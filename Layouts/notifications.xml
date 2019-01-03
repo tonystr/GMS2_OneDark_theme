@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="NotificationPopup" layout_guid="5c002296-50cd-403f-8084-90fbb796720e">
+    <Grid stylename="grid_container" left="8dpi_px" right="8dpi_px" top="2dpi_px" grid_rowlayout="['auto', 'auto']" row_spacing="4dpi_px" grid_resize="ResizeGrid">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="notification_title_label" layout_id="label_title" layout_guid="09569c89-180b-41c0-8452-bd966f59737b" height="22px" width="78px" left="0px" caption="Runtimes" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="notification_message_label" layout_id="label_message" layout_guid="1ac69037-4595-4d56-89f3-b5e6de4e365d" height="32px" left="0px" margin_bottom="2dpi_px" caption="A new runtime is available in Master." word_wrap="True" />
+        </ChildGadgets>
+      </Cell>
+      <Gadgets>
+        <CloseButton stylename="close_button_up" layout_id="notification_close" layout_guid="945ab029-977b-4493-8f42-6725115d44cc" height="16dpi_px" width="16dpi_px" />
+      </Gadgets>
+    </Grid>
+  </Layout>
+</Layouts>

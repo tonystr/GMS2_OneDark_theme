@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ImageEditorWindow" layout_guid="a552f456-60de-4f29-b8d4-6a31597b3807">
+    <Grid stylename="grid_container" help_tag="image_view" grid_rowlayout="['1*', '20dpi_px']" grid_resize="None">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="window_client_panel" layout_id="client_panel" layout_guid="1ff38121-8339-4df6-b266-8622a621b4b0">
+            <ChildGadgets>
+              <Grid stylename="grid_container" layout_id="main_grid" layout_guid="77b4ce17-03f8-437e-a0be-0f8d8c3628d8" grid_rowlayout="['117dpi_px', '1*']" grid_columnlayout="['1*', '252dpi_px']">
+                <RowSplitter stylename="invisible_horizontal_grid_splitter" layout_id="row_splitter" layout_guid="ed008a88-37c4-4723-beed-d662ab206310" height="7dpi_px" width="333px" left="0px" top="113px" row="1" column="0" rowspan="1" columnspan="1" />
+                <ColumnSplitter stylename="ie_toolpanel_splitter" height="450px" width="7dpi_px" left="333px" top="0px" row="0" column="1" rowspan="2" columnspan="1" />
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']">
+                      <Cell layout_id="timeline_cell" layout_guid="f2e29818-1a96-45e8-8f6a-fa2629b106ec" row="0" column="0" flow_index="0" />
+                      <Cell layout_id="toolbar_cell" layout_guid="ed3cd270-fd2f-480e-8006-6cc12e4618b5" row="1" column="0" flow_index="0" />
+                    </Grid>
+                  </ChildGadgets>
+                </Cell>
+                <Cell layout_id="image_cell" layout_guid="a782ce6a-5206-44ea-82c9-0ab261664384" row="1" column="0" flow_index="0" />
+              </Grid>
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="dialog_editor_status_bar" layout_id="editor_status_bar" layout_guid="088d282b-7070-4c57-be4e-b8b4f0277082">
+            <Gadgets>
+              <Label stylename="status_bar_text_style" layout_id="status_cursorpos" layout_guid="7f49ff2f-8b37-45a4-945b-aeb6b9922419" height="16dpi_px" width="0dpi_px" left="4dpi_px" />
+              <Label stylename="status_bar_text_style" layout_id="status_dimensions" layout_guid="fb15b223-f2a3-490e-bdcd-f0d8fbffafc5" height="16dpi_px" width="0dpi_px" left="200dpi_px" />
+              <Label stylename="status_bar_text_style" layout_id="status_message" layout_guid="0f007906-5f5d-4dc4-b95f-c8227613c219" height="16dpi_px" width="0dpi_px" left="400dpi_px" />
+            </Gadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ImageEditorMenu">
+      <MenuBar stylename="menu_bar" layout_id="image_editor_menu" layout_guid="cb69196b-7233-469e-a16d-f75c6cf7e7cc">
+          <MenuBarEntry stylename="menu_bar_entry" layout_id="menubar_edit" layout_guid="e9e85943-e36b-4b58-bfd5-216d4ee3e308" width="41px" left="50px" localise_name="MenuBar_Image">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                  <MenuEntry stylename="menu_entry" layout_id="menu_cut" layout_guid="9b046d27-3ef2-49fc-93b4-0ab870b17672" localise_name="ImageEditor_Cut" keyboard_shortcut="${edit_cut}" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_copy" layout_guid="2d9422b6-72f3-4bd1-a224-1ff416cbbc8c" localise_name="ImageEditor_Copy" keyboard_shortcut="${edit_copy}" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_paste" layout_guid="d43ccfe1-87f1-4cd9-b0c4-ed3e29734feb" localise_name="ImageEditor_Paste" keyboard_shortcut="${edit_paste}" />
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_select_all" localise_name="ImageEditor_SelectAll" keyboard_shortcut="${select_all}" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_cancel_selection" layout_guid="25a34cb9-47d0-48f5-a7fa-dc73f3c821c3" localise_name="ImageEditor_CancelSelection" keyboard_shortcut="ESCAPE" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_invert_selection" layout_guid="6eccfbd4-2dff-4da7-adb3-dc1971c3c650" localise_name="ImageEditor_InvertSelection" keyboard_shortcut="${invert_selection}" />
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_add_frame" localise_name="ImageEditor_AddFrame" keyboard_shortcut="SHIFT+A" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_insert_frame" localise_name="ImageEditor_InsertFrame" keyboard_shortcut="${insert_frame}" />
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_delete_frame" localise_name="ImageEditor_DeleteFrames" keyboard_shortcut="Delete" />
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_add_file" layout_guid="78f595de-92d7-403f-981e-859d78a1d450" localise_name="ImageEditor_AddFromFile" keyboard_shortcut="${import_files}" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_create_from_strip" layout_guid="78f595de-92d7-403f-981e-859d78a1d450" localise_name="ImageEditor_CreateFromStrip"/>
+                  <MenuEntry stylename="menu_entry" layout_id="menu_import_from_strip" layout_guid="78f595de-92d7-403f-981e-859d78a1d450" localise_name="ImageEditor_ImportFromStrip" keyboard_shortcut="${import_from_strip}"/>
+                  <MenuEntry stylename="menu_entry" layout_id="menu_export_png" layout_guid="78f595de-92d7-403f-981e-859d78a1d450" localise_name="ImageEditor_ExportToPNG"/>
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_resize_canvas" localise_name="ImageEditor_ResizeCanvas" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_crop_to_selection" localise_name="ImageEditor_CropToSelection" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_auto_trim" localise_name="ImageEditor_AutoTrim" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_reverse_frames" localise_name="ImageEditor_ReverseFrames"/>
+                  <HorizontalSeparator stylename="menu_separator" />
+                  <SubMenuEntry stylename="menu_entry" layout_id="menu_transform_mirror" localise_name="ImageEditor_Menu_Mirror">
+                      <ContextMenu stylename="context_menu" left="125px" top="65px">
+                          <MenuEntry stylename="menu_entry" layout_id="menu_mirror_frame" localise_name="ImageEditor_Menu_CurrentFrame" />
+                          <MenuEntry stylename="menu_entry" layout_id="menu_mirror_animation" localise_name="ImageEditor_Menu_AllFrames" />
+                      </ContextMenu>
+                  </SubMenuEntry>
+                  <SubMenuEntry stylename="menu_entry" layout_id="menu_transform_flip" localise_name="ImageEditor_Menu_Flip" >
+                      <ContextMenu stylename="context_menu" left="125px" top="65px">
+                          <MenuEntry stylename="menu_entry" layout_id="menu_flip_frame" localise_name="ImageEditor_Menu_CurrentFrame" />
+                          <MenuEntry stylename="menu_entry" layout_id="menu_flip_animation" localise_name="ImageEditor_Menu_AllFrames" />
+                      </ContextMenu>
+                  </SubMenuEntry>  
+                  <MenuEntry stylename="menu_entry" layout_id="menu_transform_rotate_cw" localise_name="ImageEditor_Menu_RotateImageCW" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_transform_rotate_acw" localise_name="ImageEditor_Menu_RotateImageACW" />
+              </ContextMenu>
+          </MenuBarEntry>
+          <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_view" layout_guid="699de57b-c884-4730-85c6-2a4601b612af" width="47px" left="100px" localise_name="MenuBar_View">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                  <MenuEntry stylename="menu_entry" layout_id="menu_nozoom" layout_guid="61311a81-e240-4783-bc36-ddf53e872e67" localise_name="ImageEditor_CentreUnitScale" keyboard_shortcut="ALT+C" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_scaletofit" layout_guid="61311a81-e240-4783-bc36-ddf53e872e67" localise_name="ImageEditor_CentreFit" keyboard_shortcut="ALT+F" />
+                  <MenuEntry stylename="menu_entry" layout_id="menu_togglegrid" layout_guid="f7d40bf4-f926-4d8a-98a3-7236b932b6b1" localise_name="ImageEditor_ToggleGrid" keyboard_shortcut="G"/>
+                  <MenuEntry stylename="menu_entry" layout_id="menu_onion_settings" localise_name="ImageEditor_OnionSkinSettings" />
+              </ContextMenu>
+          </MenuBarEntry>
+          <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_effects" layout_guid="320bd077-e37f-4875-acbf-cd98f7be148e" width="101px" left="226px" localise_name="ImageEditor_Effects">
+              <ContextMenu stylename="context_menu">
+              </ContextMenu>
+          </MenuBarEntry>
+      </MenuBar>
+  </Layout>
+  <Layout layout_name="ToolPanelWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6">
+    <Cell row="0" column="1">
+      <Gadgets>
+        <TitleBar layout_id="window_title_bar">
+        </TitleBar>
+      </Gadgets>
+    </Cell>
+    <Cell row="1" column="1" layout_id="window_client_panel" />
+  </Layout>   
+</Layouts>
+

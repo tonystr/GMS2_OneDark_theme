@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="BrushToolPanel" layout_guid="6226d5d9-62c7-48bc-8eed-87f0d21cd670">
+    <Window stylename="image_editor_toolbox" localise_title="ImageEditor_BrushPanelTitle">
+      <Layout layout_name="BasicBorderlessWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <StackPanel layout_id="brush_stackpanel" stylename="toolbox_stack_panel" left="0px" top="0px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="BrushPluginToolPanel" layout_guid="fbe88607-03e5-4838-87d8-61825c87c1dd">
+    <Window stylename="image_editor_toolbox" left="0px" top="0px" localise_title="ImageEditor_BrushPanelTitle" window_flags="DragDisabled, AutoSizeHeight">
+      <Client>
+        <ChildGadgets />
+      </Client>
+      <Layout layout_name="ToolPanelWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="QuestionDialog" layout_guid="9cb43518-af62-4b27-a1ff-038dbd251ed7">
+    <Grid stylename="grid_container" layout_id="QuestionDialog" layout_guid="d7e3b22c-b7dc-4ee6-8862-9fb410bc087f" height="100%" width="100%" left="0dpi_px" top="0dpi_px" margin_bottom="15dpi_px" grid_rowlayout="['auto', 'auto', 'auto']" grid_resize="ResizeGrid">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" layout_id="QuestionHeader" layout_guid="4584ed2f-e32c-41d4-9917-9285a25ad4cd" height="30dpi_px" width="100%" left="0dpi_px" top="0px" grid_columnlayout="['1*', '160dpi_px']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="32dpi_px" top="0dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="survey_question_title" layout_id="Question" layout_guid="e39714c2-00f0-4485-ab28-9cdc28f13142" height="23px" width="85px" left="6px" top="0dpi_px" margin_left="6dpi_px" margin_top="4dpi_px" caption="Question 1" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="100%" width="100%" left="0dpi_px" top="3dpi_px" stack_order="RightToLeft">
+                  <ChildGadgets>
+                    <Button stylename="survey_rating_5" layout_id="Rating_5" layout_guid="52fbb700-e2bd-4cb5-9f9c-58bb92116393" flow_index="5" width="25dpi_px" right="0px" top="0dpi_px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                    <Button stylename="survey_rating_4" layout_id="Rating_4" layout_guid="0022af1c-5548-4e6f-b8b4-59fe00bd0cbc" flow_index="4" width="25dpi_px" right="25px" top="0dpi_px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                    <Button stylename="survey_rating_3" layout_id="Rating_3" layout_guid="7d2463f9-8462-497b-b63e-21fb4fb286d2" flow_index="3" width="25dpi_px" right="50px" top="0dpi_px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                    <Button stylename="survey_rating_2" layout_id="Rating_2" layout_guid="3aa172dd-4e81-413d-a995-14274a7c0f1b" flow_index="2" width="25dpi_px" right="75px" top="0dpi_px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                    <Button stylename="survey_rating_1" layout_id="Rating_1" layout_guid="447806cf-1367-4463-b67b-26835e2833d2" flow_index="1" width="25dpi_px" right="100px" top="0dpi_px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                    <Button stylename="survey_rating_0" layout_id="Rating_0" layout_guid="a7d7c31a-86c9-4b2e-9a63-9ce0143a5a47" width="25dpi_px" right="131px" top="0dpi_px" margin_right="6dpi_px" margin_top="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\icon_survey_question.png" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="1">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" layout_id="QuestionBar" layout_guid="5ea7cde2-faba-4ab1-bdb0-0369df82014b" height="100%" width="100%" margin_top="6dpi_px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Label stylename="survey_question_category" layout_id="QuestionInfo1" layout_guid="9b5894f0-fb32-4d66-9c11-f557031d273b" height="31dpi_px" left="6px" top="0dpi_px" margin_left="6dpi_px" margin_top="3dpi_px" margin_bottom="3dpi_px" caption="How much wood would a woodchuck chuck if a woodchuck could chuck wood. A woodchuck could chuck no amount of wood since a woodchuck can't chuck wood." word_wrap="True" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="2">
+        <ChildGadgets>
+          <MultiLineTextBox stylename="survey_comment" layout_id="CommentBox" layout_guid="cc4e40d1-4873-44d2-a116-c03e25a8d134" height="70dpi_px" width="100%" left="0px" top="0dpi_px" default_caption="(optional) additional feedback" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="SurveyDialog" layout_guid="e2524317-5ab0-433b-86c6-22dd1aa84369">
+    <Window stylename="survey_window" height="215dpi_px" left="" top="" grid_resize="ResizeGridHeight" localise_title="Survey_Title" window_flags="CloseButton, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', '30dpi_px']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="default_scrollpanel" left="0dpi_px" top="0dpi_px" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" layout_id="QuestionStack" layout_guid="2236d8b7-b875-423e-8038-481344033cad" left="0dpi_px" top="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="116.6667%" top="1dpi_px" margin_top="6dpi_px" grid_columnlayout="['auto', 'auto']" grid_resize="None">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" height="100%" left="0px" top="0dpi_px">
+                        <ChildGadgets>
+                          <Button stylename="button_up" layout_id="SubmitAllButton" layout_guid="3a0b0050-b084-4f3c-bea3-512158a718b2" height="24px" width="77dpi_px" left="6px" top="0dpi_px" margin_left="6dpi_px" localise_name="Survey_SubmitAll" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" height="100%" left="0px" stack_order="RightToLeft">
+                        <ChildGadgets>
+                          <Button stylename="button_up" layout_id="Expanded" layout_guid="d48ccec5-138f-4aa6-aa13-3f1cd6e7dd81" height="24px" width="129dpi_px" right="6px" top="18px" margin_right="6dpi_px" localise_name="Survey_SubmitMoreFeedback" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

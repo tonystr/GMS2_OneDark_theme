@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="marketplace_library_overview_new" layout_guid="315ec3aa-dc0e-4563-ba28-332aa31319d6">
+    <StackPanel stylename="stack_panel" layout_id="overview_container" layout_guid="c7104b30-fddb-4275-9179-1c79cd02a030" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+      <ChildGadgets>
+        <Grid stylename="grid_container" height="0px" left="0px" right="0px" top="15px" margin_left="15dpi_px" margin_top="15dpi_px" grid_rowlayout="['auto', 'auto', 'auto']" row_spacing="10dpi_px" grid_resize="ResizeGrid">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="grid_container" layout_id="overview_responsive_grid" layout_guid="ce8f897d-fdc6-4dfc-ab34-cdfcdd770d9d" right="0px" grid_rowlayout="['auto']" grid_columnlayout="['210dpi_px', '1*']" grid_resize="ResizeGrid">
+                <Cell layout_id="responsive_1" layout_guid="6c67eab5-d382-4612-b938-11514a91fafd" row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <Image stylename="image" layout_id="overview_icon" layout_guid="d887814f-2fff-44ad-a344-10b39e5d4393" left="2dpi_px" right="21dpi_px" top="1px" bottom="1px" image_flags="Stretch, Centre" />
+                    <ScrollPanel stylename="marketplace_icon_frame_active" height="188dpi_px" width="188dpi_px" left="1dpi_px" right="20dpi_px" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <Grid stylename="marketplace_overview_grid_container" layout_id="grid_overview_responsive" layout_guid="c686a011-6fcd-4b8c-9fb5-fa6f9196e60a" width="100%" grid_rowlayout="['auto', 'auto', '1*', '1*']" grid_resize="ResizeGrid">
+                      <Cell row="0" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="marketplace_overview_label_title" layout_id="overview_title" layout_guid="06fb1f73-cf60-4363-a7ac-e5328b3349b4" left="0px" top="0px" auto_ellipsis="True" word_wrap="True" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <LinkLabel stylename="link_label_marketplace_caption" layout_id="overview_author" layout_guid="7ba9444f-deb4-4ac0-87f5-bc12b3d3ab41" height="16px" margin_top="10dpi_px" auto_size="False" auto_ellipsis="True" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" left="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <Button stylename="survey_rating_1" layout_id="Overview_Rating_1" layout_guid="54a94517-ce80-4ae5-8972-23ad82f4b2d3" flow_index="1" width="20dpi_px" left="0px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                              <Button stylename="survey_rating_2" layout_id="Overview_Rating_2" layout_guid="565f6c30-9fde-4ec3-a65d-32c861493598" flow_index="2" width="20dpi_px" left="20px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                              <Button stylename="survey_rating_3" layout_id="Overview_Rating_3" layout_guid="1fb242be-f5fc-47f6-9f91-db3925d9314b" flow_index="3" width="20dpi_px" left="40px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                              <Button stylename="survey_rating_4" layout_id="Overview_Rating_4" layout_guid="d6cb7c71-fc55-4b3d-8302-6fa31b288dde" flow_index="4" width="20dpi_px" left="60px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                              <Button stylename="survey_rating_5" layout_id="Overview_Rating_5" layout_guid="68fde214-22ea-4a74-865a-dfaed1849fb0" flow_index="5" width="20dpi_px" left="80px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="3" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <Button stylename="marketplace_download_button" layout_id="overview_button" layout_guid="8f720d9d-79af-437a-81f7-8aea14ed8123" height="43dpi_px" width="188dpi_px" left="0px" bottom="0px" name="Download" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="0">
+            <ChildGadgets>
+              <Button stylename="marketplace_page_button" layout_id="overview_prev_asset" layout_guid="818f2ffb-c6de-45c0-816a-95287b0a31eb" width="94dpi_px" left="0px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeftBig.png" />
+              <Button stylename="marketplace_page_button" layout_id="overview_next_asset" layout_guid="ea1f05a8-3c42-476d-8711-0b46ba5d9c36" width="94dpi_px" left="94dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeftBig.png" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" height="173dpi_px" left="0px" right="5dpi_px" stack_order="TopToBottom">
+                <ChildGadgets>
+                  <Label stylename="label_marketplace_title_light" height="22px" width="94px" left="0px" top="0px" localise_caption="Marketplace_MyLibrary_Screens" />
+                  <ScrollPanel stylename="default_scrollpanel" height="145dpi_px" left="0px" top="27px" margin_top="5px" scrollpanel_flags="HorizontalScroll">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" layout_id="overview_screenshots" layout_guid="e602b6c8-ec1b-49e9-819d-432bec1413a5" height="100%" left="0dpi_px" top="8dpi_px" bottom="8dpi_px" stack_resize="ResizeWidth" />
+                    </ChildGadgets>
+                  </ScrollPanel>
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+        <StackPanel stylename="stack_panel" left="15dpi_px" right="15dpi_px" top="446px" margin_top="24dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+          <ChildGadgets>
+            <Label stylename="label_marketplace_title_light" left="0px" top="0px" localise_caption="Marketplace_MyLibrary_Description" auto_ellipsis="True" word_wrap="True" />
+            <Label stylename="label_marketplace_overview_text" layout_id="overview_description" layout_guid="758a04e3-ceb1-47ab-bb2d-71a83ad51e4b" left="0px" top="30px" auto_ellipsis="True" word_wrap="True" />
+            <Label stylename="label_marketplace_title_light" left="0px" top="1315px" margin_top="20dpi_px" localise_caption="Marketplace_MyLibrary_Version" auto_ellipsis="True" word_wrap="True" />
+            <Label stylename="label_marketplace_overview_text" layout_id="overview_version" layout_guid="7a890ca7-9777-4171-b87a-f8eea1b05be8" left="0px" top="1345px" localise_caption="Marketplace_MyLibrary_VersionLabel" auto_ellipsis="True" word_wrap="True" />
+            <Label stylename="label_marketplace_overview_text" layout_id="overview_madewith" layout_guid="3d97eebd-0287-4aee-8cae-416c57e37121" height="22px" left="0px" top="1375px" localise_caption="Marketplace_MyLibrary_MadeWith" auto_size="False" auto_ellipsis="True" word_wrap="True" />
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="marketplace_library_new" layout_guid="5e61177b-0bc9-4b57-9e34-f6cfdf776cdf">
+    <Window stylename="marketplace_window" height="" width="">
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="marketplace_grid" left="4dpi_px" right="4dpi_px" top="5dpi_px" bottom="14dpi_px" grid_columnlayout="['1*', '6*']" grid_resize="ResizeGrid">
+            <ColumnDockSplitter stylename="dock_splitter" height="638px" width="14dpi_px" left="179px" top="0px" splitter_anchor="First" row="0" column="1" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" top="0dpi_px" grid_rowlayout="['51dpi_px', '1*']" row_spacing="-1px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TextBox stylename="search_box" layout_id="search_box" layout_guid="34e2a03c-c881-410c-9659-4f50c16a2edf" height="22dpi_px" width="100%" top="0px" localise_default_caption="Marketplace_MyLibrary_SearchText" />
+                      <Image stylename="image_searchicon" left="5dpi_px" top="5dpi_px" image="searchbar_icon.png" />
+                      <TitleBar stylename="title_bar" bottom="0px">
+                        <ChildGadgets>
+                          <Label stylename="label_marketplace_title_light" height="22px" width="81px" left="17dpi_px" localise_caption="Marketplace_MyLibrary_Categories" />
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="marketplace_stack_panel" layout_id="category_list" layout_guid="62e3c145-4054-4db2-8a10-4b4a9b59c397" stack_order="TopToBottom" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="marketplace_grid" top="0px" grid_columnlayout="['2*', '1*']" grid_resize="ResizeGrid">
+                  <ColumnDockSplitter stylename="dock_splitter" height="638px" width="14dpi_px" left="709px" top="0px" row="0" column="1" rowspan="1" columnspan="1" />
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['51dpi_px', '1*']" row_spacing="-1px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label_marketplace_title_light" layout_id="marketplace_category" layout_guid="8b545796-2654-4e40-8cb3-67a02768063b" height="22px" width="78px" left="3px" top="2px" caption="Animation" />
+                            <Button stylename="marketplace_icon_button" layout_id="button_refresh" layout_guid="c1f27e13-5868-4eaa-a3f3-60eb27035d22" localise_tooltip="Marketplace_MyLibrary_RefreshTooltip" height="26dpi_px" width="26dpi_px" right="124dpi_px" top="0px" icon="Runtime\icon_IDE_refresh.png" />
+                            <Label stylename="label_marketplace_title_light" layout_id="offline_label" layout_guid="fbb6bedf-8c64-4ddc-88c8-7bd0ef608e3d" height="22px" width="49px" right="124dpi_px" top="2px" localise_caption="Marketplace_MyLibrary_Offline" />
+                            <Label stylename="label_marketplace_title_light" layout_id="loading_label" layout_guid="ce83560d-8436-4827-b3d9-4896e7d6653e" height="22px" width="72px" right="175dpi_px" top="2dpi_px" localise_caption="ProgressBar_Load" />
+                            <Image stylename="ide_progress_spinner" layout_id="loading_spinner" layout_guid="0674f2d4-2915-4fa8-8020-10fa6e8e7625" right="150dpi_px" top="3dpi_px" render_flags="FlipHorizontal" animated_image="{ image:'Progress_Bar/save_spinner_atlas.png', total: 9, row: 3, size: [40, 40] }" />
+                            <ComboBox stylename="combobox_panel" layout_id="combo_filters" layout_guid="a7b342ed-2be9-4a89-b8c1-300fbb3209e3" right="0px" top="2dpi_px">
+                              <ListBoxItems />
+                            </ComboBox>
+                            <TitleBar stylename="title_bar" bottom="0px">
+                              <ChildGadgets>
+                                <Grid stylename="grid_container" layout_id="grid_headers" layout_guid="99a02419-6fe8-4709-9376-c519e7d3cd6b" left="0px" right="10px" grid_columnlayout="['87dpi_px', '2*', '2*', '104dpi_px', '170dpi_px']" column_spacing="23dpi_px">
+                                  <Cell layout_id="responsive_4" layout_guid="21377359-5137-445b-b865-ff9e144f9d90" row="0" column="0" flow_index="0" />
+                                  <Cell row="0" column="1" flow_index="0">
+                                    <ChildGadgets>
+                                      <Label stylename="label_marketplace_title_light" height="22px" width="32px" left="0px" localise_caption="Marketplace_MyLibrary_Header_Title" />
+                                    </ChildGadgets>
+                                  </Cell>
+                                  <Cell layout_id="responsive_1" layout_guid="0d85df95-7818-480b-98ff-0863d757597c" row="0" column="2" flow_index="0">
+                                    <ChildGadgets>
+                                      <Label stylename="label_marketplace_title_light" height="22px" width="78px" left="0px" localise_caption="Marketplace_MyLibrary_Header_Developer" />
+                                    </ChildGadgets>
+                                  </Cell>
+                                  <Cell layout_id="responsive_2" layout_guid="01123914-9d57-4d06-869b-1ea205a188e3" row="0" column="3" flow_index="0">
+                                    <ChildGadgets>
+                                      <Label stylename="label_marketplace_title_light" height="22px" width="48px" left="0px" localise_caption="Marketplace_MyLibrary_Header_Rating" />
+                                    </ChildGadgets>
+                                  </Cell>
+                                  <Cell layout_id="responsive_3" layout_guid="45d55af3-dac8-4c8d-be2e-8c731caa86a8" row="0" column="4" flow_index="0" />
+                                </Grid>
+                              </ChildGadgets>
+                            </TitleBar>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="marketplace_grid_container" grid_rowlayout="['1*', 'auto']">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <TableListBox stylename="marketplace_tablegadget_content" layout_id="assetlist" layout_guid="224ccebf-a2ed-4f78-b33f-a798f79d57cb">
+                                    <ListBoxItems />
+                                  </TableListBox>
+                                  <ScrollPanel stylename="default_scrollpanel" layout_id="empty_panel" layout_guid="100b4b2d-b647-439c-93f8-4d59536e3528" scrollpanel_flags="None">
+                                    <ChildGadgets>
+                                      <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+                                        <ChildGadgets>
+                                          <Label stylename="label" height="16px" top="0px" localise_caption="Marketplace_MyLibrary_Empty" auto_ellipsis="True" word_wrap="True" />
+                                          <LinkLabel stylename="link_label" layout_id="browse_marketplace_link" layout_guid="a1e17671-b77a-4516-9fad-1f9b889350ba" height="16px" top="16px" localise_caption="Marketplace_MyLibrary_ClickToBrowse" auto_ellipsis="True" word_wrap="True" />
+                                        </ChildGadgets>
+                                      </StackPanel>
+                                    </ChildGadgets>
+                                  </ScrollPanel>
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="1" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Grid stylename="grid_container" layout_id="page_buttons" layout_guid="c4de5106-ce92-40e4-a6fd-c7be50a2ff82" height="32dpi_px" grid_columnlayout="['1*', 'auto', '1*']">
+                                    <Cell row="0" column="0" flow_index="0">
+                                      <ChildGadgets>
+                                        <Button stylename="marketplace_page_button" layout_id="page_left" layout_guid="fbd04195-0fb2-4db3-b5b3-0dc8be39f8dd" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeftBig.png" />
+                                      </ChildGadgets>
+                                    </Cell>
+                                    <Cell row="0" column="1" flow_index="0">
+                                      <ChildGadgets>
+                                        <Label stylename="label" layout_id="label_page" layout_guid="b0c589da-4ad0-45c0-a7de-c693e178e794" height="16px" width="75px" localise_caption="Marketplace_MyLibrary_Pagination" />
+                                      </ChildGadgets>
+                                    </Cell>
+                                    <Cell row="0" column="2" flow_index="0">
+                                      <ChildGadgets>
+                                        <Button stylename="marketplace_page_button" layout_id="page_right" layout_guid="961b0619-f941-43db-8dd7-1454482dd277" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeftBig.png" />
+                                      </ChildGadgets>
+                                    </Cell>
+                                  </Grid>
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['51dpi_px', '1*']" row_spacing="-1px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <TitleBar stylename="title_bar" bottom="0px">
+                              <ChildGadgets>
+                                <Label stylename="label_marketplace_title_light" height="22px" width="69px" left="17dpi_px" localise_caption="Marketplace_MyLibrary_Overview" />
+                              </ChildGadgets>
+                            </TitleBar>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <ScrollPanel stylename="marketplace_scrollpanel" left="0px" top="0px" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+                              <ChildGadgets>
+                                <Layout layout_name="marketplace_library_overview_new" layout_guid="315ec3aa-dc0e-4563-ba28-332aa31319d6" />
+                              </ChildGadgets>
+                            </ScrollPanel>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Window>
+  </Layout>
+  <Layout layout_name="marketplace_library_item" layout_guid="67fa1ef0-3b88-4e8a-bb3c-51348ad8d7c6">
+    <Grid stylename="grid_container_marketplace_item" height="64dpi_px" left="0dpi_px" top="0dpi_px" margin_right="10px" margin_top="10dpi_px" margin_bottom="10dpi_px" grid_columnlayout="['87dpi_px', '2*', '2*', '128dpi_px', '170dpi_px']" column_spacing="23dpi_px">
+      <Cell layout_id="responsive_4" layout_guid="e917636c-8855-41af-8b6c-db93175af64d" row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Image stylename="marketplace_image" layout_id="image_thumbnail" layout_guid="311d81df-97d6-4350-b2e1-38aad1a49792" height="62dpi_px" width="62dpi_px" image_flags="Stretch" />
+          <ScrollPanel stylename="marketplace_icon_frame_inactive" layout_id="marketplace_icon_frame" layout_guid="fd31b399-2134-45f2-b489-09d1009256bc" height="64dpi_px" width="64dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label_marketplace_title_light" layout_id="label_title" layout_guid="c5dc98d0-b4ef-4cf9-890a-37a587be3afd" width="" left="0px" top="12dpi_px" auto_ellipsis="True" word_wrap="True" />
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="responsive_1" layout_guid="cae56280-2d9a-4dda-b01b-aeb0705f3803" row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <LinkLabel stylename="link_label_marketplace_caption" layout_id="label_author" layout_guid="1a7d5028-9241-4e2f-9f85-23c6225d1fbc" localise_tooltip="Marketplace_MyLibrary_ViewAuthor" height="30dpi_px" width="" left="0px" top="12dpi_px" auto_ellipsis="True" word_wrap="True" />
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="responsive_2" layout_guid="134cf87e-85ef-4f4f-96e1-fa98219e413e" row="0" column="3" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" top="11dpi_px" grid_rowlayout="['26dpi_px', 'auto']" grid_columnlayout="['auto']" grid_resize="ResizeGrid">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" right="0px" top="0px" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <Button stylename="survey_rating_1" layout_id="Rating_1" layout_guid="54a94517-ce80-4ae5-8972-23ad82f4b2d3" flow_index="1" height="25dpi_px" width="25dpi_px" left="0px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\survey_star_empty.png" />
+                    <Button stylename="survey_rating_2" layout_id="Rating_2" layout_guid="ad9061aa-c3fe-4a97-91ab-e43f10a79779" flow_index="2" height="25dpi_px" width="25dpi_px" left="21px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\survey_star_empty.png" />
+                    <Button stylename="survey_rating_3" layout_id="Rating_3" layout_guid="d179f17e-1612-44ce-aa5c-4a9a533b9373" flow_index="3" height="25dpi_px" width="25dpi_px" left="42px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\survey_star_empty.png" />
+                    <Button stylename="survey_rating_4" layout_id="Rating_4" layout_guid="c6ad057c-def6-4cb8-a2a2-28b069a3b67a" flow_index="4" height="25dpi_px" width="25dpi_px" left="63px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\survey_star_empty.png" />
+                    <Button stylename="survey_rating_5" layout_id="Rating_5" layout_guid="0cc93fa7-cd44-4ae6-bd89-1e991658ca77" flow_index="5" height="25dpi_px" width="25dpi_px" left="84px" margin_top="0dpi_px" button_down_style="survey_star_down" button_over_style="survey_star_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Survey\survey_star_empty.png" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" left="3dpi_px" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <LinkLabel stylename="link_label" layout_id="label_rating_all" layout_guid="1c6f7036-361a-4f9d-ad7c-f09bd54b2e8f" height="16px" width="7px" left="0px" caption="6" font_size="8"/>
+                    <Image stylename="image" layout_id="image_rating_all" layout_guid="30ec59ac-5658-459a-8711-b0f49c0181f4" height="12dpi_px" width="12dpi_px" left="11px" margin_left="1dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="Survey\star_indeterminate.png" />
+                  </ChildGadgets>
+                </StackPanel>
+                <LinkLabel stylename="link_label" font_size="8" layout_id="label_reviews" layout_guid="dbd213ec-a6d6-4038-b5dd-08e8325c2764" height="16px" width="63px" right="3dpi_px" localise_caption="Marketplace_MyLibrary_Reviews" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="responsive_3" layout_guid="da1d6d27-fea6-486f-9ae1-30b697c5689e" row="0" column="4" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" height="26dpi_px" top="12dpi_px">
+            <ChildGadgets>
+              <Button stylename="marketplace_update_icon_button" layout_id="button_update" layout_guid="b79e5e85-936d-4020-922f-806e7f5834af" localise_tooltip="Marketplace_MyLibrary_UpdateTooltip" width="24dpi_px" left="0px" icon="icon_update_available.png" />
+              <Button stylename="marketplace_icon_button" layout_id="button_import" layout_guid="ca87b94b-41ab-4e4c-97fe-767641360355" localise_tooltip="Marketplace_MyLibrary_Import" width="24dpi_px" left="36px" margin_left="12dpi_px" icon="icon_import.png" />
+              <Button stylename="marketplace_icon_button" layout_id="button_download" layout_guid="375f8a2e-3a79-4bce-b750-236dab3014a0" localise_tooltip="Marketplace_MyLibrary_Download" width="24dpi_px" left="72px" margin_left="12dpi_px" icon="icon_download.png" />
+              <Button stylename="marketplace_icon_button" layout_id="button_view" layout_guid="ba7a4d85-c69f-4e93-a398-87443c9ec556" localise_tooltip="Marketplace_MyLibrary_ViewAsset" width="24dpi_px" left="108px" margin_left="12dpi_px" icon="icon_view.png" />
+              <Button stylename="marketplace_icon_button" layout_id="button_trashbin" layout_guid="a7d6954b-8413-4c6d-b901-cdb17ccc4735" localise_tooltip="MarketplaceAsset_RemoveTooltip" width="24dpi_px" left="144px" margin_left="12dpi_px" icon="trashbin.png" />
+            </ChildGadgets>
+          </StackPanel>
+          <ProgressBar stylename="marketplace_progressbar" layout_id="progress_bar" layout_guid="5d4966b2-3ccf-4502-a89d-2dd9dbc0191a" height="9dpi_px" width="" left="36dpi_px" right="37dpi_px" top="41dpi_px" margin_left="" margin_right="" margin_top="" margin_bottom="" colour="#00FFFFFF" bar_style="marketplace_progressbar_bar" frame_style="marketplace_progressbar_frame" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

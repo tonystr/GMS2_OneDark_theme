@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SoundEditor" layout_guid="9d2dc2f4-0195-449c-9df0-726415c91e4a">
+    <Window stylename="default_window" height="500dpi_px" width="394dpi_px" localise_title="SoundEditor_Title" window_flags="CloseButton, MinimizeButton, Bookmark" help_tag="sound_editor">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeAll">
+            <ChildGadgets>
+              <Label stylename="label" height="16px" width="37px" left="0px" top="6px" margin_left="7dpi_px" margin_top="6dpi_px" localise_caption="SoundEditor_Name">
+                <ChildGadgets>
+                  <Label stylename="label" layout_id="sound_status" layout_guid="ee00a590-4dbd-4bab-bba1-8123a770cbe2" height="16px" width="149px" top="51px" localise_caption="SoundEditor_NoSound" />
+                </ChildGadgets>
+              </Label>
+              <StackPanel stylename="stack_panel" height="30dpi_px" top="21px" margin_left="3dpi_px" margin_top="-1dpi_px">
+                <ChildGadgets>
+                  <TextBox stylename="text_box" height="20dpi_px" width="335dpi_px" left="0px" bind_property="name" />
+                  <Button stylename="soundeditor_mixer_button_up" layout_id="OpenSoundButton" layout_guid="984d9c9a-32bf-4bc2-8582-1ea3dd1cd1fb" flow_index="1" localise_tooltip="SoundEditor_ToolTip_BrowseForSound" height="24px" width="31dpi_px" left="341px" top="0px" margin_left="6dpi_px" margin_top="3dpi_px" name="..." />
+                </ChildGadgets>
+              </StackPanel>
+              <Label stylename="label" height="16px" width="45px" left="0px" top="51px" margin_left="8dpi_px" localise_caption="SoundEditor_Volume" />
+              <Grid stylename="grid_container" left="335px" top="67px" grid_rowlayout="['auto']" grid_columnlayout="['auto', 'auto']" row_spacing="6dpi_px" column_spacing="0dpi_px" grid_resize="ResizeGrid">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="soundeditor_volume_group_box" height="50dpi_px" width="335dpi_px" top="0px" margin_left="6dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <StackPanel stylename="stack_panel" left="0px" top="0px" margin_right="6dpi_px" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <Button stylename="soundeditor_button_up" layout_id="MuteButton" layout_guid="49d4d6f9-06fe-4029-99d0-bcddecb9f937" flow_index="2" localise_tooltip="SoundEditor_ToolTip_MuteSound" width="24dpi_px" left="5px" margin_left="5dpi_px" margin_right="1dpi_px" margin_top="7dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_volume.png" />
+                            <Slider stylename="slider_grid" layout_id="VolumeSlider" layout_guid="3187e504-ec85-4adb-bc49-9adcfa565b84" flow_index="3" localise_tooltip="SoundEditor_ToolTip_Volume" height="24dpi_px" width="202dpi_px" left="30px" top="0dpi_px" margin_top="10dpi_px" has_textbox="True" textbox_style="slider_grid_textbox" />
+                            <Button stylename="soundeditor_button_up" layout_id="PlaySoundButton" layout_guid="7b4f1a71-4b25-4e01-8125-52e3e388e9e6" flow_index="4" localise_tooltip="SoundEditor_ToolTip_PlaySound" width="24dpi_px" left="240px" top="0px" margin_left="8dpi_px" margin_top="8dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_play.png" />
+                            <ToggleButton stylename="soundeditor_button_up" layout_id="LoopSoundButton" layout_guid="d9510adb-f293-4ab5-9ec6-199b9dff9580" flow_index="5" localise_tooltip="SoundEditor_ToolTip_RepeatSound" width="24dpi_px" left="270px" top="0px" margin_left="6dpi_px" margin_top="8dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_soundloop.png" />
+                            <Button stylename="soundeditor_button_up" layout_id="StopSoundButton" layout_guid="e347d040-4b90-4a8c-96f0-3e42d5c03aac" flow_index="6" localise_tooltip="SoundEditor_ToolTip_RewindSound" width="24dpi_px" left="300px" top="0px" margin_left="6dpi_px" margin_top="8dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_rewind.png" />
+                          </ChildGadgets>
+                        </StackPanel>
+                        <Grid stylename="grid_container" height="24dpi_px" width="100%" left="0dpi_px" right="6dpi_px" top="40px" margin_left="6dpi_px" margin_right="0dpi_px" margin_top="6dpi_px" margin_bottom="6dpi_px" grid_columnlayout="['18dpi_px', '1*', '99dpi_px']" column_spacing="0dpi_px" grid_resize="ResizeGrid">
+                          <Cell row="0" column="0" flow_index="0">
+                            <ChildGadgets>
+                              <Image stylename="image" height="16dpi_px" width="16dpi_px" left="3dpi_px" margin_right="0dpi_px" image_flags="Stretch" image="SoundMixer\icon_IDE_music.png" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="1" flow_index="0">
+                            <ChildGadgets>
+                              <Slider stylename="slider_grid" layout_id="position" layout_guid="e0b6bc77-8f59-44aa-b58f-0ec95dc5550c" localise_tooltip="SoundMixer_ToolTip_PlaybackPosition" width="" left="6dpi_px" right="0dpi_px" margin_left="0dpi_px" min_value="0" max_value="1" flow_increment="0.1" click_increment="0.1" mindrag_increment="0.01" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="2" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" layout_id="duration" layout_guid="658232c9-4166-4fc4-a736-2bc9ed8527ae" height="16px" width="92px" right="6dpi_px" top="4dpi_px" localise_caption="SoundMixer_Duration" />
+                            </ChildGadgets>
+                          </Cell>
+                        </Grid>
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_mixer_button_up" layout_id="MixerButton" layout_guid="85c15889-b38e-4bd6-8fa3-35643150f0ba" flow_index="7" localise_tooltip="SoundEditor_ToolTip_OpenGroupMixer" height="31dpi_px" width="31dpi_px" margin_left="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_soundmixer.png" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Label stylename="label" height="16px" width="58px" left="0dpi_px" top="144px" margin_left="8dpi_px" margin_top="7dpi_px" localise_caption="SoundEditor_Attributes" />
+              <RadioGroup stylename="group_box" height="109px" width="372px" left="0dpi_px" top="162px" margin_left="3dpi_px" margin_top="2dpi_px" bind_property="kind">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" height="100dpi_px" width="332dpi_px" left="0dpi_px" right="0dpi_px" top="0px" stack_order="TopToBottom">
+                    <Gadgets>
+                      <RadioButton stylename="radiobutton_stack" height="61.90476%" top="5px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="2px" localise_name="SoundEditor_Uncompressed_NotStreamed" />
+                      <RadioButton stylename="radiobutton_stack" flow_index="1" height="50%" left="4px" top="31px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="2px" localise_name="SoundEditor_Compressed_NotStreamed" />
+                      <RadioButton stylename="radiobutton_stack" flow_index="2" width="130.6548%" left="-29px" top="57px" margin_left="5px" margin_right="5px" margin_top="3px" margin_bottom="2px" localise_name="SoundEditor_UncompressOnLoad_NotStreamed" />
+                      <RadioButton stylename="radiobutton_stack" flow_index="3" width="195.3834%" left="-54px" top="83px" margin_left="5px" margin_right="5px" margin_top="3px" margin_bottom="5px" localise_name="SoundEditor_Compressed_Streamed" />
+                    </Gadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </RadioGroup>
+              <StackPanel stylename="stack_panel" flow_index="1" height="120dpi_px" width="372dpi_px" left="0dpi_px" top="278px" margin_left="3dpi_px" margin_top="7dpi_px" stack_order="TopToBottom">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="86px" left="0px" top="0px" margin_left="5dpi_px" localise_caption="SoundEditor_TargetOptions" />
+                  <Group stylename="soundeditor_group_box" flow_index="2" height="102px" width="372px" left="0px" top="17px" margin_top="1dpi_px">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" flow_index="9" height="102dpi_px" width="372dpi_px" left="0dpi_px" stack_order="TopToBottom">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" height="17dpi_px" width="335dpi_px" left="0dpi_px" top="8px" margin_top="8dpi_px" />
+                          <StackPanel stylename="stack_panel" height="20dpi_px" width="372dpi_px" left="0dpi_px" top="25px">
+                            <ChildGadgets>
+                              <ComboBox stylename="combobox_panel" layout_id="type_combobox" layout_guid="34763bad-1970-42a5-9bcf-0d5946c11820" flow_index="12" height="20dpi_px" width="153dpi_px" left="6px" top="0dpi_px" margin_left="6dpi_px" bind_property="type">
+                                <ListBoxItems />
+                              </ComboBox>
+                              <ComboBox stylename="combobox_panel" layout_id="sampleRate_combobox" layout_guid="60b3f736-2c13-4e6f-ab68-e4b5ea3629cd" flow_index="13" height="20dpi_px" width="153dpi_px" left="209px" top="0dpi_px" margin_left="50dpi_px" bind_property="sampleRate">
+                                <ListBoxItems>
+                                  <Label stylename="label" height="16px" width="35px" left="0%" top="26px" caption="11025" />
+                                  <Label stylename="label" height="16px" width="35px" left="0%" top="26px" caption="22050" />
+                                  <Label stylename="label" height="16px" width="35px" left="0%" top="29px" caption="32000" />
+                                  <Label stylename="label" height="16px" width="35px" left="0%" top="17px" caption="44100" />
+                                  <Label stylename="label" height="16px" width="35px" left="0%" top="27px" caption="48000" />
+                                </ListBoxItems>
+                              </ComboBox>
+                            </ChildGadgets>
+                          </StackPanel>
+                          <StackPanel stylename="stack_panel" height="17dpi_px" width="335dpi_px" top="55px" margin_top="10dpi_px" />
+                          <StackPanel stylename="stack_panel" height="20dpi_px" width="372dpi_px" left="0dpi_px" top="72px">
+                            <ChildGadgets>
+                              <ComboBox stylename="combobox_panel" layout_id="bitdepth_combobox" layout_guid="fb5dfffe-d0de-46f1-a7bf-103069be2624" flow_index="14" height="20dpi_px" width="153dpi_px" left="6px" top="0px" margin_left="6dpi_px" bind_property="bitDepth">
+                                <ListBoxItems />
+                              </ComboBox>
+                              <ComboBox stylename="combobox_panel" layout_id="bitrate_combobox" layout_guid="614e17e5-bce4-476d-8a64-00a84dec9f7e" flow_index="15" height="20dpi_px" width="153dpi_px" left="209px" top="0px" margin_left="50dpi_px" bind_property="bitRate">
+                                <ListBoxItems>
+                                  <Label stylename="label" height="16px" width="7px" left="0%" top="17px" caption="8" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="26px" caption="16" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="29px" caption="24" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="27px" caption="32" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="43px" caption="40" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="59px" caption="48" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="75px" caption="56" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="91px" caption="64" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="107px" caption="80" />
+                                  <Label stylename="label" height="16px" width="14px" left="0%" top="123px" caption="96" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="139px" caption="112" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="155px" caption="128" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="171px" caption="144" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="187px" caption="160" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="203px" caption="192" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="219px" caption="224" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="235px" caption="256" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="251px" caption="320" />
+                                  <Label stylename="label" height="16px" width="21px" left="0%" top="267px" caption="512" />
+                                </ListBoxItems>
+                              </ComboBox>
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </StackPanel>
+                      <Label stylename="label" height="16px" width="41px" left="7dpi_px" top="8dpi_px" localise_caption="SoundEditor_Output" />
+                      <Label stylename="label" height="16px" width="73px" left="209dpi_px" top="8dpi_px" localise_caption="SoundEditor_SampleRate" />
+                      <Label stylename="label" height="16px" width="42px" left="7dpi_px" top="52dpi_px" localise_caption="SoundEditor_Quality" />
+                      <Label stylename="label" height="16px" width="83px" left="210dpi_px" top="52dpi_px" localise_caption="SoundEditor_BitRate" />
+                    </ChildGadgets>
+                  </Group>
+                </ChildGadgets>
+              </StackPanel>
+              <Label stylename="label" height="16px" width="73px" left="0px" top="404px" margin_left="11dpi_px" margin_top="6dpi_px" localise_caption="SoundEditor_AudioGroup" />
+              <ComboBox stylename="combobox_panel" layout_id="audiogroup_combobox" layout_guid="562b9408-ce88-48e9-a5ac-ed7be323e1a2" flow_index="16" height="20dpi_px" width="153dpi_px" left="0px" top="424px" margin_left="9dpi_px">
+                <ListBoxItems />
+              </ComboBox>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

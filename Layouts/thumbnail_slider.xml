@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ThumbnailSlider" layout_guid="fe81cb99-fefd-4696-845a-d2fa7fb3d194">
+    <StackPanel stylename="thumbnail_slider_stackpanel" height="15dpi_px" width="90dpi_px" right="4dpi_px" stack_order="RightToLeft">
+      <ChildGadgets>
+        <Image stylename="thumbnail_slider_thumb_large" layout_id="thumb_large" layout_guid="c038cd4e-5e4d-441f-a3c5-101548260b10" right="0px" top="1dpi_px" />
+        <Slider stylename="slider_grid" layout_id="slider" layout_guid="9e9c76e4-69ea-49a1-bdc7-9a98968fe075" width="75dpi_px" left="" right="9px" top="0dpi_px" margin_top="1dpi_px" value="5" />
+        <Image stylename="thumbnail_slider_thumb_small" layout_id="thumb_small" layout_guid="c5740766-21eb-41f1-8637-6a6eb7d87790" right="84px" top="3dpi_px" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+</Layouts>

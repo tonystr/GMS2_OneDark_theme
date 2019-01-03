@@ -1,0 +1,256 @@
+{
+	"code_default": {
+		colour: "#ff404080",
+        fontname: "Consolas",
+        size: 10,
+        style: "0",
+        antialias: 0
+	},
+
+	"code_default_mac": {
+        fontname: "Menlo",
+        size: 9
+	},
+
+	"code_normal_text": {
+		colour: "#FFC0C0C0",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_keywords": {
+		colour: "#FF71B8FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "1",
+        antialias: -1
+	},
+
+	"code_values": {
+		colour: "#FF8080FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_strings": {
+		colour: "#FF00FFFF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_comments": {
+		colour: "#ff5b995b",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_constants": {
+		colour: "#FF8080FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_built_in_variables": {
+		colour: "#FF5AE558",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_object_variables": {
+		colour: "#ffffb1b2",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_functions": {
+		colour: "#FF71B8FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_script_names": {
+		colour: "#FF71B8FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_resource_names": {
+		colour: "#FF8080FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_enums": {
+		colour: "#FF8080FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_enum_entries": {
+		colour: "#FF8080FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_macros": {
+		colour: "#FF5B5BFF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_local_variables": {
+		colour: "#ff99f8ff",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_global_variables": {
+		colour: "#ffff7eff",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_white_space_text": {
+		colour: "#FFFF0000",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_obsolete_symbols": {
+		colour: "#ffff6000",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_braces": {
+		colour: "#FF71B8FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "1",
+        antialias: -1
+	},
+
+	"code_line_number_text": {
+		colour: "#FFF4C340",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_readonly_line_number_text": {
+		colour: "#FF0000FF",
+        fontname: "Use Default",
+        size: -1,
+        style: "-1",
+        antialias: -1
+	},
+
+	"code_bookmark_line_number_text": {
+		colour: "#FF222222",
+        fontname: "Use Default",
+        size: 8,
+        style: "-1",
+        antialias: -1
+	},
+
+    "code_colours": {
+        background :            "#ff222222",
+        current_line_colour :   "#ff444444",
+        selection_colour :      "#60ffefcf",
+        highlight_colour :      "#30ffffff",
+        debugger_colour :       "#330000ff",
+        error_line_colour :     "#FF0000FF",
+        selected_line_colour :  "#ff9999CC",
+        line_change_colour :    "#ff9999CC",
+        status_bar_text_selected : "#ffB4A59D",
+        status_bar_text_left :  "#ff62534B",
+        bracket_match_success : "#60c8c800",
+        bracket_match_fail :    "#600000c8",
+        folded_region :         "#ff606060",
+        folded_region_tag:      "#ffff6060",
+        tab_lines_colour:       "#10ffffff"
+    },
+
+	"output_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	},
+
+	"search_output_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	},
+
+	"sourcecontrol_output_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	},
+
+	"breakpoints_output_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	},
+
+	"compile_errors_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	},
+
+	"syntax_errors_default": {
+		colour: "#FFC0C0C0",
+        fontname: "Open Sans",
+        size: 9,
+        style: "0",
+        antialias: 0
+	}
+}

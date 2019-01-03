@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="PlatformImageGeneration" layout_guid="202b05bd-c57a-4e7e-af29-cfda35ca5d0d">
+    <Window stylename="image_generation_window" localise_title="PlatformImage_GenerateTitle" window_flags="Default" accept_button_id="generate_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', 'auto']" grid_columnlayout="['1*', '1*']" column_spacing="4dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="44px" left="8px" localise_caption="PlatformImage_Images" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="image_generation_label" left="8px" localise_caption="PlatformImage_Icons" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <FileInputGadget stylename="file_input" layout_id="image_file_path" layout_guid="6f9d3aed-e79d-4ae6-85bc-0423176f4b2a" top="5px" margin_left="6px" margin_right="6px" margin_bottom="20px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <FileInputGadget stylename="file_input" layout_id="icon_file_path" layout_guid="f92399d6-f77a-4097-b695-86b5e2f3c767" top="5px" margin_left="6px" margin_right="6px" margin_bottom="20px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel">
+                  <ChildGadgets>
+                    <ScrollPanel stylename="generate_image_frame" width="45%" left="6px" margin_left="6px" margin_right="10px">
+                      <ChildGadgets>
+                        <Image stylename="generate_image_preview" layout_id="image_preview" layout_guid="9ca8b1de-7033-4c29-9a36-bd83cf78ab1a" height="100%" width="100%" margin_left="6dpi_px" margin_right="6dpi_px" margin_top="6dpi_px" margin_bottom="6dpi_px" />
+                      </ChildGadgets>
+                    </ScrollPanel>
+                    <StackPanel stylename="image_generation_stack" height="100%" width="100%" left="156px" margin_left="10px" margin_right="6px">
+                      <ChildGadgets>
+                        <Label stylename="label" left="4px" top="10px" margin_top="10px" margin_bottom="4px" localise_caption="PlatformImage_GenerationType" auto_ellipsis="True" />
+                        <ComboBox stylename="combobox_panel" layout_id="image_options" layout_guid="1d388c22-a4ee-41b6-93e6-e59524e6aa95" width="100%" left="0px" top="34px" margin_bottom="20px">
+                          <ListBoxItems />
+                        </ComboBox>
+                        <Label stylename="label" left="4px" top="78px" margin_bottom="4px" localise_caption="PlatformImage_BorderColour" auto_ellipsis="True" />
+                        <ColourSelectButton stylename="border_colour_select" layout_id="border_colour" layout_guid="27ecd2fd-de34-493b-8660-c96968d0fc38" width="100%" left="0px" top="98px" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="1" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel">
+                  <ChildGadgets>
+                    <ScrollPanel stylename="generate_image_frame" width="45%" left="6px" margin_left="6px" margin_right="10px">
+                      <ChildGadgets>
+                        <Image stylename="generate_image_preview" layout_id="icon_preview" layout_guid="518ee983-e7fb-4a03-bf0c-fcd436bec7d4" height="100%" width="100%" margin_left="6dpi_px" margin_right="6dpi_px" margin_top="6dpi_px" margin_bottom="6dpi_px" />
+                      </ChildGadgets>
+                    </ScrollPanel>
+                    <StackPanel stylename="image_generation_stack" height="100%" width="100%" left="156px" margin_left="10px" margin_right="6px">
+                      <ChildGadgets>
+                        <Label stylename="label" left="4px" top="10px" margin_top="10px" margin_bottom="4px" localise_caption="PlatformImage_GenerationType" auto_ellipsis="True" />
+                        <ComboBox stylename="combobox_panel" layout_id="icon_options" layout_guid="ce2f419a-d761-42a3-8d6a-c9349f6bf591" width="100%" left="0px" top="34px" margin_bottom="20px">
+                          <ListBoxItems />
+                        </ComboBox>
+                        <Label stylename="label" left="4px" top="78px" margin_bottom="4px" localise_caption="PlatformImage_BorderColour" auto_ellipsis="True" />
+                        <ColourSelectButton stylename="border_colour_select" layout_id="icon_border_colour" layout_guid="447cb146-bae2-4a81-8062-9e97075a24a1" width="100%" left="0px" top="98px" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="1" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="generate_button" layout_guid="185e3a3e-a558-4b60-8436-fab24a9b5e4e" height="24px" width="100dpi_px" right="10px" bottom="5px" margin_bottom="20px" localise_name="PlatformImage_Generate" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

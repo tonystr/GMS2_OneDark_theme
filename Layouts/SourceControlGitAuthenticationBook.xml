@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitAuthenticationBookSettingsGadget" layout_guid="7e3b2876-45b9-400e-aec5-795e4b79f4db">
+    <!--<Grid stylename="sourcecontrolgit_authenticationbook" grid_rowlayout="['24dpi_px', '1*']" grid_resize="ResizeLast">-->
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['24dpi_px']" grid_columnlayout="['1*', '1*']" column_spacing="6dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="sourcecontrolgit_auth_add_userpass" layout_guid="d911cf6a-afc1-408d-90f6-e3f3c09ce148" height="24px" width="100%" left="0dpi_px" localise_name="sourcecontrolgit_auth_add_userpass" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="sourcecontrolgit_auth_add_ssh" layout_guid="68db1fce-4f80-4695-8f7e-5a0df8c57475" height="24px" width="100%" right="0dpi_px" localise_name="sourcecontrolgit_auth_add_ssh" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <TableListBox stylename="extension_tablegadget_content" layout_id="auth_list" layout_guid="a860bfe8-22b9-4e2d-a83e-f42e268e62e3">
+            <ListBoxItems />
+          </TableListBox>
+        </ChildGadgets>
+      </Cell>
+    <!--</Grid>-->
+  </Layout>
+  <Layout layout_name="SourceControlGit_AuthRow" layout_guid="e3f0149a-f19c-4b02-8349-5501fadcb327">
+    <!--<StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeAll">-->
+    <ChildGadgets>
+      <CloseButton stylename="close_button_up" layout_id="close" left="0px" right="" />
+      <VerticalSeparator stylename="vertical_separator" left="21px" margin_left="6dpi_px" margin_right="6dpi_px" />
+      <Label stylename="label" layout_id="auth_type" layout_guid="a8507596-c5e6-4c0c-818b-a90958e8ed97" height="16px" width="150dpi_px" left="28px" auto_size="False" auto_ellipsis="True" />
+      <VerticalSeparator stylename="vertical_separator" left="134px" margin_left="6dpi_px" margin_right="6dpi_px" />
+      <Label stylename="label" layout_id="repo_name" layout_guid="6a7c6aff-5921-4012-ad4d-e9a8bdd578d3" height="16px" width="0px" left="141px" />
+    </ChildGadgets>
+    <!--</StackPanel>-->
+  </Layout>
+  <Layout layout_name="SourceControlGit_Auth_Edit_UserPass" layout_guid="9516f491-de93-4d94-9fd4-61f8390eb5fa">
+    <!--<Window stylename="default_window" height="176px" width="394dpi_px" localise_title="sourcecontrolgit_authentication_settings" window_flags="CloseButton, AutoSizeWidth, AutoSizeHeight">-->
+    <Client>
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" top="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Grid stylename="grid_container" layout_id="auth_user_pass" layout_guid="4264b886-cff7-469d-9819-62322c239b4c" top="0px" grid_rowlayout="['auto', 'auto', 'auto']" grid_columnlayout="['auto', '1*']" row_spacing="6dpi_px" column_spacing="6dpi_px" grid_resize="ResizeGrid">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="84px" localise_caption="sourcecontrolgit_auth_repository" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <TextBox stylename="text_box" layout_id="repository" layout_guid="e6699036-d093-4a49-9868-7b68f57b6cd8" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="59px" localise_caption="sourcecontrolgit_auth_username" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="1" flow_index="0">
+                <ChildGadgets>
+                  <TextBox stylename="text_box" layout_id="username" layout_guid="5f06de60-e8d9-4ada-b1d3-10dd3c4d2d40" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="54px" localise_caption="sourcecontrolgit_auth_password" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="1" flow_index="0">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+                    <ChildGadgets>
+                      <TextBox stylename="text_box" layout_id="password" layout_guid="4de40e08-fa9f-41ab-b9a0-fcbef61dd975" left="0px" top="0px" />
+                      <CheckBox stylename="checkbox_stack" layout_id="show_password" layout_guid="e32c0a2b-10a8-4c1d-9ad8-c04bc3c758fa" left="0dpi_px" top="24px" localise_name="Settings_ShowPassword" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+            <Grid stylename="grid_container" height="24dpi_px" top="109px" margin_top="6dpi_px" grid_columnlayout="['1*', '1*']" grid_resize="ResizeGrid">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="ok" layout_guid="97da8c0e-0438-46a7-92a8-49bae75a1c69" height="24px" width="100dpi_px" right="50dpi_px" localise_name="Button_OK" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="cancel" layout_guid="d805234c-1570-41b9-974b-1916d2dd7e8d" height="24px" width="100dpi_px" left="50dpi_px" localise_name="Button_Cancel" />
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </Client>
+    <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    <!--</Window>-->
+  </Layout>
+  <Layout layout_name="SourceControlGit_Auth_Edit_SSH" layout_guid="d83bb7cd-89fe-4e84-a217-495ab1319ccb">
+    <!--<Window stylename="default_window" height="206px" width="450dpi_px" localise_title="sourcecontrolgit_authentication_settings" window_flags="CloseButton, AutoSizeWidth, AutoSizeHeight">-->
+    <Client>
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" top="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Grid stylename="grid_container" layout_id="auth_ssh_keys" layout_guid="0b8206c4-3972-41a4-a9cf-f72db40a3870" top="0px" grid_rowlayout="['auto', 'auto', 'auto', 'auto']" grid_columnlayout="['auto', '1*']" row_spacing="6dpi_px" column_spacing="6dpi_px" grid_resize="ResizeGrid">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="84px" localise_caption="sourcecontrolgit_auth_repository" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <TextBox stylename="text_box" layout_id="repository" layout_guid="80afa894-6664-4d8c-a1a4-e1aa3948dd24" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="54px" localise_caption="sourcecontrolgit_auth_password" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="1" flow_index="0">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+                    <ChildGadgets>
+                      <TextBox stylename="text_box" layout_id="password" layout_guid="eba2f875-b5bc-4707-8ff0-96afbea54410" top="0px" />
+                      <CheckBox stylename="checkbox_stack" layout_id="show_password" layout_guid="f20e3155-58bf-4b8b-9169-43f0782783ab" left="0dpi_px" top="24px" localise_name="Settings_ShowPassword" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="98px" localise_caption="sourcecontrolgit_auth_public" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="1" flow_index="0">
+                <ChildGadgets>
+                  <FileInputGadget stylename="file_input" layout_id="public" layout_guid="f15c3552-026e-4111-9f28-a64deb1bc66c" width="" left="0px" right="30dpi_px" />
+                  <Button stylename="button_up" layout_id="copy_public_key" layout_guid="4e61080b-7bc2-4f56-a4d5-33e091dae371" localise_tooltip="Dialog_CopyToClipboard" width="24dpi_px" right="0dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Copy.png" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="3" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="104px" localise_caption="sourcecontrolgit_auth_private" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="3" column="1" flow_index="0">
+                <ChildGadgets>
+                  <FileInputGadget stylename="file_input" layout_id="private" layout_guid="13bc87ac-4528-4ae6-bf17-2aea85f3e85c" />
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+            <Grid stylename="grid_container" height="24dpi_px" top="139px" margin_top="6dpi_px" grid_columnlayout="['1*', '1*', '1*']" grid_resize="ResizeGrid">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="create_keypair" layout_guid="1ec0bcf8-0048-4585-bb33-03f051ee41d5" height="24px" localise_name="sourcecontrolgit_auth_create_keypair" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="ok" layout_guid="b42d6725-1c57-41f4-9639-3fe238a2bda0" height="24px" width="100dpi_px" localise_name="Button_OK" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="2" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="cancel" layout_guid="f822296b-0b26-4345-9eee-f2458976eeb6" height="24px" width="100dpi_px" localise_name="Button_Cancel" />
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </Client>
+    <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    <!--</Window>-->
+  </Layout>
+</Layouts>

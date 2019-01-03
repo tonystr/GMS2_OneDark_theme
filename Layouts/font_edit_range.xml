@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="fonteditor_range" layout_guid="560c9d25-7479-45b1-930b-470f3f9b5688">
+    <Window stylename="fixed_window" height="379dpi_px" width="496dpi_px" left="353dpi_px" top="52dpi_px" localise_title="fontrange_caption" help_tag="font_editor">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom" />
+          <Grid stylename="grid_container" grid_rowlayout="['1*', '1*']" row_spacing="10dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" left="0px" top="0px" grid_columnlayout="['70%', '1*']" grid_resize="None">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Group stylename="group_box_fixed" flow_index="1" height="111dpi_px" width="269dpi_px" left="10dpi_px" right="10dpi_px" top="10dpi_px" bottom="10dpi_px">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" grid_rowlayout="['1*', '1*', '1*']" grid_columnlayout="['3*', '2*', '3*']" row_spacing="5dpi_px" column_spacing="5dpi_px">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <NumericTextBox stylename="numeric_text_box" layout_id="fontrange_start_range" layout_guid="1758e1f8-0d7f-498b-a73b-18344f52a39f" max="65535"/>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" height="16px" width="13px" localise_caption="fontrange_till" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="2" flow_index="1">
+                              <ChildGadgets>
+                                <NumericTextBox stylename="numeric_text_box" layout_id="fontrange_end_range" layout_guid="4f9df8ad-3e05-4eee-9f89-1abebab90ed1" max="65535"/>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="0" flow_index="2">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="fontrange_normal_button" layout_guid="e5e6cd7f-52c1-48a5-a37e-38129d60ccbf" height="24px" left="4dpi_px" right="0dpi_px" localise_name="fontrange_normal" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="2" flow_index="3">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="fontrange_ascii_button" layout_guid="b304bfe0-0634-43ea-9641-84936315238d" height="24px" left="0dpi_px" right="4dpi_px" localise_name="fontrange_ascii" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="0" flow_index="4">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="fontrange_digits_button" layout_guid="7ec49d4f-c988-4943-9a0a-02bd3658f47e" height="24px" left="4dpi_px" right="0dpi_px" localise_name="fontrange_digits" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="2" flow_index="5">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="fontrange_letters_button" layout_guid="cbb921b5-76e1-4072-bf7a-facef047c1c0" height="24px" left="0dpi_px" right="4dpi_px" localise_name="fontrange_letters" />
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </Group>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" left="10dpi_px" right="10dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Button stylename="button_up" layout_id="fontrange_fromcode_button" layout_guid="10d986b1-1f3a-4a6a-8928-e86e5c0ce1de" height="24px" top="0px" localise_name="fontrange_from_code" />
+                          <Button stylename="button_up" layout_id="fontrange_fromfile_button" layout_guid="bf24a3a4-b58b-4ce3-a7a2-d9013bf32275" height="24px" top="34px" margin_top="10dpi_px" localise_name="fontrange_from_file" />
+                          <Button stylename="button_up" layout_id="fontrange_add_range" layout_guid="447121a3-5f25-43cd-aaae-b3579c3e8f65" height="24px" top="88px" margin_top="30dpi_px" localise_name="fontrange_add_range" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <MultiLineTextBox stylename="multiline_text_box" layout_id="fontrange_font_textbox" layout_guid="e87ab076-54a7-43a5-8008-3ff0047a6cbf" flow_index="1" height="161dpi_px" width="460dpi_px" left="5dpi_px" right="5dpi_px" top="0px" text="ABCDEFGHIJKLMNOPQRSTUVWXYZ" disable_rtl="true" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

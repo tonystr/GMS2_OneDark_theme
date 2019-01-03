@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ResourceTree_SearchDropDown" layout_guid="bc55beca-e8cf-41fa-a752-b8b1d63b95f9">
+    <Grid stylename="grid_container" margin_left="3dpi_px" margin_bottom="3dpi_px" grid_columnlayout="['65%', '1*']" grid_resize="ResizeGrid">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <ListBox stylename="list_box" layout_id="search_history" layout_guid="4384b57b-0309-4dbe-ae68-0d56038963ea" height="" width="" left="1dpi_px" right="1dpi_px" top="1dpi_px" bottom="5dpi_px">
+            <ListBoxItems />
+          </ListBox>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" top="6dpi_px" bottom="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', '1*']" grid_resize="ResizeGrid">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="37px" left="6dpi_px" localise_caption="ResourceTree_Search_Filters" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" layout_id="search_filter" layout_guid="ae665ce2-bbb6-47da-92a6-ec79393095a5" left="6dpi_px" localise_name="ResourceTree_Filter" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" layout_id="search_wholeword" layout_guid="87064c2f-1bdd-4fad-9c07-ae1b89edea0c" left="6dpi_px" localise_name="ResourceTree_WholeWord" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="search_reset" layout_guid="b5c00d38-16ef-4593-9f92-40e17e4d9266" height="24px" left="6dpi_px" right="3dpi_px" localise_name="ResourceTree_Search_Reset" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="search_go" layout_guid="3f963757-7352-4c12-b7c7-b56a6b66eb98" height="24px" left="3dpi_px" right="8dpi_px" localise_name="ResourceTree_Search_Go" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

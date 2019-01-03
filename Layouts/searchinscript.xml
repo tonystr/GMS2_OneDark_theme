@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SearchInScript" layout_guid="a4dbbc6f-669f-4c99-9d4b-9dba9ee07fb2">
+    <Grid stylename="searchinscript_grid_container" layout_id="searchreplace" layout_guid="f94e63f6-0e01-42bc-8e59-3c90e83b0ff7" height="86dpi_px" width="348dpi_px" right="-3dpi_px" top="-1dpi_px" grid_rowlayout="['24dpi_px', '24dpi_px', '24dpi_px', '6dpi_px']" row_spacing="0dpi_px">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" margin_bottom="2dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['1*', '30dpi_px']" grid_resize="ResizeGridHeight">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" bottom="0dpi_px" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="94px" left="12dpi_px" localise_caption="FindReplace_Title" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" layout_id="selection_only" layout_guid="5a9bb7fb-ca66-477e-95d7-b7d17854eca1" top="1dpi_px" localise_name="SearchInScript_SelectionOnly" stack_resize="None" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <CloseButton stylename="close_button_up" layout_id="close" layout_guid="ff816815-1a2f-4748-85ff-26b86a1cf98f" height="20dpi_px" right="7px" top="4dpi_px" margin_bottom="" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" right="6dpi_px" grid_columnlayout="['36dpi_px', '169dpi_px', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <ToggleButton stylename="button_up" layout_id="toggle_replace" layout_guid="19c58b68-d352-4919-be16-3d08b62d735b" flow_index="1" localise_tooltip="FindReplace_ToggleReplace" width="24dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="6dpi_px" colour="#FF929292" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Search\icon_IDE_FindReplace.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <ComboBox stylename="combobox_panel" layout_id="search" layout_guid="1f0fef28-bd69-424e-a6b8-f0acdd436244" width="" left="0dpi_px" textbox_style="combobox_search_textbox" allow_edit="true" localise_default_caption="SearchInScript_Search">
+                </ComboBox>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" left="6px" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <ToggleButton stylename="button_up" layout_id="whole_word" layout_guid="b5f188f9-c906-4328-a774-b321ebe8e0cb" localise_tooltip="FindReplace_WholeWord" width="24dpi_px" left="0px" colour="#FF929292" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Search\icon_IDE_wholeword.png" />
+                    <ToggleButton stylename="button_up" layout_id="case_sensitive" layout_guid="a01bba32-8879-4fae-bc83-fb0a5184bd47" localise_tooltip="FindReplace_CaseSensitive" width="24dpi_px" left="30px" margin_left="6dpi_px" colour="#FF929292" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Search\icon_IDE_casesensitive.png" />
+                    <VerticalSeparator stylename="vertical_separator" left="60px" margin_left="6dpi_px" margin_right="6dpi_px" />
+                    <Button stylename="button_up" layout_id="prev" layout_guid="52548595-d084-4967-a717-3ecb6af12046" localise_tooltip="FindReplace_FindPrevious" width="24dpi_px" left="67px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeft.png" />
+                    <Button stylename="button_up" layout_id="next" layout_guid="671c4d8e-0ca7-4911-b81e-b3d27225dcec" localise_tooltip="FindReplace_FindNext" width="24dpi_px" left="96px" margin_left="5px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowRight.png" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" right="6dpi_px" grid_columnlayout="['36dpi_px', '169dpi_px', '1*']" grid_resize="ResizeGrid">
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <ComboBox stylename="combobox_panel" layout_id="replace" layout_guid="f9a02546-e02d-4539-b0b5-f66312ca7277" height="24dpi_px" width="169dpi_px" left="0dpi_px" top="0dpi_px" textbox_style="combobox_search_textbox" allow_edit="true" localise_default_caption="SearchInScript_Replace" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" top="0dpi_px">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="replace_next" layout_guid="2eee056b-bd2e-4ebf-9a25-c2d9ff5c60a8" flow_index="1" localise_tooltip="FindReplace_ReplaceNext" width="24dpi_px" left="6px" margin_left="6px" margin_right="6dpi_px" colour="#FF929292" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Search\icon_IDE_replacesingle.png" />
+                    <Button stylename="button_up" layout_id="replace_all" layout_guid="162a2e3f-45c1-4c5e-a289-371c48826aed" flow_index="2" localise_tooltip="FindReplace_ReplaceAll" width="24dpi_px" left="36px" top="5px" margin_right="0dpi_px" colour="#FF929292" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Search\icon_IDE_replaceall.png" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

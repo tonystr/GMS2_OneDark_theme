@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="IncludedFiles" layout_guid="9237cec8-fb52-4f2f-9f1c-1ed045e73a9c">
+    <Window stylename="included_file_window" height="400dpi_px" width="300dpi_px" left="413dpi_px" top="36dpi_px" localise_title="IncludedFile_Title" help_tag="included_files">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="included_files_grid" height="100%" width="100%" margin_top="10dpi_px" grid_rowlayout="['auto', 'auto', 'auto', '1*']" grid_columnlayout="['auto', '1*']" row_spacing="10dpi_px" column_spacing="10dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="59px" left="4dpi_px" margin_right="8dpi_px" localise_caption="IncludedFile_FileName" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <TextBox stylename="text_box" layout_id="FileNameTextbox" layout_guid="583c9604-81d3-4e74-b149-2ba959249f1d" left="0dpi_px" right="4dpi_px" bind_property="fileName" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="48px" left="4dpi_px" margin_right="8dpi_px" localise_caption="IncludedFile_FileSize" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="FileSizeLabel" layout_guid="a067f835-266b-4a23-8514-b935bd68c385" height="16px" width="35px" left="0dpi_px" localise_caption="IncludedFile_FileSizeKB" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="60px" left="4dpi_px" margin_right="8dpi_px" localise_caption="IncludedFile_Platforms" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="1" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" stack_resize="ResizeHeight">
+                  <Gadgets>
+                    <Button stylename="button_up" layout_id="AllButton" layout_guid="19f4ae47-b7e8-4830-8590-1cf498d36173" height="24px" width="70dpi_px" left="0px" margin_right="10dpi_px" localise_name="IncludedFile_AllPlatforms" />
+                    <Button stylename="button_up" layout_id="NoneButton" layout_guid="f9109d87-951e-4426-9d41-e8f0c3afcb1b" height="24px" width="70dpi_px" left="80px" top="123dpi_px" localise_name="IncludedFile_NoPlatforms" />
+                  </Gadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" rowspan="1" columnspan="2">
+              <ChildGadgets>
+                <ListBox stylename="list_box" layout_id="platformList" layout_guid="6ae8935c-9b06-47de-9bef-89de905b6be3" width="" left="4dpi_px" right="4dpi_px">
+                  <ListBoxItems />
+                </ListBox>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="GreyscaleEffectSettings" layout_guid="6fcfb429-d421-4ed2-831e-c5f114f37b96">
+    <ScrollPanel stylename="default_scrollpanel" height="50dpi_px" scrollpanel_flags="None">
+      <ChildGadgets>
+        <Slider stylename="slider_grid" layout_id="intensity_slider" layout_guid="ccf8ce6c-249e-47d8-961f-3bd223968683" left="12dpi_px" right="12dpi_px" min_value="0" max_value="100" value="100" mindrag_increment="1" localise_name="ImageEditor_IntensityLabel" label_style="slider_grid_label" has_textbox="True" textbox_style="slider_grid_textbox" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="BrushSizeToolbar" layout_guid="57ac8b81-e84e-4a78-a70f-cb83effa146f">
+    <StackPanel stylename="stack_panel" left="0px" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Button stylename="button_up" layout_id="brush_button" layout_guid="67801f08-1c03-462c-ae67-42220dccf73e" width="24dpi_px" margin_bottom="4dpi_px" mouse_events="false" />
+        <Slider stylename="ie_toolbar_slider" layout_id="size_slider" layout_guid="1f9c63aa-62fa-4f6c-817f-f661b2a29642" width="200dpi_px" left="38px" margin_left="10dpi_px" min_value="1" value="1" localise_name="ImageEditor_BrushSizeLabel" />
+        <CheckBox stylename="checkbox_stack" layout_id="smooth_check" layout_guid="90f90063-8265-4ae8-9030-9f094e598030" left="248px" margin_left="10dpi_px" localise_name="ImageEditor_BrushSmoothLabel" stack_order="RightToLeft" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_MagicWand" layout_guid="c2a9e2e7-b12a-4fb2-8b5e-b11f3dbc86af">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Slider stylename="ie_toolbar_slider" layout_id="tolerance_slider" layout_guid="157a20fb-80b9-4682-89ed-e25687c0cff8" width="250dpi_px" left="0px" localise_name="ImageEditor_ToleranceLabel" label_style="ie_toolbar_slider_label" />
+        <CheckBox stylename="checkbox_stack" layout_id="colour_only_check" layout_guid="b51adeb2-8992-44fe-9a7a-7b8660ce2bf8" left="260px" margin_left="10dpi_px" localise_name="ImageEditor_ColourOnlyLabel" stack_order="RightToLeft" />
+        <CheckBox stylename="checkbox_stack" layout_id="contiguous_check" layout_guid="bf6fee26-a803-4e31-ab95-1d317805a39a" left="365px" margin_left="10dpi_px" localise_name="ImageEditor_ContiguousLabel" stack_order="RightToLeft" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_TextTool" layout_guid="983b8136-95de-435a-b391-6cb2f51ef6e5">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Label stylename="label" height="16px" width="25px" left="0px" caption="font:" />
+        <ComboBox stylename="combobox_panel" layout_id="combo_fonts" layout_guid="0e468559-f70f-406e-8c59-73be82c0f349" left="29px" margin_left="4dpi_px">
+          <ListBoxItems />
+        </ComboBox>
+        <Label stylename="label" height="16px" width="29px" left="159px" margin_left="10dpi_px" caption="style:" />
+        <ComboBox stylename="combobox_panel" layout_id="combo_stylename" layout_guid="63dccaf1-ece9-4583-a3b1-b2cf030d96e2" left="192px" margin_left="4dpi_px">
+          <ListBoxItems />
+        </ComboBox>
+        <VerticalSeparator stylename="vertical_separator" left="324px" margin_left="12dpi_px" margin_right="12dpi_px" />
+        <Label stylename="label" height="16px" width="25px" left="337px" caption="size:" />
+        <NumericTextBox stylename="numeric_text_box" layout_id="textbox_fontsize" layout_guid="20c99b98-74bb-44ff-abdb-77182a528f80" left="366px" margin_left="4dpi_px" />
+        <CheckBox stylename="checkbox_stack" layout_id="checkbox_aa" layout_guid="0a2b92ad-ba45-4cff-98ca-ea942e0a013f" left="428px" margin_left="12dpi_px" localise_name="ImageEditor_TextTool_AA" stack_order="RightToLeft" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_FillTool" layout_guid="f39fa6e3-30f8-4d0d-8fd2-b37ef437fe31">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Slider stylename="ie_toolbar_slider" layout_id="tolerance_slider" layout_guid="aead846d-f8f5-4277-b961-a72c9f5bf564" localise_name="ImageEditor_ToleranceLabel" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_Shape" layout_guid="9eaacb70-bfeb-44d1-af4e-add984328976">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <RadioGroup stylename="ie_toolbar_radiogroup" layout_id="fill_radio_group" layout_guid="3a51b987-b203-4c2a-9adb-e4292344d3ef" width="200dpi_px" left="0px">
+          <ChildGadgets>
+            <StackPanel stylename="resizing_stack_panel">
+              <Gadgets>
+                <RadioButton stylename="radiobutton_stack" layout_id="stroke_button" layout_guid="7e9a0536-7f03-4d93-9948-243301e4f2a1" left="5px" top="5px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_FillStyle_Stroke" />
+                <RadioButton stylename="radiobutton_stack" layout_id="fill_button" layout_guid="285fcc76-48a8-40da-a26e-fc4b432aac54" left="82px" top="36px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_FillStyle_Fill" />
+                <RadioButton stylename="radiobutton_stack" layout_id="both_button" layout_guid="ea76e583-fdc8-4bca-a401-49b03e0f1b57" left="138px" top="36px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_FillStyle_Both" />
+              </Gadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </RadioGroup>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_ArcTool" layout_guid="79ab5dc7-7770-4df3-b055-ec5f0ac68fea">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Slider stylename="ie_toolbar_slider" layout_id="quality_slider" localise_name="ImageEditor_Arc_Iterations" width="250dpi_px" min_value="1" max_value="50" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="ImageEditorToolbar" layout_guid="db57b1ef-3c46-49ac-bce8-619515f2d994">
+    <StackPanel stylename="image_editor_ide_toolbar" layout_id="toolbar_stack" layout_guid="a45157cf-b094-4b5b-b981-3d17e5cbdebf">
+      <ChildGadgets>
+        <Image stylename="image" layout_id="tool_image" layout_guid="46a23644-8b73-4a88-bacf-96cf864306bd" height="24dpi_px" width="24dpi_px" left="10px" margin_left="10dpi_px" image_flags="Stretch, Centre" />
+        <VerticalSeparator stylename="vertical_separator" left="44px" margin_left="10dpi_px" margin_right="16dpi_px" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="Tool_Settings_FreeRotateTool" layout_guid="39836af3-0ec0-48ae-979f-4b76f9f1fe4f">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Slider stylename="ie_toolbar_slider" layout_id="rotation_slider" layout_guid="81983c68-ca6a-4d0c-8af6-d991bf03842c" left="0px" max_value="360" slider_float_precision="1" localise_name="ImageEditor_RotationLabel" label_style="ie_toolbar_slider_label" />
+        <CheckBox stylename="checkbox_stack" layout_id="interpolate_checkbox" layout_guid="af090c37-ac1e-46fc-b02c-0968b5195729" left="242px" margin_left="12dpi_px" localise_name="ImageEditor_RotationInterpolateLabel" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="BlurEffectSettings" layout_guid="a4ff480d-c0e2-4bdb-ab45-89bceb33e1c9">
+    <Grid stylename="grid_container" height="150dpi_px" grid_rowlayout="['2*', '1*']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_columnlayout="['1*', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <RadioGroup stylename="group_box_fixed" layout_id="blur_direction_group" layout_guid="b0e3be3a-1ada-4580-bdcc-9d8d3d2f20fc" colour="#00000000" name="Radio Group">
+                  <ChildGadgets>
+                    <StackPanel stylename="resizing_stack_panel" stack_order="TopToBottom">
+                      <Gadgets>
+                        <RadioButton stylename="radiobutton_stack" left="5px" top="5px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_Horizontal" />
+                        <RadioButton stylename="radiobutton_stack" left="127px" top="36px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_Vertical" />
+                        <RadioButton stylename="radiobutton_stack" left="249px" top="67px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ImageEditor_Both" />
+                      </Gadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </RadioGroup>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" left="10dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="218px" left="4dpi_px" top="0px" localise_caption="ImageEditor_BlurType" />
+                    <ComboBox stylename="combobox_panel" layout_id="blur_type_combo" layout_guid="79d5d4ed-a4e4-4543-8c96-e42ef8094129" left="0px" top="20px">
+                      <ListBoxItems />
+                    </ComboBox>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Slider stylename="slider_grid" layout_id="intensity_slider" left="8dpi_px" right="8dpi_px" min_value="1" max_value="30" value="1" mindrag_increment="1" localise_name="ImageEditor_IntensityLabel" label_style="slider_grid_label" has_textbox="True" textbox_style="slider_grid_textbox" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

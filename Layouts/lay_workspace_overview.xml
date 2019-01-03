@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="WorkspaceOverviewListItem" layout_guid="24469495-fb30-4a17-895b-da720b1e162b">
+    <Grid stylename="grid_container" height="20dpi_px" left="0px" grid_columnlayout="['16dpi_px', '1*', 'auto']" column_spacing="10px" grid_resize="ResizeGridWidth">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Image stylename="image" layout_id="icon" layout_guid="30f94322-4544-40e8-92cb-85cd3b6b1df4" height="16dpi_px" width="16dpi_px" margin_left="6px" image_flags="Centre, KeepAspectRatio, Downscale" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" layout_id="caption" layout_guid="8d9d9d0f-6646-436c-9584-4cb786eb6a30" height="16px" width="0px" left="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <CloseButton stylename="close_button_up" layout_id="btn_close" layout_guid="1a124994-9312-4982-86d6-bb4bd11f3e58" height="16dpi_px" right="" top="" margin_right="2dpi_px" margin_bottom="" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="WorkspaceOverviewWindow" layout_guid="8e603396-f6c3-4b03-9950-d28f6cacbe3f">
+    <Window stylename="default_blend_window" localise_title="WorkspaceOverview_Title" window_flags="Borderless, CloseButton, ResizeButton, ScrollBars, DockingDisabled, DesktopTransferDisabled, IgnoreLayoutSerialization">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6px" right="6px" top="0px" bottom="6px" grid_rowlayout="['auto', '1*']" grid_columnlayout="['auto', 'auto']" row_spacing="4px" column_spacing="10px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="68px" left="1px" localise_caption="WorkspaceOverview_Tabs" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="label_active" layout_guid="bb27762d-2b38-4650-980d-ee3f049307be" height="16px" width="87px" left="0px" localise_caption="WorkspaceOverview_ActiveWindows" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ListBox stylename="list_box_dial_inner" layout_id="listbox_workspaces" layout_guid="16c8558d-2056-4d17-a54f-4b8321adcf65">
+                  <ListBoxItems />
+                </ListBox>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <ListBox stylename="list_box_dial_inner" layout_id="listbox_active" layout_guid="b6ba55f7-209a-4a50-98d1-2a9230ac7ac5">
+                  <ListBoxItems />
+                </ListBox>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BlendWindowFrame" layout_guid="0d9b47bf-35fe-4d09-b089-30cb2385bb82" />
+    </Window>
+  </Layout>
+</Layouts>

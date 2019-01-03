@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="DesktopDockGrid" layout_guid="545daa38-6f82-4697-bf23-96200deb6b0a">
+    <Grid stylename="grid_container" height_flags="ScaleToFit" width_flags="ScaleToFit" width="100%" height="100%" grid_rowlayout="['1*', '10%']" grid_columnlayout="['10%', '1*', '10%']" splitter_thickness="7dpi_px" colour="#ff232323">
+      <ColumnSplitter stylename="vertical_grid_splitter" layout_id="left_splitter" height="664.25px" width="5px" left="100px" top="0px" row="0" column="1" rowspan="2" columnspan="1" />
+      <RowSplitter stylename="horizontal_grid_splitter" layout_id="bottom_splitter" height="5px" width="969.0046px" left="105px" top="559px" row="1" column="1" rowspan="1" columnspan="1" />
+      <ColumnSplitter stylename="vertical_grid_splitter" layout_id="right_splitter" height="664.25px" width="5px" left="1074px" top="0px" row="0" column="2" rowspan="2" columnspan="1" />
+    </Grid>
+  </Layout>
+  <Layout layout_name="dock_container_L" layout_guid="bb3e0dcd-a552-42e8-b19c-b594d1890c7f">
+    <ScrollPanel stylename="dock_scroll_panel">
+      <ChildGadgets>
+        <ScrollPanel stylename="scroll_panel" layout_id="main_panel" layout_guid="64852436-c93d-4a8a-9e27-961edea13848" left="17dpi_px" right="0px" top="0px" bottom="17dpi_px" />
+        <Button stylename="dock_button_left" layout_id="expand_button" layout_guid="098f3899-8443-4d91-8322-152d75ac090c" width="17dpi_px" left="0px" top="0px" bottom="0px" icon="Dock\dock_right.png"/>
+        <ScrollPanel stylename="vdock_filler" height="17dpi_px" left="17dpi_px" right="0dpi_px" bottom="0dpi_px" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="dock_container_R" layout_guid="8b2961ef-b331-4f39-9813-0ffbd58cad8c">
+    <ScrollPanel stylename="dock_scroll_panel">
+      <ChildGadgets>
+        <ScrollPanel stylename="scroll_panel" layout_id="main_panel" layout_guid="6c4cb25c-4357-429f-8156-eda90a86bbef" left="0px" right="17dpi_px" top="0px" bottom="17dpi_px" />
+        <Button stylename="dock_button_right" layout_id="expand_button" layout_guid="16766b0f-8314-4f74-addf-725e336574c3" width="17dpi_px" right="0px" top="0px" bottom="0px" icon="Dock\dock_left.png" />
+        <ScrollPanel stylename="vdock_filler" height="17dpi_px" right="17dpi_px" left="0dpi_px" bottom="0dpi_px" mouse_events="false" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="dock_container_B" layout_guid="3491bbd6-7bf2-4dd8-b4e2-f52f98a0485c">
+    <ScrollPanel stylename="dock_container_bottom" left="-1dpi_px" right="-1dpi_px">
+      <ChildGadgets>
+        <Button stylename="dock_button_bottom" layout_id="expand_button" layout_guid="a641af27-9160-40f3-b3b0-57e47609ff2d" height="17dpi_px" left="0px" right="0px" bottom="0px" icon="Dock\dock_up.png" />
+        <ScrollPanel stylename="scroll_panel" layout_id="main_panel" layout_guid="d509ce0f-e39a-432e-b820-4fb2985fd925" left="7px" right="7px" top="0px" bottom="17dpi_px" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="DockItemFrame" layout_guid="80ce3fd7-2d4a-46be-9483-6697472721c1">
+    <Cell row="0" column="1">
+      <ChildGadgets>
+        <TitleBar layout_id="window_title_bar" stylename="dock_titlebar_focus" label_style="dock_item_label" height="25dpi_px">
+          <ChildGadgets>
+            <Button layout_id="collapse_button" stylename="collapse_button_up" right="8dpi_px" icon="Dock\dock_item_arrowD.png" />
+          </ChildGadgets>
+        </TitleBar>
+      </ChildGadgets>
+    </Cell>
+    <Cell row="1" column="1" layout_id="window_client_panel" />
+  </Layout>
+</Layouts>

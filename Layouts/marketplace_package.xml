@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ResourceSelectorExport" layout_guid="db2379d8-9665-4c99-b589-a3db6a50df3e">
+    <Grid stylename="grid_container" grid_rowlayout="['auto', '20px', 'auto', '1*']" grid_columnlayout="['1*', 'auto', '1*']">
+      <Cell row="0" column="0" flow_index="0">
+        <Gadgets>
+          <Label stylename="label" height="16px" width="368px" left="7px" top="7dpi_px" margin_bottom="4dpi_px" localise_caption="Marketplace_CreatePackageDesc" />
+        </Gadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="42px" left="12px" top="4dpi_px" margin_top="4dpi_px" margin_bottom="4dpi_px" localise_caption="Marketplace_ProjectLabel" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="2" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="84px" left="12px" top="4dpi_px" margin_top="4dpi_px" margin_bottom="4dpi_px" localise_caption="Marketplace_AssetPackageLabel" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="default_scrollpanel" height="" width="" left="4dpi_px" right="0px" top="0px" bottom="0dpi_px">
+            <ChildGadgets>
+              <ResourceSelectorTreeView stylename="gadget_treeview" layout_id="source_treeview" layout_guid="c8e752e9-035d-4394-8484-d04da0734b96" left="0dpi_px" top="0dpi_px" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" margin_left="8px" margin_right="8px" stack_order="TopToBottom" stack_resize="ResizeAll">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="button_add" layout_guid="00f66e94-6fda-4706-a395-b4509b40f76a" height="24px" width="100dpi_px" top="0px" margin_bottom="60px" localise_name="Marketplace_Package_AddLabel" />
+              <Button stylename="button_up" layout_id="button_add_all" layout_guid="4f60ca67-6d3d-4943-99d4-fcd537085dfe" height="24px" width="100dpi_px" top="84px" margin_bottom="60px" localise_name="Marketplace_Package_AddAllLabel" />
+              <Button stylename="button_up" layout_id="button_remove" layout_guid="745d7c13-3d42-4900-8eb0-ef6e03c2c610" height="24px" width="100dpi_px" top="168px" margin_bottom="60px" localise_name="Marketplace_Package_RemoveLabel" />
+              <Button stylename="button_up" layout_id="button_remove_all" layout_guid="2a9645d5-5471-4e7d-a200-a1aabf584907" height="24px" width="100dpi_px" top="252px" localise_name="Button_Remove_All" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="2" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="default_scrollpanel" height="" width="" left="0px" right="4dpi_px" top="0px" bottom="0dpi_px">
+            <ChildGadgets>
+              <ResourceSelectorTreeView stylename="gadget_treeview" layout_id="dest_treeview" layout_guid="0fe44400-b610-4ecf-a6f4-45f5829410ec" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ResourceSelectorImport" layout_guid="c6da2365-d8e9-46ce-ae88-d78d84f37758">
+    <Window stylename="default_window" height="635dpi_px" width="792dpi_px" localise_title="Extension_Import_Resources_Title" accept_button_id="ok_button">
+      <Client>
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="394px" left="7dpi_px" top="7dpi_px" localise_caption="Marketplace_Package_ImportDesc" />
+          <Button stylename="button_up" layout_id="cancel_button" layout_guid="54a25efc-aad7-40e6-84df-19fca3a5b88b" height="24px" width="100dpi_px" right="8dpi_px" bottom="4dpi_px" localise_name="Button_Cancel" />
+          <Button stylename="button_up" layout_id="ok_button" layout_guid="3e9121b8-05af-41e9-8a0c-7eae92e6ce86" height="24px" width="100dpi_px" left="8dpi_px" bottom="4dpi_px" localise_name="Button_Import" />
+          <Label stylename="label" height="16px" width="109px" left="12dpi_px" top="44dpi_px" localise_caption="Marketplace_Package_PackageResources" />
+          <ScrollPanel stylename="default_scrollpanel" height="" width="40%" left="4dpi_px" top="70dpi_px" bottom="80dpi_px">
+            <ChildGadgets>
+              <ResourceSelectorTreeView stylename="gadget_treeview" layout_id="source_treeview" layout_guid="0fe44400-b610-4ecf-a6f4-45f5829410ec" />
+              <ScrollPanel stylename="default_scrollpanel" layout_id="left_overlay" layout_guid="f62f5369-2f7f-4177-be43-7893a6bb53cc" colour="#80000000" mouse_events="true"/>
+            </ChildGadgets>
+          </ScrollPanel>
+          <ScrollPanel stylename="default_scrollpanel" height="" width="40%" right="4dpi_px" top="70dpi_px" bottom="80dpi_px">
+            <ChildGadgets>
+              <ResourceSelectorTreeView stylename="gadget_treeview" layout_id="dest_treeview" layout_guid="c8e752e9-035d-4394-8484-d04da0734b96" left="0dpi_px" top="0dpi_px" />
+              <ScrollPanel stylename="default_scrollpanel" layout_id="right_overlay" layout_guid="6ae57e31-9d29-491b-9113-4cce34eff0b5" colour="#80000000" mouse_events="true"/>
+            </ChildGadgets>
+          </ScrollPanel>
+          <Label stylename="label" height="16px" width="115px" left="60%" top="44dpi_px" localise_caption="Marketplace_Package_ImportResources" />
+          <Button stylename="button_up" layout_id="button_add" layout_guid="3b6b6109-15a3-4b6b-bcdc-cd0f2f3e3334" height="24px" width="12%" top="25%" localise_name="Marketplace_Package_AddLabel" />
+          <Button stylename="button_up" layout_id="button_add_all" layout_guid="55771bac-e149-4758-9b6e-a19e483132b7" height="24px" width="12%" top="40%" localise_name="Marketplace_Package_AddAllLabel" />
+          <Button stylename="button_up" layout_id="button_remove" layout_guid="aca8ff56-b6bc-4500-8aa8-189a8c88cb93" height="24px" width="12%" top="55%" localise_name="Extension_Import_Button_Remove" />
+          <Button stylename="button_up" layout_id="button_remove_all" layout_guid="43914149-d499-4efc-86a1-79f00e2ef67c" height="24px" width="12%" top="70%" localise_name="Button_Remove_All" />
+          <CheckBox stylename="checkbox_stack" layout_id="new_project_checkbox" layout_guid="4449d0dd-f3e1-4ef3-8f98-688985f43772" left="8dpi_px" bottom="44dpi_px" localise_name="Marketplace_Package_ImportToNewProject" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="AssetPackageProperties2" layout_guid="a383b30f-6df1-4e56-bf33-58984387089c">
+    <Window stylename="fixed_window" height="403dpi_px" width="555dpi_px" localise_title="Marketplace_CreatePackage">
+      <Client>
+        <ChildGadgets>
+          <Label stylename="label" height="16dpi_px" width="415dpi_px" left="12dpi_px" top="12dpi_px" localise_caption="Marketplace_ChoosePackageId" />
+          <Label stylename="label_right" layout_id="package_name_label" layout_guid="93e720a4-3586-476c-9497-10bf012a0bd2" height="16dpi_px" width="120dpi_px" left="0dpi_px" top="57dpi_px" localise_caption="Marketplace_PackageName" />
+          <Label stylename="label_right" height="16dpi_px" width="120dpi_px" left="0dpi_px" top="95dpi_px" localise_caption="Marketplace_PackageId" />
+          <Label stylename="label_right" height="16dpi_px" width="120dpi_px" left="0dpi_px" top="130dpi_px" localise_caption="Marketplace_PackageVersion" />
+          <ComboBox stylename="combobox_panel" layout_id="package_id_combo" layout_guid="8cb18a8d-414c-4848-85bc-f19492dc3704" width="214dpi_px" left="140dpi_px" top="52dpi_px">
+            <ListBoxItems />
+          </ComboBox>
+          <Label stylename="label" layout_id="package_id_label" layout_guid="a7c2c104-4bf9-4353-bd1c-5e844f0fe9a2" height="16dpi_px" width="0dpi_px" left="141dpi_px" top="95dpi_px" />
+          <NumericTextBox stylename="numeric_text_box" layout_id="version_box_1" layout_guid="51e9ad61-b12b-4674-8d47-0c49913bc301" left="140dpi_px" top="130dpi_px" max="999" />
+          <NumericTextBox stylename="numeric_text_box" layout_id="version_box_2" layout_guid="039e5f79-640c-4ecf-9438-05b0c1eba914" left="200dpi_px" top="130dpi_px" max="999" />
+          <NumericTextBox stylename="numeric_text_box" layout_id="version_box_3" layout_guid="d4980c69-7676-4e6b-baef-cb8692522ab4" left="260dpi_px" top="130dpi_px" max="999" />
+          <Button stylename="button_up" layout_id="button_cancel" layout_guid="cd4be98d-eb36-4580-9ff1-3e08e0f4d41e" height="24dpi_px" width="100dpi_px" right="140dpi_px" bottom="10dpi_px" localise_name="Button_Cancel" />
+          <Button stylename="button_up" layout_id="button_next" layout_guid="ee0db2f1-c419-4a19-86a6-cc694eb4729e" height="24dpi_px" width="100dpi_px" right="10dpi_px" bottom="10dpi_px" localise_name="Button_Next" />
+          <ComboBox stylename="combobox_panel" layout_id="publisher_account_combo" layout_guid="79b85a7b-6d92-4ebe-8b07-e00f5c6cf6ca" width="214dpi_px" left="140dpi_px" top="52dpi_px">
+            <ListBoxItems />
+          </ComboBox>
+          <CheckBox stylename="checkbox_stack" layout_id="new_package_check" layout_guid="062ca7be-9af7-439c-814e-a3ac6383f74c" left="382dpi_px" top="53dpi_px" name="Create new package ID" />
+          <TextBox stylename="text_box" layout_id="package_id_textbox" layout_guid="99846f79-6472-4df4-a079-63f88f94a4e0" width="39.55775%" left="140dpi_px" top="92dpi_px" />
+          <Label stylename="label" layout_id="create_warning_label" layout_guid="21ff4c99-ab5c-4d46-9b75-6c4540908d4b" height="16dpi_px" width="444dpi_px" left="16dpi_px" top="243dpi_px" localise_caption="MPackage_PackageIdImportant" />
+          <Label stylename="label" layout_id="category_label" layout_guid="b15ba466-9e4e-4404-83d3-c852622823cb" height="16dpi_px" width="288dpi_px" left="16dpi_px" top="270dpi_px" localise_caption="MPackage_CategorySetting_Tutorial" />
+          <Label stylename="label_right" height="16dpi_px" width="120dpi_px" left="0dpi_px" top="167dpi_px" localise_caption="MPackage_PackageType" />
+          <ComboBox stylename="combobox_panel" layout_id="package_type_combo" layout_guid="517d92f1-30ec-4f71-aacf-83167b10316c" width="211dpi_px" left="140dpi_px" top="165dpi_px">
+            <ListBoxItems />
+          </ComboBox>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="PackageUpload" layout_guid="43d69efd-7660-4632-8d86-53d9974191ed">
+    <Window stylename="fixed_window" height="182dpi_px" width="370dpi_px" localise_title="MPackage_PackageUploadTitle">
+      <Client>
+        <ChildGadgets>
+          <ProgressBar stylename="progressbar_frame" layout_id="progress_bar" layout_guid="f48aa33e-fdc7-4fe9-9fca-6f87f7ea21b7" width="175dpi_px" top="88dpi_px" />
+          <Label stylename="label" layout_id="progress_label" layout_guid="00005c07-9026-4497-afdb-11d66e3bef12" height="16px" width="262px" top="65dpi_px" localise_caption="MPackage_PackageUploading" />
+          <Label stylename="confirm_dialog_label" layout_id="message_label" layout_guid="acab72f9-5408-47f3-b4f2-48675fe84f9e" height="34dpi_px" width="511dpi_px" left="22dpi_px" top="6dpi_px" margin_left="20dpi_px" margin_right="20dpi_px" localise_caption="MPackage_PackageCreated" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="create_new_asset_packageid_error" layout_guid="68a9150b-d215-4e4e-809f-54c265db8a6b">
+    <Window stylename="fixed_window" height="224dpi_px" width="486dpi_px" localise_title="MPackage_PackageIDInvalid" accept_button_id="button_ok">
+      <Client>
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="button_ok" layout_guid="5ef4ad0f-4d98-47d0-a3c0-57bc977e5fc0" height="24dpi_px" width="140dpi_px" bottom="10dpi_px" localise_name="Button_OK" />
+          <Label stylename="label" layout_id="label_error" layout_guid="97fb4a65-98d0-484f-89ad-008c727f2e93" height="16dpi_px" width="207dpi_px" left="10dpi_px" top="10dpi_px" localise_caption="MPackage_PackageIDInvalid" />
+          <Label stylename="label" height="16dpi_px" width="130dpi_px" left="20dpi_px" top="40dpi_px" localise_caption="MPackage_PackageIdRestrictions" />
+          <Label stylename="label" layout_id="label_rule1" layout_guid="180fddc5-ef29-486e-bc4b-e19d908205ee" height="16dpi_px" width="305dpi_px" left="30dpi_px" top="65dpi_px" localise_caption="MPackage_PackageIdRule1" />
+          <Label stylename="label" layout_id="label_rule2" layout_guid="07b74e76-caf4-4294-965a-c7d150bcb39f" height="16dpi_px" width="133dpi_px" left="30dpi_px" top="85dpi_px" localise_caption="MPackage_PackageIdRule2" />
+          <Label stylename="label" layout_id="label_rule3" layout_guid="0de6ba5a-bf8a-4f19-9887-640a74b6b4aa" height="16dpi_px" width="345dpi_px" left="30dpi_px" top="105dpi_px" localise_caption="MPackage_PackageIdRule3" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="CreateNewPackage" layout_guid="f6699431-d887-43c7-8239-0d20610ce4b9">
+    <StackPanel stylename="window_client_panel" stack_order="BottomToTop">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" right="0px" bottom="6px" margin_top="6px" margin_bottom="6px" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Button stylename="button_up" layout_id="button_cancel" layout_guid="2bf5eb76-8da1-4783-922c-55415a1a80c2" height="24px" width="100dpi_px" left="0px" bottom="15dpi_px" margin_right="10px" localise_name="Button_Cancel" />
+            <Button stylename="button_up" layout_id="button_ok" layout_guid="fb1c5038-ba63-4fb1-a2cd-a95617f98bb8" height="24px" width="100dpi_px" left="110px" bottom="14dpi_px" margin_right="10px" localise_name="Button_OK" />
+          </ChildGadgets>
+        </StackPanel>
+        <Grid stylename="package_grid" height="100%" width="100%" bottom="36px" grid_rowlayout="['50%', '1*']" grid_columnlayout="['1*', '1*']">
+          <ColumnDockSplitter stylename="dock_splitter" height="689px" width="14dpi_px" left="704px" top="0px" splitter_anchor="First" row="0" column="1" rowspan="2" columnspan="1" />
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" left="0px" top="16px" margin_left="12px" margin_top="16px" localise_caption="Marketplace_CreatePackageDescription" auto_ellipsis="True" />
+                  <Label stylename="label" height="16px" left="0px" top="44px" margin_left="12dpi_px" margin_top="12px" localise_caption="Marketplace_CreatePackageDetails" auto_ellipsis="True" />
+                  <ScrollPanel stylename="package_inner_panel" left="1px" top="70px" margin_left="5px" margin_right="2px" margin_top="10px" scrollpanel_flags="VerticalScroll, HorizontalScroll, AdjustToScrollBars">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" height="100%" width="100%" left="0px" top="0px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto']" grid_columnlayout="['auto', 'auto']" grid_resize="ResizeGrid">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" width="92px" top="12px" margin_top="12px" localise_caption="Marketplace_PublisherName" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="package_combobox" layout_id="publisher_account_combo" layout_guid="88b440f7-92cc-47f8-8a8d-f0e61b3c0627" height="24dpi_px" width="100%" left="9px" margin_left="9px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" width="76px" top="7px" margin_top="7px" localise_caption="MPackage_AssetDisplayName" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" width="45px" top="7px" margin_top="7px" localise_caption="Marketplace_PackageVersion" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="3" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <TextBox stylename="create_package_text_box" layout_id="display_name_textbox" layout_guid="7a4b3ad0-a6e4-42a5-836b-89b6419ca0eb" width="100%" left="9px" margin_left="9px" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="3" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" left="9px" margin_left="9px" stack_resize="ResizeAll">
+                                  <ChildGadgets>
+                                    <NumericTextBox layout_id="version_box_1" layout_guid="308de266-92c0-49d9-9950-b3b89cee4c2a" width="60dpi_px" left="0px" top="130dpi_px" margin_right="12px" max="999" />
+                                    <NumericTextBox layout_id="version_box_2" layout_guid="8c7fba1d-5251-4ef2-8949-62e9f62a4f88" width="60dpi_px" left="72px" top="130dpi_px" margin_right="12px" max="999" />
+                                    <NumericTextBox layout_id="version_box_3" layout_guid="f4e965a9-374e-41ce-adca-a4f837f17a4c" width="60dpi_px" left="144px" top="130dpi_px" max="999" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="4" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" width="65px" top="7px" margin_top="7px" localise_caption="Marketplace_PackageId" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="4" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" width="80px" top="7px" margin_top="7px" localise_caption="MPackage_PackageType" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="5" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <TextBox stylename="create_package_text_box" layout_id="package_id_textbox" layout_guid="0944466f-a4bd-4be6-8077-786e8fa95ca0" width="100%" left="9px" margin_left="9px" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="5" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="package_combobox" layout_id="package_type_combo" layout_guid="f83260ee-5922-405e-9309-6338c6c96341" width="100%" left="9px" margin_right="9px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                          <StackPanel stylename="stack_panel" width="100%" left="0px" top="152px" stack_resize="ResizeAll">
+                            <Gadgets>
+                              <Image stylename="image" layout_id="category_icon" layout_guid="51032550-8a31-4ef6-a6be-ca5869558300" height="32dpi_px" width="32dpi_px" left="9px" top="0px" margin_left="9px" margin_top="8px" image_flags="Stretch, KeepAspectRatio" image="WarningTriangle32.png" />
+                              <Label stylename="package_type_label" layout_id="package_info" layout_guid="197cad75-ef04-4285-bd6a-8b8338df1407" width="250px" left="49px" top="10px" margin_left="8px" margin_top="10px" margin_bottom="4px" localise_caption="MPackage_NewPackageInfo_Other" word_wrap="True" />
+                            </Gadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </ScrollPanel>
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="default_scrollpanel" layout_id="tutorial_panel" layout_guid="8ec799f7-f85e-4b64-9cef-25d702709bc9">
+                <ChildGadgets>
+                  <Layout layout_name="TutorialSettings" layout_guid="03cd5ba6-b181-46f7-bff9-63a1f2643738" />
+                  <Layout layout_name="InactiveTutorialSettings" layout_guid="53208685-710c-4ae5-a81c-7e102f13f78f" />
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" rowspan="2" columnspan="1">
+            <ChildGadgets>
+              <Layout layout_name="ResourceSelectorExport" layout_guid="db2379d8-9665-4c99-b589-a3db6a50df3e" />
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="UpdateExistingPackage" layout_guid="4f7481c2-2651-4a06-b3ec-d1c9bd8e9adb">
+    <StackPanel stylename="window_client_panel" stack_order="BottomToTop">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" right="0px" bottom="6px" margin_top="6px" margin_bottom="6px" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Button stylename="button_up" layout_id="button_cancel" layout_guid="2bf5eb76-8da1-4783-922c-55415a1a80c2" height="24px" width="100dpi_px" left="0px" bottom="15dpi_px" margin_right="10px" localise_name="Button_Cancel" />
+            <Button stylename="button_up" layout_id="button_ok" layout_guid="fb1c5038-ba63-4fb1-a2cd-a95617f98bb8" height="24px" width="100dpi_px" left="110px" bottom="14dpi_px" margin_right="10px" localise_name="Button_OK" />
+          </ChildGadgets>
+        </StackPanel>
+        <Grid stylename="package_grid" height="100%" width="100%" left="-3px" bottom="36px" grid_rowlayout="['50%', '1*']" grid_columnlayout="['1*', '1*']">
+          <ColumnDockSplitter stylename="dock_splitter" height="636px" width="14dpi_px" left="604px" top="0px" splitter_anchor="First" row="0" column="1" rowspan="2" columnspan="1" />
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" left="0px" top="16px" margin_left="12px" margin_top="16px" localise_caption="Marketplace_ChoosePackageId" auto_ellipsis="True" />
+                  <Label stylename="label" height="16px" left="0px" top="44px" margin_left="12dpi_px" margin_top="12px" localise_caption="Marketplace_CreatePackageDetails" auto_ellipsis="True" />
+                  <ScrollPanel stylename="package_inner_panel" top="70px" margin_left="5px" margin_right="2px" margin_top="10px" scrollpanel_flags="VerticalScroll, HorizontalScroll, AdjustToScrollBars">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" height="100%" width="100%" left="0px" top="0px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto']" grid_columnlayout="['auto', 'auto']" grid_resize="ResizeGrid">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" layout_id="publisher_name_label" layout_guid="4c86339f-ce5f-4037-8705-eafbbf37d99b" height="16px" top="12px" margin_top="12px" localise_caption="Marketplace_PublisherName" auto_ellipsis="True" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="package_combobox" layout_id="publisher_account_combo" layout_guid="40d5ab04-b1f2-43f5-a2e0-49aa4671d959" width="100%" left="9px" margin_left="9px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" layout_id="package_name_label" layout_guid="e57c989b-b198-4653-a4b6-27bab3b97ac1" height="16px" top="12px" margin_top="12px" localise_caption="Marketplace_PackageName" auto_ellipsis="True" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="3" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="package_combobox" layout_id="package_id_combo" layout_guid="3b7f1435-0e01-4f77-970f-aa2821b34d2e" width="100%" left="9px" margin_left="9px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="4" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" top="7px" margin_top="7px" localise_caption="Marketplace_PackageId" auto_ellipsis="True" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="4" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" top="7px" margin_top="7px" localise_caption="Marketplace_PackageVersion" auto_ellipsis="True" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="5" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <TextBox stylename="readonly_package_text_box" layout_id="package_id_textbox" layout_guid="b2b86846-3b19-4c1a-931a-5c2fedda75eb" width="100%" left="9px" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="5" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" left="9px" margin_left="9px" stack_resize="ResizeAll">
+                                  <ChildGadgets>
+                                    <NumericTextBox stylename="package_numeric_text_box" layout_id="version_box_1" layout_guid="92204ac0-95a4-4607-b405-b05a1254cad9" width="60dpi_px" left="0px" top="65dpi_px" margin_right="12px" max="999" />
+                                    <NumericTextBox stylename="package_numeric_text_box" layout_id="version_box_2" layout_guid="707af0c9-64b1-4d33-8205-bcf75c48b1cd" width="60dpi_px" left="72px" top="65dpi_px" margin_right="12px" max="999" />
+                                    <NumericTextBox stylename="package_numeric_text_box" layout_id="version_box_3" layout_guid="3eff33d9-c61e-4155-8780-c14e4d7a5d3b" width="60dpi_px" left="144px" top="65dpi_px" margin_right="9px" max="999" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="6" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="package_heading_label" height="16px" top="7px" margin_top="7px" localise_caption="MPackage_PackageType" auto_ellipsis="True" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="7" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="package_combobox" layout_id="package_type_combo" layout_guid="bfd29041-acbe-41ee-ba96-a3365c693005" width="100%" left="9px" margin_left="9px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                          <StackPanel stylename="stack_panel" layout_id="category_info" layout_guid="53da4956-6d9b-4cc1-9839-ed72a674bbf6" width="100%" left="512px" top="206px" stack_resize="ResizeAll">
+                            <Gadgets>
+                              <Image stylename="image" layout_id="category_icon" layout_guid="2b27dec4-7505-4f0c-b10e-9f2aa758330d" height="32dpi_px" width="32dpi_px" left="9px" top="0px" margin_left="9px" margin_top="8px" image_flags="Stretch, KeepAspectRatio" image="WarningTriangle32.png" />
+                              <Label stylename="package_type_label" layout_id="category_label" layout_guid="408424cf-c843-4d04-a0ee-56cc5e14846a" width="250px" left="49px" top="10px" margin_left="8px" margin_top="10px" margin_bottom="4px" localise_caption="MPackage_CategorySetting_Tutorial" word_wrap="True" />
+                            </Gadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </ScrollPanel>
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="default_scrollpanel" layout_id="tutorial_panel" layout_guid="8ec799f7-f85e-4b64-9cef-25d702709bc9">
+                <ChildGadgets>
+                  <Layout layout_name="TutorialSettings" layout_guid="03cd5ba6-b181-46f7-bff9-63a1f2643738" />
+                </ChildGadgets>
+                <ChildGadgets>
+                  <Layout layout_name="InactiveTutorialSettings" layout_guid="53208685-710c-4ae5-a81c-7e102f13f78f" />
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" rowspan="2" columnspan="1">
+            <ChildGadgets>
+              <Layout layout_name="ResourceSelectorExport" layout_guid="db2379d8-9665-4c99-b589-a3db6a50df3e" />
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="create_new_asset_displayname_error" layout_guid="7894a281-0f81-4e48-b842-a4999c97a8cd">
+    <Window stylename="fixed_window" height="224dpi_px" width="486dpi_px" localise_title="MPackage_DisplayNameInvalid" accept_button_id="button_ok">
+      <Client>
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="button_ok" layout_guid="5ef4ad0f-4d98-47d0-a3c0-57bc977e5fc0" height="24px" width="140dpi_px" bottom="10dpi_px" localise_name="Button_OK" />
+          <Label stylename="label" layout_id="label_error" layout_guid="515b4ca4-9f17-44cf-8109-b015ae4c2389" height="16px" width="269px" left="10dpi_px" top="10dpi_px" localise_caption="MPackage_DisplayNameInvalid" />
+          <Label stylename="label" height="16px" width="142px" left="20dpi_px" top="40dpi_px" localise_caption="MPackage_DisplayNameRestrictions" />
+          <Label stylename="label" layout_id="label_rule1" layout_guid="89276800-e4d9-48bf-87d6-424fdc2f2ce7" height="16px" width="244px" left="30dpi_px" top="65dpi_px" localise_caption="MPackage_DisplayNameRule1" />
+          <Label stylename="label" layout_id="label_rule2" layout_guid="0cfafcc6-1de6-4ac5-b175-2d55b1f9c387" height="16px" width="133px" left="30dpi_px" top="85dpi_px" localise_caption="MPackage_DisplayNameRule2" />
+          <Label stylename="label" layout_id="label_rule3" layout_guid="36308dc3-965d-444a-b212-95c00db9c388" height="16px" width="339px" left="30dpi_px" top="105dpi_px" localise_caption="MPackage_DisplayNameRule3" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

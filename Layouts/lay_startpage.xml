@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="StartPageHome" layout_guid="d23cf7f8-7d34-4014-84ca-1bbbf21cde09">
+    <ScrollPanel stylename="sp_scroll_panel">
+      <ChildGadgets>
+        <StartPageAspectGrid stylename="sp_grid_buttons">
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack_first" localise_caption="StartPage_Web_GettingStarted" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="1" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="sp_grid_button_stack">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_newproject" layout_guid="5a97b9db-9956-4e02-b755-81d8e8155f08" height="36px" localise_name="StartPage_Web_NewProject" image="StartPage\New.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_openproject" layout_guid="bc0d39dc-4b02-4cda-b934-5d42bd7cc2af" height="36px" localise_name="StartPage_Web_OpenProject" image="StartPage\Open.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="2" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_importproject" layout_guid="879b8488-47c0-4752-82a3-35079c98b08b" height="36px" localise_name="StartPage_Web_ImportProject" image="StartPage\Import.png" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack" localise_caption="StartPage_Web_Explore" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="3" column="1" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="sp_grid_button_stack">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_marketplace" layout_guid="fd63cb92-ddc2-47f0-9dc4-4d53420c005f" height="36px" localise_name="StartPage_Web_Marketplace" image="StartPage\Marketplace.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_tutorials" layout_guid="aed8e78d-ec78-4e55-abc2-fffba448a5b9" height="36px" localise_name="StartPage_Web_Tutorials" image="StartPage\Learn.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="2" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_demos" layout_guid="2ab55ed1-aba2-4828-9536-f678f1abf701" height="36px" localise_name="StartPage_Web_Demos" image="StartPage\About.png" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+        </StartPageAspectGrid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageNewProject" layout_guid="f32b3d6b-a394-4b17-b49c-65066d7d1eb4">
+    <ScrollPanel stylename="sp_scroll_panel">
+      <ChildGadgets>
+        <StartPageAspectGrid stylename="sp_grid_buttons">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <PointerButton stylename="sp_back_button" layout_id="btn_back" layout_guid="51f98a19-3a6e-4ce9-9e36-6f421ab89bcc" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack_first" localise_caption="StartPage_Web_CreateNewProject" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="1" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="sp_grid_button_stack" layout_id="content_buttons" layout_guid="5620112b-b31a-407d-b3a2-9abe712c57bf">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_newdnd" layout_guid="f9758cf9-655a-4d62-a804-ba6bb37b40a7" height="36px" localise_name="StartPage_Web_NewDnD" image="StartPage\New.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StartPageButton stylename="sp_button" layout_id="btn_newgml" layout_guid="0c5d3e49-9013-40a4-862b-d48d5ad60aa5" height="36px" localise_name="StartPage_Web_NewGml" image="StartPage\New.png" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+        </StartPageAspectGrid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageLicenses" layout_guid="cbb494b7-b72d-4a8e-9b02-5a6eb95a8255">
+    <ScrollPanel stylename="sp_scroll_panel">
+      <ChildGadgets>
+        <StartPageAspectGrid stylename="sp_grid_buttons" grid_rowlayout="['76dpi_px', '1*']">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <PointerButton stylename="sp_back_button" layout_id="btn_back" layout_guid="3a032e98-df7b-4b4c-80b5-7a1615cebef0" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack_first" localise_caption="StartPage_Web_Licenses" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="1" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="sp_scroll_panel" scrollpanel_flags="VerticalScroll">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_wrap_panel" layout_id="container_licenses" layout_guid="12f3d81d-6eee-41e5-87d9-135bbe9a0136" height="100%" width="100%" left="0px" top="0px">
+                    <ChildGadgets>
+                      <LicenseButton stylename="sp_button_license" left="0px" name="YoYo_License" />
+                      <LicenseButton stylename="sp_button_license" left="150px" name="YoYo_License" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+        </StartPageAspectGrid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageTutorials" layout_guid="1a65479b-0aef-40f5-b701-d855f990789a">
+    <ScrollPanel stylename="sp_scroll_panel">
+      <ChildGadgets>
+        <StartPageAspectGrid layout_id="grid_tutorial_page" stylename="sp_grid_demo_buttons">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <PointerButton stylename="sp_back_button" layout_id="btn_back" layout_guid="4955ae96-2d9f-4d0a-b654-07f776eeff37" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack_first" localise_caption="StartPage_Web_OwnedTutorials" separator_style="sp_title_stack_red_separator_first" />
+              <HorizontalSeparator stylename="sp_horizontal_separator_title_first" />
+              <StackPanel stylename="stack_panel" right="28dpi_px" top="0px" bottom="0px" stack_resize="ResizeAll">
+                <ChildGadgets>
+                  <PointerButton stylename="sp_menu_button" layout_id="btn_refresh" layout_guid="9cd9f5e5-3039-4ba3-9bae-5364fce3c09c" left="4px" icon="StartPage\refresh.png" localise_tooltip="StartPage_Web_RefreshTutorials" />
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_toggle_installed" layout_guid="3276d939-bb5f-4567-bc12-2d60147b73d8" left="40px" icon_render_flags="Normal" icon="StartPage\toggleinstalled.png" localise_tooltip="StartPage_Web_FilterByInstalled" />
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_owned_expand" layout_guid="72632618-a052-476e-bd73-1a63fa4e8c0a" left="76px" icon="StartPage\expandcollapse.png" localise_tooltip="StartPage_Web_ExpandOrCollapse" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="1" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="sp_scroll_panel" scrollpanel_flags="VerticalScroll">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_wrap_panel" layout_id="stack_owned_tutorials" layout_guid="6b966a10-5d90-49ed-b79e-49f46ef27aec" height="100%" width="100%" top="0px">
+                    <ChildGadgets>
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack" localise_caption="StartPage_Web_OfficialTutorials" separator_style="sp_title_stack_red_separator" />
+              <HorizontalSeparator stylename="sp_horizontal_separator_title" />
+              <StackPanel stylename="stack_panel" right="28dpi_px" top="0px" bottom="0px" stack_resize="ResizeAll">
+                <ChildGadgets>
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_official_expand" icon="StartPage\expandcollapse.png" localise_tooltip="StartPage_Web_ExpandOrCollapse" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="3" column="1" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="sp_scroll_panel" scrollpanel_flags="VerticalScroll">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_wrap_panel" layout_id="stack_official_tutorials" layout_guid="49133f9f-a925-4aa1-8b07-8f4f97eb1353" height="100%" width="100%" top="0px">
+                    <ChildGadgets>
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+        </StartPageAspectGrid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageDemos" layout_guid="3a54b4a1-49df-40db-815f-46876491bf89">
+    <ScrollPanel stylename="sp_scroll_panel">
+      <ChildGadgets>
+        <StartPageAspectGrid layout_id="grid_tutorial_page" stylename="sp_grid_demo_buttons">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <PointerButton stylename="sp_back_button" layout_id="btn_back" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack_first" localise_caption="StartPage_Web_OwnedTutorials" />
+              <HorizontalSeparator stylename="sp_horizontal_separator_title_first" />
+              <StackPanel stylename="stack_panel" right="28dpi_px" top="0px" bottom="0px" stack_resize="ResizeAll">
+                <ChildGadgets>
+                  <PointerButton stylename="sp_menu_button" layout_id="btn_refresh" left="4px" icon="StartPage\refresh.png" localise_tooltip="StartPage_Web_RefreshTutorials" />
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_toggle_installed" left="40px" icon_render_flags="Normal" icon="StartPage\toggleinstalled.png" localise_tooltip="StartPage_Web_FilterByInstalled" />
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_owned_expand" left="76px" icon="StartPage\expandcollapse.png" localise_tooltip="StartPage_Web_ExpandOrCollapse" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="1" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="sp_scroll_panel" scrollpanel_flags="VerticalScroll">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_wrap_panel" layout_id="stack_owned_tutorials" height="100%" width="100%" top="0px">
+                    <ChildGadgets>
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="1" flow_index="0">
+            <ChildGadgets>
+              <StartPageTitleLabel stylename="sp_title_stack" localise_caption="StartPage_Web_OfficialTutorials" />
+              <HorizontalSeparator stylename="sp_horizontal_separator_title" />
+              <StackPanel stylename="stack_panel" right="28dpi_px" top="0px" bottom="0px" stack_resize="ResizeAll">
+                <ChildGadgets>
+                  <PointerToggleButton stylename="sp_menu_button" layout_id="btn_official_expand" icon="StartPage\expandcollapse.png" localise_tooltip="StartPage_Web_ExpandOrCollapse" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="3" column="1" flow_index="0">
+            <ChildGadgets>
+              <ScrollPanel stylename="sp_scroll_panel" scrollpanel_flags="VerticalScroll">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_wrap_panel" layout_id="stack_official_tutorials" height="100%" width="100%" top="0px">
+                    <ChildGadgets>
+                      <StartPageDemoButton stylename="sp_demo_button" left="0px" name="Tutorial Name" />
+                    </ChildGadgets>
+                  </StackPanel>
+                </ChildGadgets>
+              </ScrollPanel>
+            </ChildGadgets>
+          </Cell>
+        </StartPageAspectGrid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageBanner" layout_guid="ed4b4a7a-5ad1-417e-a955-0323635c22e4">
+    <ScrollPanel stylename="sp_scroll_panel" colour="#FF000000">
+      <ChildGadgets>
+        <StartPageBanner layout_id="panel_slides" layout_guid="43e45ab8-cf40-4d47-b9ca-9c5c8550eb9f" left="0px" top="0px" scrollpanel_flags="None">
+          <ChildGadgets>
+            <Image stylename="sp_banner_image" image="StartPage\banner.png" />
+          </ChildGadgets>
+        </StartPageBanner>
+        <ScrollPanel stylename="sp_scrollpanel_banner_overlay" layout_id="overlay" layout_guid="284f4c02-e42d-431b-8245-429ff8eba017">
+          <ChildGadgets>
+            <Image stylename="image" height="32px" width="221px" left="32dpi_px" image_flags="Centre, Resize" image="StartPage\title-logo.png" />
+            <StackPanel stylename="stack_panel" height="60dpi_px" right="32dpi_px" top="0px" stack_resize="ResizeWidth">
+              <ChildGadgets>
+                <StartPageTitleLabel stylename="sp_title_stack_link" layout_id="link_yyg" label_style="sp_label_yoyogames" layout_guid="503e5a55-93f0-4960-8d31-07521e2bf39d" localise_tooltip="IDEMenu_Help_YYG" height="60dpi_px" right="" caption="YoYo Games" />
+                <StartPageSocialImage stylename="sp_social_icon" tooltip="Facebook" left="118px" image="StartPage\facebook_32.png" network="facebook" />
+                <StartPageSocialImage stylename="sp_social_icon" tooltip="Twitter" left="166px" image="StartPage\twitter_32.png" network="twitter" />
+                <StartPageSocialImage stylename="sp_social_icon" tooltip="YouTube" left="214px" image="StartPage\youtube_32.png" network="youtube" />
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </ScrollPanel>
+        <StackPanel stylename="sp_stackpanel_banner_slide_buttons" layout_id="stack_slide_buttons" layout_guid="3eb94e45-1f01-41a9-9447-40dee3002ae0">
+          <ChildGadgets>
+            <StartPageSlideButton stylename="sp_banner_slide_button" left="1px" />
+            <StartPageSlideButton stylename="sp_banner_slide_button" left="26px" />
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPage" layout_guid="e07bb512-fb55-4d7f-9a95-39b1dfa48f44">
+    <Grid stylename="sp_grid_background" grid_rowlayout="['30*', '70*']">
+      <Cell layout_id="banner" layout_guid="899f9daf-0e15-435b-a37a-be42c00b02c9" row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Layout layout_name="StartPageBanner" layout_guid="ed4b4a7a-5ad1-417e-a955-0323635c22e4" />
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="content" layout_guid="27836281-81e4-4113-930d-e87d983297a1" row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="sp_main_region">
+            <Cell layout_id="content_area" layout_guid="c39be7e7-c16b-452b-bc51-3dcd89c3aa5d" row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Layout layout_name="StartPageHome" layout_guid="d23cf7f8-7d34-4014-84ca-1bbbf21cde09" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+          <ScrollPanel stylename="sp_scroll_panel" layout_id="panel_recent_projects" layout_guid="caa94bb5-56cb-45d2-8db2-5a824afb0862" width="18.43%" left="0px" top="0px">
+            <ChildGadgets>
+              <Layout layout_name="StartPageRecentProjects" layout_guid="7ff6db97-a90f-4cc8-9de9-5ac570653e98" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="StartPageRecentProjects" layout_guid="7ff6db97-a90f-4cc8-9de9-5ac570653e98">
+    <StartPageTitleLabel stylename="sp_title_stack_first" layout_id="label_recent_projects" left="32dpi_px" right="0dpi_px" top="0px" localise_caption="StartPage_Web_RecentProjects" />
+    <ScrollPanel stylename="sp_scroll_panel" vertical_scrollbar_style="sp_scrollbar_left_aligned" left="0px" top="69dpi_px" bottom="0dpi_px" scrollpanel_flags="VerticalScroll">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" layout_id="stack_rplist" layout_guid="fbedd363-0f85-48d1-97e3-2d06f4aa6505" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+          <ChildGadgets>
+            <StartPageProjectItem stylename="sp_scrollpanel_project_item" top="7px" margin_top="7dpi_px" title="Project File #1" path="C:\Some_Path\Project File.yyp" />
+            <StartPageProjectItem stylename="sp_scrollpanel_project_item" top="77px" title="Project File #2" path="C:\Some_Path\Project File.yyp" />
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="StartPageTooltip" layout_guid="196f347a-b38f-41a0-aa87-ad7e6cc2a58f">
+    <Grid stylename="sp_tooltip_inner_panel" left="18dpi_px" right="18dpi_px" top="18dpi_px" bottom="18dpi_px" grid_rowlayout="['auto', '20dpi_px', '1*']" row_spacing="15dpi_px" grid_resize="ResizeGrid">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="sp_tooltip_caption" layout_id="label_title" layout_guid="42eaf6a9-f98c-4c20-b747-f86f0984a499" caption="TITLE" />
+          <VerticalSeparator stylename="sp_hr" height="1px" width="100%" bottom="0px" margin_top="" margin_bottom="" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <VerticalSeparator stylename="sp_tooltip_separator" width="100%" margin_top="" margin_bottom="" />
+          <Label stylename="sp_tooltip_status" layout_id="label_status" layout_guid="4a590c3c-57f2-4b12-826f-f9da63733bfb" right="6dpi_px" margin_top="1dpi_px" margin_bottom="1dpi_px" localise_caption="StartPage_Web_Owned" auto_ellipsis="True" />
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="scroll_clip" layout_guid="306b8138-71b0-4c5a-935f-b9f64417a6a3" row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="sp_tooltip_description" layout_id="label_description" layout_guid="915fed43-d633-44d9-9671-b2fe08f1dfbe" caption="Description" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

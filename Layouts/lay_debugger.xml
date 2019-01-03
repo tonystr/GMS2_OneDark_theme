@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="Debugger" layout_guid="796f42cc-0e70-4827-9709-7bdf9041c7a8">
+    <Grid stylename="bordered_scrollpanel_dark" grid_rowlayout="['auto', '1*']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="bordered_scrollpanel" scrollpanel_flags="ResizeHeight">
+            <ChildGadgets>
+              <Debugger_StatusBar stylename="debugger_statusbar" right="0px" />
+              <Debugger_Toolbar stylename="debugger_toolbar" left="0px" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="default_scrollpanel" layout_id="main_panel" layout_guid="043261e4-f662-4258-85af-2ada73de47ee" scrollpanel_flags="VerticalScroll, HorizontalScroll, AdjustToScrollBars" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="Debugger_SourceView" layout_guid="6a63400f-c689-42a9-8583-de9437d2727f">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <TabControl stylename="tab_control" layout_id="tab_control" layout_guid="2311f38b-e9b8-4a9b-8c7d-11777a6aba7e">
+        <Cell row="0" column="0" flow_index="0">
+          <Gadgets>
+            <Grid stylename="tab_container" layout_id="tab_list" layout_guid="b18c6ca9-438f-42c1-aed7-09419829d78a" grid_columnlayout="['auto']">
+              <Cell row="0" column="0" flow_index="0">
+                <Gadgets>
+                  <TabItem stylename="tab_item" tooltip="Tab 1" height="22px" name="Tab 1">
+                    <ContextMenu stylename="context_menu">
+                      <MenuEntry stylename="menu_entry" layout_id="entry0" layout_guid="b7117b4b-1ada-480f-bda5-77b7b07d56f3" localise_name="CMenu_CloseAllButThis" />
+                    </ContextMenu>
+                    <Client />
+                  </TabItem>
+                </Gadgets>
+              </Cell>
+            </Grid>
+          </Gadgets>
+        </Cell>
+      </TabControl>
+      <Label stylename="label_deactivated" layout_id="label_none" layout_guid="e017927c-2637-487c-b82b-1a041e7f49d2" height="16px" width="308px" localise_caption="Debugger_SurfaceView_NoneSelected" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_CallStackView" layout_guid="bd5bc9a4-56f7-4a81-b39f-de8358a0b608">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <Grid stylename="grid_container">
+        <Cell row="0" column="0" flow_index="0">
+          <ChildGadgets>
+            <TableGadget stylename="grid_container" layout_id="table" layout_guid="cca28a65-21b0-4d4e-b855-6a67fd997ffb" />
+          </ChildGadgets>
+        </Cell>
+      </Grid>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_SurfacesView" layout_guid="ee4df2de-a869-46a6-9e57-ca7cc49b1857">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']" row_spacing="4dpi_px">
+        <Cell row="0" column="0" flow_index="0">
+          <ChildGadgets>
+            <TableGadget stylename="grid_container" layout_id="table" layout_guid="bc4bed44-a88c-4184-a43c-c9c203b09676" />
+          </ChildGadgets>
+        </Cell>
+        <Cell row="1" column="0" flow_index="0">
+          <ChildGadgets>
+              <Grid stylename="grid_container" layout_guid="aaad5d95-d436-434c-be09-03d2da9fd086" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*', '32dpi_px']" grid_resize="ResizeGridHeight">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" layout_id="combo_view" layout_guid="5f92c969-20b4-4628-853d-09257fbe71c4" left="0px" display_tag_property="True">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                      <Label stylename="label" layout_id="loading_label" layout_guid="e35ccbd1-5020-4a6a-8fe6-7a6c459e0e26" height="16px" width="108px" right="4dpi_px" localise_caption="Debugger_FetchingTextures" />
+                  </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="2" flow_index="0">
+                  <ChildGadgets>
+                      <Button stylename="marketplace_icon_button" layout_id="refresh_button" localise_tooltip="Debugger_RefreshTextures_Tooltip" icon="Runtime\icon_IDE_refresh.png" />
+                  </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </Cell>
+      </Grid>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_GraphView" layout_guid="8975282f-5e48-4ce2-a676-2a6ba9885919">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <ScrollPanel stylename="bordered_scrollpanel_dark" layout_id="scrollparent" layout_guid="7140d3b5-d373-42a6-a6eb-86cf41caa5de" />
+      <Image stylename="help_icon" layout_id="graph_help" localise_tooltip="Debugger_Graph_Help" left="2dpi_px" bottom="16dpi_px" />
+      <ScrollPanel stylename="debugger_graph_help" mouse_events="False" height="42px" width="122px" right="2dpi_px" bottom="16dpi_px" scrollpanel_flags="ResizeHeight, ResizeWidth">
+        <ChildGadgets>
+          <Grid stylename="grid_container" mouse_events="False" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['auto', 'auto']" row_spacing="4dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGrid">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="debugger_graph_stat_label" mouse_events="False" layout_id="label_Memory" layout_guid="a59deb7f-c52e-4b96-b12c-8e21dc1d063a" height="15px" width="49px" left="8dpi_px" top="4dpi_px" margin_left="8dpi_px" margin_top="4dpi_px" localise_caption="Debugger_Graph_Mem" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="debugger_graph_stat_label" mouse_events="False" layout_id="label_MemoryAverage" layout_guid="79f2295a-5bd9-43c5-83c6-8d3070e53b55" height="15px" width="49px" left="0px" top="4dpi_px" margin_right="8dpi_px" margin_top="4dpi_px" localise_caption="Debugger_Graph_Avg" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="debugger_graph_stat_label" mouse_events="False" layout_id="label_SampledFps" layout_guid="7865b4ca-aeb6-431e-ace5-b406d5e935c2" height="15px" width="49px" left="8dpi_px" bottom="4dpi_px" margin_left="8dpi_px" margin_bottom="4dpi_px" localise_caption="Debugger_Graph_Fps" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="debugger_graph_stat_label" mouse_events="False" layout_id="label_SampledFpsAverage" layout_guid="806a5e6f-491f-460e-add0-a77e62515952" height="15px" width="49px" left="0px" bottom="4dpi_px" margin_right="8dpi_px" margin_bottom="4dpi_px" localise_caption="Debugger_Graph_Avg" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </ScrollPanel>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_GraphView_Popup" layout_guid="1320ebec-38cf-4490-a80b-0ba08b0bde81">
+    <Cell row="0" column="0" flow_index="0" layout_id="window_client_panel" />
+    <Client>
+      <ChildGadgets>
+        <Grid left="0px" top="0px" stylename="debugger_graph_view_tag_popup_panel" grid_columnlayout="['1*']" grid_rowlayout="['1*', 'auto']">
+          <Cell row="0" column="0">
+            <ChildGadgets>
+              <ListBox layout_id="list_box" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0">
+            <ChildGadgets>
+              <LinkLabel layout_id="label" localise_caption="Debugger_GraphView_ShowWindow" />
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="Debugger_GraphView_TagList" layout_guid="aa80e7da-d372-44ca-b65e-ffddabfb58f9">
+    <Window stylename="debugger_window_graph_view_tag_window" localise_title="Debugger_GraphView_Tags_WindowTitle">
+      <Client>
+        <ChildGadgets>
+          <ListBox stylename="list_box" layout_id="listbox" layout_guid="1557df69-3ced-4e56-b01c-241dd1d20ee8">
+            <ListBoxItems />
+          </ListBox>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="Debugger_GraphView_TagListItem" layout_guid="a2b2bf5c-ffe4-46d6-9c80-ec19407b5ef4">
+    <Grid grid_rowlayout="['auto']" margin_top="2dpi_px" margin_bottom="2dpi_px" grid_columnlayout="['12dpi_px', '1*']" column_spacing="2dpi_px" grid_resize="ResizeGridHeight" left="0px" right="0px">
+      <Cell row="0" column="0">
+        <ChildGadgets>
+          <Image layout_id="type" image="Debugger/graph_event.png" image_flags="Stretch, Centre, KeepAspectRatio" width="100%" height="100%" mouse_events="True" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1">
+        <ChildGadgets>
+          <Label layout_id="label" auto_size="True" auto_ellipsis="True" left="0px" mouse_events="False" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="Debugger_ProfileView" layout_guid="e8580155-730b-437a-9e19-6b7ebb7733d9">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']" row_spacing="4dpi_px" grid_resize="ResizeGrid">
+        <Cell row="0" column="0" flow_index="0">
+          <ChildGadgets>
+            <Grid stylename="grid_container" grid_rowlayout="['auto']" grid_columnlayout="['auto', 'auto', '1*', 'auto', 'auto']" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <ToggleButton stylename="debugger_profiling_toggle_button" layout_id="btn_startstop" layout_guid="8d597eb6-8320-4bec-8e22-ce33b5483619" height="24px" width="130dpi_px" left="1dpi_px" top="1dpi_px" margin_right="1dpi_px" margin_bottom="1dpi_px" localise_name="Debugger_Profiler_Start" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <CheckBox stylename="checkbox_stack" layout_id="checkbox_average" layout_guid="4fc4f371-8d18-43b9-a853-1f3734e265aa" localise_tooltip="Debugger_Profiler_Averages_Tooltip" localise_name="Debugger_Profiler_Averages" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="3" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" layout_id="combo_view" width="150dpi_px" display_tag_property="True">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="4" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" layout_id="combo_filter" display_tag_property="True" layout_guid="f0d0ac2a-a8d6-48a6-8b71-1f6e2f898e88">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </Cell>
+        <Cell row="1" column="0" flow_index="0">
+          <ChildGadgets>
+            <DataGrid stylename="data_grid_style" layout_id="data_grid" layout_guid="9332608e-29c9-4b3e-b507-b4f28b595b6e" />
+          </ChildGadgets>
+        </Cell>
+      </Grid>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_BufferView" layout_guid="c982bc0e-4e0a-49ae-a2d6-41a36768ab29">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', '24dpi_px']" row_spacing="2dpi_px">
+        <Cell row="0" column="0" flow_index="0">
+          <ChildGadgets>
+            <Grid stylename="grid_container" left="4dpi_px" right="0px" top="0px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '65dpi_px', 'auto', '1*', 'auto', 'auto']" column_spacing="6dpi_px" grid_resize="ResizeGridHeight">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="48px" left="0px" localise_caption="Debugger_Buffer_Id" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <NumericTextBox stylename="numeric_text_box" layout_id="textbox_id" layout_guid="f032d098-b9aa-43cf-8150-f7fb83f79170" left="0px" has_buttons="True" max="65536" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="2" flow_index="0">
+                <ChildGadgets>
+                  <Image stylename="help_icon_listbox" localise_tooltip="Help_BufferId" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="4" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="49px" localise_caption="Debugger_Buffer_Columns" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="5" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" layout_id="combo_columns" layout_guid="29c43508-233c-4457-9536-68ea8b17ccff" width="65dpi_px">
+                    <ListBoxItems>
+                      <Label stylename="label" height="16px" width="26px" left="0%" localise_caption="Debugger_Buffer_ColumnsAuto" />
+                      <Label stylename="label" height="16px" width="7px" left="0%" caption="1" />
+                      <Label stylename="label" height="16px" width="7px" left="0%" caption="2" />
+                      <Label stylename="label" height="16px" width="7px" left="0%" caption="4" />
+                      <Label stylename="label" height="16px" width="7px" left="0%" caption="8" />
+                      <Label stylename="label" height="16px" width="14px" left="0%" caption="16" />
+                      <Label stylename="label" height="16px" width="14px" left="0%" caption="32" />
+                      <Label stylename="label" height="16px" width="14px" left="0%" caption="64" />
+                    </ListBoxItems>
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </Cell>
+        <Cell row="1" column="0" flow_index="0">
+          <ChildGadgets>
+            <ScrollPanel stylename="bordered_scrollpanel_dark" scrollpanel_flags="VerticalScroll, HorizontalScroll, AdjustToScrollBars">
+              <ChildGadgets>
+                <ScrollPanel stylename="default_scrollpanel" layout_id="data_panel" layout_guid="4e8b4aa2-fb9a-468a-802e-c5c61cdece36" left="0px" top="0px" scrollpanel_flags="None" />
+              </ChildGadgets>
+            </ScrollPanel>
+          </ChildGadgets>
+        </Cell>
+        <Cell row="2" column="0" flow_index="0">
+          <ChildGadgets>
+            <Grid stylename="grid_container" grid_columnlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', '1*', 'auto']">
+              <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" layout_id="label_type" layout_guid="a061b33d-b154-4e81-8f69-2bbee5ef40c8" height="16px" width="50px" left="0px" localise_caption="Debugger_Buffer_Type" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <VerticalSeparator stylename="dbg_buffer_separator" left="6px" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="2" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" layout_id="label_size" layout_guid="07c6558e-72f6-40c0-9a99-d461b339838f" height="16px" width="46px" left="0px" localise_caption="Debugger_Buffer_Size" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="3" flow_index="0">
+                <ChildGadgets>
+                  <VerticalSeparator stylename="dbg_buffer_separator" left="6px" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="4" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" layout_id="label_tell" layout_guid="5904fc8a-3c3d-40c6-83d0-7d17b16fb1b2" height="16px" width="43px" left="0px" localise_caption="Debugger_Buffer_Tell" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="5" flow_index="0">
+                <ChildGadgets>
+                  <VerticalSeparator stylename="dbg_buffer_separator" left="6px" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="6" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" layout_id="label_alignment" layout_guid="40e4841c-3989-41ca-88aa-8dcd0c3f5e8c" height="16px" width="80px" left="0px" localise_caption="Debugger_Buffer_Alignment" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="8" flow_index="0">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="btn_burger" layout_guid="846afdac-2522-4069-b07f-590c2b290444" height="21dpi_px" width="32dpi_px" margin_right="1px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Dock\dock_item_burger.png" />
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </Cell>
+      </Grid>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_LocalsView" layout_guid="7c43b429-b868-4684-be6e-abb4bc9fa6bf">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_RenderStateView" layout_guid="808069c8-5cee-419c-94c7-fd2aad8723c1">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_GlobalsView" layout_guid="f3f13d42-0829-4f48-9f0f-dac4cc2b0d10">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_InstanceView" layout_guid="ffbb1fd9-c639-4cf2-ba6b-8e3c76080344">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_AllInstancesView" layout_guid="ac5d2451-1c4e-453f-8932-098f60b92535">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_SelectedInstanceView" layout_guid="f52ddfd0-108c-482e-81e2-d11db02955b3">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_WatchView" layout_guid="6834734f-9538-4e8d-880e-a3b338fcb94a">
+    <!--<ScrollPanel>-->
+    <ChildGadgets>
+      <DataGrid layout_id="data_grid" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_Toolbar" layout_guid="01748e80-4609-4043-8d6e-8e2a7195307a">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <StackPanel stylename="stack_panel" left="0px" stack_resize="ResizeAll">
+        <ChildGadgets>
+          <Button stylename="toolbar_button" layout_id="btn_run" layout_guid="06edeb8e-0993-45a6-b2b3-d6c3ef651182" localise_tooltip="Debugger_Toltip_Run" left="4px" margin_left="4dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_continue.png" />
+          <Button stylename="toolbar_button" layout_id="btn_break" layout_guid="ac2ce670-3507-4bd0-afd2-fcc3cfa68402" localise_tooltip="Debugger_Toltip_Break" left="30px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_break.png" />
+          <Button stylename="toolbar_button" layout_id="btn_restart" layout_guid="0751b78a-5fb5-4a8c-a3d3-bcc5d7b8da10" localise_tooltip="Debugger_Toltip_Restart" left="56px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_restart.png" />
+          <VerticalSeparator stylename="debugger_toolbar_separator" left="85px" />
+          <Button stylename="toolbar_button" layout_id="btn_stop" layout_guid="11b089d2-ad63-4c54-992d-b6ce318757a6" localise_tooltip="Debugger_Toltip_Stop" left="91px" click_command="stop_program" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_stop.png" />
+          <VerticalSeparator stylename="debugger_toolbar_separator" left="120px" />
+          <Button stylename="toolbar_button" layout_id="btn_step_into" layout_guid="b9cc1ec1-8a0d-4939-bfa2-6da562db6074" localise_tooltip="Debugger_Toltip_StepInto" left="126px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_step_in.png" />
+          <Button stylename="toolbar_button" layout_id="btn_step_over" layout_guid="fffeb013-4d39-49ea-b53b-2e3886f6136f" localise_tooltip="Debugger_Toltip_StepOver" left="152px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_step_over.png" />
+          <Button stylename="toolbar_button" layout_id="btn_step_out" layout_guid="cbcce832-08f6-4ee6-bd17-d93ec9ef0d2c" localise_tooltip="Debugger_Toltip_StepOut" left="178px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_step_out.png" />
+          <VerticalSeparator stylename="debugger_toolbar_separator" left="207px" />
+          <ToggleButton stylename="toolbar_button" layout_id="btn_realtime" layout_guid="1de382ff-f464-401c-98c2-2545f44d71ed" localise_tooltip="Debugger_Toltip_Realtime" left="213px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_realtime.png" />
+          <VerticalSeparator stylename="debugger_toolbar_separator" left="242px" />
+          <Button stylename="toolbar_button" layout_id="btn_close" layout_guid="0676e284-4dc4-4407-8255-56e04e2ed31e" localise_tooltip="Debugger_Tooltip_Close" left="248px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Debugger\button_close.png" />
+        </ChildGadgets>
+      </StackPanel>
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_StatusBar" layout_guid="ecdb2c36-ac64-48a6-9837-95376cbdcf96">
+    <!--<ScrollPanel stylename="scroll_panel">-->
+    <ChildGadgets>
+      <StackPanel stylename="stack_panel" right="25dpi_px" stack_resize="ResizeAll">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="Debugger_MemoryUsage" />
+          <Label stylename="label" layout_id="label_memory" layout_guid="9dd27380-53b3-4092-bd33-f71e52b7b0ac" height="16px" width="7px" left="53px" caption="0" />
+          <Label stylename="label" height="16px" width="26px" left="184px" margin_left="6dpi_px" localise_caption="Debugger_Fps" />
+          <Label stylename="label" layout_id="label_fps" layout_guid="8ef68c77-2e4e-4ec9-baa4-899e7491a414" height="16px" width_min="30dpi_px" left="210px" caption="0" auto_size="True" />
+        </ChildGadgets>
+      </StackPanel>
+      <Image stylename="debugger_image_connection_off" layout_id="image_connection" layout_guid="b8e1e12f-d263-4cab-95e7-6872355eb21c" height="13dpi_px" width="13dpi_px" right="6dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" />
+    </ChildGadgets>
+    <!--</ScrollPanel>-->
+  </Layout>
+  <Layout layout_name="Debugger_MenuBar" layout_guid="2f49325d-6373-466b-8d78-b3df06c3a1fc">
+    <MenuBar stylename="menu_bar">
+      <MenuBarEntry stylename="menu_bar_entry" localise_name="Debugger_MenuBar_Debugger">
+        <ContextMenu stylename="context_menu">
+          <SubMenuEntry stylename="menu_entry" localise_name="Debugger_Menu_Windows">
+            <ContextMenu stylename="context_menu">
+              <MenuEntry stylename="menu_entry" layout_id="resource" localise_name="Debugger_Window_ResourceView" />
+              <MenuEntry stylename="menu_entry" layout_id="source" localise_name="Debugger_Window_SourceView" />
+              <MenuEntry stylename="menu_entry" layout_id="callstack" localise_name="Debugger_Window_Callstack" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="locals" localise_name="Debugger_Window_LocalsView" />
+              <MenuEntry stylename="menu_entry" layout_id="globals" localise_name="Debugger_Window_GlobalsView" />
+              <MenuEntry stylename="menu_entry" layout_id="instance" localise_name="Debugger_Window_InstanceView" />
+              <MenuEntry stylename="menu_entry" layout_id="watch" localise_name="Debugger_Window_WatchView" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="allinstances" localise_name="Debugger_Window_AllInstancesView" />
+              <MenuEntry stylename="menu_entry" layout_id="selectedinstance" localise_name="Debugger_Window_SelectedInstanceView" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="surfaces" localise_name="Debugger_Window_Surfaces" />
+              <MenuEntry stylename="menu_entry" layout_id="renderstate" localise_name="Debugger_Window_RenderState" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="buffers" localise_name="Debugger_Window_Buffers" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="graph" localise_name="Debugger_Window_Graph" />
+              <MenuEntry stylename="menu_entry" layout_id="profiler" localise_name="Debugger_Window_Profile" />
+            </ContextMenu>
+          </SubMenuEntry>
+          <MenuEntry stylename="menu_entry" layout_id="resetlayout" localise_name="Debugger_ResetLayout" />
+        </ContextMenu>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+  <Layout layout_name="Debugger_ViewTypeMenu" layout_guid="30bcd71d-be41-4ced-b1fa-d6e7ca9385b5">
+    <ContextMenu stylename="context_menu" layout_id="view_type_menu" left="10px" top="10px">
+      <MenuEntry stylename="menu_entry" layout_id="view_real" layout_guid="9bffb73a-2a46-419e-bfa6-0afb1bd48132" localise_name="Debugger_ViewType_Real" has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dslist" layout_guid="3ddbb2b6-bb93-47c8-8bba-6ae57f97fe21" localise_name="Debugger_ViewType_DSList" has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dsmap" layout_guid="16a34620-dee5-47e5-818f-ada24e9d30f6" localise_name="Debugger_ViewType_DSMap"  has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dsstack" layout_guid="407779f2-bb94-42b2-ba5b-b333a685cad9" localise_name="Debugger_ViewType_DSStack"  has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dsqueue" layout_guid="751f2d9b-7856-4ec6-bc8d-31eb2fc407ee" localise_name="Debugger_ViewType_DSQueue"  has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dspriority" layout_guid="7fd4fead-35db-4fd9-8ec1-f42b721cb044" localise_name="Debugger_ViewType_DSPriority" has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_dsgrid" layout_guid="f4f45be6-33ce-4290-9ae8-bce4595d6b07" localise_name="Debugger_ViewType_DSGrid" has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="view_instance" layout_guid="27db1523-5082-4663-9c78-a42ac7e3b89b" localise_name="Debugger_ViewType_Instance" has_checkbox="True" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="Debugger_WatchContextMenu" layout_guid="30bcd71d-be41-4ced-b1fa-d6e7ca9385b5">
+    <ContextMenu stylename="context_menu" left="10px" top="10px">
+      <SubMenuEntry stylename="menu_entry" layout_id="view_as" localise_name="Debugger_ViewAs" icon_flags="Stretch, Centre, KeepAspectRatio">
+        <Layout layout_name="Debugger_ViewTypeMenu" />
+      </SubMenuEntry>
+      <MenuEntry stylename="menu_entry" layout_id="delete_watch" localise_name="Debugger_DeleteWatch" icon_flags="Stretch, Centre, KeepAspectRatio" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry stylename="menu_entry" layout_id="clear_watches" localise_name="Debugger_ClearWatches" icon_flags="Stretch, Centre, KeepAspectRatio" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="Debugger_VariableContextMenu" layout_guid="30bcd71d-be41-4ced-b1fa-d6e7ca9385b5">
+    <ContextMenu stylename="context_menu" left="10px" top="10px">
+      <SubMenuEntry stylename="menu_entry" layout_id="view_as" localise_name="Debugger_ViewAs" icon_flags="Stretch, Centre, KeepAspectRatio">
+        <Layout layout_name="Debugger_ViewTypeMenu" />
+      </SubMenuEntry>
+      <MenuEntry stylename="menu_entry" layout_id="add_watch" localise_name="Debugger_AddWatch" icon_flags="Stretch, Centre, KeepAspectRatio" />
+      <HorizontalSeparator stylename="menu_separator" />
+    </ContextMenu>
+  </Layout>
+  
+  <Layout layout_name="Debugger_SourceView_Popup" layout_guid="f0d34b17-e215-407e-afbb-f87af373785d">
+    <Cell row="0" column="0" flow_index="0" layout_id="window_client_panel" />
+    <Client>
+      <ChildGadgets>
+        <StackPanel layout_id="panel" left="0px" top="0px" stylename="debugger_source_popup_panel" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Label stylename="debugger_source_popup_label_var" layout_id="var_name" left="0px" margin="8dpi_px" />
+            <Label stylename="debugger_source_popup_label_value" layout_id="var_value" margin="8dpi_px" />
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="Debugger_CodeErrorDialog" layout_guid="565124c0-0a77-454f-bb2a-fbd7dd20eccb">
+    <Window stylename="debugger_code_error_window" width="426px" localise_title="Debugger_CodeError" window_flags="CloseButton, ResizeButton, DockingDisabled, DesktopTransferDisabled, AutoSizeWidth, IgnoreLayoutSerialization" accept_button_id="button_close">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" top="0px" stack_resize="ResizeAll">
+            <ChildGadgets>
+              <Image stylename="image" height="32dpi_px" width="32dpi_px" left="0px" image_flags="Stretch, Centre, KeepAspectRatio" image="ErrorCross32.png" />
+              <Label stylename="label" height="16px" width="209px" left="44px" margin_left="12dpi_px" localise_caption="Debugger_ErrorMsg" />
+            </ChildGadgets>
+          </StackPanel>
+          <MultiLineTextBox stylename="multiline_text_box" layout_id="text_box" layout_guid="a8982e8a-cf62-41ea-8728-6367bc43984a" left="0dpi_px" right="0dpi_px" top="40dpi_px" bottom="36dpi_px" />
+          <Button stylename="button_up" layout_id="button_close" layout_guid="1aa04c66-1e9a-44a6-ba68-02d50ff2dd38" height="24px" width="100dpi_px" bottom="4dpi_px" localise_name="Window_Close" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+
+  <Layout layout_name="Debugger_AttachLayout" layout_guid="06c99999-dfcd-4854-8578-c1a21ebc2942">
+    <Window stylename="remote_add_window" height="130dpi_px" width="420dpi_px" left="463px" top="293dpi_px" help_tag="remote_worker" localise_title="Debugger_AttachToProgramDialog_Title" accept_button_id="connect_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*']" grid_columnlayout="['auto', '1*']" row_spacing="4dpi_px" column_spacing="8dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" localise_tooltip="Debugger_AttachToProgram_YYDebugFile_Tooltip" height="16px" width="34px" left="0px" localise_caption="Debugger_AttachToProgram_YYDebugFile" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="1">
+              <ChildGadgets>
+                <!--<TextBox stylename="text_box" layout_id="tb_yydebugfile" layout_guid="1973445a-63da-47dc-9bb3-49017105b3ed" />-->
+                <FileInputGadget stylename="file_input" layout_id="tb_yydebugfile" layout_guid="01e69fc3-8fa5-497e-9b4e-1aaaaa015633" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="image_generation_label" localise_tooltip="Debugger_AttachToProgram_Host_Tooltip" localise_caption="Debugger_AttachToProgram_Host" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="2">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="24dpi_px" width="100%">
+                  <ChildGadgets>
+                    <TextBox stylename="text_box" layout_id="tb_hostname" layout_guid="ee543042-4474-4f39-b244-505cdb94faa0" width="60%" left="0px" />
+                    <Label stylename="image_generation_label" localise_tooltip="Debugger_AttachToProgram_Port_Tooltip" width="7%" left="217.38px" margin_left="3%" localise_caption="Debugger_AttachToProgram_Port" auto_size="False" auto_ellipsis="False" />
+                    <TextBox stylename="text_box" layout_id="tb_portnumber" layout_guid="a8ad023e-b9bf-4d12-a73d-f88414f4bf46" width="30%" left="241px" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" rowspan="1" columnspan="2" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="connect_button" layout_guid="cd858c74-637f-46a2-b0c1-b3be656b300b" height="24px" width="80dpi_px" left="0px" margin_right="8dpi_px" localise_name="Debugger_AttachToProgramDialog_Button" />
+                    <Button stylename="button_up" layout_id="cancel_button" layout_guid="9d8bc1f1-0de4-4e2d-9c65-e3b21f27201d" height="24px" width="80dpi_px" left="88px" localise_name="Button_Cancel" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+
+</Layouts>

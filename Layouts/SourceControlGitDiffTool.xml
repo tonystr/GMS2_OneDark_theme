@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitDiffToolOptions" layout_guid="be776a0a-b556-4c81-8290-7feb7199dadd">
+    <!--<Grid stylename="grid_container" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['1*', 'auto']" row_spacing="6dpi_px" column_spacing="12dpi_px" grid_resize="ResizeGrid">-->
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <FileInputGadget stylename="file_input" layout_id="diff_tool" layout_guid="01e69fc3-8fa5-497e-9b4e-16a10a015633" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="260px" localise_caption="sourcecontrolgit_difftool_path" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="diff_options" layout_guid="747f8099-a128-4e5a-83cf-ad0fb977c510" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="276px" localise_caption="sourcecontrolgit_difftool_options" />
+        </ChildGadgets>
+      </Cell>
+    <!--</Grid>-->
+  </Layout>
+</Layouts>

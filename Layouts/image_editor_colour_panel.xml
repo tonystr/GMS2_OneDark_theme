@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ColourSelectToolPanel_Window" layout_guid="cb19dc5d-365e-4d42-ab4d-2e72ec366190">
+    <Window stylename="default_window" height="366px" width="279px" left="244px" top="57px" title="Basic Window">
+      <Client>
+          <Layout layout_name="ColourSelectToolPanel"/>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ColourSelectToolPanel" layout_guid="5bc27051-c9bf-43f8-9540-9693c861cbe1">
+      <ChildGadgets>
+          <StackPanel stylename="stack_panel" layout_id="container_stack" layout_guid="edfbf73d-ba20-4f5e-8022-1f3d2cb2c969" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                  <StackPanel stylename="swatch_stack_panel" layout_id="swatch_stack" layout_guid="d4c7a5e4-d6a3-4b30-98b6-b203241b85cf" top="2px" margin_top="2dpi_px" />
+                  <StackPanel stylename="swatch_stack_panel" layout_id="history_stack" layout_guid="906934be-41c5-4277-b7ad-0a8df9193145" left="0px" top="12px" margin_top="10dpi_px" />
+                  <HorizontalSeparator stylename="horizontal_separator" width="" top="22px" margin_left="5dpi_px" margin_right="5dpi_px" margin_top="10dpi_px" margin_bottom="10dpi_px" />
+                  <Grid stylename="grid_container" height="50dpi_px" width="100%" left="4dpi_px" top="33px" margin_right="4dpi_px" grid_columnlayout="['41dpi_px', 'auto', '41dpi_px', 'auto']" grid_resize="ResizeGridWidth">
+                      <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                              <ColourSelectButton stylename="colour_select_button_up" layout_id="left_colour_button" layout_guid="63397fc3-6ef1-4618-a369-bc674c52f565" height="40dpi_px" width="40dpi_px" />
+                              <Image stylename="image" layout_id="eraser_icon_left" height="32dpi_px" width="32dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="ImageEditor\ToolIcons\icon_IE_eraser.png" />
+                          </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                              <Image stylename="image" layout_id="mouse_image" layout_guid="f94595d8-47a6-409f-a821-5a33635e138d" height="32px" width="64px" left="1dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="ImageEditor\icon_ie_mouse_colour.png" />
+                          </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" flow_index="0">
+                          <ChildGadgets>
+                              <ColourSelectButton stylename="colour_select_button_up" layout_id="right_colour_button" layout_guid="038dbc6e-77ed-4dea-848e-d1430d91dc60" height="40dpi_px" width="40dpi_px" left="2dpi_px" />
+                              <Image stylename="image" layout_id="eraser_icon_right" height="32dpi_px" width="32dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="ImageEditor\ToolIcons\icon_IE_eraser.png" />
+                          </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="3" flow_index="0">
+                          <ChildGadgets>
+                              <Image stylename="image" layout_id="swap_colours" layout_guid="bdc28fc0-893d-425c-926f-8ce05de039f8" localise_tooltip="ImageEditor_SwapColours_TT" height="32dpi_px" width="32dpi_px" left="6dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="ImageEditor\icon_IE_swatchswitch.png" />
+                          </ChildGadgets>
+                      </Cell>
+                  </Grid>
+              </ChildGadgets>
+          </StackPanel>
+      </ChildGadgets>
+  </Layout>
+</Layouts>

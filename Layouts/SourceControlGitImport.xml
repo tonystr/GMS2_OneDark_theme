@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitImport" layout_guid="2eda1000-b154-4b3b-8f52-8e83f3bb1e89">
+    <Window stylename="source_control_git_import_window" height="180dpi_px" width="400dpi_px" localise_title="sourcecontrolgit_import_project" window_flags="CloseButton, MinimizeButton, MaximizeButton, DockingDisabled" accept_button_id="ok_button">
+      <Client>
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="ok_button" layout_guid="1be654ea-328a-47b8-be35-a1c49ee0f43d" height="24px" width="69dpi_px" left="12dpi_px" bottom="12dpi_px" localise_name="Button_OK" />
+          <Button stylename="button_up" layout_id="cancel_button" layout_guid="4affacb8-d85e-43f8-bcc8-f93e1ded8b3b" height="24px" width="69dpi_px" right="12dpi_px" bottom="12dpi_px" localise_name="Button_Cancel" />
+          <TextBox stylename="text_box" layout_id="url_text" layout_guid="e290cace-d76a-4a36-98ad-fc2490e309b2" left="8dpi_px" right="8dpi_px" top="43dpi_px" />
+          <Label stylename="label" height="16px" width="290px" left="11dpi_px" top="17dpi_px" localise_caption="sourcecontrolgit_import_repository" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

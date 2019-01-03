@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitCommit_Menu" layout_guid="3d985226-65d1-49fb-bda1-85c13d971bfa">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_revert" localise_name="SCM_Revert_Path" />
+      <MenuEntry layout_id="menu_delete" localise_name="SCM_Delete_Path" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_revert_all" localise_name="SCM_Revert_All" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="SourceControlGitCommit" layout_guid="3ae34bc9-5ebc-422d-8720-0fabd04acdd2">
+    <Window stylename="source_control_git_commit_window" height="0dpi_px" width="580dpi_px" localise_title="sourcecontrolgit_commit" window_flags="CloseButton, MinimizeButton, MaximizeButton, ResizeButton, DockingDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" right="6dpi_px" top="6dpi_px" bottom="6dpi_px" grid_rowlayout="['auto', '2*', '2*', '1*', 'auto']" row_spacing="6dpi_px" grid_resize="ResizeGrid">
+            <RowSplitter stylename="horizontal_grid_splitter_gitstatus" height="5dpi_px" width="550px" left="0px" top="213px" row="2" column="0" rowspan="1" columnspan="1" />
+            <RowSplitter stylename="horizontal_grid_splitter_gitstatus" height="5dpi_px" width="550px" left="0px" top="410px" row="3" column="0" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="status" layout_guid="96c56b46-c61f-47b0-a8e7-2634a82907b5" height="16px" width="0px" right="0dpi_px" top="0dpi_px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['32dpi_px', '1*', '26dpi_px']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="32dpi_px" localise_title="sourcecontrolgit_commit_stagedchanges">
+                        <ChildGadgets>
+                          <Button stylename="source_control_git_commit_button_up" layout_id="unstage_selected" layout_guid="38b2310b-22b8-48b4-bffa-9de3d8f6e249" width="180dpi_px" right="6dpi_px" localise_name="sourcecontrolgit_commit_unstageselected" />
+                          <Button stylename="source_control_git_commit_button_up" layout_id="unstage_all" layout_guid="72077196-6a50-4fd0-8de0-12aeaa66c691" width="180dpi_px" right="190dpi_px" localise_name="sourcecontrolgit_commit_unstageall" />
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TableListBox stylename="extension_tablegadget_content" layout_id="staged_files" layout_guid="a65d9974-49b9-42e8-8ff1-49d2ca1e1d2c" top="-1px" bottom="-1px">
+                        <ListBoxItems />
+                      </TableListBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="" width="">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" grid_columnlayout="['1*', '100dpi_px']">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" layout_id="staged_page" layout_guid="072540df-6f3f-4c39-ac25-155ea50c8c8f" height="16px" left="6dpi_px" margin_left="6dpi_px" localise_caption="Loading" auto_size="False" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="20dpi_px" right="6dpi_px" stack_order="RightToLeft">
+                                  <ChildGadgets>
+                                    <Button stylename="source_control_git_commit_button_up" layout_id="staged_page_right" layout_guid="5e74b95d-dbb2-4ced-972e-1cdb35bac4d7" localise_tooltip="SourceControlGit_PageRight" height="20dpi_px" width="34dpi_px" right="0px" margin_left="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeft.png" />
+                                    <Button stylename="source_control_git_commit_button_up" layout_id="staged_page_left" layout_guid="e0e30e8d-49ea-4588-9c0b-08276395154d" localise_tooltip="SourceControlGit_PageLeft" height="20dpi_px" width="34dpi_px" right="40px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeft.png" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['32dpi_px', '1*', '26dpi_px']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="32dpi_px" localise_title="sourcecontrolgit_commit_unstagedchanges">
+                        <ChildGadgets>
+                          <Button stylename="source_control_git_commit_button_up" layout_id="stage_selected" layout_guid="14e0c932-94f0-4b9d-a715-1a62a378815b" width="180dpi_px" right="6dpi_px" localise_name="sourcecontrolgit_commit_stageselected" />
+                          <Button stylename="source_control_git_commit_button_up" layout_id="stage_all" layout_guid="e7f693f2-c047-4bdf-be08-38f316ad34e8" width="180dpi_px" right="190dpi_px" localise_name="sourcecontrolgit_commit_stageall" />
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TableListBox stylename="extension_tablegadget_content" layout_id="unstaged_files" layout_guid="d2a97241-88b0-49e5-beaa-df3e95778f4a" top="-1px" bottom="-1px">
+                        <ListBoxItems />
+                      </TableListBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="" width="" top="0px">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" grid_columnlayout="['1*', '100dpi_px']">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" layout_id="unstaged_page" layout_guid="dc8a904c-8154-47e4-93c7-bd507474a38e" height="16px" left="6dpi_px" margin_left="6dpi_px" localise_caption="Loading" auto_size="False" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="20dpi_px" right="6dpi_px" stack_order="RightToLeft">
+                                  <ChildGadgets>
+                                    <Button stylename="source_control_git_commit_button_up" layout_id="unstaged_page_right" layout_guid="a6273d56-4720-42ab-9b4f-9b5d4207664a" localise_tooltip="SourceControlGit_PageRight" height="20dpi_px" width="34dpi_px" right="0px" margin_left="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeft.png" />
+                                    <Button stylename="source_control_git_commit_button_up" layout_id="unstaged_page_left" layout_guid="dc4b9318-92f5-442a-a00c-bb01776a94e8" localise_tooltip="SourceControlGit_PageLeft" height="20dpi_px" width="34dpi_px" right="40px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeft.png" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['24dpi_px', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" localise_title="sourcecontrolgit_commit_message" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <MultiLineTextBox stylename="multiline_text_box" layout_id="commit_message" layout_guid="a073f3e2-c01d-4930-a953-27ff1bc36e34" height="" width="" top="-1px" bottom="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="4" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="commit_commit" layout_guid="d74e0148-81fd-454e-b705-8552bcbcc160" height="24px" width="100dpi_px" right="120dpi_px" bottom="0dpi_px" localise_name="sourcecontrolgit_commit_button" />
+                <Button stylename="button_up" layout_id="commit_cancel" layout_guid="8b07297c-548c-4132-ae87-36e9e13cbcdf" height="24px" width="100dpi_px" right="0dpi_px" bottom="0dpi_px" localise_name="Button_Cancel" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ide_toolbar" layout_guid="e855d477-7f10-4eb0-b5cf-444d9e4102c8">
+    <Grid stylename="ide_toolbar_frame" height="100dpi_px" width="100%" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto']" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="ide_toolbar" layout_id="ide_toolbar" layout_guid="73839102-b3b0-45cf-864f-8c48de812c8a" height="100dpi_px" width="100%" left="1dpi_px" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_home" layout_guid="7de30aac-1f68-4077-9881-9aa09fd23048" localise_tooltip="IDETooltip_StartPage" left="2px" click_command="show_home_page" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_home.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="separator1" layout_guid="10b73ee7-da08-45db-9262-262533580096" left="88px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_new" layout_guid="41510dee-e8bb-406c-a90c-31eceb85fd55" localise_tooltip="IDETooltip_NewProject" left="2px" click_command="show_new_projects_page" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_new.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_open" layout_guid="4530f42d-da0f-415f-8b85-0bc68f6876b0" localise_tooltip="IDETooltip_OpenProject" left="28px" click_command="load_project_dialog" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_open.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_save" layout_guid="c5ae4f11-8bc8-48d0-9074-038d52443f9a" localise_tooltip="IDETooltip_Save" left="54px" click_command="menu_save_project_incremental" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_save.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="separator1" layout_guid="0ac34e20-c28d-4177-9cb7-fa35cbf2f890" left="88px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_package" layout_guid="3b6dc79b-9999-4b71-a056-d8652b320394" localise_tooltip="IDETooltip_Package" left="101px" click_command="package_program" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_package.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="separator2" layout_guid="5cd1e8c2-e54a-4f33-a181-08c9989d73f9" left="135px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_debug" layout_guid="3b6dc79b-6534-4b71-a056-d8652b320394" localise_tooltip="IDETooltip_Debug" left="148px" click_command="run_program" command_arg="debug" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_debug.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_play" layout_guid="1fe0026b-aae8-44ce-88f9-6083a85f0fb4" localise_tooltip="IDETooltip_Run" left="174px" click_command="run_program" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_play.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_stop" layout_guid="58581a17-a1bc-40c3-805f-b41c5be297fc" localise_tooltip="IDETooltip_Stop" left="200px" click_command="stop_program" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_stop.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_clean" layout_guid="a8056ef5-7cc9-4e7d-b7c5-95a98ba23b6d" localise_tooltip="IDETooltip_Clean" left="226px" click_command="clean_program" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_clean.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="separator3" layout_guid="1bf71928-0474-410e-9055-2732f9d9baf4" left="260px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_gamesettings" layout_guid="6920f2a1-dddf-48b3-9a8f-e8a4bc111d81" localise_tooltip="IDETooltip_GameSettings" left="273px" click_command="open_options_editor" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_gamesettings.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_help" layout_guid="1cc36087-b3a3-492c-a431-ba52df9459cf" localise_tooltip="IDETooltip_Help" left="299px" click_command="find_gadget_help" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_help.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="separator4" layout_guid="4326b3c6-6e11-4867-ab19-a38011d31d33" left="333px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_zoomout" layout_guid="f841e2f4-d74e-492a-8983-86456f12069f" localise_tooltip="IDETooltop_WorkspaceZoomOut" left="346px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_zoom_out.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_zoomreset" layout_guid="c8a83dbd-c3a3-4c55-bdbc-02ec8a820947" localise_tooltip="IDETooltop_WorkspaceZoomReset" left="372px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_zoom_reset.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_zoomin" layout_guid="27475a9d-080d-4732-9165-48a0d5a49fe6" localise_tooltip="IDETooltop_WorkspaceZoomIn" left="398px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_zoom_in.png" />
+              <Button stylename="toolbar_button" layout_id="ide_toolbar_collapsedocks" layout_guid="00c86454-edaf-4449-8648-0978fb161de3" localise_tooltip="IDETooltop_CollapseDocks" left="424px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_show_hide_docks.png" />
+              <VerticalSeparator stylename="vertical_separator" layout_id="laptop_separator" layout_guid="f40da905-af78-4991-bbcf-79d376643b98" left="458px" top="4dpi_px" bottom="4dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" />
+              <ToggleButton stylename="button_up" layout_id="laptop_toggle" layout_guid="3e474162-b48c-4161-b030-e312d2529c43" localise_tooltip="IDETooltip_LaptopMode_Title" width="24dpi_px" left="469px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="IDE_Toolbar\icon_IDE_laptop.png" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="RightToLeft" stack_resize="ResizeAll">
+            <ChildGadgets>
+              <TargetSelectButton stylename="target_select_button" layout_id="target_select_button" layout_guid="961a7a9f-58c2-4976-b11a-dd67a6e22d17" right="16px" margin_right="16dpi_px" />
+              <Label stylename="target_select_label" layout_id="target_select_label_4" layout_guid="68a0343f-2867-4c8d-8aef-bfa346d405b2" height="16px" width="0px" right="46px" />
+              <Label stylename="target_select_label" layout_id="target_select_splitter_4" layout_guid="0be3437b-86f4-4ea9-a88c-a9d66299dd8e" height="16px" width="7px" right="50px" caption="|" />
+              <Label stylename="target_select_label" layout_id="target_select_label_3" layout_guid="68a0c6df-2867-4c8d-8aef-bfa346d405b2" height="16px" width="0px" right="46px" width_max="200dpi_px"/>
+              <Label stylename="target_select_label" layout_id="target_select_splitter_3" layout_guid="0be29f7b-86f4-4ea9-a88c-a9d66299dd8e" height="16px" width="7px" right="50px" caption="|" />
+              <Label stylename="target_select_label" layout_id="target_select_label_2" layout_guid="e905d9eb-fce4-43fc-a941-e489253503d6" height="16px" width="0px" right="61px" />
+              <Label stylename="target_select_label" layout_id="target_select_splitter_2" layout_guid="6279a6a1-4430-47b1-9fe6-8be31d87ffa8" height="16px" width="7px" right="65px" caption="|" />
+              <Label stylename="target_select_label" layout_id="target_select_label_1" layout_guid="6934c5d4-24f7-466a-a36e-207bdaf50971" height="16px" width="0px" right="76px" />
+              <Label stylename="target_select_label" layout_id="target_select_splitter_1" layout_guid="a49b9403-e41e-4c4d-b6b9-6bcfa94a58cd" height="16px" width="7px" right="80px" caption="|" />
+              <Label stylename="target_select_label" layout_id="target_select_label_0" layout_guid="a0fc9471-886f-44a5-9385-61c7fa1707b6" height="16px" width="0px" right="91px" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

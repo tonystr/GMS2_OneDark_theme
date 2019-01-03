@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ObjectEditor_PhysicsShapeWindow" layout_guid="5117df4b-a6fd-4a8b-b996-dbded638a869">
+    <Window stylename="object_physics_shape_window" height="520dpi_px" width="830dpi_px" left="26dpi_px" top="54dpi_px" localise_title="ObjectEditor_PhysicsShape_WindowTitle" window_flags="Default" help_tag="object_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" height="100%" grid_columnlayout="['auto', '1*']" column_spacing="5px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" width="150dpi_px" grid_rowlayout="['auto', '1*']" row_spacing="4dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <ComboBox stylename="combobox_panel" layout_id="select_physics_shape" layout_guid="40b99f8f-bc44-45e1-a9a6-723eae36f631" width="100%">
+                        <ListBoxItems>
+                          <Label stylename="label" height="16px" width="32px" left="0%" top="0dpi_px" localise_caption="ObjectEditor_Circle" />
+                          <Label stylename="label" height="16px" width="21px" left="0%" top="16dpi_px" localise_caption="ObjectEditor_Box" />
+                          <Label stylename="label" height="16px" width="79px" left="0%" top="32dpi_px" localise_caption="ObjectEditor_Shape" />
+                        </ListBoxItems>
+                      </ComboBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_columns_points" flow_index="1" left="0dpi_px" top="0px" grid_rowlayout="['16dpi_px', '1*']" grid_columnlayout="['1*', '1*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="7px" left="2dpi_px" caption="X" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="7px" left="2dpi_px" caption="Y" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" rowspan="1" columnspan="2" flow_index="0">
+                          <ChildGadgets>
+                            <ListBox stylename="list_box_multi" layout_id="listbox_points" layout_guid="ddc0b28b-e1d6-4b1d-82b2-886e6b07f578">
+                              <ListBoxItems />
+                            </ListBox>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="1">
+              <ChildGadgets>
+                <Grid stylename="grid_container_spriteeditor" top="0px" bottom="0px" grid_rowlayout="['25%', '75%']">
+                  <RowDockSplitter stylename="dock_splitter" height="14dpi_px" width="727px" left="0px" top="154px" splitter_anchor="First" row="1" column="0" rowspan="1" columnspan="1" />
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" layout_id="sprite_frames_container" layout_guid="04ee9c3d-f29d-4611-9254-f6807e737027" top="0px" stack_resize="ResizeHeight" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" flow_index="1">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" left="0px" margin_top="2dpi_px" grid_rowlayout="['auto', '1*']" row_spacing="1dpi_px">
+                            <Cell layout_id="toolbar_panel" layout_guid="0cff768e-4dfa-41ea-be8b-016debe55b4c" row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="24dpi_px">
+                                  <ChildGadgets>
+                                    <ToggleButton stylename="button_up" layout_id="btn_togglegrid" layout_guid="6bd498d3-421b-431d-875c-8e02f50ba850" localise_tooltip="PhysicsShapeEditor_ToggleGrid" height="100%" width="24dpi_px" left="160px" margin_left="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_grid_show.png" pressed="True" />
+                                    <ToggleButton stylename="button_up" layout_id="btn_snaptogrid" layout_guid="72c38b33-d4cb-4ce2-835f-b7c047b409fd" localise_tooltip="gridsettings_snaptogrid" height="100%" width="24dpi_px" left="186px" margin_left="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_grid_snap.png" />
+                                    <VerticalSeparator stylename="vertical_separator" left="215px" margin_left="5dpi_px" margin_right="5dpi_px" />
+                                    <Label stylename="label" height="16px" width="38px" left="221px" localise_caption="PathEditor_SnapX" />
+                                    <NumericTextBox stylename="numeric_text_box" layout_id="textbox_gridx" layout_guid="d5981276-e80b-4da1-a584-7ede09d1e2f1" localise_tooltip="PhysicsShapeEditor_SnapX" width="40dpi_px" left="265px" margin_left="6dpi_px" text="1" min="1" max="1000" />
+                                    <Label stylename="label" height="16px" width="38px" left="311px" margin_left="6dpi_px" localise_caption="PathEditor_SnapY" />
+                                    <NumericTextBox stylename="numeric_text_box" layout_id="textbox_gridy" layout_guid="15216ea5-7510-40a8-b74c-176976daa009" localise_tooltip="PhysicsShapeEditor_SnapY" width="40dpi_px" left="355px" margin_left="6dpi_px" text="1" min="1" max="1000" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell layout_id="spline_panel" layout_guid="25f3663d-5073-47f4-89e4-f50e347397ba" row="1" column="0" flow_index="1" />
+                          </Grid>
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditorEvents" layout_guid="99508034-6ebe-4ebb-bb26-8820bd1873d8">
+    <Window stylename="object_events_window" height="300dpi_px" width="250dpi_px" left="71dpi_px" top="52dpi_px" localise_title="ObjectEditor_Events" help_tag="object_editor" window_flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, Bookmark" icon="ObjectEditor\MenuIcons\icon_IDE_events.png">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']" row_spacing="4dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <TreeView stylename="gadget_treeview" layout_id="events_list" layout_guid="cba8a3f6-b375-4db1-bf8d-328fef886c2c" height="" left="0dpi_px" node_stylename="treeview_plusminus" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="add_event_button" layout_guid="78e6d6f4-9caa-40a3-bb83-71d205d4211a" flow_index="1" height="24px" width="100%" left="0dpi_px" bottom="0dpi_px" localise_name="ObjectEditor_AddEvent" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditor" layout_guid="4ee3d8cb-9c57-4d57-a91d-eed8a197b6f7">
+    <Window stylename="object_editor_window" layout_id="object_properties_window" layout_guid="e42b2c9a-efea-43bb-aa17-a1153cedff58" help_tag="object_editor" height="450px" width="258px" left="85px" top="16px" localise_title="ObjectEditor_WindowTitle" window_flags="CloseButton, MinimizeButton, AutoSizeWidth, AutoSizeHeight, Bookmark">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="object_editor_grid" left="0px" top="0px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto']" grid_columnlayout="['auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" left="0px" right="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="37px" left="0px" top="5px" margin_left="12px" margin_top="5px" margin_bottom="3px" localise_caption="ObjectEditor_Name" />
+                    <TextBox stylename="object_editor_gadget_scaletofit" top="24px" margin_left="10px" margin_right="10px" margin_bottom="5px" bind_property="name" />
+                    <SpriteSelector stylename="sprite_group_grid" layout_id="sprite_selector" layout_guid="f7bf20ed-82d0-48c7-ad77-2b4283f8eac6" height="85px" top="71px" margin_bottom="8px" bind_property="spriteModelView" />
+                    <Label stylename="label" height="16px" width="83px" left="0px" top="164px" margin_left="15px" margin_bottom="5px" localise_caption="Object_Mask" />
+                    <Grid stylename="grid_container" left="10px" right="10px" top="185px" margin_left="10px" margin_right="10px" grid_rowlayout="['24dpi_px']" grid_columnlayout="['1*', '24dpi_px']" column_spacing="3px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <ObjectSpriteMaskButton stylename="browse_button" layout_id="mask_button" layout_guid="a62cc38c-3d8e-4fd0-bed7-62dc864d5001" height="24px" bind_property="maskSpriteView" name="&lt;sprite&gt;" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" flow_index="0">
+                        <ChildGadgets>
+                          <Button stylename="button_up" layout_id="edit_mask_button" layout_guid="fe283875-6469-46a2-b010-bc343871cd1c" localise_tooltip="ObjectEditor_EditMask" width="24dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ResourceIcons\icon_IDE_edit_sprite.png" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="object_editor_grid" height="50px" width="50px" margin_left="10px" margin_right="10px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['auto', 'auto']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" flow_index="1" left="0px" margin_top="8px" margin_bottom="8px" bind_property="visible" localise_name="Object_Visible" localise_tooltip="Object_Visible_Tooltip"/>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" flow_index="2" left="0px" margin_top="8px" margin_bottom="8px" bind_property="solid" localise_name="Object_Solid" localise_tooltip="Object_Solid_Tooltip"/>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" flow_index="3" left="0px" top="0px" margin_bottom="8px" bind_property="persistent" localise_name="Object_Persistent" localise_tooltip="Object_Persistent_Tooltip" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" layout_id="use_physics_checkbox" layout_guid="112ea029-e932-4bec-a81f-f7cc65a929ee" flow_index="4" left="0dpi_px" top="0dpi_px" bind_property="physicsObject" localise_name="Object_UsesPhysics" localise_tooltip="Object_UsesPhysics_Tooltip"/>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <BrowseButton stylename="tileset_button" layout_id="events_button" layout_guid="e6a9bce7-f758-46a1-af75-128eeedac22e" height="24px" margin_bottom="10px" localise_name="ObjectEditor_Events" icon="ObjectEditor\MenuIcons\icon_IDE_events.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <BrowseButton stylename="tileset_button" layout_id="parent_button" layout_guid="e5a517cc-ba60-4b15-a0d5-c57eb831eafa" height="24px" margin_bottom="10px" localise_name="Object_Parent" icon="ObjectEditor\MenuIcons\icon_IDE_parent.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="4" column="0" flow_index="0">
+              <ChildGadgets>
+                <BrowseButton stylename="tileset_button" layout_id="physics_button" layout_guid="22120eba-86d2-4da6-a7fe-902534e30333" height="24px" margin_bottom="10px" localise_name="ObjectEditor_Physics" icon="ObjectEditor\MenuIcons\icon_IDE_physics.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="5" column="0" flow_index="0">
+              <ChildGadgets>
+                <BrowseButton stylename="tileset_button" layout_id="properties_button" layout_guid="60f22a2b-7cb6-4397-a25e-ec9ef8eed2ab" height="24px" margin_bottom="10px" localise_name="ObjectEditor_InstPropsDefs" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditor_PhysicsSettings" layout_guid="cb79d7ec-2c59-42d0-82a3-67eda5c52a2b">
+    <Window stylename="object_physics_window" height="310dpi_px" width="240dpi_px" left="122dpi_px" top="77dpi_px" help_tag="object_editor" localise_title="ObjectEditor_Physics" icon="ObjectEditor\MenuIcons\icon_IDE_physics.png">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto']" grid_columnlayout="['1*', 'auto']" row_spacing="2dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsDensity" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsDensity" input_type="Real" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsRestitution" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsRestitution" input_type="Real" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsGroup" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsGroup" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsLinearDamping" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsLinearDamping" input_type="Real" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="4" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsAngularDamping" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="4" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsAngularDamping" input_type="Real" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="5" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="object_editor_gadget_scaletofit" height="16dpi_px" left="6dpi_px" margin_left="6dpi_px" margin_right="2dpi_px" localise_caption="Object_PhysicsFriction" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="5" column="1" flow_index="0">
+              <ChildGadgets>
+                <NumericTextBox stylename="numeric_text_box" width="80dpi_px" margin_right="6dpi_px" bind_property="physicsFriction" input_type="Real" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="6" column="0" rowspan="1" columnspan="2">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" left="6dpi_px" bind_property="physicsSensor" localise_name="Object_PhysicsSensor" />
+                <CheckBox stylename="checkbox_stack" left="50%" bind_property="physicsStartAwake" localise_name="Object_PhysicsStartAwake" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="7" column="0" rowspan="1" columnspan="2">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" left="50%" margin_top="4dpi_px" bind_property="physicsKinematic" localise_name="Object_PhysicsKinematic" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="8" column="0" rowspan="1" columnspan="2">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="modify_collision_shape_button" layout_guid="a204e5a9-9b47-488f-8e38-4d69e31cd51b" height="24px" left="20dpi_px" right="20dpi_px" margin_top="10dpi_px" localise_name="ObjectEditor_ModifyCollisionShape" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="EventListItem2Icon" layout_guid="82e2515c-6e2f-43cd-8305-96c1a80023e4">
+    <Grid stylename="grid_container" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto']" grid_resize="ResizeGrid">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="event_item_stack_panel" layout_id="event_list_item" layout_guid="533c21a3-5022-4cfa-a705-4c5daa0a1d53" left="4dpi_px" right="4dpi_px" top="0dpi_px">
+            <ChildGadgets>
+              <Image stylename="resource_icon" layout_id="event_image" layout_guid="12dc4562-9873-45d1-b3b0-9f34c620a02a" left="1px" margin_left="1dpi_px" margin_right="6dpi_px" />
+              <Image stylename="resource_icon" layout_id="event_image2" layout_guid="91cb0e09-fb6e-4240-8d78-3e664a366b5d" left="28px" margin_left="1dpi_px" margin_right="5dpi_px" />
+              <Label stylename="label" layout_id="event_name2" layout_guid="f8844349-9119-4312-ab1d-da855aa8ef08" height="16px" width="0px" left="53px" />
+              <Label stylename="label" layout_id="event_name" layout_guid="326c0b9e-66e9-44fb-9afc-bf50e4694baf" height="16px" width="5px" left="53px" caption="?" />
+              <Label stylename="label" layout_id="event_parent_object" height="16px" width="0px" left="58px" />
+              <Label stylename="label" layout_id="event_name_desc" layout_guid="eba7f83b-6cc4-4151-b779-26a3610d0eb4" height="16px" width="0px" left="58px" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_guid="2c986cf2-78f3-4b45-a4b8-8e467e37e6a5" row="0" column="1" flow_index="0">
+          <ChildGadgets>
+              <Image stylename="event_override_icon" layout_id="override_icon" layout_guid="060464f3-b944-4473-a6a3-945d9570504f" left="0px" margin_right="6dpi_px" />
+          </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ObjectPhysicsPropertiesGroup" layout_guid="4a2722a6-b4ac-4870-b7cb-f4723a010894">
+    <Group stylename="object_editor_group_box" height="99.60861%" width="100%" left="0px" top="3px" margin_top="0px" localise_name="ObjectEditor_PhysicsProperties">
+      <ChildGadgets>
+        <NumericTextBox width="42.09678%" right="10px" top="314px" bind_property="physicsAngularDamping" input_type="Real" />
+        <NumericTextBox width="42.09678%" right="10px" top="199px" bind_property="physicsDensity" input_type="Real" />
+        <RadioGroup stylename="object_editor_group_box" height="102px" left="4px" right="4px" top="24.5px" localise_name="ObjectEditor_CollisionShape">
+          <ChildGadgets>
+            <StackPanel stylename="resizing_stack_panel" left="8px" stack_order="TopToBottom">
+              <Gadgets>
+                <RadioButton stylename="radiobutton_stack" top="5px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ObjectEditor_Circle" />
+                <RadioButton stylename="radiobutton_stack" top="31px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ObjectEditor_Box" />
+                <RadioButton stylename="radiobutton_stack" left="62.5px" top="57px" margin_left="5px" margin_right="5px" margin_top="5px" margin_bottom="5px" localise_name="ObjectEditor_Shape" />
+              </Gadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </RadioGroup>
+        <Button stylename="button_up" layout_id="modify_collision_shape_button" height="23.69744px" left="20px" right="20px" top="142px" localise_name="ObjectEditor_ModifyCollisionShape" />
+        <Label stylename="right_aligned_label" height="16px" width="41px" left="7px" right="50%" top="205px" localise_caption="Object_PhysicsDensity" />
+        <Label stylename="right_aligned_label" height="16px" width="58px" left="5px" right="50.80646%" top="234px" localise_caption="Object_PhysicsRestitution" />
+        <Label stylename="right_aligned_label" height="16px" width="85px" left="4px" right="51.20968%" top="262px" localise_caption="Object_PhysicsGroup" />
+        <Label stylename="right_aligned_label" height="16px" width="89px" left="5px" right="50.80646%" top="289px" localise_caption="Object_PhysicsLinearDamping" />
+        <Label stylename="right_aligned_label" height="16px" width="97px" left="4px" right="51.20968%" top="320px" localise_caption="Object_PhysicsAngularDamping" />
+        <Label stylename="right_aligned_label" height="16px" width="40px" left="5px" right="50.80646%" top="350px" localise_caption="Object_PhysicsFriction" />
+        <NumericTextBox width="42.09678%" right="10px" top="227px" bind_property="physicsRestitution" input_type="Real" />
+        <NumericTextBox width="42.09678%" right="10px" top="255px" bind_property="physicsGroup" />
+        <NumericTextBox width="42.09678%" right="10px" top="284px" bind_property="physicsLinearDamping" input_type="Real" />
+        <NumericTextBox width="42.09678%" right="10px" top="346px" bind_property="physicsFriction" input_type="Real" />
+        <CheckBox stylename="checkbox_stack" left="6.5px" top="382px" bind_property="physicsSensor" localise_name="Object_PhysicsSensor" />
+        <CheckBox stylename="checkbox_stack" left="127.5px" top="385px" bind_property="physicsStartAwake" localise_name="Object_PhysicsStartAwake" />
+        <CheckBox stylename="checkbox_stack" left="6.5px" top="409px" bind_property="physicsKinematic" localise_name="Object_PhysicsKinematic" />
+      </ChildGadgets>
+    </Group>
+  </Layout>
+  <Layout layout_name="ObjectEditor_ParentSettings" layout_guid="06c8ae81-dfcd-4854-8578-cfdcddbc2942">
+    <Window stylename="object_events_window" height="250dpi_px" width="250dpi_px" left="135dpi_px" top="33dpi_px" help_tag="object_editor" localise_title="Object_Parent" icon="ObjectEditor\MenuIcons\icon_IDE_parent.png">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', '1*', 'auto']" row_spacing="4dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="37px" left="0px" top="0dpi_px" localise_caption="Object_Parent" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ResourceDropPanel stylename="resource_selector" layout_id="parent_drop_panel" layout_guid="a733affa-a0bf-49cc-a0d3-a5d3c7529db4" height="36dpi_px" bind_property="parentObjectView">
+                  <Gadgets>
+                    <Label stylename="resource_selector_drag_message" layout_id="drag_message" layout_guid="9c899f55-f805-42bc-a831-0ab047a8e555" localise_caption="ObjectEditor_DropParentHere" />
+                  </Gadgets>
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="0px" right="0px" grid_rowlayout="['32dpi_px']" grid_columnlayout="['auto', '1*', '24dpi_px']" column_spacing="3px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" flow_index="0">
+                        <ChildGadgets>
+                          <ScrollPanel stylename="object_selector_icon_frame" height="32dpi_px" width="32dpi_px" left="0px" margin_right="5px">
+                            <ChildGadgets>
+                              <Resource_ObjectIcon stylename="image" height="24dpi_px" width="24dpi_px" bind_property="parentObjectView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                            </ChildGadgets>
+                          </ScrollPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" flow_index="0">
+                        <ChildGadgets>
+                          <ResourceButton stylename="browse_button" allow_create="True" layout_id="parent_button" layout_guid="1012600d-9256-41c5-8c8d-6307a8ae9048" left="0px" right="0px" bind_property="parentObjectView" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" flow_index="0">
+                        <ChildGadgets>
+                          <Button stylename="button_up" layout_id="edit_parent_button" layout_guid="43bfc930-1013-4750-a137-0a1450a339d3" localise_tooltip="ObjectEditor_EditParent" width="24dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ResourceIcons\icon_IDE_edit_object.png" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </ResourceDropPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="47px" left="0px" bottom="0px" localise_caption="ObjectEditor_Children" />
+                <Button stylename="button_object_editor_child" layout_id="btn_add_child" layout_guid="eef53036-0256-403a-bbf9-26fb42dc9ceb" localise_tooltip="ObjectEditor_AddChildTooltip" width="24dpi_px" right="0px" bottom="0px" margin_top="10dpi_px" icon="Buttons\icon_IDE_add.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <ResourceDropPanel stylename="resource_selector" layout_id="child_drop_panel" layout_guid="13ace6ba-b5c0-41df-aa26-76eff3d7d075" left="0px" right="0px" top="0px" bottom="0px">
+                  <Gadgets>
+                    <Label stylename="resource_selector_drag_message" layout_id="child_drag_message" layout_guid="c612ea66-9c4c-4040-a888-d6956c5ed36f" localise_caption="ObjectEditor_DropChildHere" />
+                  </Gadgets>
+                  <ChildGadgets>
+                    <ScrollPanel stylename="bordered_scrollpanel_dark">
+                      <ChildGadgets>
+                        <TreeView stylename="treeview_no_frame" layout_id="children_listbox" layout_guid="7a13f9c3-eed5-4f58-b67a-7a28c85c0efb" height="" width="" top="1dpi_px" bottom="1px" accept_dragged_nodes="False" />
+                      </ChildGadgets>
+                    </ScrollPanel>
+                  </ChildGadgets>
+                </ResourceDropPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditor_PhysicsShape_ListItem" layout_guid="8464f870-8983-4db6-b293-f607991f8819">
+    <Grid stylename="grid_container" height="16dpi_px" width="100%" grid_columnlayout="['1*', '1*']">
+      <Cell row="0" column="0">
+        <ChildGadgets>
+          <Label stylename="point_editable_label" layout_id="pointitem_editable_x" layout_guid="2fd1a4ff-fbae-451d-a5af-db7be98c62c3" height="16dpi_px" bind_property="x" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1">
+        <ChildGadgets>
+          <Label stylename="point_editable_label" layout_id="pointitem_editable_y" layout_guid="f3268518-a310-42fe-8c9b-85b099f50b04" height="16dpi_px" bind_property="y" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ChildList_Item" layout_guid="7443072c-9bdd-4a98-95d3-65e0225e4cab">
+    <StackPanel stylename="stack_panel" left="0px" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <ScrollPanel stylename="object_selector_icon_frame" height="24dpi_px" width="24dpi_px" left="1px" margin_left="1dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px">
+          <ChildGadgets>
+            <Resource_SpriteIcon stylename="object_editor_child_icon" height="16dpi_px" width="16dpi_px" bind_property="spriteModelView" image_flags="Stretch, Centre, KeepAspectRatio" image="ResourceIcons\icon_object.png" />
+          </ChildGadgets>
+        </ScrollPanel>
+        <Label stylename="label" height="16px" width="32px" left="31px" margin_left="6dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" bind_property="name" caption="name" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+</Layouts>

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="PathEditor_ShiftDialog" layout_guid="d07ba281-8bc1-4b5f-ac03-2d5b13ea7844">
+    <Window stylename="default_window" height="120dpi_px" width="350dpi_px" left="26dpi_px" top="54dpi_px" localise_title="PathEditor_ShiftPath_Title" window_flags="CloseButton, MinimizeButton" help_tag="path_editor">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <Label stylename="label" height="16px" width="315px" top="6px" margin_left="6dpi_px" margin_top="6dpi_px" margin_bottom="10dpi_px" localise_caption="PathEditor_ShiftDialog_Label" />
+              <StackPanel stylename="stack_panel" top="32px" stack_resize="ResizeAll">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="215px" left="0px" margin_right="4dpi_px" localise_caption="PathEditor_Increment" />
+                  <NumericTextBox stylename="numeric_text_box" layout_id="textbox_value" layout_guid="bb71bb7c-f2b6-4ed6-a559-248e2127cf66" height="24dpi_px" width="32dpi_px" left="219px" margin_right="24dpi_px" text="1" default_value="1" min="-10000" max="10000" input_type="Integer" />
+                  <Button stylename="button_up" layout_id="btn_shift_left" layout_guid="a9ccd51b-c0b0-49a6-b797-d1a984b38872" width="24dpi_px" left="275px" margin_right="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="PathEditor\ShiftRight.png" />
+                  <Button stylename="button_up" layout_id="btn_shift_up" layout_guid="a8f2fe11-d973-40ca-9350-e4822d65e657" width="24dpi_px" left="305px" margin_right="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="PathEditor\ShiftUp.png" />
+                  <Button stylename="button_up" layout_id="btn_shift_right" layout_guid="dfaed4ef-57d3-4f1d-99ec-cc4c97260f8e" width="24dpi_px" left="335px" margin_right="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="PathEditor\ShiftRight.png" />
+                  <Button stylename="button_up" layout_id="btn_shift_down" layout_guid="ec9ee6f9-cde8-4b7c-9979-ffef09a2c1f4" width="24dpi_px" left="365px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipVertical" icon="PathEditor\ShiftUp.png" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="PathEditor_ListBoxItem" layout_guid="ec67f197-6e32-49c1-ade3-c4563ecd3e06">
+    <Grid stylename="grid_container" height="16dpi_px" width="100%" grid_columnlayout="['1*', '1*', '1*']">
+      <Cell row="0" column="0">
+        <ChildGadgets>
+          <Label stylename="point_editable_label" layout_id="pointitem_editable_x" layout_guid="56935ba5-c089-4f53-b040-b52b5361f598" height="16dpi_px" bind_property="x">
+            <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+              <MenuEntry stylename="menu_entry" layout_id="menu_edit" layout_guid="1553bc38-820e-455f-9b65-f5ebbdd2ce83" localise_name="PathEditor_ContextMenu_EditPoint" />
+            </ContextMenu>
+          </Label>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1">
+        <ChildGadgets>
+          <Label stylename="point_editable_label" layout_id="pointitem_editable_y" layout_guid="b4e93f1d-c000-4a18-9148-8150ed2daa93" height="16dpi_px" bind_property="y">
+            <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+              <MenuEntry stylename="menu_entry" layout_id="menu_edit" layout_guid="9df80676-0b2d-48fe-9951-0629bb0a4545" localise_name="PathEditor_ContextMenu_EditPoint" />
+            </ContextMenu>
+          </Label>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2">
+        <ChildGadgets>
+          <Label stylename="point_editable_label" layout_id="pointitem_editable_speed" layout_guid="67319d02-807a-4701-b3ed-2b0e64f7c824" height="16dpi_px" bind_property="speed">
+            <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+              <MenuEntry stylename="menu_entry" layout_id="menu_edit" layout_guid="f87330f5-4fb7-483a-bdb2-58de49ebb12f" localise_name="PathEditor_ContextMenu_EditPoint" />
+            </ContextMenu>
+          </Label>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PathEditor_InfoPanel" layout_guid="a4edff22-c233-4a76-9b70-839a4ff43c28">
+    <Grid stylename="grid_container" height="40dpi_px">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" height="100%" width="100%" left="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Label stylename="label" height="16dpi_px" width="209dpi_px" left="0dpi_px" top="0dpi_px" margin_left="4dpi_px" localise_caption="PathEditor_SplineEditor_AddTip" />
+              <Label stylename="label" height="16dpi_px" width="268dpi_px" left="0dpi_px" top="16dpi_px" margin_left="4dpi_px" localise_caption="PathEditor_SplineEditor_EditTip" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PathEditor" layout_guid="80ccbb3c-714a-4b0a-999b-6623d24a940b">
+    <Window stylename="path_window" height="544dpi_px" left="26dpi_px" top="54dpi_px" localise_title="PathEditor_WindowTitle" window_flags="Default" help_tag="path_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" height="100%" grid_columnlayout="['220dpi_px', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', '1*']" row_spacing="4dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" width="100%" left="0dpi_px" top="6dpi_px" margin_top="6dpi_px" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="37px" left="10px" top="0dpi_px" margin_left="10dpi_px" margin_right="6dpi_px" margin_top="4dpi_px" localise_caption="PathEditor_Name" />
+                          <TextBox stylename="path_editor_textbox" width="100%" left="53px" top="16dpi_px" margin_right="10dpi_px" bind_property="name" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" width="100%" left="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <RadioGroup stylename="group_box" height="31px" width="217px" left="0dpi_px" top="25px" margin_top="10dpi_px" bind_property="kind" localise_name="PathEditor_ConnectionKind">
+                            <ChildGadgets>
+                              <StackPanel stylename="resizing_stack_panel">
+                                <Gadgets>
+                                  <RadioButton stylename="radiobutton_stack" left="0px" top="5dpi_px" margin_top="5dpi_px" margin_bottom="5dpi_px" localise_name="PathEditor_StraightLines" />
+                                  <RadioButton stylename="radiobutton_stack" left="107px" top="36dpi_px" margin_top="5dpi_px" margin_bottom="5dpi_px" localise_name="PathEditor_SmoothCurve" />
+                                </Gadgets>
+                              </StackPanel>
+                            </ChildGadgets>
+                          </RadioGroup>
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" width="100%" left="0dpi_px" top="0dpi_px" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="54px" left="2px" margin_left="2dpi_px" margin_right="6dpi_px" localise_caption="PathEditor_Precision" />
+                          <NumericTextBox stylename="path_text_box" left="62px" top="76dpi_px" margin_right="6dpi_px" bind_property="precision" text="1" min="1" max="8" />
+                          <CheckBox stylename="checkbox_stack" flow_index="1" left="118px" margin_right="6dpi_px" bind_property="closed" localise_name="PathEditor_Closed" />
+                          <Button stylename="button_shift_path" layout_id="btn_shiftpath" layout_guid="e0ad5d0c-ecca-4e1c-9d39-23e56905f9de" width="24dpi_px" left="191px" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_columns_points" flow_index="1" left="0dpi_px" top="0px" grid_rowlayout="['16dpi_px', '1*']" grid_columnlayout="['1*', '1*', '1*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="7px" left="2dpi_px" caption="X" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="7px" left="2dpi_px" caption="Y" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="2" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="35px" left="2dpi_px" localise_caption="PathEditor_Speed" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" rowspan="1" columnspan="3" flow_index="0">
+                          <ChildGadgets>
+                            <ListBox stylename="list_box_paths" layout_id="listbox_points" layout_guid="0b1822b7-f297-4cae-9c9d-ed5094f0245c" height="" width="">
+                              <ListBoxItems />
+                            </ListBox>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="1">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" flow_index="1">
+                  <ChildGadgets>
+                    <VerticalSeparator stylename="vertical_separator" left="0px" />
+                    <Grid stylename="grid_container" left="1px" margin_top="2dpi_px" grid_rowlayout="['auto', '1*', 'auto']" row_spacing="1dpi_px">
+                      <Cell layout_id="toolbar_panel" layout_guid="0cff768e-4dfa-41ea-be8b-016debe55b4c" row="0" column="0" flow_index="0" />
+                      <Cell layout_id="spline_panel" layout_guid="25f3663d-5073-47f4-89e4-f50e347397ba" row="1" column="0" flow_index="1" />
+                      <Cell layout_id="info_panel" layout_guid="afc2b74b-6451-4704-83bd-934a971874f6" row="2" column="0" flow_index="2" />
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="PathEditor_RoomPlugin_Properties" layout_guid="36f21a13-7156-4a20-8835-a3c7bb46d200">
+    <PathPropertiesPanel stylename="default_scrollpanel" layout_id="GMRPathLayer" layout_guid="b5143d10-ce5e-4d36-874a-08109b8550ee">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <RoomEditor_InheritButton stylename="button_up" layout_id="button_inherit" layout_guid="186e826f-55ea-4c7d-b841-613569d61529" height="24px" width="50dpi_px" left="6px" top="4px" margin_left="6px" margin_top="4dpi_px" bind_property="inheritLayerSettings" localise_name="PathEditor_RoomPlugin_Inherit" localise_tooltip="RoomEditor_InheritPathToolTip" parent_property="parentLayer" />
+            <Label stylename="label" layout_id="label_path" layout_guid="c4a974e4-839b-4ca3-8617-d2bcace0b4d4" height="16px" width="58px" left="6px" top="34px" margin_left="6dpi_px" margin_top="6px" bind_property="name" localise_caption="PathEditor_RoomPlugin_NoPath" />
+            <StackPanel stylename="stack_panel" left="0dpi_px" top="50px" stack_resize="ResizeAll">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="button_select_path" layout_guid="2f33e6fa-0e2e-4277-8bac-4dc979777535" height="24px" width="100dpi_px" left="6px" top="16dpi_px" margin_left="6dpi_px" margin_right="10dpi_px" margin_top="6dpi_px" localise_name="PathEditor_RoomPlugin_SelectPath" />
+                <ColourSelectButton stylename="colour_select_button_up" layout_id="colour_picker" layout_guid="0b369cf7-e98a-439c-9526-df6fe76fe26e" left="116px" margin_top="4dpi_px" bind_property="colour" />
+              </ChildGadgets>
+            </StackPanel>
+            <RadioGroup stylename="group_box" height="72px" width="120px" left="6dpi_px" top="105px" bind_property="kind" localise_name="PathEditor_ConnectionKind">
+              <ChildGadgets>
+                <StackPanel stylename="resizing_stack_panel" left="0dpi_px" margin_top="10dpi_px" stack_order="TopToBottom">
+                  <Gadgets>
+                    <RadioButton stylename="radiobutton_stack" left="5dpi_px" top="5px" margin_left="5dpi_px" margin_right="5dpi_px" margin_top="5dpi_px" margin_bottom="5dpi_px" localise_name="PathEditor_StraightLines" />
+                    <RadioButton stylename="radiobutton_stack" left="116dpi_px" top="36px" margin_left="5dpi_px" margin_right="5dpi_px" margin_top="5dpi_px" margin_bottom="5dpi_px" localise_name="PathEditor_SmoothCurve" />
+                  </Gadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </RadioGroup>
+            <CheckBox stylename="checkbox_stack" left="10dpi_px" top="181px" margin_left="6dpi_px" margin_top="4dpi_px" bind_property="closed" localise_name="PathEditor_Closed" />
+            <StackPanel stylename="stack_panel" left="0dpi_px" top="204px" margin_top="4dpi_px" stack_resize="ResizeAll">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="60dpi_px" left="6px" margin_left="6dpi_px" margin_right="6dpi_px" localise_caption="PathEditor_Precision" auto_size="False" auto_ellipsis="True" />
+                <NumericTextBox stylename="path_text_box" left="72px" top="76dpi_px" margin_right="10dpi_px" bind_property="precision" text="4" default_value="4" min="1" max="20" />
+              </ChildGadgets>
+            </StackPanel>
+            <StackPanel stylename="stack_panel" height="24dpi_px" left="0px" top="234px" margin_right="2px" margin_top="6dpi_px" stack_resize="ResizeAll">
+              <Gadgets>
+                <Label stylename="layerproperties_label" height="16px" width="60dpi_px" left="6px" margin_left="6dpi_px" margin_right="6dpi_px" localise_caption="Layer_Depth" />
+                <NumericTextBox stylename="numeric_text_box" layout_id="tilelayer_depth_value" layout_guid="c1151585-36d8-40e8-9f9c-4128bdf91438" left="72px" top="0dpi_px" margin_right="10dpi_px" bind_property="depth" />
+                <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="tilelayer_depth_toggle" layout_guid="dc1333b7-abcd-4ecc-b224-65dc97c7863d" left="132px" top="0dpi_px" margin_right="10dpi_px" bind_property="userdefined_depth" toggle_gadgets="['tilelayer_depth_value']" />
+                <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="161px" top="0dpi_px" bind_property="inheritLayerDepth" localise_name="PathEditor_RoomPlugin_Inherit" localise_tooltip="RoomEditor_InheritLayerDepthToolTip" parent_property="parentLayer" />
+              </Gadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </PathPropertiesPanel>
+  </Layout>
+</Layouts>

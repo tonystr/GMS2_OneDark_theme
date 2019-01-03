@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="DialogEditor" layout_guid="700b0b3e-7c37-4eb2-ac04-c4778418dda0">
+    <Window stylename="dialog_editor" title_bar_id="no_title_bar" close_button_id="no_close_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['50%', '25%', '25%']" grid_columnlayout="['200px', '1*', '250px']">
+            <ColumnSplitter stylename="vertical_grid_splitter" height="433.5px" width="5px" left="200px" top="0px" row="0" column="1" rowspan="3" columnspan="1" />
+            <ColumnSplitter stylename="vertical_grid_splitter" height="433.5px" width="5px" left="301px" top="0px" row="0" column="2" rowspan="3" columnspan="1" />
+            <RowSplitter stylename="horizontal_grid_splitter" height="5px" width="250px" left="306px" top="211px" row="1" column="2" rowspan="1" columnspan="1" />
+            <RowSplitter stylename="horizontal_grid_splitter" height="5px" width="96px" left="205px" top="322px" row="2" column="1" rowspan="1" columnspan="1" />
+            <Cell row="0" column="2">
+              <ChildWindows>
+                <Layout layout_name="DialogEditor_LayoutHierarchy" layout_guid="2a0c2e98-f7dc-4a85-ac6f-acf92928eb16" />
+              </ChildWindows>
+            </Cell>
+            <Cell row="2" column="1">
+              <ChildGadgets>
+                <Layout layout_name="DialogEditor_StyleEditor" layout_guid="dc1ab3f1-e7ee-45c3-bf59-3494f2b16cd4" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="0" rowspan="3" columnspan="1">
+              <ChildWindows>
+                <Layout layout_name="DialogEditor_GadgetToolBox" layout_guid="e52713c5-3b8b-4c3c-92d4-1697f04a6fb9" />
+              </ChildWindows>
+            </Cell>
+            <Cell row="1" column="2" rowspan="2" columnspan="1">
+              <ChildWindows>
+                <Layout layout_name="DialogEditor_LayoutProperties" layout_guid="387797f2-a2ab-41cf-bbb2-c78d90218da6" />
+              </ChildWindows>
+            </Cell>
+            <Cell row="0" column="1" rowspan="2" columnspan="1">
+              <Gadgets>
+                <ScrollPanel stylename="dialog_editor_scroll_panel" layout_id="edit_area" layout_guid="20e383a5-6aa7-4538-beb0-87ef077769de" scrollpanel_flags="VerticalScroll, HorizontalScroll">
+                  <Layout layout_name="DialogEditor_EditorAreaContextMenu" layout_guid="7a5d5dca-fd8b-45f6-8cdf-0e6e44f78073" />
+                </ScrollPanel>
+              </Gadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Cell row="0" column="1">
+        <ChildGadgets>
+          <MenuBar stylename="menu_bar" layout_id="dialog_editor_menu" layout_guid="966c6207-4cd2-4014-9b15-c7c360fb9cf8">
+            <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_file" layout_guid="93bbadbe-4def-4803-b8eb-c009dcba2d6f" width="40px" left="0px" localise_name="MenuBar_File">
+              <ContextMenu stylename="context_menu">
+                <MenuEntry stylename="menu_entry" layout_id="menu_new_layout" layout_guid="9046325f-5c1a-4ebf-bef4-4b36b805eb37" localise_name="DialogEditor_NewLayout" keyboard_shortcut="CTRL+N" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_open_layout" layout_guid="fb55f196-902b-4994-bedd-87037bd44d77" localise_name="DialogEditor_OpenLayout" keyboard_shortcut="CTRL+O" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_save_layout" layout_guid="560b2c26-9795-4bc6-bbf6-9f050ea4f7c5" localise_name="DialogEditor_SaveLayout" keyboard_shortcut="CTRL+S" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_save_as_layout" layout_guid="03cb9392-3454-4463-9bf6-077ccabe8ce3" localise_name="DialogEditor_SaveAsLayout" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_delete_layout" layout_guid="38719542-8de2-491f-871b-6016d827dffe" localise_name="DialogEditor_DeleteLayout" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_edit" layout_guid="c3d5285d-fcb9-427f-973c-cc0e80424bf1" width="41px" left="50px" localise_name="MenuBar_Edit">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <MenuEntry stylename="menu_entry" layout_id="reload_images" layout_guid="8cc76f20-6489-4654-9f1a-0498285cdb39" localise_name="DialogEditor_ReloadImages" keyboard_shortcut="CTRL+SHIFT+I"/>
+                <MenuEntry stylename="menu_entry" layout_id="menu_test_layout" layout_guid="62a3070e-a738-413e-90db-c5244adecc77" localise_name="DialogEditor_TestLayout" keyboard_shortcut="ALT+T" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_remove_test_layout" layout_guid="80ca4434-6c14-4ffb-9e1b-0026de7bcaa1" localise_name="DialogEditor_RemoveTestLayout" keyboard_shortcut="ALT+SHIFT+T" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_cut_gadget" layout_guid="79e9153d-348e-4c27-8686-46fb4dfabd86" localise_name="DialogEditor_CutGadget" icon="Cut.png" keyboard_shortcut="CTRL+X" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_copy_gadget" layout_guid="e2300550-e42a-420a-85a2-270e1ce2a29c" localise_name="DialogEditor_CopyGadget" icon="Copy.png" keyboard_shortcut="CTRL+C" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_paste_gadget" layout_guid="8282e610-ff28-4a5d-93ec-1ceaf78760a5" localise_name="DialogEditor_PasteGadget" icon="Paste.png" keyboard_shortcut="CTRL+V" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_delete_gadget" layout_guid="6789be40-d178-4859-b0f0-a0462cd43a5b" localise_name="DialogEditor_DeleteGadget" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_clip_gadget" layout_guid="9ff78ac5-9fb6-4fef-b417-732c836dce4a" localise_name="DialogEditor_ClippedGadget" has_checkbox="True" />
+                <HorizontalSeparator stylename="menu_separator" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_flatten_sublayout" layout_guid="bdd17a51-ccd9-4e15-9c14-7de331d5e176" localise_name="DialogEditor_FlattenSubLayout" />
+                <HorizontalSeparator stylename="menu_separator" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_add_context_menu" layout_guid="e4dc184d-8e3e-41d0-bcc8-64c2042848ae" localise_name="DialogEditor_AddContextMenu" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_select_context_menu" layout_guid="e45dbf73-9221-4422-ae27-c94f174b83b2" localise_name="DialogEditor_SelectContextMenu" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_style" layout_guid="2e577c6b-9244-4cfa-89d8-e1fd05db7907" width="47px" left="100px" localise_name="MenuBar_Style">
+              <ContextMenu stylename="context_menu">
+                <MenuEntry stylename="menu_entry" layout_id="menu_save_style" layout_guid="6ac04b19-85d8-45bd-bce1-810d3e754cae" localise_name="DialogEditor_SaveStyle" icon="IDE_Toolbar\icon_IDE_save.png" keyboard_shortcut="ALT+S" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_save_all_styles" layout_guid="474ffd2e-f2f8-425f-a19e-39ef6f2f074c" localise_name="DialogEditor_SaveAllStyles" icon="SaveAll.png" keyboard_shortcut="ALT+SHIFT+S" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_save_style_as" layout_guid="f42a2e65-8354-4ef9-9fba-403d7f394ff7" localise_name="DialogEditor_SaveStyleAs" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_revert_style" layout_guid="d031b22d-5a13-4c09-8f3f-f492677018ed" localise_name="DialogEditor_RevertStyle" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_revert_all_styles" layout_guid="229bbd31-8d93-4468-9349-543d8816209f" localise_name="DialogEditor_RevertAllStyles" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_revert_style_to_original" layout_guid="69ccabb5-6aa2-4183-bde3-3b13dd5233d2" localise_name="DialogEditor_RevertStyleToOriginal" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_revert_all_styles_to_original" layout_guid="d04b0ef5-3455-494c-b89d-22c927bf6199" localise_name="DialogEditor_RevertAllStylesToOriginal" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_language" layout_guid="c33ef61d-df96-4c87-a5a5-04a0d7595c4f" width="76px" left="150px" localise_name="MenuBar_Language">
+              <ContextMenu stylename="context_menu" />
+            </MenuBarEntry>
+          </MenuBar>
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="window_client_panel" layout_guid="1110cfe3-1295-49f8-b7d7-384fbe853633" row="1" column="1" />
+      <Cell row="2" column="1">
+        <ChildGadgets>
+          <ScrollPanel stylename="dialog_editor_status_bar">
+            <ChildGadgets>
+              <Label stylename="dialog_editor_status_label" layout_id="status_layoutname" layout_guid="264d24ea-ecac-498c-94fa-441afb4ee59b" width="0px" caption="  " />
+              <Label stylename="dialog_editor_gadget_info" layout_id="status_gadgetinfo" layout_guid="98e4275d-fc3c-466b-88e6-b246b9a7cb6f" width="0px" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_EditorAreaContextMenu" layout_guid="7a5d5dca-fd8b-45f6-8cdf-0e6e44f78073">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_save_layout" localise_name="DialogEditor_SaveLayout" keyboard_shortcut="CTRL+S" />
+      <MenuEntry layout_id="menu_save_as_layout" localise_name="DialogEditor_SaveAsLayout" />
+      <MenuEntry layout_id="menu_delete_layout" localise_name="DialogEditor_DeleteLayout" />
+      <MenuEntry layout_id="menu_test_layout" localise_name="DialogEditor_TestLayout" keyboard_shortcut="ALT+T" />
+      <MenuEntry layout_id="menu_remove_test_layout" localise_name="DialogEditor_RemoveTestLayout" keyboard_shortcut="ALT+SHIFT+T" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_cut_gadget" icon="Cut.png" localise_name="DialogEditor_CutGadget" keyboard_shortcut="CTRL+X" />
+      <MenuEntry layout_id="menu_copy_gadget" icon="Copy.png" localise_name="DialogEditor_CopyGadget" keyboard_shortcut="CTRL+C" />
+      <MenuEntry layout_id="menu_paste_gadget" icon="Paste.png" localise_name="DialogEditor_PasteGadget" keyboard_shortcut="CTRL+V" />
+      <MenuEntry layout_id="menu_delete_gadget" localise_name="DialogEditor_DeleteGadget" />
+      <MenuEntry layout_id="menu_clip_gadget" localise_name="DialogEditor_ClippedGadget" has_checkbox="True" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_flatten_sublayout" localise_name="DialogEditor_FlattenSubLayout" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_add_context_menu" localise_name="DialogEditor_AddContextMenu" />
+      <MenuEntry layout_id="menu_select_context_menu" localise_name="DialogEditor_SelectContextMenu" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="DialogEditor_GadgetToolBox" layout_guid="e52713c5-3b8b-4c3c-92d4-1697f04a6fb9">
+    <Window stylename="dialog_editor_toolbox">
+      <Layout layout_name="BasicBorderlessWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <TreeView stylename="editor_tree_view" layout_id="toolbox_tree_view" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_LayoutHierarchy" layout_guid="2a0c2e98-f7dc-4a85-ac6f-acf92928eb16">
+    <Window stylename="dialog_editor_hierarchy">
+      <Layout layout_name="BasicBorderlessWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <TreeView stylename="hierarchy_tree_view" layout_id="hierarchy_tree_view" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_LayoutProperties" layout_guid="387797f2-a2ab-41cf-bbb2-c78d90218da6">
+    <Window stylename="dialog_editor_properties">
+      <Layout layout_name="BasicBorderlessWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <TreeView stylename="editor_tree_view" layout_id="properties_tree_view" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_StyleEditor" layout_guid="dc1ab3f1-e7ee-45c3-bf59-3494f2b16cd4">
+    <TabControl stylename="editor_style_editor" layout_id="style_editor">
+      <Cell row="0" column="0">
+        <Gadgets>
+          <StackPanel stack_resize="ResizeHeight" stack_order="RightToLeft">
+            <ChildGadgets>
+              <Button stylename="style_editor_toolbar_button" icon="SaveAll.png" layout_id="save_all_styles_button" />
+              <Button stylename="style_editor_toolbar_button" icon="IDE_Toolbar\icon_IDE_save.png" layout_id="save_style_button" />
+              <Grid layout_id="tab_list" grid_columnlayout="['5px']" stylename="tab_container" height="28px">
+                <Cell row="0" column="0">
+                  <Gadgets>
+                    <Button stylename="add_tab_button_up" layout_id="add_tab" name="+" />
+                  </Gadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </StackPanel>
+        </Gadgets>
+      </Cell>
+    </TabControl>
+  </Layout>
+  <Layout layout_name="DialogEditor_NewLayout" layout_guid="ea52d414-7c3f-495d-9b3a-727b7cb576e4">
+    <Window stylename="dialog_editor_new_or_saveas_layout" title="New Layout" localise_title="DialogEditor_NewLayout">
+      <Client />
+      <Cell row="0" column="0" />
+      <Cell row="0" column="1" />
+      <Cell row="0" column="2" />
+      <Cell row="1" column="0" />
+      <Cell row="1" column="2" />
+      <Cell row="2" column="0" />
+      <Cell row="2" column="1" />
+      <Cell row="2" column="2" />
+      <Layout layout_name="DialogEditor_New_Or_SaveAs_Layout" layout_guid="37d0e57d-0c60-4d65-9645-65d7956e675d" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_SaveAsLayout" layout_guid="0cb45a8e-3c4b-431d-8663-0564d5ce8dc5">
+    <Window stylename="dialog_editor_new_or_saveas_layout" localise_title="DialogEditor_SaveAsLayout">
+      <Layout layout_name="DialogEditor_New_Or_SaveAs_Layout" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_New_Or_SaveAs_Layout" layout_guid="37d0e57d-0c60-4d65-9645-65d7956e675d">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid grid_rowlayout="[&quot;auto&quot;, &quot;auto&quot;, &quot;*&quot;]" grid_columnlayout="[&quot;auto&quot;, &quot;*&quot;, &quot;auto&quot;]">
+          <Cell row="0" column="0">
+            <Gadgets>
+              <Label localise_caption="DialogEditor_FileName" stylename="dialog_editor_label" />
+            </Gadgets>
+          </Cell>
+          <Cell row="0" column="1">
+            <Gadgets>
+              <TextBox layout_id="filename_box" stylename="dialog_editor_textbox" text="" />
+            </Gadgets>
+          </Cell>
+          <Cell row="0" column="2">
+            <Gadgets>
+              <Button layout_id="file_browse_button" stylename="dialog_file_browse_button" />
+            </Gadgets>
+          </Cell>
+          <Cell row="1" column="0">
+            <Gadgets>
+              <Label localise_caption="DialogEditor_LayoutName" stylename="dialog_editor_label" />
+            </Gadgets>
+          </Cell>
+          <Cell row="1" column="1" columnspan="2">
+            <Gadgets>
+              <TextBox layout_id="layoutname_box" stylename="dialog_editor_textbox" text="" />
+            </Gadgets>
+          </Cell>
+          <Cell row="2" column="0" columnspan="3">
+            <Gadgets>
+              <StackPanel stylename="dialog_editor_ok_cancel_stack">
+                <Gadgets>
+                  <Button layout_id="cancel_button" stylename="dialog_editor_cancel_button" />
+                  <Button layout_id="ok_button" stylename="dialog_editor_ok_button" />
+                </Gadgets>
+              </StackPanel>
+            </Gadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="DialogEditor_SaveAs_Style" layout_guid="daefc868-b5f1-4352-a821-803473159e63">
+    <Window stylename="dialog_editor_saveas_style" localise_title="DialogEditor_SaveStyleAs">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Grid grid_rowlayout="[&quot;auto&quot;, &quot;auto&quot;, &quot;*&quot;]" grid_columnlayout="[&quot;auto&quot;, &quot;*&quot;, &quot;auto&quot;]">
+            <Cell row="0" column="0">
+              <Gadgets>
+                <Label localise_caption="DialogEditor_FileName" stylename="dialog_editor_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="0" column="1">
+              <Gadgets>
+                <TextBox layout_id="filename_box" stylename="dialog_editor_textbox" text="" />
+              </Gadgets>
+            </Cell>
+            <Cell row="0" column="2">
+              <Gadgets>
+                <Button layout_id="file_browse_button" stylename="dialog_file_browse_button" />
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="0">
+              <Gadgets>
+                <Label localise_caption="DialogEditor_StyleName" stylename="dialog_editor_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="1" columnspan="2">
+              <Gadgets>
+                <TextBox layout_id="stylename_box" stylename="dialog_editor_textbox" text="" />
+              </Gadgets>
+            </Cell>
+            <Cell row="2" column="0" columnspan="3">
+              <Gadgets>
+                <StackPanel stylename="dialog_editor_ok_cancel_stack">
+                  <Gadgets>
+                    <Button layout_id="cancel_button" stylename="dialog_editor_cancel_button" />
+                    <Button layout_id="ok_button" stylename="dialog_editor_ok_button" />
+                  </Gadgets>
+                </StackPanel>
+              </Gadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_Save_Style" layout_guid="8c7bca6e-3ad5-4802-8420-a7442eb193e9">
+    <Window stylename="dialog_editor_save_style" localise_title="DialogEditor_SaveStyle">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Grid grid_rowlayout="[&quot;80px&quot;, &quot;30px&quot;, &quot;auto&quot;, &quot;*&quot;]" grid_columnlayout="[&quot;auto&quot;, &quot;*&quot;, &quot;auto&quot;]">
+            <Cell row="0" column="0" columnspan="3">
+              <Gadgets>
+                <Label localise_caption="DialogEditor_SelectSaveFile" stylename="dialog_editor_wrapped_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="0">
+              <Gadgets>
+                <Label localise_caption="DialogEditor_StyleName" stylename="dialog_editor_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="1">
+              <Gadgets>
+                <Label layout_id="style_info_label" stylename="dialog_editor_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="2" column="0">
+              <Gadgets>
+                <Label localise_caption="DialogEditor_FileName" stylename="dialog_editor_label" />
+              </Gadgets>
+            </Cell>
+            <Cell row="2" column="1">
+              <Gadgets>
+                <TextBox layout_id="filename_box" stylename="dialog_editor_textbox" text="" />
+              </Gadgets>
+            </Cell>
+            <Cell row="2" column="2">
+              <Gadgets>
+                <Button layout_id="file_browse_button" stylename="dialog_file_browse_button" />
+              </Gadgets>
+            </Cell>
+            <Cell row="3" column="0" columnspan="3">
+              <Gadgets>
+                <StackPanel stylename="dialog_editor_ok_cancel_stack">
+                  <Gadgets>
+                    <Button layout_id="cancel_button" stylename="dialog_editor_cancel_button" />
+                    <Button layout_id="ok_button" stylename="dialog_editor_ok_button" />
+                  </Gadgets>
+                </StackPanel>
+              </Gadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_OpenLayout" layout_guid="ffe5d752-6cf7-4199-89e5-71fa73e7f68d">
+    <Window stylename="dialog_editor_open_layout">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Grid grid_rowlayout="[&quot;auto&quot;, &quot;*&quot;, &quot;auto&quot;]" grid_columnlayout="[&quot;*&quot;]">
+            <Cell row="0" column="0">
+              <Gadgets>
+                <Button layout_id="load_layout_file" stylename="dialog_editor_load_button" />
+                <Button layout_id="clear_layout_list" stylename="dialog_editor_clear_button" />
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="0">
+              <Gadgets>
+                <ListBox layout_id="open_layout_list" />
+              </Gadgets>
+            </Cell>
+            <Cell row="2" column="0">
+              <Gadgets>
+                <StackPanel stylename="dialog_editor_ok_cancel_stack">
+                  <Gadgets>
+                    <Button layout_id="cancel_button" stylename="dialog_editor_cancel_button" />
+                    <Button layout_id="ok_button" stylename="dialog_editor_ok_button" />
+                  </Gadgets>
+                </StackPanel>
+              </Gadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_DeleteLayout" layout_guid="92363ec8-e00f-49e8-9388-72b098ce04b6">
+    <Window stylename="dialog_editor_delete_layout">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Label stylename="dialog_editor_label" localise_caption="DialogEditor_DeleteLayout_AreYouSure" top="10px" />
+          <StackPanel stylename="dialog_editor_ok_cancel_stack">
+            <Gadgets>
+              <Button layout_id="cancel_button" stylename="dialog_editor_cancel_button" />
+              <Button layout_id="ok_button" stylename="dialog_editor_ok_button" />
+            </Gadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="DialogEditor_InfoBox" layout_guid="ff4e3524-18cf-4164-9cf5-091c1d369ab3">
+    <Window stylename="dialog_editor_info_box">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Label layout_id="message" stylename="dialog_editor_wrapped_label" top="10px" valign="vAlignTop" halign="hAlignCentre" />
+          <Button layout_id="ok_button" stylename="dialog_editor_ok_button" bottom="10px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+</Layouts>

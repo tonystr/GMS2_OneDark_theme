@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="font_editor" layout_guid="edf15d63-7473-42b1-85de-c766a60e5101">
+    <Window stylename="window_font_editor" height="390dpi_px" width="750dpi_px" left="172dpi_px" top="71dpi_px" help_tag="font_editor" localise_title="fonteditor_window">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_columnlayout="['300dpi_px', '1*']" column_spacing="10dpi_px" grid_resize="ResizeGrid">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', '133dpi_px', '1*', 'auto']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" height="124dpi_px" left="0dpi_px" top="0dpi_px" grid_rowlayout="['auto', 'auto', '1*']" grid_columnlayout="['auto', '1*']" row_spacing="5dpi_px" column_spacing="8dpi_px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="34px" right="0dpi_px" localise_caption="fonteditor_name" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <TextBox stylename="text_box" layout_id="font_gml_name" layout_guid="04585026-ffd0-484a-bcc3-a66e2f71e558" bind_property="name" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="61px" right="0px" localise_caption="fonteditor_font" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <ComboBox stylename="combobox_panel" layout_id="font_list" layout_guid="7b71f3d5-bece-43e3-83d2-2e3238d39cc2" width="100%">
+                              <ListBoxItems />
+                            </ComboBox>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="2" column="0" rowspan="1" columnspan="2" flow_index="0">
+                          <ChildGadgets>
+                            <CheckBox stylename="checkbox_stack" layout_id="checkbox_includettf" layout_guid="4d200bac-06ff-4334-a35c-da33d35a5718" localise_tooltip="fonteditor_includettf_tooltip" right="0px" top="0px" bind_property="includeTTF" localise_name="fonteditor_includettf" stack_order="RightToLeft" stack_resize="ResizeHeight" />
+                            <Label stylename="font_ttfpath_label" layout_id="label_ttfpath" layout_guid="57239076-d376-4d1c-ad2c-79496a397274" right="2dpi_px" top="20dpi_px" localise_caption="fonteditor_ttfpath" />
+                            <Label stylename="label_glypherror" layout_id="label_glypherror" layout_guid="e3555e8e-f8cd-45cd-bfaf-6b93993b274d" localise_tooltip="FontEditor_ReplacementGlyphError_Tooltip" height="16px" width="" right="0px" top="36dpi_px" localise_caption="FontEditor_ReplacementGlyphError" word_wrap="True" />
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Group stylename="group_box" height="100px" width="300px" left="0dpi_px" right="0dpi_px" top="20dpi_px" localise_name="fonteditor_style">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" height="100dpi_px" left="0dpi_px" right="0dpi_px" top="0px" grid_rowlayout="['1*', '1*', '1*']" grid_columnlayout="['1*', '2*']" column_spacing="8dpi_px" grid_resize="ResizeGrid">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" height="16px" width="27px" right="0dpi_px" localise_caption="fonteditor_stylename" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <ComboBox stylename="combobox_panel" layout_id="font_style" layout_guid="a7465368-dfa1-4259-8132-a34d9b4575bf" width="90dpi_px" left="0dpi_px" right="6dpi_px">
+                                  <ListBoxItems />
+                                </ComboBox>
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" height="16px" width="23px" right="0dpi_px" localise_caption="fonteditor_size" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="1" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <NumericTextBox stylename="numeric_text_box" layout_id="font_size" layout_guid="df2b9de6-745e-4149-9803-008a6639847b" width="90dpi_px" right="8dpi_px" bind_property="size" has_buttons="True" text="1" default_value="1" min="1" max="200" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" height="16px" width="69px" right="0dpi_px" localise_caption="fonteditor_render_mode" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="2" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <RadioGroup stylename="group_box_aa_toggle" layout_id="radiogroup_aa_toggle" layout_guid="46a84c6c-3660-44f2-9b18-6a7854a10c36" height="34px" width="114px" right="6dpi_px">
+                                  <ChildGadgets>
+                                    <Grid stylename="grid_container" height="100%" grid_columnlayout="['auto', 'auto']" grid_resize="ResizeGridWidth">
+                                      <Cell row="0" column="0" flow_index="0">
+                                        <ChildGadgets>
+                                          <RadioButton stylename="radiobutton_stack" layout_id="radio_aa_on" layout_guid="c8811434-a38b-41b9-8060-0cfdedc58e86" left="0px" right="0px" top="" localise_name="fonteditor_aa_on" />
+                                        </ChildGadgets>
+                                      </Cell>
+                                      <Cell row="0" column="1" flow_index="0">
+                                        <ChildGadgets>
+                                          <RadioButton stylename="radiobutton_stack" layout_id="radio_aa_off" layout_guid="65ee1d32-c6b0-4d0d-bffc-88ba965ba0c5" left="0px" right="0dpi_px" top="" localise_name="fonteditor_aa_off" />
+                                        </ChildGadgets>
+                                      </Cell>
+                                    </Grid>
+                                  </ChildGadgets>
+                                </RadioGroup>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </Group>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" height="24dpi_px" top="0px" grid_columnlayout="['61dpi_px', '1*']" column_spacing="8dpi_px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="38px" right="0px" localise_caption="SpriteEditor_TextureGroup" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <ComboBox stylename="combobox_panel" layout_id="combo_texturegroup" layout_guid="6f5cfa01-578b-4d0e-b9a1-d8c8e97e5bcb" width="100%" left="0px">
+                              <ListBoxItems />
+                            </ComboBox>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" height="50dpi_px" left="0px" right="0px" grid_rowlayout="['1*', '1*']" grid_columnlayout="['30%', '1*']" row_spacing="2dpi_px" column_spacing="6dpi_px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Button stylename="button_up" layout_id="font_add_range" layout_guid="685a665a-cb34-4e41-b49d-d900f276eed8" height="24px" localise_name="fonteditor_add_range" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="84px" left="0dpi_px" top="4dpi_px" localise_caption="fonteditor_add_range_desc" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Button stylename="button_up" layout_id="font_del_range" layout_guid="4ecb0a40-ea46-42fa-8dc4-b3d3d64ea6a3" height="24px" localise_name="fonteditor_del_range" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="123px" left="0dpi_px" top="4dpi_px" localise_caption="fonteditor_del_range_desc" />
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="1">
+              <ChildGadgets>
+                <Grid stylename="fonteditor_grid" grid_rowlayout="['235dpi_px', '1*']" row_spacing="5dpi_px">
+                  <RowDockSplitter stylename="dock_splitter" height="14dpi_px" width="422px" left="0px" top="235px" row="1" column="0" rowspan="1" columnspan="1" />
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <MultiLineTextBox stylename="multiline_text_box" layout_id="font_editbox" layout_guid="45829101-4f63-45b7-8b80-20c4f27f26bb" height="" left="0px" right="0px" top="0dpi_px" bind_property="sampleText" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <ScrollPanel stylename="default_scrollpanel" width="95%" left="0dpi_px">
+                        <ChildGadgets>
+                          <Grid stylename="font_grid_container" layout_id="font_ranges" layout_guid="a91ff302-1b6a-497c-bcfe-f8d71f4e8453" width="97%" left="0dpi_px" top="0dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', 'auto']"></Grid>
+                        </ChildGadgets>
+                      </ScrollPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="RoomEditor_PropertyTableRow" layout_guid="2d658794-de84-4ee2-8ac1-264b29785f41">
+    <InheritedVariableTableRow stylename="object_properties_table_row" left="0px" top="0px" grid_rowlayout="['auto']" grid_columnlayout="['1.5*', '110dpi_px', '1.5*', '57dpi_px']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label layout_id="label_name" bind_property="varName" left="4dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label layout_id="label_type" auto_ellipsis="true" bind_property="varTypeLabel" left="4dpi_px" allow_bound_localisation="true"/>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel layout_id="content_panel" left="0px" right="2dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="3" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="instance_property_override_button" layout_id="btn_override" width="24dpi_px" height="24dpi_px" right="0px" localise_tooltip="InstanceEditor_Prop_OverrideTooltip" />
+          <Button stylename="instance_property_remove_button" layout_id="btn_revoke_override" width="24dpi_px" height="24dpi_px" right="0px" localise_tooltip="ObjectEditor_Prop_RemoveOverrideTooltip" />
+        </ChildGadgets>
+      </Cell>
+    </InheritedVariableTableRow>
+  </Layout>
+  <Layout layout_name="ObjEd_PropertyOptions_Integer" layout_guid="3dacb81d-b75d-4cee-bea0-c5ff85ace065">
+    <Window stylename="object_property_options_window" height="112dpi_px" width="205dpi_px" help_tag="object_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" left="0px" bind_property="rangeEnabled" localise_name="ObjectEditor_RangeEnabled" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="21px" left="0px" localise_caption="ObjectEditor_RangeMin" />
+                    <NumericTextBox stylename="numeric_text_box" left="25px" margin_left="4dpi_px" bind_property="rangeMin" has_buttons="True" input_type="Integer" />
+                    <Label stylename="label" height="16px" width="24px" left="94px" margin_left="4dpi_px" localise_caption="ObjectEditor_RangeMax" />
+                    <NumericTextBox stylename="numeric_text_box" left="122px" margin_left="4dpi_px" bind_property="rangeMax" has_buttons="True" text="1" default_value="1" input_type="Integer" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditor_PropertyTableRow_Inherited" layout_guid="0139c87f-9670-43ec-8636-5a6a3cddf49f">
+    <InheritedVariableTableRow stylename="object_properties_table_row" left="0px" top="0px" grid_rowlayout="['auto']" grid_columnlayout="['1.5*', '1.5*', '1*', '57dpi_px']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label layout_id="label_name" bind_property="varName" left="4dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel layout_id="content_panel" left="0px" right="2dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <ComboBox stylename="combobox_panel" layout_id="combo_type" width="100%" bind_property="varType" deactivated="true" left="2dpi_px" right="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="3" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="instance_property_override_button" layout_id="btn_override" width="24dpi_px" height="24dpi_px" right="0px" localise_tooltip="InstanceEditor_Prop_OverrideTooltip" />
+          <Button stylename="instance_property_remove_button" layout_id="btn_revoke_override" width="24dpi_px" height="24dpi_px" right="0px" localise_tooltip="ObjectEditor_Prop_RemoveOverrideTooltip" />
+        </ChildGadgets>
+      </Cell>
+    </InheritedVariableTableRow>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Real" layout_guid="f15024c7-e967-4fab-9032-3e0978175a48">
+    <ScrollPanel stylename="default_scrollpanel" scrollpanel_flags="None">
+      <ChildGadgets>
+        <NumericTextBox stylename="numeric_text_box" layout_id="input" layout_guid="3d8668cf-8ca4-4d3c-8bed-959780547e62" width="100%" bind_property="value" has_buttons="True" step_increment="0.1" input_type="Expression" />
+        <Slider stylename="slider_grid" layout_id="range" layout_guid="cedc2c76-9a78-47a9-905f-72acc4005d18" left="" bind_property="value" has_textbox="True" textbox_style="slider_grid_textbox" input_type="Real" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_List" layout_guid="3698b594-2168-4484-95f0-a81e6b3b8abe">
+    <ComboBox stylename="combobox_panel" layout_id="input" layout_guid="9ece4a26-1bbf-4524-8eb5-0fbafc0809c8" width="100%" left="0px" display_tag_property="True" bind_property="value">
+      <ListBoxItems />
+    </ComboBox>
+  </Layout>
+  <Layout layout_name="ObjEd_PropertyOptions_List" layout_guid="bc565b80-d5f9-4364-a1e1-980ccf47ecd1">
+    <Window stylename="object_property_options_window" height="228dpi_px" width="205dpi_px" window_flags="CloseButton, MinimizeButton, ResizeButton, ScrollBars" help_tag="object_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', '1*', '30dpi_px']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="53px" left="0px" margin_bottom="4dpi_px" localise_caption="ObjectEditor_ListItems" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <TreeView stylename="object_properties_list_tree_view" layout_id="tree" layout_guid="36ad017b-0c5a-40e2-85e8-47c6173e772e" left="0dpi_px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" left="0px" bind_property="multiselect" localise_name="ObjectEditor_Multiselect" />
+                <Button stylename="button_up" layout_id="btn_add" layout_guid="d0579ccc-8490-41b1-82e7-024db0ea930d" height="24px" width="74dpi_px" right="0px" localise_name="Button_Add" localise_tooltip="ObjectEditor_ListAddButton_Tooltip" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ObjectEditor_PropertyTableRow" layout_guid="249d6f88-6e33-4f0c-b2e0-ee4979e588a3">
+    <VariableTableRow stylename="object_properties_table_row" left="0px" top="0px" grid_rowlayout="['auto']" grid_columnlayout="['1.5*', '1.5*', '1*', '57dpi_px']" mouse_events="True">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid top="0px" grid_columnlayout="['auto', '1*']" column_spacing="4dpi_px" left="0px" right="4dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Image stylename="image" image="Buttons/widget_thumb.png" mouse_events="False" left="2dpi_px" top="2dpi_px" bottom="2dpi_px" width="7dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <DnDExpressionInput layout_id="expr_name" bind_property="varName" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel layout_id="content_panel" left="0px" right="2dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <ComboBox stylename="combobox_panel" layout_id="combo_type" bind_property="varType" left="2dpi_px" right="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="3" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stackpanel" stack_resize="ResizeWidth" right="0px">
+            <ChildGadgets>
+              <Button stylename="object_property_options_button" layout_id="btn_options" width="24dpi_px" height="24dpi_px" localise_tooltip="ObjectEditor_Prop_OptionsTooltip" margin_right="4dpi_px" />
+              <Button stylename="object_property_remove_button" layout_id="btn_remove" width="24dpi_px" height="24dpi_px" localise_tooltip="ObjectEditor_Prop_RemoveTooltip" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+    </VariableTableRow>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Expression" layout_guid="23ea11af-e131-4c5e-9031-688231184aad">
+    <DnDExpressionInput stylename="dnd_gadget" layout_id="input" layout_guid="3f4adf47-31bc-4d6b-a385-dc8415caac81" bind_property="value" />
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Integer" layout_guid="17c2f5d4-8915-4ae8-8c3c-272eff411e4d">
+    <ScrollPanel stylename="default_scrollpanel" scrollpanel_flags="None">
+      <ChildGadgets>
+        <NumericTextBox stylename="numeric_text_box" layout_id="input" width="100%" bind_property="value" has_buttons="True" step_increment="1" input_type="Expression" />
+        <Slider stylename="slider_grid" layout_id="range" left="" bind_property="value" has_textbox="True" textbox_style="slider_grid_textbox" input_type="Integer" />
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="ObjEd_PropertyOptions_Resource" layout_guid="dd227312-8b88-400a-b36e-bd5250724ed5">
+    <Window stylename="object_property_options_window" height="180dpi_px" width="205dpi_px" window_flags="CloseButton, MinimizeButton, ResizeButton, ScrollBars" help_tag="object_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', '1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="249px" left="0px" localise_caption="ObjectEditor_ResourceFilter" auto_ellipsis="True" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ListBox stylename="list_box" layout_id="list" bind_property="resourceFilter" layout_guid="912c86b9-1e27-487b-bc96-ae2a97bffd88" multi_select="True">
+                  <ListBoxItems />
+                </ListBox>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_String" layout_guid="7d3c86d4-6a23-41bd-acac-6c6ba9a23507">
+    <TextBox stylename="text_box" layout_id="input" layout_guid="d2bde0ab-2f00-4006-b571-de9f6ff14260" width="100%" bind_property="value" />
+  </Layout>
+  <Layout layout_name="PropertyOptions_List_Item" layout_guid="6eaf70f9-bbca-473b-b55a-53d4c6a5afc7">
+    <ScrollPanel stylename="default_scrollpanel" height="28dpi_px" left="0px" top="0px" scrollpanel_flags="None" mouse_events="False">
+      <ChildGadgets>
+        <Image stylename="image" image="Buttons/widget_thumb.png" mouse_events="False" left="2dpi_px" top="2dpi_px" bottom="2dpi_px" width="7dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" />
+        <ScrollPanel mouse_events="True" left="11dpi_px" right="0px">
+          <ChildGadgets>
+            <Button stylename="button_object_editor_child" layout_id="btn_remove" layout_guid="d88b500d-1bb9-416b-9d2a-d28be165c2dd" localise_tooltip="ObjectEditor_RemoveListItem" width="24dpi_px" left="0px" top="2dpi_px" icon="Buttons\icon_IDE_remove.png" />
+            <TextBox stylename="text_box" layout_id="textbox" layout_guid="224af103-a21b-4f2a-850c-6f214dd4dd8d" height="24dpi_px" left="26dpi_px" right="2dpi_px" top="2dpi_px" />
+          </ChildGadgets>
+        </ScrollPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Resource" layout_guid="3960d7ca-eec9-4848-be2b-efdb21c504fa">
+    <DnDResourceSelection stylename="dnd_gadget" layout_id="input" layout_guid="1d76173d-0d4b-430e-9bf8-0a728df74a34" bind_property="value" />
+  </Layout>
+  <Layout layout_name="ObjectEditor_InstancePropertiesWindow" layout_guid="8b45ef63-a3f1-4931-9237-134c5e200391">
+    <ObjectVariablesWindow stylename="object_properties_window" height="250dpi_px" width="640dpi_px" left="122dpi_px" top="77dpi_px" localise_title="ObjectEditor_InstPropsDefs">
+      <Client>
+        <ChildGadgets>
+          <TableGadget stylename="instance_variable_table" layout_id="table_properties" table_list_box_style="object_properties_table_gadget" layout_guid="8df2675d-dd5e-4a0e-900e-37abd7cfd42e" height="100%" width="100%" left="0px" top="0px" grid_rowlayout="['auto', '1*', 'auto']" grid_columnlayout="['auto']">
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="btn_add_property" layout_guid="2a456fe0-106d-47ea-9cee-a70206b6f8da" localise_tooltip="ObjectEditor_PropAddButton_Tooltip" height="24px" width="88dpi_px" right="0px" bottom="0px" margin_top="4dpi_px" localise_name="Button_Add" />
+              </ChildGadgets>
+            </Cell>
+          </TableGadget>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </ObjectVariablesWindow>
+  </Layout>
+  <Layout layout_name="ObjEd_PropertyOptions_Real" layout_guid="8eb56257-1f9f-4a19-81b7-a6dc334f3cd5">
+    <Window stylename="object_property_options_window" height="112dpi_px" width="205dpi_px" help_tag="object_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" left="0px" bind_property="rangeEnabled" localise_name="ObjectEditor_RangeEnabled" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="21px" left="0px" localise_caption="ObjectEditor_RangeMin" />
+                    <NumericTextBox stylename="numeric_text_box" left="25px" margin_left="4dpi_px" bind_property="rangeMin" has_buttons="True" input_type="Real" />
+                    <Label stylename="label" height="16px" width="24px" left="94px" margin_left="4dpi_px" localise_caption="ObjectEditor_RangeMax" />
+                    <NumericTextBox stylename="numeric_text_box" left="122px" margin_left="4dpi_px" bind_property="rangeMax" has_buttons="True" text="1" default_value="1" input_type="Real" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Boolean" layout_guid="87878088-24c1-44d0-a467-e508b37b1134">
+    <CheckBox stylename="checkbox_stack" layout_id="input" left="0px" bind_property="value" localise_name="InstanceEditor_PropBoolean_Label" />
+  </Layout>
+  <Layout layout_name="InstanceEditor_PropertyType_Color" layout_guid="e8f7d25a-017e-479f-9781-08bb27dd4c50">
+    <DnDColorPicker stylename="dnd_gadget" layout_id="input" layout_guid="69c56e47-ca57-4858-95c7-550cc69c4e50" bind_property="value" />
+  </Layout>
+  <Layout layout_name="RoomEditor_InstanceVariablesWindow" layout_guid="8b45ef63-a3f1-4931-9237-134c5e200391">
+    <ObjectVariablesWindow stylename="object_properties_window" layout_id="window_variables" height="250dpi_px" width="640dpi_px" left="122dpi_px" top="77dpi_px" localise_title="ObjectEditor_InstProps">
+      <Client>
+        <ChildGadgets>
+          <TableGadget stylename="instance_variable_table" table_list_box_style="object_properties_table_gadget" layout_id="table_properties" height="100%" width="100%" left="0px" top="0px" grid_rowlayout="['auto', '1*', 'auto']" grid_columnlayout="['auto']" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </ObjectVariablesWindow>
+  </Layout>
+</Layouts>

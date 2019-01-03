@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="TextureGroupsWindow" layout_guid="fa42d235-d01f-432b-9f78-dbbd252bf2b3">
+    <Window stylename="audiotexturegroup_window" height="550dpi_px" width="660dpi_px" left="34dpi_px" top="28dpi_px" localise_title="TextureGroups_WindowTitle" window_flags="CloseButton, MinimizeButton, ResizeButton">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['40dpi_px', '1*', 'auto']" grid_columnlayout="['2*', '3*']" row_spacing="6dpi_px" column_spacing="6dpi_px">
+            <ColumnSplitter stylename="vertical_grid_splitter" height="461px" width="5dpi_px" left="254px" top="46px" row="1" column="1" rowspan="2" columnspan="1" />
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <PreviewPanArea stylename="previewarea_style" layout_id="preview_area" layout_guid="51ccfe62-6dbc-487d-b6f4-e8e533a3f205" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="1" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="212dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', 'auto']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" width="170dpi_px" left="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', '24dpi_px', '24dpi_px', '1*']" grid_columnlayout="['1dpi_px']" row_spacing="6dpi_px">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="83px" left="0dpi_px" localise_caption="TextureGroups_SettingsLabel" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <CheckBox stylename="checkbox_stack" layout_id="chck_scaling" layout_guid="469207cd-4104-48e8-bdb5-d7b0f07b2ae7" left="0dpi_px" localise_name="TextureGroups_AllowScaling" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="2" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <CheckBox stylename="checkbox_stack" layout_id="chck_autocrop" layout_guid="98a21ebc-612e-43d2-936b-6865baa34cce" left="0dpi_px" localise_name="TextureGroups_AutoCrop" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="3" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <CheckBox stylename="checkbox_stack" layout_id="chck_mipmap" layout_guid="98a21ebc-612e-43d2-936b-3434baa34cce" left="0dpi_px" localise_name="TextureGroups_MipMap" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="4" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeHeight">
+                              <ChildGadgets>
+                                <Label stylename="label" height="16px" width="68px" left="0px" margin_top="0dpi_px" localise_caption="TextureGroups_BorderSize" />
+                                <NumericTextBox stylename="numeric_text_box" layout_id="num_border" layout_guid="d9d054da-313b-4ce0-915f-a161b5cd2332" width="60dpi_px" left="78px" margin_left="10dpi_px" has_buttons="True" text="2" default_value="2" max="16" />
+                              </ChildGadgets>
+                            </StackPanel>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="5" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="121px" left="0dpi_px" localise_caption="TextureGroups_ParentTexGorup" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="6" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <ComboBox stylename="combobox_panel" layout_id="combo_parenttexgroup" layout_guid="ff8d5729-d61c-4cb6-8042-e9baff3ce3c1" width="150dpi_px">
+                              <ListBoxItems />
+                            </ComboBox>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="88px" left="0dpi_px" top="0px" localise_caption="TextureGroups_TargetPlatforms" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <TableListBox stylename="extension_tablegadget_content" layout_id="platformList" layout_guid="82a89e36-7488-4326-ae6d-52c9927a2cd7">
+                              <ListBoxItems />
+                            </TableListBox>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="0" rowspan="1" columnspan="2" flow_index="0">
+              <ChildGadgets>
+                <HorizontalSeparator stylename="horizontal_separator" top="35dpi_px" margin_left="" margin_right="" />
+                <Grid stylename="grid_container" height="30dpi_px" top="0px" grid_columnlayout="['auto', 'auto', '1*', 'auto', 'auto']" column_spacing="6dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="84px" localise_caption="TextureGroups_ActiveGroup" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <ComboBox stylename="combobox_panel" layout_id="combo_currentgroup" layout_guid="e3f5c9b1-e2ea-45fe-9945-824dec5d46bb" width="180dpi_px" allow_edit="True">
+                        <ListBoxItems />
+                      </ComboBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="3" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_addnew" layout_guid="b09fc1d5-4862-4648-943a-fa862f6c7c8b" height="24px" width="120dpi_px" localise_name="TextureGroups_AddNew" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="4" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_delete" layout_guid="1838df53-95e1-47c0-9d16-09ffc41b9c77" height="24px" width="120dpi_px" localise_name="TextureGroups_Delete" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" rowspan="2" columnspan="1" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']" row_spacing="6dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TreeView stylename="gadget_treeview" layout_id="treeview_resources" layout_guid="22254ec5-09db-4bfa-b290-087b8bc84ce5" accept_dragged_nodes="False">
+                        <Node layout_id="node_sprites" layout_guid="7967fa83-099e-4d3b-a38e-cd460a44dbbf" stylename="treeviewnode_panel" selectable="False" expanded="True">
+                          <Label stylename="label" height="16px" width="39px" left="20px" localise_caption="TextureGroups_Sprites" />
+                          <Node layout_id="node_empty_sprites" layout_guid="5f8ecb54-915a-4fec-b156-1c00a4da0ce8" stylename="treeviewnode_panel" selectable="False" expanded="False">
+                            <Label stylename="label" height="16px" width="112px" left="20px" localise_caption="TextureGroups_NoResources" />
+                          </Node>
+                        </Node>
+                        <Node layout_id="node_backgrounds" layout_guid="642a3d21-7fb2-46c9-8485-c22d21e17061" stylename="treeviewnode_panel" selectable="False" expanded="True">
+                          <Label stylename="label" height="16px" width="43px" left="20px" localise_caption="TextureGroups_Backgrounds" />
+                          <Node layout_id="node_empty_backgrounds" layout_guid="8c0d746b-18fb-476d-895c-f8ccc5eae037" stylename="treeviewnode_panel" selectable="False" expanded="False">
+                            <Label stylename="label" height="16px" width="112px" left="20px" localise_caption="TextureGroups_NoResources" />
+                          </Node>
+                        </Node>
+                        <Node layout_id="node_fonts" layout_guid="738912fc-0462-4dc7-9257-b80318d9ecb1" stylename="treeviewnode_panel" selectable="False" expanded="True">
+                          <Label stylename="label" height="16px" width="30px" left="20px" localise_caption="TextureGroups_Fonts" />
+                          <Node layout_id="node_empty_fonts" layout_guid="3bd2deea-d556-4708-b563-adf435ac6825" stylename="treeviewnode_panel" selectable="False" expanded="False">
+                            <Label stylename="label" height="16px" width="112px" left="20px" localise_caption="TextureGroups_NoResources" />
+                          </Node>
+                        </Node>
+                        <ContextMenu stylename="context_menu" layout_id="resource_menu" layout_guid="e5efd69a-a021-4916-9541-4b8a80a2e373" left="10px" top="10px">
+                          <MenuEntry stylename="menu_entry" layout_id="menu_open" layout_guid="5a3d5daf-7078-4090-bc03-04b02c57f159" localise_name="TextureGroups_OpenResource" />
+                          <SubMenuEntry stylename="menu_entry" layout_id="menu_moveto" layout_guid="12760322-a28c-4a3a-a404-228e75bed57a" localise_name="TextureGroups_Menu_MoveTo">
+                            <ContextMenu stylename="context_menu" left="84dpi_px" top="3dpi_px" />
+                          </SubMenuEntry>
+                        </ContextMenu>
+                      </TreeView>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_explorer" layout_guid="efc1d8b1-81a1-4ae2-9da0-3ad7c41da04a" height="24px" left="10px" right="10px" top="0px" localise_name="TextureGroups_FindResource" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

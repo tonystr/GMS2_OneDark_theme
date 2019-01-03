@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="MacroEditor" layout_guid="2fe201d2-f62f-437f-9c1c-58dd1af3c5d6">
+    <Window stylename="default_window" width="920dpi_px" localise_title="macroeditor_title">
+      <Client>
+        <ChildGadgets>
+          <TableListBox stylename="extension_tablegadget_content" layout_id="macros" layout_guid="f0fca51f-cd31-4846-99d7-cfec0c667450">
+            <ListBoxItems />
+          </TableListBox>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

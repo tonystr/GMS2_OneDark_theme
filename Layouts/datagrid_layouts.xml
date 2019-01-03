@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="textview_window" layout_guid="93879ae5-3808-42ec-a70f-50b708373476">
+    <Window stylename="default_window" width="600dpi_px" height="480dpi_px" localise_title="Textview_Title" window_flags="CloseButton, ResizeButton, DockingDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="4dpi_px" right="4dpi_px" top="0dpi_px" bottom="0dpi_px" grid_rowlayout="['26dpi_px', '24dpi_px', '1*', '32dpi_px']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="64px" left="0dpi_px" localise_caption="Textview_Expression" />
+                <TextBox stylename="text_box" layout_id="expression_text" layout_guid="6eb21135-5466-4681-a161-9a39491f68ef" left="100dpi_px" right="0dpi_px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="34px" left="0dpi_px" localise_caption="Textview_Value" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <MultiLineTextBox stylename="multiline_text_box" layout_id="text_box" layout_guid="f3cf59a1-ee61-4fb4-81f4-05c508db481b" height="100%" width="100%" top="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <CheckBox stylename="checkbox_stack" layout_id="wrap_check" layout_guid="e345a2c0-e7d3-434d-841f-0408ca68d1f1" left="0dpi_px" localise_name="Textview_Wrap" />
+                <Button stylename="button_up" layout_id="close_button" layout_guid="1e635c05-aa1d-474d-b3c9-8914ce67a782" height="24px" width="80dpi_px" right="0dpi_px" localise_name="Window_Close" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

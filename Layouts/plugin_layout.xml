@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="UndoActionHistory" layout_guid="57392b81-4d31-46ce-9c80-62b3097465c8">
+    <Window title="History" localise_title="History_Title" top="40px" left="700px" width="200px" height="300px" window_flags="ResizeButton, CloseButton, ScrollBars">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <Grid grid_rowlayout="['*', '24px']" grid_columnlayout="['*']">
+            <Cell row="0" column="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="default_scrollpanel" width="100%" height="100%" top="0px" left="0px">
+                  <ChildGadgets>
+                    <StackPanel layout_id="actions_panel" stack_order="TopToBottom" stack_resize="ResizeHeight" width="100%" height="100%" top="0px" left="0px" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0">
+              <ChildGadgets>
+                <StackPanel width="100%" height="100%" stack_order="LeftToRight">
+                  <ChildGadgets>
+                    <Button layout_id="undo_button" stylename="undo_button" />
+                    <Button layout_id="redo_button" stylename="redo_button" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="GamemakerHelp_Menu" layout_guid="096674a3-6869-430f-8977-6dba0c9778e2">
+    <Grid grid_rowlayout="['32dpi_px', '*']" grid_columnlayout="['*']">
+      <Cell row="0" column="0">
+        <Gadgets>
+          <StackPanel stylename="stack_panel" stack_order="LeftToRight" width="100%" height="100%">
+            <ChildGadgets>
+              <Button icon="icon_Browser_back.png" layout_id="back_button" stylename="toolbar_button" localise_tooltip="Navigation_Back" />
+              <Button icon="icon_Browser_forward.png" layout_id="forward_button" stylename="toolbar_button" localise_tooltip="Navigation_Forward" />
+              <Button icon="icon_Browser_reload.png" layout_id="reload_button" stylename="toolbar_button" localise_tooltip="Navigation_Reload" />
+            </ChildGadgets>
+          </StackPanel>
+        </Gadgets>
+      </Cell>
+      <Cell row="1" column="0">
+        <Gadgets>
+          <ScrollPanel width="100%" height="100%">
+            <ChildGadgets>
+              <WebView layout_id="webview" width="100%" height="100%" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </Gadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="plugin_manager" layout_guid="8d0b282b-825a-4357-9961-4e98e97ee1ba">
+    <Window stylename="default_window" height="273px" width="867px" title="Manage Plugins">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <Grid stylename="pluginmanager_grid_container" layout_id="plugin_grid" left="0px" top="0px" margin_bottom="1px" grid_rowlayout="['auto']" grid_columnlayout="['50px', 'auto', '1*']" row_spacing="1px" column_spacing="1px">
+                <Cell row="0" column="0" />
+                <Cell row="0" column="1" />
+                <Cell row="0" column="2" />
+              </Grid>
+              <Grid stylename="grid_container" height="30px" top="233px" grid_columnlayout="['1*', '1*', '1*']">
+                <Cell row="0" column="0" />
+                <Cell row="0" column="1" />
+                <Cell row="0" column="2">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="restart_button" left="0px" name="Restart" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="GamemakerNews_ReleaseNotes" layout_guid="8644cce3-da56-45c3-b3da-7d8388ddb7e0">
+    <Window localise_title="News_ReleaseNotes" width="800px" height="600px" window_flags="CloseButton, ResizeButton, ScrollBars">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="releasenotes" width="100%" height="100%" url="http://store.yoyogames.com/downloads/gm-studio/release-notes-studio.html" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="FileModificationsDetected" layout_guid="c161a295-c36e-40c3-98a6-f95589b9afc0">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['140dpi_px', '240dpi_px', 'auto']">
+          <Cell row="0" column="0" flow_index="3">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="dialog_message_icon" layout_id="message_icon" image="WarningTriangle32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" top="0px" left="0px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="2">
+            <ChildGadgets>
+              <ListBox stylename="list_box" layout_id="reload_files" height="220dpi_px" margin_bottom="12dpi_px">
+                <ListBoxItems />
+              </ListBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="RightToLeft" stack_resize="ResizeHeight">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="no_button" height="33dpi_px" width="60dpi_px" right="12px" margin_right="8dpi_px" localise_name="Button_No" flow_index="1" />
+                  <Button stylename="button_up" layout_id="yes_button" height="33dpi_px" width="60dpi_px" right="114px" margin_right="8dpi_px" localise_name="Button_Yes" flow_index="0" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="ManageConfigs" layout_guid="8cc30b66-b107-4bd1-9cf3-fdb445856721">
+    <Window localise_title="Configurations_Manage" width="560px" height="360px" window_flags="CloseButton">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <ListBox layout_id="config_list" multi_select="false" width="280px" height="240px" left="10px" top="10px" />
+          <Button layout_id="up" stylename="button_config_moveup" left="300px" top="15px" />
+          <Button layout_id="down" stylename="button_config_movedown" left="300px" top="35px" />
+          <TreeView layout_id="treeview" top="10px" left="330px" width="180px" height="240px" start_expanded="true" accept_dragged_nodes="false" multi_select="false" selection_colour="#00000000" />
+          <Button layout_id="add_config" localise_name="Button_Add" stylename="basic_button" width="90px" height="30px" left="10px" top="266px" />
+          <Button layout_id="delete_config" localise_name="Button_Delete" stylename="basic_button" width="90px" height="30px" left="105px" top="266px" />
+          <Button layout_id="rename_config" localise_name="Button_Rename" stylename="basic_button" width="90px" height="30px" left="200px" top="266px" />
+          <Button layout_id="ok" localise_name="Button_Done" stylename="basic_button" width="90px" height="30px" left="330px" top="266px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="ImportProgressDialog" layout_guid="96deaecc-8d74-4c89-bd4a-31ce8557ebef">
+    <Window stylename="progress_window">
+      <Gadgets>
+        <ProgressBar stylename="progressbar_frame" layout_id="progress_bar" layout_guid="593ec6d5-798d-417c-a179-caad640a2340" bottom="0px">
+          <Gadgets>
+            <Label stylename="progressbar_label" localise_caption="Importing" />
+          </Gadgets>
+        </ProgressBar>
+      </Gadgets>
+    </Window>
+  </Layout>
+  <Layout layout_name="GamemakerNews" layout_guid="44116c19-5879-4cb9-9b49-a49f918f7f63">
+    <Window localise_title="Gamemaker_News" width="800px" height="600px" window_flags="CloseButton, ResizeButton, ScrollBars">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="marketplace" width="100%" height="100%" url="https://www.yoyogames.com/news/ide" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="SaveRequestFailureDialog" layout_guid="2925CE61-50D5-472E-8FF0-D6ADD2EB2FBC">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['1*', '140dpi_px', 'auto', 'auto']">
+          <Cell row="0" column="0" flow_index="3">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="dialog_message_icon" layout_id="message_icon" layout_guid="4fb1a651-99f6-4229-8419-b085a7618f7c" image="ErrorCross32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" layout_guid="5c6cd4b0-c524-4208-861f-274dbcd68a14" top="0px" left="0px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="2">
+            <ChildGadgets>
+              <ListBox stylename="list_box" layout_id="saverequest_listbox" layout_guid="abe51dbe-0160-49bd-bc07-f79189241fb5" height="120dpi_px" margin_bottom="12dpi_px">
+                <ListBoxItems />
+              </ListBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="yes_button" layout_guid="ae1eb0e0-e2c8-43a9-bb38-855fabd0ba4f" height="30dpi_px" width="60dpi_px" right="8dpi_px" margin_right="8dpi_px" localise_name="Button_OK" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="3" column="0" flow_index="1">
+            <ChildGadgets>
+              <CheckBox stylename="checkbox_stack" layout_id="dontshowagain_checkbox" layout_guid="e3516c86-331e-46bf-b5cc-6aef55f52f1b" left="0px" localise_name="Dialog_DontShowAgain" />
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="ConfigEditor_InfoBox" layout_guid="883d4149-895c-498c-bb56-dc5ee832316e">
+    <Window width="350dpi_px" height="150dpi_px" window_flags="DragDisabled" accept_button_id="ok_button">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <Label layout_id="message" width="100%" height="100%" left="0dpi_px" top="10dpi_px" word_wrap="true" valign="vAlignCentre" halign="hAlignCentre" left_flags="ScaleToFit" width_flags="ScaleToFit" />
+          <Button layout_id="ok_button" localise_name="Button_OK" bottom="10dpi_px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="FileModificationsDetected" layout_guid="ffa4b716-27ad-4425-9908-4019c00ac62d">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['140dpi_px', '240dpi_px', 'auto']">
+          <Cell row="0" column="0" flow_index="3">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="dialog_message_icon" layout_id="message_icon" image="WarningTriangle32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" top="0px" left="0px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="2">
+            <ChildGadgets>
+              <ListBox stylename="list_box" layout_id="reload_files" height="220dpi_px" margin_bottom="12dpi_px">
+                <ListBoxItems />
+              </ListBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="RightToLeft" stack_resize="ResizeHeight">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="no_button" height="33dpi_px" width="60dpi_px" right="12px" margin_right="8dpi_px" localise_name="Button_No" flow_index="1" />
+                  <Button stylename="button_up" layout_id="yes_button" height="33dpi_px" width="60dpi_px" right="114px" margin_right="8dpi_px" localise_name="Button_Yes" flow_index="0" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="BreakpointManager" layout_guid="6c2c32a7-fb01-4e19-83eb-fc026331dfd3">
+    <Window localise_title="Breakpoints" width="900px" height="240px" window_flags="ResizeButton, CloseButton, ScrollBars">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <StackPanel layout_id="breakpoint_display" stack_order="TopToBottom" stack_resize="ResizeAll" left="0px" top="0px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="LoadFailureDialog" layout_guid="26c33dee-5679-4cdc-9522-f9405fdcdb1a">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['60dpi_px', 'auto', 'auto']">
+          <Cell row="0" column="0" flow_index="3">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="dialog_message_icon" layout_id="message_icon" image="WarningTriangle32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" top="0px" left="0px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="2">
+            <ChildGadgets>
+              <ListBox stylename="list_box" layout_id="load_failures" height="300dpi_px" margin_bottom="12dpi_px">
+                <ListBoxItems />
+              </ListBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="RightToLeft" stack_resize="ResizeHeight">
+                <ChildGadgets>                  
+                  <Button stylename="button_up" layout_id="yes_button" height="33dpi_px" width="60dpi_px" right="114dpi_px" margin_right="8dpi_px" localise_name="Button_OK" flow_index="0" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="AddNewConfig" layout_guid="fca9af6e-97f6-418d-bac3-41e930eac581">
+    <Window stylename="window" height="160dpi_px" width="390dpi_px" localise_title="Configurations_Add" window_flags="CloseButton" accept_button_id="ok">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', '1*']" grid_columnlayout="['auto', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="141px" left="10dpi_px" margin_left="10px" margin_right="10px" localise_caption="Configurations_NewName" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <TextBox stylename="basic_text_box" layout_id="config_entry" layout_guid="3c1d44d5-e41c-4320-92e4-716bac4b5a36" width="" left="4px" right="4px" margin_top="4px" margin_bottom="4px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="116px" left="10dpi_px" margin_left="10px" margin_right="10px" margin_top="4px" margin_bottom="4px" localise_caption="Configurations_Parent" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="parent_config" layout_guid="572d8300-dfe4-4b93-b42c-8b99d7bebc82" height="16px" margin_left="4px" margin_right="4px" auto_ellipsis="True" auto_size="false" width_flags="ScaleToFit"/>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" rowspan="1" columnspan="2" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="basic_button" layout_id="ok" layout_guid="208196a8-59ea-4fbf-bc97-dd59276bb7d4" height="24px" width="90dpi_px" bottom="6px" localise_name="Button_OK" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ResourceTreeWindow" layout_guid="14e79252-65dd-4d42-886d-e2f421fa6e5e">
+    <Window stylename="window" height="540dpi_px" width="350dpi_px" localise_title="ResourceTree_Title" window_flags="CloseButton, ResizeButton, ScrollBars">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" top="8dpi_px" bottom="0dpi_px" grid_rowlayout="['32dpi_px', '30dpi_px', '1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <Gadgets>
+                <Grid stylename="grid_container" left="5dpi_px" right="5dpi_px" top="0dpi_px" margin_left="5dpi_px" margin_right="5dpi_px" grid_rowlayout="['24dpi_px']" grid_columnlayout="['1*', '26dpi_px', '24dpi_px', '24dpi_px']" column_spacing="3dpi_px" grid_resize="ResizeGrid">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TextBox stylename="gototype_text_box" layout_id="search_text" layout_guid="bc4a3f5b-c1ca-42e8-b40a-46549ce3396f" width="100%" left="0px" localise_default_caption="ResourceTree_SearchResources" text_hoffset="22dpi_px" text_hclip="12dpi_px">
+                        <ChildGadgets>
+                          <Image stylename="image_searchicon" layout_id="search_icon" layout_guid="7cee077f-1335-4e45-859d-049d808a7d0e" left="3dpi_px" top="3dpi_px" render_flags="FlipHorizontal" image="searchbar_icon.png" />
+                          <CloseButton stylename="close_button_up" layout_id="search_cancel" layout_guid="619fd226-63c5-4fee-a5ce-5665a14cd9de" right="0dpi_px" top="" margin_bottom="" colour="#FF888888" />
+                        </ChildGadgets>
+                      </TextBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <ToggleButton stylename="soundeditor_button_up" layout_id="search_dropdown" layout_guid="c1d15c5c-ab8d-4925-b5f8-2baa7ab7415e" flow_index="1" localise_tooltip="ResourceTree_SearchOptions" height="" left="0dpi_px" right="3dpi_px" button_down_style="resourcetree_searchoptions_button_down" icon_flags="Centre, KeepAspectRatio, Downscale" icon="SoundMixer\expand_down.png" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="search_previous" layout_guid="5f4e0b12-c112-455d-9406-0b39c209cc71" localise_tooltip="ResourceTree_FindPrevious" width="24dpi_px" icon_flags="Centre, KeepAspectRatio, Downscale" icon="ArrowLeft.png" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="3" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="search_next" layout_guid="9146bb37-89ba-4f67-80cc-e8c56e168317" localise_tooltip="ResourceTree_FindNext" width="24dpi_px" icon_flags="Centre, KeepAspectRatio, Downscale" icon="ArrowRight.png" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </Gadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="treeview_viewmenu" grid_columnlayout="['25dpi_px', '2*', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="collapse_all" layout_guid="15b1d2da-6a78-49b7-87c9-3c895f335754" localise_tooltip="ResourceTree_ExpandCollapseAllToolTip" height="18dpi_px" width="18dpi_px" right="1dpi_px" icon_flags="Centre, KeepAspectRatio, Downscale" icon="ResourceTree\collapse_all.png" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="current_view" layout_guid="8e1405ad-2b12-4105-8bb4-75287ee93a71" height="16px" width="26px" left="5px" margin_left="5dpi_px" margin_right="5dpi_px" margin_top="5dpi_px" margin_bottom="5dpi_px" caption="Default" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <ToggleButton stylename="resourcetree_viewoptions_button_up" layout_id="view_selector" layout_guid="4959abe8-5a0d-4265-8bc2-32c2c86bfb25" height="24px" bottom="3dpi_px" button_down_style="resourcetree_viewoptions_button_down" localise_name="ResourceTree_Views" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Dock\dock_item_burger.png">
+                        <ContextMenu stylename="context_menu" layout_id="views_menu" layout_guid="c06994a5-8386-4ba8-95b7-e6037c018cfe" left="10px" top="10px">
+                          <HorizontalSeparator stylename="menu_separator" layout_id="view_menu_separator" layout_guid="bb94f346-44dc-4c64-a81f-d656923f87d9" />
+                          <MenuEntry stylename="menu_entry" layout_id="view_rename" layout_guid="3cb008d9-5640-4e30-b8fb-e52b7d8f93f9" localise_name="Button_Rename" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_pencil.png" />
+                          <MenuEntry stylename="menu_entry" layout_id="view_add" layout_guid="b8825bef-672e-4282-8ce2-e538c3198078" localise_name="Button_Add" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ResourceTree\newView.png" />
+                          <MenuEntry stylename="menu_entry" layout_id="view_clone" layout_guid="8b1419af-773b-4c00-abcd-eaf4808fb5ff" localise_name="ResourceTree_Views_Clone" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ResourceTree\clone.png" />
+                          <MenuEntry stylename="menu_entry" layout_id="view_delete" layout_guid="4ac909c8-46d8-4930-80af-425eccfae88b" localise_name="ResourceTree_Views_Delete" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_destroy.png" />
+                        </ContextMenu>
+                      </ToggleButton>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell layout_id="resource_tree_panel" layout_guid="3bd9a8cf-8b3f-485c-8731-386bca6e8027" row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="resource_tree_no_resources_found" layout_guid="691b9e0e-595b-4834-bc9e-b3b42761ee52" height="16px" width="92px" localise_caption="ResourceTree_NoResourceFound" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto', 'auto']" grid_resize="ResizeGrid">
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="slider_label" layout_guid="b2d5ce70-0aff-4c8f-a229-764a24c0e7ce" height="16px" width="31px" colour="#FF666666" caption="100%" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <ThumbnailSlider stylename="thumbnail_slider_stackpanel" layout_id="slider_thumbs" layout_guid="06095b79-013a-4557-a889-6a065eb63dce" width="100dpi_px" right="0dpi_px" margin_top="6dpi_px" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="SaveProgressDialog" layout_guid="b31208f9-1273-41ad-a237-9125a660462f">
+    <Window stylename="progress_window">
+      <Gadgets>
+        <ProgressBar stylename="progressbar_frame" layout_id="progress_bar" layout_guid="62a914a7-c490-477a-be22-5b1dee633047" bottom="0px">
+          <Gadgets>
+            <Label stylename="progressbar_label" layout_id="SaveProgressDialog_label" localise_caption="Saving" outline_colour="#ff000000" />
+          </Gadgets>
+        </ProgressBar>
+      </Gadgets>
+    </Window>
+  </Layout>
+  <Layout layout_name="LoadProgressDialog" layout_guid="a9e738c3-c378-44cd-997b-a2d013da8f43">
+    <Window stylename="progress_window">
+      <Gadgets>
+        <ProgressBar stylename="progressbar_frame" layout_id="progress_bar" layout_guid="a43221af-8581-4b03-b348-a230168b96e8" bottom="0px">
+          <Gadgets>
+            <Label stylename="progressbar_label" layout_id="LoadProgressDialog_label" localise_caption="Loading" outline_colour="#ff000000" />
+          </Gadgets>
+        </ProgressBar>
+      </Gadgets>
+    </Window>
+  </Layout>
+  <Layout layout_name="GamemakerHelp_Basic" layout_guid="41665ec7-ca6c-4464-9421-c7731dc2fac8">
+    <Window localise_title="Gamemaker_Help" width="800px" height="600px" window_flags="CloseButton, ResizeButton, ScrollBars">
+      <Layout layout_name="BasicWindowFrame" />
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="webview" width="100%" height="100%" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="OutputPanel" layout_guid="c807d705-604e-40fd-80c1-99c6002d5ed5">
+    <Window localise_title="OutputPanel_Title" width="900dpi_px" height="240dpi_px" height_min="40dpi_px" width_max="100%" window_flags="Default">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ConfigSelect" layout_guid="8b5546ff-5a15-45eb-8873-140783f91788">
+    <Window localise_title="Configuration_Select" width="280px" height="20px" window_flags="ScrollBars">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <StackPanel layout_id="config_layout" stack_order="LeftToRight" stack_resize="ResizeAll" left="0px" top="0px">
+            <Gadgets>
+              <Label localise_caption="Configuration" auto_size="true" margin="5px" />
+              <ComboBox layout_id="config_selector" allow_edit="false" width="120px" left="0px" top="0px" label_only="true" margin="5px" />
+            </Gadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="BreakpointItemContextMenu" layout_guid="ea92157f-1c26-4768-b7a2-cf363f51d836">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_bp_delete" localise_name="Breakpoint_Delete" />
+      <MenuEntry layout_id="menu_bp_goto_code" localise_name="Breakpoint_GotoCode" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="MyAccount_EmbeddedBrowser" layout_guid="1872e789-c333-48ed-8a58-af4880850ec2">
+    <Grid grid_rowlayout="['32dpi_px', '*']" grid_columnlayout="['*']">
+      <Cell row="0" column="0">
+        <Gadgets>
+          <StackPanel stylename="stack_panel" stack_order="LeftToRight" width="100%" height="100%">
+            <ChildGadgets>
+              <Button icon="icon_Browser_back.png" layout_id="back_button" stylename="toolbar_button" localise_tooltip="Navigation_Back" />
+              <Button icon="icon_Browser_forward.png" layout_id="forward_button" stylename="toolbar_button" localise_tooltip="Navigation_Forward" />
+              <Button icon="icon_Browser_reload.png" layout_id="reload_button" stylename="toolbar_button" localise_tooltip="Navigation_Reload" />
+            </ChildGadgets>
+          </StackPanel>
+        </Gadgets>
+      </Cell>
+      <Cell row="1" column="0">
+        <Gadgets>
+          <ScrollPanel width="100%" height="100%">
+            <ChildGadgets>
+              <WebView layout_id="webview" width="100%" height="100%" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </Gadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="breakpoint_item" layout_guid="a109c965-0071-4660-b86d-8c8e7721b759">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeHeight">
+      <ChildGadgets>
+        <CheckBox stylename="checkbox_stack" layout_id="bp_checkbox" layout_guid="06288eff-3b14-461a-808f-be3aa36aa3b9" left="0px" />
+        <Label stylename="label" layout_id="bp_label" layout_guid="40059992-dcdc-4617-996f-a3bbd2fc9536" height="16px" width="27px" left="29px" top="2px" margin_left="10px" caption="hello" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="ConfigManager_ErrorBox" layout_guid="3f55412b-ed0f-46a8-aa17-dcf2d953646d">
+    <Window localise_title="Dialog_Error" stylename="config_manager_info_box" accept_button_id="ok_button">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <Label layout_id="message" stylename="dialog_editor_wrapped_label" top="10dpi_px" valign="vAlignTop" halign="hAlignCentre" />
+          <Button layout_id="ok_button" stylename="dialog_editor_ok_button" bottom="10dpi_px" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="MarketplaceView" layout_guid="1872e789-c333-48ed-8a58-af4880850ec2">
+    <Grid grid_rowlayout="['32dpi_px', '*']" grid_columnlayout="['*']">
+      <Cell row="0" column="0">
+        <Gadgets>
+          <StackPanel stylename="stack_panel" stack_order="LeftToRight" width="100%" height="100%">
+            <ChildGadgets>
+              <Button icon="icon_Browser_back.png" layout_id="back_button" stylename="toolbar_button" localise_tooltip="Navigation_Back" />
+              <Button icon="icon_Browser_forward.png" layout_id="forward_button" stylename="toolbar_button" localise_tooltip="Navigation_Forward" />
+              <Button icon="icon_Browser_reload.png" layout_id="reload_button" stylename="toolbar_button" localise_tooltip="Navigation_Reload" />
+            </ChildGadgets>
+          </StackPanel>
+        </Gadgets>
+      </Cell>
+      <Cell row="1" column="0">
+        <Gadgets>
+          <ScrollPanel width="100%" height="100%">
+            <ChildGadgets>
+              <WebView layout_id="marketplace" width="100%" height="100%" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </Gadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="UnpairedDevicesDetected" layout_guid="c2475724-a811-424c-83fc-740834c98b94">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['80dpi_px', '240dpi_px', '60dpi_px']">
+          <Cell row="0" column="0" flow_index="3">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="dialog_message_icon" layout_id="message_icon" image="WarningTriangle32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" top="0px" left="0px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="2">
+            <ChildGadgets>
+              <ListBox stylename="list_box" layout_id="unpaired_devices" height="220dpi_px" margin_bottom="12dpi_px">
+                <ListBoxItems />
+              </ListBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="RightToLeft">
+                <ChildGadgets>                  
+                  <Button stylename="button_up" layout_id="yes_button" height="33dpi_px" width="60dpi_px" right="114px" margin_right="8dpi_px" localise_name="Button_OK" flow_index="0" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+</Layouts>

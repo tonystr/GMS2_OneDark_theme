@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ide_about_box" layout_guid="5ddb3951-28b6-4d1d-bb5f-ad3a875287f6">
+    <Window stylename="default_window" height="397dpi_px" width="496dpi_px" left="366dpi_px" top="157dpi_px" localise_title="IDEMenu_Help_About" window_flags="CloseButton, DockingDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', 'auto']" row_spacing="6dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', 'auto']" grid_columnlayout="['1.5*', '1*', '2*']" grid_resize="ResizeGrid">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="67px" right="0px" localise_caption="aboutbox_ide_version" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_version" layout_guid="b81e76f4-8d70-4510-a7e3-4ffeb4697f7c" height="16px" width="44px" caption="V0.0.0.0" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="95px" right="0px" localise_caption="aboutbox_runtime_version" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_runtime" layout_guid="4f6a6220-d53e-4668-8682-5bfc98069cb9" height="16px" width="43px" caption="v0.0.0.0" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="74px" right="0dpi_px" localise_caption="aboutbox_onlinestatus" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_onlinestatus" layout_guid="bd46f698-394d-4a26-ba5a-fd08a2ca3508" height="16px" width="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="62px" right="0dpi_px" localise_caption="aboutbox_username" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_username" layout_guid="601b90f4-710f-4ec9-a280-bd049b780733" height="16px" width="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '6dpi_px', 'auto', 'auto', 'auto']" grid_resize="ResizeGrid">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="63px" localise_caption="aboutbox_time_in_ide" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_usetimer" layout_guid="ceb176fe-7c65-461f-b638-bd34b8a08573" height="16px" width="57px" caption="9001 days" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_graphicsvendor" layout_guid="33cc5378-a07b-4f58-ad90-92798a8fe39a" height="16px" width="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="4" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_graphicsvendor2" layout_guid="d272a198-e600-444d-bb1d-4ec875269cf5" height="16px" width="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="5" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" layout_id="aboutbox_cpuvendor" layout_guid="bc305ea8-5a91-4f52-b71d-d99dc8f2b03c" height="16px" width="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" layout_id="CreditsGrid" layout_guid="714590d3-0129-4619-9c7c-7574ac39f409" left="5dpi_px" right="5dpi_px" top="5dpi_px" bottom="5dpi_px">
+                  <Cell layout_id="CreditsPanel" layout_guid="dcf3bfd2-85e9-454a-a721-777bc54f45cc" row="0" column="0" flow_index="0" />
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="aboutbox_copyright" layout_guid="b5adecea-31ee-43c5-a8ad-99d6f6611bf1" height="16px" width="256px" top="1dpi_px" caption="copyright YoYo Games Ltd. all rights reserved." />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

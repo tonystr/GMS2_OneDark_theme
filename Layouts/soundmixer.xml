@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="DropTargetIndicator" layout_guid="0fd5c6fa-a35e-4e13-a707-51a4a82495ce">
+    <Image stylename="image" height="4dpi_px" image="SoundMixer\drop_target_highlight.png" image_flags="Stretch" />
+  </Layout>
+  <Layout layout_name="SoundMixer" layout_guid="b3fa4dbb-1db4-448e-b9b9-3b7fc1b8f87d">
+    <Window stylename="soundmixer_window" height="540dpi_px" width="82dpi_px" left="313dpi_px" top="79dpi_px" localise_title="SoundMixer_Title" window_flags="Default" help_tag="sound_mixer">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="soundmixer_grid_container" layout_id="mixer_grid" layout_guid="1fe5165d-f7da-427c-919b-8a16ceb64306" left="0dpi_px" top="0dpi_px" margin_left="6dpi_px" margin_right="6dpi_px" grid_columnlayout="['64dpi_px']" grid_resize="ResizeLast">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="soundmixer_button_up" layout_id="add_group" layout_guid="ea5cfdb6-a9c8-49e6-bdd6-a9dc1d44d23e" localise_tooltip="SoundMixer_ToolTip_AddGroup" height="380dpi_px" width="32dpi_px" left="6dpi_px" top="110dpi_px" bottom="7dpi_px" margin_right="32dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundMixer\icon_IE_add.png" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="SoundMixerGroup" layout_guid="ec74bdd0-6a78-429b-914c-af46d4c6bf96">
+    <ScrollPanel stylename="soundmixer_scrollpanel" layout_id="soundmixer_group" layout_guid="a1fb218b-7ef8-41d1-8501-49ac1b097bc1" height="0px" width="" left="0px" top="0px" bottom="0px" scrollpanel_flags="ResizeHeight">
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', 'auto', '1*']" row_spacing="6dpi_px">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <Label stylename="label" height="16px" width="88px" left="0dpi_px" top="0px" margin_left="15dpi_px" margin_top="0dpi_px" localise_caption="SoundMixer_ColumnVolume" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="soundeditor_volume_group_box" layout_id="group_volume_box" layout_guid="f80143c8-7230-4686-a9b7-c23572c4545a" height="40dpi_px" grid_columnlayout="['34dpi_px', '1*', '24dpi_px', '24dpi_px', '34dpi_px']" column_spacing="6dpi_px">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_button_up" layout_id="group_mute" layout_guid="7cc7a9f3-3337-4e3b-b0c8-634c96212b0b" localise_tooltip="SoundMixer_ToolTip_MuteGroup" width="24dpi_px" left="12dpi_px" top="8dpi_px" margin_left="6dpi_px" margin_right="0px" margin_top="7dpi_px" margin_bottom="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_volume.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <Slider stylename="slider_grid" layout_id="group_volume" layout_guid="ae2a4d3b-a5c9-41fb-a3c2-861440a4c5ea" localise_tooltip="SoundMixer_ToolTip_ColumnVolume" height="27dpi_px" width="" left="" top="16dpi_px" min_value="0" max_value="1" value="1" flow_increment="0.1" click_increment="0.1" mindrag_increment="0.01" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="2" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_button_up" layout_id="group_play" layout_guid="90fbc3b2-746f-40c1-a8f1-5b32b4ecc509" localise_tooltip="SoundMixer_ToolTip_PlayGroup" width="24dpi_px" top="8dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_play.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="3" flow_index="0">
+                  <ChildGadgets>
+                    <ToggleButton stylename="soundeditor_button_up" layout_id="group_loop" layout_guid="bfeb8d6d-afdf-40c1-b60c-d9b7a1617257" localise_tooltip="SoundMixer_ToolTip_LoopGroup" width="24dpi_px" top="8dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_soundloop.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="4" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_button_up" layout_id="group_stop" layout_guid="09b5a1e2-a9c9-46a8-ba41-358e0837b8da" localise_tooltip="SoundMixer_ToolTip_RewindGroup" width="24dpi_px" right="10dpi_px" top="8dpi_px" margin_left="6dpi_px" margin_right="10dpi_px" margin_bottom="3dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_rewind.png" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0" flow_index="0">
+            <ChildGadgets>
+              <Label stylename="label" height="16px" width="73px" left="0dpi_px" margin_left="15dpi_px" localise_caption="SoundEditor_AudioGroup" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="3" column="0" flow_index="0">
+            <ChildGadgets>
+              <Grid stylename="grid_container" height="34dpi_px" grid_columnlayout="['1*', '14dpi_px']" column_spacing="6dpi_px">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <ComboBox stylename="combobox_panel" layout_id="group_list" layout_guid="e1a654b5-050e-4c2d-9510-4f181e8139fe" localise_tooltip="SoundMixer_ToolTip_SoundGroup" width="" left="0dpi_px" top="0dpi_px">
+                      <ListBoxItems />
+                    </ComboBox>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <CloseButton stylename="close_button_up" layout_id="close_group" layout_guid="64b71208-b06b-47b8-b41c-2b09e0165425" localise_tooltip="SoundMixer_ToolTip_CloseGroup" height="16dpi_px" width="14dpi_px" right="" top="6px" margin_bottom="" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="4" column="0" flow_index="0">
+            <ChildGadgets>
+              <Group stylename="soundmixer_group_box" layout_id="mixer_group" layout_guid="185e1dab-7852-4d7c-94ce-08b78cfc02c2" left="0dpi_px" bottom="0px" margin_left="0dpi_px" margin_top="6dpi_px">
+                <ChildGadgets>
+                  <ScrollPanel stylename="default_scrollpanel" layout_id="mixer_panel" layout_guid="719ef419-f2f3-4a71-a65f-548248e4243b" left="0dpi_px" top="1dpi_px" margin_right="1dpi_px" margin_bottom="1dpi_px" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+                    <ChildGadgets>
+                      <StackPanel stylename="stack_panel" layout_id="mixer_column" layout_guid="3418083e-af15-48de-9f80-db845143b949" left="0dpi_px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+                    </ChildGadgets>
+                  </ScrollPanel>
+                </ChildGadgets>
+              </Group>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="SoundMixerLink" layout_guid="e46ce7ef-38d1-48ee-b835-d4ab3c0b4d64">
+    <Grid stylename="grid_container" layout_id="linker_split" layout_guid="932a1261-f17b-4ed0-9321-af652a9c807b" width="24dpi_px" left="5dpi_px" right="6dpi_px" margin_left="6dpi_px" margin_right="6dpi_px" grid_rowlayout="['53dpi_px', '1*']" grid_resize="None">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <ToggleButton stylename="button_up" layout_id="link_button" layout_guid="5c312f77-7544-4474-b9d1-20662dacc214" localise_tooltip="SoundMixer_ToolTip_LinkGroups" height="19dpi_px" width="19dpi_px" left="3dpi_px" top="33px" margin_top="33dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundMixer\icon_IDE_link.png" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <VerticalSeparator stylename="vertical_separator" width="1dpi_px" left="12dpi_px" top="59px" bottom="6dpi_px" margin_top="59dpi_px" margin_bottom="" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="SoundMixerControl" layout_guid="13504d63-199b-4755-95dc-67dd3e295584">
+    <Grid stylename="soundmixercontrol_grid_container" layout_id="control_grid" layout_guid="8b964ca3-a81f-4ad8-9372-dbf217a19654" height="93dpi_px" left="6dpi_px" right="6dpi_px" top="0dpi_px" margin_left="6dpi_px" margin_right="6dpi_px" margin_top="6dpi_px" margin_bottom="6dpi_px" grid_rowlayout="['25dpi_px', '25dpi_px', '25dpi_px']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Group stylename="soundmixer_control_title_bar" layout_id="titlebar" layout_guid="ef094468-67ad-4211-894a-250f2064b9ed">
+            <ChildGadgets>
+              <Grid stylename="grid_container" left="6dpi_px" grid_columnlayout="['1*', '24dpi_px', '24dpi_px', '24dpi_px', '1dpi_px', '26dpi_px']" column_spacing="6dpi_px">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <Label stylename="label" layout_id="sound_name" layout_guid="dc9d3493-56ec-4b12-9702-6ea22bca1f17" height="16px" width="" left="6dpi_px" right="0dpi_px" top="5dpi_px" margin_left="6dpi_px" caption="How much wood would a woodchuck chuck if a woodchuck could chuck wood" auto_size="False" auto_ellipsis="True" word_wrap="True" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_button_up" layout_id="play_button" layout_guid="3f6a2ed9-d668-4ba3-9ac4-76f832d6e84d" flow_index="1" localise_tooltip="SoundMixer_ToolTip_PlaySound" width="24dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_play.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="2" flow_index="0">
+                  <ChildGadgets>
+                    <ToggleButton stylename="soundeditor_button_up" layout_id="loop_button" layout_guid="8e960f11-1054-4155-8390-1f28fd8ba767" flow_index="2" localise_tooltip="SoundMixer_ToolTip_RepeatSound" width="24dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_soundloop.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="3" flow_index="0">
+                  <ChildGadgets>
+                    <Button stylename="soundeditor_button_up" layout_id="stop_button" layout_guid="049025e0-9e34-4629-887d-d28016a3706b" flow_index="3" localise_tooltip="SoundMixer_ToolTip_RewindSound" width="24dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_rewind.png" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="4" flow_index="0">
+                  <ChildGadgets>
+                    <VerticalSeparator stylename="vertical_separator" top="6px" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="5" flow_index="0">
+                  <ChildGadgets>
+                    <CloseButton stylename="close_button_up" layout_id="close_button" layout_guid="190e9f4c-e487-49a7-8b6b-2a5c65f1e8c1" flow_index="4" localise_tooltip="SoundMixer_ToolTip_CloseSound" height="16dpi_px" width="13dpi_px" right="12dpi_px" top="6dpi_px" margin_bottom="0dpi_px" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </Group>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" right="2dpi_px" grid_columnlayout="['24dpi_px', '1*', '92dpi_px', '20dpi_px']" column_spacing="6dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="soundeditor_button_up" layout_id="mute_button" layout_guid="7f902019-c4cc-42e3-8318-2e9225dea981" flow_index="1" localise_tooltip="SoundMixer_ToolTip_MuteSound" width="24dpi_px" button_down_style="soundeditor_button_down" button_over_style="soundeditor_button_over" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundEditor\icon_IDE_volume.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Slider stylename="slider" layout_id="volume_slider" layout_guid="a30aba4c-e45e-4420-baa2-61fe277e8ba4" flow_index="2" width="" left="" top="6dpi_px" min_value="0" max_value="1" flow_increment="0.1" click_increment="0.1" mindrag_increment="0.01" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="compact_duration" layout_guid="36478418-bea5-47c4-88cb-f787ad2d68ef" height="16px" width="92px" top="5dpi_px" caption="888.88 / 888.88s" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="3" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="soundeditor_button_up" layout_id="toggle_expanded" layout_guid="4814b62e-483c-4b1c-8484-9bb41c47e163" flow_index="3" height="20dpi_px" width="20dpi_px" top="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="SoundMixer\expand_up.png" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" right="2dpi_px" grid_columnlayout="['24dpi_px', '1*', '92dpi_px', '20dpi_px']" column_spacing="6dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Image stylename="image" height="16dpi_px" width="16dpi_px" left="4dpi_px" image_flags="Stretch" image="SoundMixer\icon_IDE_music.png" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Slider stylename="slider_grid" layout_id="playback_position" layout_guid="aff8cead-fe02-4af5-8b1e-0d7a530c8e6a" localise_tooltip="SoundMixer_ToolTip_PlaybackPosition" width="" left="" min_value="0" max_value="1" flow_increment="0.1" click_increment="0.1" mindrag_increment="0.01" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="expanded_duration" layout_guid="426865d1-35a4-4b67-8221-7201b87ef2fa" height="16px" width="92px" top="4dpi_px" caption="888.88 / 888.88s" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

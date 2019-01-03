@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitMenu" layout_guid="92ccc089-15eb-4c12-9d2b-bccee69f62c9">
+    <MenuBar stylename="menu_bar" layout_id="menu_bar" layout_guid="10a9875d-09f6-4dec-853e-8cf33a38184f" top="241dpi_px">
+      <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_scm" layout_guid="5ba102ee-56de-4785-8ff1-33f4d43439ce" width="241dpi_px" left="0dpi_px" localise_name="SCM_Menu">
+        <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+          <MenuEntry stylename="menu_entry" layout_id="menu_create" layout_guid="54c90d1a-6e5f-44a6-bc86-912942021cb3" localise_name="SCM_Create" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_import" layout_guid="b314b47e-8f7e-4d79-b8ef-ef6a7bcc2e36" localise_name="SCM_Import" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_clone" layout_guid="4581cfa0-fb40-42c4-ae32-d5f082c4af1e" localise_name="SCM_Clone" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_commit" layout_guid="f35779b5-6eaa-4331-a504-93de8aba1f69" localise_name="SCM_Commit" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_push" layout_guid="d21414f4-6799-4efa-96c8-8483bcf66429" localise_name="SCM_Push" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_pull" layout_guid="d1043bfc-8c0c-4b14-824f-bb0cfdc52773" localise_name="SCM_Pull" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_history" layout_guid="b0f8cf66-7483-4fff-9f07-581f58f57178" localise_name="SCM_History" />
+          <MenuEntry stylename="menu_entry" layout_id="menu_conflicts" layout_guid="b9a654bc-965a-4152-a069-0662ee6f858f" localise_name="SCM_Conflicts" />
+        </ContextMenu>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+  <Layout layout_name="SourceControlGitStartMenu" layout_guid="063bf508-a571-4184-824d-534c0326d6b5">
+    <MenuBar stylename="menu_bar" layout_id="clone_menu_bar" layout_guid="3a9437f9-40c6-43bd-b614-a87b06dc4686" top="241dpi_px">
+      <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_scm" layout_guid="5ba102ee-56de-4785-8ff1-33f4d43439ce" height="24px" width="103px" left="0px" localise_name="SCM_Menu">
+        <ContextMenu stylename="context_menu" left="10px" top="10px">
+          <MenuEntry stylename="menu_entry" layout_id="menu_clone" layout_guid="4581cfa0-fb40-42c4-ae32-d5f082c4af1e" localise_name="SCM_Clone" />
+        </ContextMenu>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+</Layouts>

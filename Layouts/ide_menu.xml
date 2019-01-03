@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ide_menu" layout_guid="5275084a-0f4f-434f-a71f-1ebcae818839">
+    <Grid stylename="ide_menu_frame" height="20dpi_px" width="100%" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto']" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="ide_toolbar" height="100dpi_px" width="100%" left="1dpi_px" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <MenuBar stylename="menu_bar" layout_id="mastermenubar" layout_guid="32109cc8-b0c9-4c64-b6f3-23a41c249cee" height="100%" left="0dpi_px" top="232dpi_px">
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_file" layout_guid="2e3caf3a-9443-4a5c-bc27-621dd1c87d59" height="24dpi_px" width="39dpi_px" left="0dpi_px" localise_name="IDEMenu_File">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_newproject" layout_guid="a89f24dc-275e-44d8-98f4-5eb5e6aeabc8" height="24dpi_px" click_command="show_new_projects_page" localise_name="File_Menu_NewProject" keyboard_shortcut="${show_new_projects_page}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_openproject" layout_guid="7751fc8a-6df3-4f2d-833d-df2466091298" height="24dpi_px" click_command="load_project_dialog" localise_name="File_Menu_OpenProject" keyboard_shortcut="${load_project_dialog}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_importproject" layout_guid="002adca7-f678-4b63-9a51-10051157b663" height="24dpi_px" click_command="import_project_dialog" localise_name="File_Menu_ImportProject" />
+                    <SubMenuEntry stylename="menu_entry" layout_id="bar_file_recentprojects" layout_guid="de7a38ab-f806-4102-b9db-24cb01cad55c" height="24dpi_px" localise_name="File_Menu_RecentProjects">
+                      <ContextMenu stylename="context_menu" />
+                    </SubMenuEntry>
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_save" layout_guid="09907b7a-9f95-4a3e-8b60-2db1cddf5e7a" height="20dpi_px" click_command="menu_save_project_incremental" localise_name="File_Menu_Save" keyboard_shortcut="${menu_save_project_incremental}" entry_active="Fal
+se" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_saveas" layout_guid="7ece0eed-ebe2-4b5d-aef8-3fb61b5cd580" height="20dpi_px" click_command="menu_save_project_as" localise_name="File_Menu_SaveAs" keyboard_shortcut="${menu_save_project_as}" entry_active="False" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_export" layout_guid="c4ccc98a-f0b7-4aa4-a8bc-70dea0870eca" height="20dpi_px" click_command="menu_export_yyz_project" localise_name="File_Menu_ExportProject" keyboard_shortcut="${menu_export_yyz_project}" entry_active="False" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_new_ide" layout_guid="0e8f9ea0-c30d-4916-9507-226588e96edd" height="24dpi_px" click_command="new_ide" localise_name="File_Menu_NewIDE" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_preferences" layout_guid="2b9b26c5-10c5-4da7-8627-650e5ba85530" height="24dpi_px" click_command="open_prefs_tree" localise_name="File_Menu_Preferences" keyboard_shortcut="${open_prefs_tree}" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_myaccount" layout_guid="8c516755-26b7-4d78-b8c6-8c03689a1dc0" height="24dpi_px" click_command="user_myaccount" localise_name="File_Menu_MyAccount" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_logout" layout_guid="6a9e61dc-b8fe-4943-9fd1-ce9d8a745151" height="24dpi_px" click_command="user_logout" localise_name="File_Menu_Logout" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_file_exit" layout_guid="16f17e08-ab4e-4f3f-804d-3edf37fdb9fa" height="24dpi_px" click_command="exit_ide" localise_name="File_Menu_Exit" keyboard_shortcut="${exit_ide}" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_edit" layout_guid="15a755cd-c69e-41c6-a400-dd5528f2bb53" height="24dpi_px" width="41dpi_px" left="50dpi_px" localise_name="IDEMenu_Edit">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry_undo" layout_guid="2701402e-4dba-4e1e-b2dd-09a62bc89086" height="24dpi_px" localise_name="Edit_Menu_Undo" keyboard_shortcut="${GlobalUndo}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry_redo" layout_guid="29e04c28-a941-49da-ac88-01ca2ccc4800" height="24dpi_px" localise_name="Edit_Menu_Redo" keyboard_shortcut="${GlobalRedo}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_edit_search" layout_guid="927f2bba-b534-4a79-bb44-99af6d347fee" height="24dpi_px" click_command="open_search_replace" localise_name="Edit_Menu_Search" keyboard_shortcut="${open_search_replace}" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_build" layout_guid="c3c074f5-94ba-43c9-b071-58befde28a3e" height="24dpi_px" width="48dpi_px" left="100dpi_px" localise_name="IDEMenu_Build">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_run_run" layout_guid="a539479f-3068-449a-b563-2086aa8af241" height="24dpi_px" click_command="run_program" localise_name="Run_Menu_Run" keyboard_shortcut="${run_program}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_run_debug" layout_guid="7bd0f56e-a493-441d-90c8-acce721dfa03" height="24dpi_px" click_command="run_program" command_arg="debug" localise_name="Run_Menu_RunDebug" keyboard_shortcut="${debug_program}" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_run_clean" layout_guid="38cd2adf-6363-4ac9-8b04-407c3b7b286e" height="24dpi_px" click_command="clean_program" localise_name="Run_Menu_Clean" keyboard_shortcut="${clean_program}" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_run_build" layout_guid="b6f38e0b-be81-4626-9df6-f0d3fb05dfa2" height="24dpi_px" click_command="package_program" localise_name="Run_Menu_CreateExecutable" keyboard_shortcut="${package_program}" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_run_remote" layout_guid="b6f38e0b-be81-4626-9df6-f0d3fb05dfa2" height="24dpi_px" click_command="reveal_worker" localise_name="Run_Menu_RevealRemote" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_views" layout_guid="76188198-3035-4a68-a902-afd87ef16a97" height="24dpi_px" width="64dpi_px" left="150dpi_px" localise_name="IDEMenu_Views">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_resources" layout_guid="8b89694a-d3ab-4d91-996f-b90e2d610bc2" height="24dpi_px" click_command="open_resource_tree" localise_name="Views_Menu_Resources" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_output" layout_guid="e6cd16f6-5ec4-4449-9300-46cb09ecfd4c" height="24dpi_px" click_command="open_output_panel" localise_name="Views_Menu_Output" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_search_results" layout_guid="b5a770d9-b6db-4a22-ae5f-1dc55ef757e5" height="24dpi_px" click_command="open_search_output_panel" localise_name="Views_Menu_SearchResults" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_sc_output" layout_guid="a0c5f8ed-07e2-4af5-ae12-103335955aa6" height="24dpi_px" click_command="open_sc_output_panel" localise_name="Views_Menu_SourceControl" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_breakpoints" layout_guid="9401faa4-db64-42cd-81c9-d2e6184770d0" height="24dpi_px" click_command="show_breakpoints_window" localise_name="Views_Menu_Breakpoints" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_compile_errors" layout_guid="dd680ab6-57fb-4243-82b8-596736013434" height="24dpi_px" click_command="show_compile_errors" localise_name="Views_Menu_CompileErrors" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_syntax_errors" layout_guid="b5d1498d-3afc-4d7b-860e-6c08d1f56834" height="24dpi_px" click_command="show_syntax_errors" command_arg="set_focus" localise_name="Views_Menu_SyntaxErrors" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_history" layout_guid="26bee66d-689e-4ee8-842e-4f0dbd8ce594" height="24dpi_px" click_command="open_undo_history" localise_name="Views_Menu_History" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_recent_windows" layout_guid="26bee66d-689e-4ee8-842e-4f0dbd8ce424" height="24dpi_px" click_command="open_recent_windows" localise_name="Views_Menu_Recent_Windows" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_macros" layout_guid="0fecc3e5-d979-4c2e-b335-869215682c3e" click_command="open_yy_macro_editor" localise_name="Views_Menu_Macros" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_tutorial" layout_guid="44841a5c-02d6-4595-a7b7-9f18e117f989" height="24dpi_px" click_command="show_tutorial_windows" localise_name="Views_Menu_Tutorial" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_tools" layout_guid="2882BFD5-1567-4DE9-98C0-05396603DA8E" height="24dpi_px" width="64dpi_px" left="150dpi_px" localise_name="IDEMenu_Tools">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_texturegroups" layout_guid="78a1adab-85a7-4fb9-b440-afa236c27b25" height="24dpi_px" click_command="open_yy_texture_manager" localise_name="IDEMenu_Texturepage" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_audiogroups" layout_guid="dc5e8219-df0f-4034-b3f9-0fc45a842fbb" height="24dpi_px" click_command="open_yy_audio_manager" localise_name="IDEMenu_Audiogroups" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_audiomixer" layout_guid="fca7e175-0d77-4ddc-8c2f-dcb65d37f9db" height="24dpi_px" click_command="open_yy_sound_mixer" localise_name="IDEMenu_SoundMixer" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_views_image_generator" layout_guid="8273ED18-2F18-4EDD-A036-0A5344BB5A2A" height="24dpi_px" click_command="platform_image_generator" localise_name="Views_Menu_ImageGenerator" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_marketplace" layout_guid="7b6a1863-8c73-4c6e-987d-2ec44af9b22c" height="24dpi_px" width="90dpi_px" left="214dpi_px" localise_name="IDEMenu_Marketplace">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_marketplace_go" layout_guid="5a90589f-ed36-42b4-9677-8411d0c17e15" height="24dpi_px" click_command="open_marketplace" localise_name="Marketplace_Go" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_marketplace_assets" layout_guid="985485df-31fe-45d4-9039-9a19c0a4f239" height="24dpi_px" click_command="open_marketplace" command_arg="assets" localise_name="Marketplace_Assets" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_marketplace_purchase_history" layout_guid="785b162f-d9fd-49f8-aa25-423439f51be7" height="24dpi_px" click_command="open_marketplace" command_arg="purchase_history" localise_name="Marketplace_PurchaseHistory" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_marketplace_update_package" layout_guid="985485df-31fe-45d4-9039-9a19c0a4f239" height="24dpi_px" click_command="update_marketplace_package" localise_name="Marketplace_UpdatePackage" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_marketplace_create_package" layout_guid="985485df-31fe-45d4-9039-9a19c0a4f239" height="24dpi_px" click_command="create_marketplace_package" localise_name="Marketplace_CreateNewPackage" />
+                  </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_layouts" layout_guid="02772a26-98ff-4d0d-8d78-18e41aaf3907" width="38dpi_px" left="0dpi_px" localise_name="IDEMenu_Layouts">
+                    <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                        <MenuEntry stylename="menu_entry" layout_id="bar_file_savelayout" layout_guid="debbd758-43cc-4eae-b12d-1c4965d52254" click_command="save_project_layout" localise_name="IDEMenu_SaveLayout" />
+                        <MenuEntry stylename="menu_entry" layout_id="bar_file_loadlayout" layout_guid="8b2b6b8e-ab66-43d9-9c4a-8c00d4bd23c1" click_command="load_project_layout" localise_name="IDEMenu_LoadLayout" />
+                        <HorizontalSeparator stylename="menu_separator" />
+                        <MenuEntry stylename="menu_entry" layout_id="bar_file_resetlayout" layout_guid="debbd758-43cc-4eae-b12d-1c4965d52254" click_command="reset_project_layout" localise_name="IDEMenu_ResetLayout" />
+                    </ContextMenu>
+                </MenuBarEntry>
+                <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_entry0" layout_guid="e6cc9c6b-5390-4911-98f3-456057fe2052" height="24dpi_px" width="46dpi_px" left="304dpi_px" localise_name="IDEMenu_Help">
+                  <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry9" layout_guid="d7abcccd-4f2c-4275-8bd6-1ea6f9a8e682" height="24dpi_px" click_command="show_start_page" localise_name="IDEMenu_Help_StartPage" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry10" layout_guid="b745e80a-b090-4085-88fd-83936f5ee0c0" height="24dpi_px" click_command="show_welcome_page" localise_name="IDEMenu_Help_WelcomePage" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry1" layout_guid="d7d04ccd-4f2c-4275-8bd6-1ea6f9a8e682" height="24dpi_px" click_command="show_help" localise_name="IDEMenu_Help_Help" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry6" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e888" height="24dpi_px" click_command="open_knowledgebase" localise_name="IDEMenu_Help_KnowledgeBase" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry8" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e222" height="24dpi_px" click_command="open_reportbug" localise_name="IDEMenu_Help_ReportBug" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry20" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e222" height="24dpi_px" click_command="open_log_explorer" localise_name="IDEMenu_Help_LogFile" />                    
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry3" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e682" height="24dpi_px" click_command="open_yyg" localise_name="IDEMenu_Help_YYG" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry4" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e999" height="24dpi_px" click_command="open_gmc" localise_name="IDEMenu_Help_GMC" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry12" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e999" height="24dpi_px" click_command="open_forums" localise_name="IDEMenu_Help_BetaForums" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry7" layout_guid="d7d04add-4f2c-4275-8bd6-7776f9a8e888" height="24dpi_px" click_command="open_releasenotes" localise_name="IDEMenu_Help_ReleaseNotes" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry7" layout_guid="d7d04add-4f2c-4275-8bd6-7776f9a8e888" height="24dpi_px" click_command="open_runtime_releasenotes" localise_name="IDEMenu_Help_RuntimeReleaseNotes" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry5" layout_guid="d7d04add-4f2c-4275-8bd6-1ea6f9a8e777" height="24dpi_px" click_command="open_sdks" localise_name="IDEMenu_Help_SDKS" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" layout_id="open_project_explorer" layout_guid="97dbde27-7c3f-4adf-9856-741551e00dac" height="20dpi_px" click_command="open_project_explorer" localise_name="IDEMenu_Help_OpenInExplorer" />
+                    <HorizontalSeparator stylename="menu_separator" />
+                    <MenuEntry stylename="menu_entry" height="24dpi_px" click_command="show_licenses_page" localise_name="IDEMenu_Help_Licenses" />
+                    <MenuEntry stylename="menu_entry" layout_id="bar_entry0_entry2" layout_guid="1792f787-b7f2-4cc3-8b1d-1affea53a0e4" height="24dpi_px" click_command="open_about_box" localise_name="IDEMenu_Help_About" />
+                  </ContextMenu>
+                </MenuBarEntry>
+              </MenuBar>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="grid_container" height="100%" grid_columnlayout="['auto', 'auto']" grid_rowlayout="['auto']" column_spacing="6dpi_px" grid_resize="ResizeGrid">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" stack_resize="ResizeWidth" height="24dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="ide_version_label" layout_id="ide_version" layout_guid="9e110ad6-9507-480b-8aed-a274f52d0243" width="93dpi_px" top="0dpi_px" bottom="0dpi_px" left="0dpi_px" caption="IDE v99.99.99.99" />
+                    <Label stylename="ide_version_label" layout_id="runtime_version" layout_guid="d47eea98-62e1-45eb-8391-13cf9740dd29" width="0dpi_px" top="0dpi_px" bottom="0dpi_px" left="99dpi_px" margin_left="3dpi_px" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <NotificationButton stylename="notification_button" layout_id="notifications" layout_guid="55a31700-78a9-4240-8776-74cfdac279f8" right="6dpi_px" margin_left="" margin_right="6dpi_px" margin_top="" margin_bottom="" />
+                <StackPanel stylename="progress_panel" layout_id="progress_panel" layout_guid="29baea57-52e2-4015-9854-950d94e5d275" right="0px" height="100%" width="100%" stack_resize="ResizeWidth">
+                  <ChildGadgets>
+                    <ProgressBar stylename="ide_progressbar" layout_id="progress_bar" layout_guid="b92627a5-2e00-47a5-9bc8-ae794ea6e29f" left="7px" margin_left="7dpi_px" margin_right="10dpi_px">
+                      <ChildGadgets>
+                        <Label stylename="ide_progress_label" layout_id="progress_label"/>
+                      </ChildGadgets>
+                    </ProgressBar>
+                    <Image stylename="progress_spinner" height="20dpi_px" width="24dpi_px" left="137px" margin_right="16dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" animated_image="{ image:'Progress_Bar/save_spinner_atlas.png', total: 9, row: 3, size: [40, 40] }" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

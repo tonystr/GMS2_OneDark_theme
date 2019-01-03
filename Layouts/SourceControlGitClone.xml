@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitClone" layout_guid="ca66c827-498b-4506-9e45-20e17ec2b08d">
+    <Window stylename="source_control_git_clone_window" height="240dpi_px" width="400px" left="343dpi_px" top="164dpi_px" localise_title="sourcecontrolgit_clone_repository" window_flags="CloseButton, MinimizeButton, MaximizeButton, DockingDisabled" accept_button_id="ok_button">
+      <Client>
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="ok_button" layout_guid="acf417c1-85bc-4a9a-acc7-be7a8be1c92b" height="24px" width="89dpi_px" left="12dpi_px" bottom="12dpi_px" localise_name="Button_OK" />
+          <Button stylename="button_up" layout_id="cancel_button" layout_guid="b1ec0f7c-ca06-4ff7-9029-6844adf92dda" height="24px" width="79dpi_px" right="5dpi_px" bottom="12dpi_px" localise_name="Button_Cancel" />
+          <TextBox stylename="text_box" layout_id="url_text" layout_guid="faf8b568-11d2-44aa-95fe-6e76e811ec41" left="5dpi_px" right="5dpi_px" top="27dpi_px" />
+          <Label stylename="label" height="16px" width="282px" left="8dpi_px" top="8dpi_px" localise_caption="sourcecontrolgit_clone_urltoclone" />
+          <Label stylename="label" height="16px" width="251px" left="11dpi_px" top="76dpi_px" localise_caption="sourcecontrolgit_clone_path" />
+          <FileInputGadget stylename="file_input" layout_id="clone_path" layout_guid="aa66ec67-b6ea-41b7-8ebc-9e9c295fd94e" left="5dpi_px" right="5dpi_px" top="99dpi_px" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

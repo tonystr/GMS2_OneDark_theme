@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="DnD_Workspace" layout_guid="f72c7c4d-dd29-4bbd-81c2-a4ed9a747345">
+    <ScrollPanel stylename="dnd_workspace" layout_id="workspace_panel" layout_guid="690934a7-61f2-47b1-a989-851af09443e0" left="0dpi_px" right="0dpi_px" top="0dpi_px" bottom="0dpi_px" />
+  </Layout>
+  <Layout layout_name="StoryPanel" layout_guid="d2df1a60-8116-44e6-aad3-eb08b1953283">
+    <ListBox stylename="list_box_dnd_overview">
+      <ListBoxItems />
+    </ListBox>
+    <StackPanel stylename="stack_panel" layout_id="panel_empty" layout_guid="53b3131a-8f19-4533-96e0-35d541776213" top="50%" bottom="50%" stack_order="TopToBottom" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Label stylename="label_storypanel" height="48dpi_px" left="0px" right="0px" top="0px" localise_caption="DnD_StoryPanel_Empty" auto_size="False" auto_ellipsis="True" word_wrap="True" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="DnD_ToolboxWindow" layout_guid="31a24cc3-b3fc-4391-991c-c3f45cffe0c1">
+    <Window stylename="default_window" height="600dpi_px" width="300dpi_px" localise_title="DnDModule_ToolboxWindow" window_flags="Default">
+      <Client />
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDLoading" layout_guid="75c37e6b-0bad-492e-b09f-588c503c0164">
+    <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Image stylename="progress_spinner" height="60dpi_px" width="72dpi_px" top="0px" colour="#8AFFFFFF" image_flags="Stretch, Centre, KeepAspectRatio" animated_image="{ image:'DnD/loading_spinner.png', total: 9, row: 3, size: [160, 160] }" update_speed="0.0666" />
+        <Label stylename="label" height="16px" width="125px" top="70px" margin_top="10dpi_px" localise_caption="DnD_Loading" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="DnD_Toolbox" layout_guid="03411c75-27df-456b-aa1a-c4833ae81cc9">
+    <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', '20dpi_px']">
+      <Cell layout_id="toolbox_chrome" layout_guid="ba187082-1a70-4c26-b77e-6d08f3280921" row="0" column="0" flow_index="0" />
+      <Cell layout_id="toolbox_search" layout_guid="7c194672-05e2-47fe-92b8-4d0cca1fe17e" row="1" column="0" flow_index="0" />
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel stylename="default_scrollpanel" layout_id="toolbox_actions_scrollpanel" layout_guid="994b8d0d-8fc6-47e5-b9e3-27a7dd613ad5" top="0dpi_px" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="toolbox_actions" layout_guid="68b8449b-c39c-4847-b690-fb86318266fb" top="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <ThumbnailSlider stylename="" layout_id="slider_thumbs" layout_guid="f7ac5d7f-e239-4049-b3fc-1ead9c6fac77" height="20dpi_px" right="10dpi_px" top="2dpi_px" margin_bottom="" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="DnD_CodeOutputWindow" layout_guid="ac08bf0a-bad1-4455-bb87-0404e8be0f88">
+    <Window stylename="default_window" height="300dpi_px" width="450dpi_px" localise_title="DnDModule_CodeOutputWindow" window_flags="MaximizeButton, Default">
+      <Client />
+      <Layout layout_name="BasicWindowFrame" />
+    </Window>
+  </Layout>
+</Layouts>

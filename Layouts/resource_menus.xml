@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="resource_menus" layout_guid="197874c2-ec60-43aa-8528-0cca1cd49071">
+    <MenuBar stylename="menu_bar" top="226px">
+      <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_entry0" layout_guid="fede97b1-bbeb-460c-b328-017246ca2e42" width="79px" left="0px" localise_name="ResourceMenu_Resources">
+          <Layout layout_name="resource_menus_context" layout_guid="245c564a-ad44-4310-a3f5-67c28c2bc997"/>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+  <Layout layout_name="resource_menus_context" layout_guid="245c564a-ad44-4310-a3f5-67c28c2bc997">
+    <ContextMenu stylename="context_menu" layout_id="resource_menu_context" layout_guid="be41c9d1-3fd3-4e34-9e40-37af85b2c823" left="10px" top="10px">
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_sprite" layout_guid="54417fec-bfd6-45f6-b7f8-cfb82b8182de" click_command="create_sprite" localise_name="ResourceMenu_CreateSprite" keyboard_shortcut="${create_sprite}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_tileset" layout_guid="403241b6-f473-44e3-8389-aeebbd888864" click_command="create_tileset" localise_name="ResourceMenu_CreateTileset" keyboard_shortcut="${create_tileset}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_sound" layout_guid="d800e9c1-57fb-4da6-bfab-8d21b78ebe1e" click_command="create_sound" localise_name="ResourceMenu_CreateSound" keyboard_shortcut="${create_sound}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_path" layout_guid="9e681ef1-0f25-4a97-bd38-98e8c98b203d" click_command="create_path" localise_name="ResourceMenu_CreatePath" keyboard_shortcut="${create_path}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_script" layout_guid="3e54b28a-874d-40f6-bc4c-7e4e18d3772b" click_command="create_script" localise_name="ResourceMenu_CreateScript" keyboard_shortcut="${create_script}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_shader" layout_guid="95ccc8bb-9c6a-4fe5-8c46-8fc26abc9469" click_command="create_shader" localise_name="ResourceMenu_CreateShader" keyboard_shortcut="${create_shader}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_font" layout_guid="1f03c84b-99e3-49e8-84cb-d8b14d63ef63" click_command="create_font" localise_name="ResourceMenu_CreateFont" keyboard_shortcut="${create_font}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_timeline" layout_guid="bbb5faa1-0045-496e-a2a9-d0de1a93d2d8" click_command="create_timeline" localise_name="ResourceMenu_CreateTimeline" keyboard_shortcut="${create_timeline}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_object" layout_guid="2f617059-ec9a-4289-bd56-512f3b6e0bc4" click_command="create_object" localise_name="ResourceMenu_CreateObject" keyboard_shortcut="${create_object}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_room" layout_guid="75aba2e9-d422-49f1-9dd5-6ff25b24100f" click_command="create_room" localise_name="ResourceMenu_CreateRoom" keyboard_shortcut="${create_room}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_note" layout_guid="a45465a5-d0d9-4fa0-ef32-44852c95b87f" click_command="create_note" localise_name="ResourceMenu_CreateNote" keyboard_shortcut="${create_note}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_included_file" layout_guid="6420b303-bfcc-4eeb-8243-6848324f71c1" click_command="create_included_file" localise_name="ResourceMenu_CreateIncludedFile" keyboard_shortcut="${create_included_file}" />
+      <MenuEntry stylename="menu_entry" layout_id="resource_menu_create_extension" layout_guid="d2c71f79-6a3a-4a25-aca7-3336a35ab01b" click_command="create_extension" localise_name="ResourceMenu_CreateExtension" keyboard_shortcut="${create_extension}" />
+    </ContextMenu>
+  </Layout>
+</Layouts>

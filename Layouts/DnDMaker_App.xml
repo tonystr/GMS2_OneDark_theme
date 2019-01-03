@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="DnDMaker" layout_guid="0c3312de-7e1e-4b9b-8a30-9f4ae6148e07">
+    <Window stylename="default_window" height="100%" width="100%" window_flags="Borderless, DragDisabled, DockingDisabled, DesktopTransferDisabled" title_bar_id="no_title_bar" close_button_id="no_close_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_columnlayout="['1*', '6*', '2*']">
+            <ColumnSplitter stylename="vertical_grid_splitter" height="657px" width="5dpi_px" left="136px" top="0px" row="0" column="1" rowspan="1" columnspan="1" />
+            <ColumnSplitter stylename="vertical_grid_splitter" height="657px" width="5dpi_px" left="962px" top="0px" row="0" column="2" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['2*', '1*']">
+                  <RowSplitter stylename="horizontal_grid_splitter" height="5dpi_px" width="136px" left="0px" top="434px" row="1" column="0" rowspan="1" columnspan="1" />
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label_dnd_header" height="16px" width="62px" top="0px" localise_caption="DnDMaker_Arguments" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <TreeView stylename="gadget_container_dndmaker" layout_id="tree_arguments" layout_guid="031a31d9-b3a7-416e-9922-915d3da0237e" multi_select="False" accept_dragged_nodes="False" />
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label_dnd_header" height="16px" width="47px" top="0px" localise_caption="DnDMaker_Gadgets" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <TreeView stylename="gadget_container_dndmaker" layout_id="tree_gadgets" layout_guid="7ed0d07b-5fe7-48b7-b7b3-3cc466ecfc22" multi_select="False" accept_dragged_nodes="False" />
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['2*', '1*']">
+                  <RowSplitter stylename="horizontal_grid_splitter" height="5dpi_px" width="821px" left="0px" top="434px" row="1" column="0" rowspan="1" columnspan="1" />
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_rowlayout="['auto', '1px', '1*']" grid_columnlayout="['1*', '300px']">
+                        <ColumnSplitter stylename="vertical_grid_splitter" height="434px" width="5dpi_px" left="516px" top="0px" row="0" column="1" rowspan="3" columnspan="1" />
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label_dnd_header" layout_id="label_designer_title" layout_guid="48e5cdef-4294-427f-b777-92b3638dfb4e" height="16px" width="112px" localise_caption="DnDMaker_LivePreview" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="96px" left="4px" localise_caption="DnDMaker_ActionProperties" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <HorizontalSeparator stylename="horizontal_separator" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="1" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <HorizontalSeparator stylename="horizontal_separator" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="2" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="grid_container">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <ScrollPanel stylename="default_scrollpanel" layout_id="preview_panel" layout_guid="bf00e009-4368-4379-80b6-0e2e31b2e028">
+                                    <ContextMenu stylename="context_menu" left="10px" top="10px">
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_copygadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_CopyGadget" keyboard_shortcut="CTRL+C" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_cutgadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_CutGadget" keyboard_shortcut="CTRL+X" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_pastegadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_PasteGadget" keyboard_shortcut="CTRL+V" />
+                                      <HorizontalSeparator stylename="menu_separator" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_removegadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_RemoveGadget" keyboard_shortcut="Delete" />
+                                    </ContextMenu>
+                                  </ScrollPanel>
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="2" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="grid_container" grid_rowlayout="['1*', '1*']">
+                              <RowSplitter stylename="horizontal_grid_splitter" height="5dpi_px" width="300px" left="0px" top="205px" row="1" column="0" rowspan="1" columnspan="1" />
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <ScrollPanel stylename="gadget_container_dndmaker" layout_id="panel_action_properties" layout_guid="b72ccd77-4954-492e-8173-d9499f741fec" margin_left="5px" scrollpanel_flags="VerticalScroll" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="1" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <TextEditorPanel stylename="text_editor_panel" layout_id="textbox_code" layout_guid="b4f0d525-9adb-4ac3-b91b-2a8b4887845e" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_columnlayout="['1*', '1*', '1*']">
+                        <ColumnSplitter stylename="vertical_grid_splitter" height="218px" width="5dpi_px" left="270px" top="0px" row="0" column="1" rowspan="1" columnspan="1" />
+                        <ColumnSplitter stylename="vertical_grid_splitter" height="218px" width="5dpi_px" left="545px" top="0px" row="0" column="2" rowspan="1" columnspan="1" />
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', '1px', '1*']">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="label_dnd_header" height="16px" width="117px" localise_caption="DnDMaker_Properties" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="1" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <HorizontalSeparator stylename="horizontal_separator" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="2" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <ScrollPanel stylename="gadget_container_dndmaker" layout_id="stack_properties" layout_guid="423297e7-f36d-4ba9-86fa-f0e4d890401e" scrollpanel_flags="VerticalScroll" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="grid_container" grid_rowlayout="['auto', '1px', '1*']">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="label_dnd_header" height="16px" width="96px" localise_caption="DnDMaker_Layout" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="1" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <HorizontalSeparator stylename="horizontal_separator" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="2" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <ScrollPanel stylename="gadget_container_dndmaker" layout_id="stack_layout" layout_guid="6939becf-14dd-4e76-958f-ba0890dbd2e5" scrollpanel_flags="VerticalScroll" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="2" flow_index="0">
+                          <ChildGadgets>
+                            <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="label_dnd_header" height="16px" width="81px" localise_caption="DnDMaker_Groups" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="1" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <TreeView stylename="gadget_treeview_dndmaker" layout_id="tree_groups" layout_guid="d9f5ad52-d978-4b00-9bef-33ae0f162e9c" multi_select="False">
+                                    <ContextMenu stylename="context_menu" left="10px" top="10px">
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_copygadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_CopyGadget" keyboard_shortcut="CTRL+C" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_cutgadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_CutGadget" keyboard_shortcut="CTRL+X" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_pastegadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_PasteGadget" keyboard_shortcut="CTRL+V" />
+                                      <HorizontalSeparator stylename="menu_separator" />
+                                      <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_removegadget" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_RemoveGadget" keyboard_shortcut="Delete" />
+                                    </ContextMenu>
+                                  </TreeView>
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']" grid_columnlayout="['auto']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label_dnd_header" height="16px" width="59px" localise_caption="DnDMaker_Library" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TreeView stylename="gadget_treeview_dndmaker" layout_id="tree_library" layout_guid="cd4dec5c-acd7-4ca3-a6c2-6d063ac056f1" node_stylename="library_tree_node" show_root_node="True">
+                        <ContextMenu stylename="context_menu" left="10px" top="10px">
+                          <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_newnode" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_NewNode" keyboard_shortcut="CTRL+N" />
+                          <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_addsection" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_AddSection" />
+                          <HorizontalSeparator stylename="menu_separator" />
+                          <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_editnode" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_EditAction" keyboard_shortcut="Enter" />
+                          <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_renamesectionoraction" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_RenameSectionOrAction" keyboard_shortcut="F2" />
+                          <HorizontalSeparator stylename="menu_separator" />
+                          <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_removesectionoraction" throw_click_command_to_owner="True" localise_name="DnDMaker_CMenu_RemoveSectionOrAction" />
+                        </ContextMenu>
+                      </TreeView>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <MenuBar stylename="menu_bar">
+            <MenuBarEntry stylename="menu_bar_entry" height="24px" width="59px" left="0px" localise_name="DnDMaker_Menu_Library">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <MenuEntry stylename="menu_entry" layout_id="menu_newlibrary" layout_guid="12a25423-4400-4b69-82b9-307179f12085" height="16px" click_command="dndmaker_newlibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_NewLibrary" keyboard_shortcut="CTRL+SHIFT+N" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_loadlibrary" layout_guid="f3d487e0-0bac-46f6-8aa0-e323cd0c5d5d" height="16px" click_command="dndmaker_loadlibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_LoadLibrary" keyboard_shortcut="CTRL+O" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_savelibrary" layout_guid="023e72fe-396c-42b4-b2eb-f730b02425a1" height="16px" click_command="dndmaker_savelibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_SaveLibrary" keyboard_shortcut="CTRL+S" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_exportlibrary" layout_guid="49056363-e887-4f44-a324-fe2545ae383f" height="16px" click_command="dndmaker_exportlibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_ExportLibrary" keyboard_shortcut="CTRL+SHIFT+E" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" height="24px" width="67px" left="59px" localise_name="DnDMaker_Menu_Sections">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_addsection" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_AddSection" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" height="24px" width="56px" left="126px" localise_name="DnDMaker_Menu_Nodes">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <MenuEntry stylename="menu_entry" layout_id="menu_newnode" layout_guid="80b7de4b-5b1c-41ef-a643-d762c4eca81b" height="16px" click_command="dndmaker_newnode" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_NewNode" keyboard_shortcut="CTRL+N" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_savenode" layout_guid="3af50787-a791-4a44-9c34-7c0037e8bc3e" height="16px" click_command="dndmaker_savenode" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_SaveNode" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_previewnode" layout_guid="ad318636-6b07-459e-b34f-0605e5265a3f" height="16px" click_command="dndmaker_previewnode" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_PreviewNode" keyboard_shortcut="ALT+T" />
+                <MenuEntry stylename="menu_entry" layout_id="menu_evaluatenode" layout_guid="92b401cc-659a-4c8c-a530-50f7f91530b8" height="16px" click_command="dndmaker_evaluatenode" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_EvaluateNode" keyboard_shortcut="ALT+E" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" height="24px" width="57px" left="182px" localise_name="DnDMaker_Menu_Layout">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_layoutwizard" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_LayoutWizard" />
+                <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_regeneratelayout" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_RegenerateLayout" />
+                <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_regeneratelayouts" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_RegenerateLayouts" />
+              </ContextMenu>
+            </MenuBarEntry>
+            <MenuBarEntry stylename="menu_bar_entry" layout_id="menu_translations" localise_name="DnDMaker_Menu_Translation">
+              <ContextMenu stylename="context_menu" left="10px" top="10px">
+                <HorizontalSeparator stylename="menu_separator" />
+                <MenuEntry stylename="menu_entry" height="16px" click_command="dndmaker_expandlocalisation" throw_click_command_to_owner="True" localise_name="DnDMaker_Menu_ExpandLocalisation" />
+              </ContextMenu>
+            </MenuBarEntry>
+          </MenuBar>
+        </ChildGadgets>
+      </Cell>
+      <Cell layout_id="window_client_panel" layout_guid="1110cfe3-1295-49f8-b7d7-384fbe853633" row="1" column="1" flow_index="0" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMaker_LibraryWizard" layout_guid="22761dd0-83e2-45e9-ada4-58597fd3295f">
+    <Window stylename="default_window" height="160px" width="330px" left="26px" top="54px" localise_title="DnDMaker_Menu_NewLibrary" window_flags="CloseButton, MinimizeButton">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="10px" right="10px" top="10px" bottom="10px" grid_rowlayout="['20px', 'auto', 'auto']" row_spacing="6px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16px" width="244px" left="2px" top="0px" localise_caption="DnDMaker_LibWizard_Label" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <TextBox stylename="text_box" layout_id="textbox_name" height="26px" top="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="30px" top="5px">
+                  <ChildGadgets>
+                    <Button stylename="button_up" width="40%" left="14.6px" margin_left="5%" click_command="dndmaker_confirmnewlibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_LibWizard_OK" />
+                    <Button stylename="button_up" width="40%" left="160.2px" margin_left="10%" click_command="dndmaker_cancelnewlibrary" throw_click_command_to_owner="True" localise_name="DnDMaker_LibWizard_Cancel" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMaker_PropertyItem" layout_guid="f629fbf6-61d4-4aaf-ad2b-48b3ea4a1d67">
+    <Grid stylename="grid_container" left="10px" right="20px" margin_top="5px" grid_columnlayout="['1*', '2*']">
+      <Cell layout_id="panel_name" layout_guid="adb94eea-8247-47a9-b97f-e64420dae953" row="0" column="0" flow_index="0" />
+      <Cell layout_id="panel_property" layout_guid="60677022-8e1f-41e9-91b0-b06d1c939a91" row="0" column="1" flow_index="0" />
+    </Grid>
+  </Layout>
+  <Layout layout_name="DnDMaker_LayoutItem" layout_guid="8b6e766d-f93f-490d-a959-d71d128a48bc">
+    <Grid stylename="grid_container" height="26px" left="10px" right="10px" margin_top="5px" grid_columnlayout="['1*', '2*']">
+      <Cell layout_id="panel_name" layout_guid="adb94eea-8247-47a9-b97f-e64420dae953" row="0" column="0" flow_index="0" />
+      <Cell layout_id="panel_property" layout_guid="c453aaa5-5552-401f-b284-fce7199742f1" row="0" column="1" flow_index="0" />
+    </Grid>
+  </Layout>
+  <Layout layout_name="DnDMaker_PopUp" layout_guid="3672db57-dd53-48ee-971a-c3a5eada3141">
+    <Window stylename="default_window" height="120px" width="300px" left="26px" top="54px" localise_title="DnDMaker_Menu_NewLibrary" window_flags="CloseButton, MinimizeButton">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="10px" right="10px" top="10px" bottom="10px" grid_rowlayout="['1*', '1*']" row_spacing="6px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" layout_id="popup_label" layout_guid="a3ac89dd-980a-4f3e-82e8-91fa8f26b926" height="16px" width="0px" left="2px" top="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" width="50%" click_command="dndmaker_closepopup" throw_click_command_to_owner="True" localise_name="DnDMaker_PopUp_OK" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMakerPreviewWindow" layout_guid="55a92c82-3eff-4453-a28e-d059f3be633c">
+    <Window stylename="default_window" title="Basic Window" window_flags="Default">
+      <Client />
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMaker_EvaluationResult" layout_guid="c443359f-e28c-4db9-ae5b-62664ba737f6">
+    <Window stylename="default_window" height="400px" width="500px" left="26px" top="54px" localise_title="DnDMaker_EvaluationResult" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="10px" right="10px" top="10px" bottom="10px" grid_rowlayout="['1*', 'auto']" row_spacing="6px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <TextEditorPanel layout_id="text" stylename="text_editor_panel" width="100%" height="100%" left="0px" top="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" width="25%" layout_id="close" localise_name="DnDMaker_PopUp_OK" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMaker_LayoutWizard" layout_guid="6a844eb9-6ca0-43f0-af23-0ddebf8fb72e">
+    <Window stylename="default_window" height="520px" width="600px" left="26px" top="54px" localise_title="DnDMaker_LayoutWizard" window_flags="MaximizeButton, Default">
+      <Client>
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="btn_ok" layout_guid="9836a975-b557-4ce4-8492-856515179afa" height="24px" width="25%" bottom="5px" click_command="dndmaker_closepopup" throw_click_command_to_owner="True" localise_name="DnDMaker_PopUp_OK" />
+          <Grid stylename="grid_container" left="0px" top="0px" bottom="40px" grid_rowlayout="['auto', 'auto', '1*']" row_spacing="6px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="50px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['1*', '1*']">
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="192px" left="0px" localise_caption="DnDMaker_LayoutWizardArgCount" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <NumericTextBox stylename="numeric_text_box" layout_id="arg_count" layout_guid="f5f6a1b0-69ce-4d4d-ae6a-f584d3b7083d" width="100%" left="0px" has_buttons="True" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="0" rowspan="1" columnspan="2">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="392px" left="0px" localise_caption="DnDMaker_LayoutWizardHelpText" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="20px" grid_columnlayout="['1*', '1*', '1*', '77px']" column_spacing="14px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="41px" localise_caption="DnDMaker_LayoutWizardArgCaption" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="38px" localise_caption="DnDMaker_LayoutWizardArgGadget" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="85px" localise_caption="DnDMaker_LayoutWizardProperties" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="default_scrollpanel" height="" top="0px">
+                  <ChildGadgets>
+                    <StackPanel stylename="dndmaker_stack_panel_fixed" layout_id="args_panel" layout_guid="b11a849b-99fe-4b26-9f07-c5ebad7cd15a" height="" width="100%" stack_order="TopToBottom" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DnDMaker_ArgItem" layout_guid="68b55585-ce44-4eee-99f4-e0868d2bbdd2">
+    <StackPanel stylename="stack_panel" height="0dpi_px" margin_bottom="10px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+      <ChildGadgets>
+        <HorizontalSeparator stylename="horizontal_separator" top="0px" />
+        <Grid stylename="grid_container" height="40px" left="0px" top="6px" margin_top="5px" grid_columnlayout="['1*', '1*', '1*', '77px']" column_spacing="14px">
+          <Cell row="0" column="0" flow_index="0">
+            <ChildGadgets>
+              <TextBox stylename="text_box" layout_id="arg_caption" layout_guid="79e731c3-dd83-47e6-821c-997b177fe83a" />
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="1" flow_index="0">
+            <ChildGadgets>
+              <ComboBox stylename="combobox_panel" layout_id="arg_type" layout_guid="cad2e6af-239a-4eeb-9994-7fba5bf97127" height="20px" width="100%">
+                <ListBoxItems />
+              </ComboBox>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="2" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+                <ChildGadgets>
+                  <CheckBox stylename="checkbox_stack" layout_id="arg_isrelative" layout_guid="82fa0b6b-5355-4657-a571-acddc52551b6" left="0px" top="0px" margin_left="20px" localise_name="DnDMaker_LayoutWizardIsRelative" />
+                  <CheckBox stylename="checkbox_stack" layout_id="arg_istemp" layout_guid="fc45506e-431b-4d18-ac4c-bf0a7f20a2b8" left="0px" top="19px" margin_left="20px" localise_name="DnDMaker_LayoutWizardIsTemp" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="0" column="3" flow_index="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" top="2px">
+                <ChildGadgets>
+                  <Button stylename="dnd_button" layout_id="btn_moveup" layout_guid="db34c1dc-4470-489a-984d-aa37762ba1b8" height="20px" width="24px" left="0px" top="0px" icon_flags="Centre" icon="arrow-arg.png" />
+                  <Button stylename="dnd_button_flipv" layout_id="btn_movedown" layout_guid="e30b1065-879b-47d5-980b-33c7fe25a51c" height="20px" width="24px" left="26px" top="20px" margin_left="2px" icon_flags="Centre" icon_render_flags="FlipVertical" icon="arrow-arg.png" />
+                  <Button stylename="dnd_button" layout_id="btn_remove" layout_guid="2eaac441-7678-43c9-b796-208fc440d44a" height="20px" width="24px" left="52px" margin_left="2px" icon_flags="Centre" icon="remove-arg.png" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+        <StackPanel stylename="stack_panel" layout_id="prop_panel" layout_guid="6d4c593a-176f-40b8-9844-1f6c1fce1fb0" top="46px" stack_order="TopToBottom" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+</Layouts>

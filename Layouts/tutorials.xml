@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="TutorialHtmlWindow" layout_guid="32cfc1d4-fecb-4439-af2e-c317cc350097">
+    <Window localise_title="Tutorial_WindowTitle" left="0" top="0" width="400dpi_px" height="800dpi_px" height_max="100%" window_flags="CloseButton, ResizeButton,MaximizeButton">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="webview" width="100%" height="100%" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="TutorialVideoWindow" layout_guid="36a1a8dd-c370-46ba-a0d9-ecc745892fc4">
+    <Window localise_title="Tutorial_WindowTitle" left="0" bottom="0" width="400dpi_px" height="300dpi_px" window_flags="CloseButton, ResizeButton,MaximizeButton">
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="webview" width="100%" height="100%" />
+        </ChildGadgets>
+      </Client>
+    </Window>
+  </Layout>
+  <Layout layout_name="VideoWindowContextMenu" layout_guid="ada10490-bfad-4e50-bce1-e58a3c74e2fb">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_open_browser" localise_name="Tutorial_Menu_OpenInBrowser" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="TutorialInstallWindow" layout_guid="43d69efd-7660-4632-8d86-53d9974191ed">
+    <Window stylename="default_window" height="200dpi_px" width="308dpi_px" localise_title="Tutorial_Install_Title" window_flags="CloseButton">
+      <Client>
+        <ChildGadgets>
+          <ProgressBar stylename="progressbar_frame" layout_id="progress_bar" layout_guid="18c9941a-b577-4ac9-a51e-ab725f85b9d1" width="175dpi_px" left="61dpi_px" top="73dpi_px" />
+          <Label stylename="label" layout_id="progress_label" layout_guid="dad82487-0a05-4483-9ac4-4741241bbe90" height="16dpi_px" width="45dpi_px" top="55dpi_px" caption="progress" />
+          <Button stylename="button_up" layout_id="button_ok" layout_guid="ecbf73f3-307d-495b-8f0f-eee8e240eb91" height="24dpi_px" width="33.91608%" top="115dpi_px" localise_name="Button_OK" />
+          <Label stylename="label" layout_id="install_name_label" layout_guid="5176e252-7d66-4719-bd8f-04558c9c74b4" height="16dpi_px" width="66dpi_px" left="7dpi_px" top="10dpi_px" localise_caption="Tutorial_Installing_Label" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="TutorialSettings" layout_guid="03cd5ba6-b181-46f7-bff9-63a1f2643738">
+    <StackPanel stylename="stack_panel" layout_id="tutorial_settings" layout_guid="1a73d845-f973-4411-a6ed-4d22cf5ef2af" stack_order="TopToBottom">
+      <ChildGadgets>
+        <Label stylename="tutorial_heading_label" height="16px" left="14px" top="28px" margin_left="14px" margin_right="9px" margin_top="28px" margin_bottom="10px" localise_caption="Tutorial_Settings_Description" auto_ellipsis="True" />
+        <ScrollPanel stylename="package_inner_panel" left="-457px" top="54px" margin_left="5px" scrollpanel_flags="VerticalScroll, HorizontalScroll, AdjustToScrollBars">
+          <ChildGadgets>
+            <StackPanel stylename="stack_panel" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                <Label stylename="package_heading_label" height="16px" top="12px" margin_right="9px" margin_top="12px" localise_caption="Tutorial_CreateInfo" auto_ellipsis="True" />
+                <Label stylename="package_heading_label" height="16px" width="209px" top="30px" localise_caption="Tutorial_CreateInfo2" />
+                <Label stylename="package_heading_label" height="16px" top="58px" margin_right="9px" margin_top="10px" margin_bottom="3px" localise_caption="Tutorial_StartPageLabel" auto_ellipsis="True" />
+                <FileInputGadget stylename="package_file_input" layout_id="html_start_page" layout_guid="4d0e8e4e-fc03-4919-91d6-fee2e79cd5bd" left="9px" top="77px" margin_left="9px" margin_right="9px" />
+                <Label stylename="package_heading_label" height="16px" top="129px" margin_right="9px" margin_top="28px" margin_bottom="10px" localise_caption="Tutorial_VideoSettingsLabel" auto_ellipsis="True" />
+                <Label stylename="package_heading_label" height="16px" top="155px" margin_right="9px" margin_bottom="3px" localise_caption="Tutorial_VideoHtmlLabel" auto_ellipsis="True" />
+                <FileInputGadget stylename="package_file_input" layout_id="html_video_page" layout_guid="d7893d33-f460-4af7-9faf-1c2237bcae36" left="9px" top="174px" margin_left="9px" margin_right="9px" />
+                <Label stylename="package_heading_label" height="16px" top="208px" margin_right="9px" margin_top="10px" margin_bottom="3px" localise_caption="Tutorial_VideoUrlLabel" auto_ellipsis="True" />
+                <TextBox stylename="package_text_box" layout_id="video_url" layout_guid="0bf22c2d-c259-4ed5-abe7-7ecfc159b13f" width="100%" left="9px" top="227px" margin_left="9px" margin_right="9px" />
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </ScrollPanel>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="InactiveTutorialSettings" layout_guid="53208685-710c-4ae5-a81c-7e102f13f78f">
+    <StackPanel stylename="stack_panel" layout_id="inactive_tutorial_settings" layout_guid="cb96cc83-bba8-4ecd-96ad-d705cba97577" stack_order="TopToBottom">
+      <ChildGadgets>
+        <Label stylename="inactive_heading_label" height="16px" left="14px" top="28px" margin_left="14px" margin_top="28px" margin_bottom="10px" localise_caption="Tutorial_Settings_Description" auto_size="False" auto_ellipsis="True" />
+        <ScrollPanel stylename="package_inner_panel" left="-457px" top="54px" margin_left="5px">
+          <ChildGadgets>
+            <Label stylename="inactive_tutorial_label" height="50%" top="50%" localise_caption="Marketplace_InactiveTutorialSettings" auto_size="False" auto_ellipsis="True" word_wrap="True" />
+            <Image stylename="image" height="32dpi_px" width="32dpi_px" bottom="50%" colour="#FF909090" image_flags="Stretch, Resize" image="Buttons\icon_IDE_tutorial.png" />
+          </ChildGadgets>
+        </ScrollPanel>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+</Layouts>

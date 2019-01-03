@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitMergeTool" layout_guid="b6166630-97e0-4fe9-b477-6c9bd0fd9a1a">
+    <Window stylename="default_window" height="176dpi_px" width="390dpi_px" localise_title="SCM_Conflict_MergeTool" accept_button_id="ok_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" height="100dpi_px" top="0dpi_px" grid_rowlayout="['1*', '1*']" grid_columnlayout="['1*', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16dpi_px" width="256dpi_px" left="0dpi_px" localise_caption="SCM_Conflict_MergeTool_Path" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <FileInputGadget stylename="file_input" layout_id="mergetool_path" layout_guid="93a5e3f7-97e6-42e6-8ae2-1372ca23a002" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" height="16dpi_px" width="274dpi_px" left="0dpi_px" localise_caption="SCM_Conflict_MergeTool_Options" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <TextBox stylename="text_box" layout_id="mergetool_options" layout_guid="c3053bbb-a152-43ef-acf9-1b628e1c052b" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+          <Button stylename="button_up" layout_id="ok_button" layout_guid="0064fe15-e099-4b73-8800-70c220873f3e" height="30dpi_px" width="80dpi_px" bottom="5dpi_px" localise_name="Button_OK" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="SourceControlGitMergeToolOptions" layout_guid="536f784e-8897-490d-af61-183a220c27a3">
+    <!--<Grid stylename="grid_container" left="0dpi_px" top="0dpi_px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['1*', 'auto']" row_spacing="6dpi_px" column_spacing="12dpi_px" grid_resize="ResizeGrid">-->
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <FileInputGadget stylename="file_input" layout_id="merge_tool" layout_guid="3722018c-7673-4b6d-879a-666434bb9ace" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="109px" localise_caption="SCM_Conflict_MergeTool_Path" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="merge_options" layout_guid="e26c1224-c67c-41b6-b4f8-3e261ca06726" width="100%"/>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="110px" localise_caption="SCM_Conflict_MergeTool_Options" />
+        </ChildGadgets>
+      </Cell>
+    <!--</Grid>-->
+  </Layout>
+</Layouts>

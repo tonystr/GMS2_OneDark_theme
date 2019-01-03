@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="PNG2Tilemap_Properties" layout_guid="5e814bef-57e7-46a3-8dd9-b015ddc162d4">
+    <Window stylename="tileset_props_editor" height="495.6dpi_px" width="955.2dpi_px" left="78px" top="40px" localise_title="PNG2Tileset_ImportDialog" window_flags="ScrollBars, Default" icon="ResourceIcons\icon_tileset.png">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="tileset_grid" grid_rowlayout="['auto', '1*']" grid_columnlayout="['1*', '260dpi_px']">
+            <ColumnDockSplitter stylename="dock_splitter" height="355px" width="14dpi_px" left="549px" top="17px" row="1" column="1" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="tileset_heading" height="16px" top="0px" localise_caption="TileSetEditor_TileSetSource" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="tileset_heading" height="16px" top="0px" localise_caption="PNG2Tileset_ImportOptions" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="window_inner_panel">
+                  <ChildGadgets>
+                    <RoomEditor_PNGTileMapInputDisplay stylename="tileset_editor_tile_display" layout_id="png_inputdisplay" layout_guid="ff7a1ec6-7a42-47b7-b8a7-4682e6b1af0f" height="100%" width="100%" top="0px" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="window_inner_panel" top="0px" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <StackPanel stylename="stack_panel" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <Grid stylename="tileset_property_panel" top="4px" margin_top="4px">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="TileSetEditor_TileWidth" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="tile_width" layout_guid="95360930-648b-4cee-99f1-e63f1b757bc5" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tilewidth" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="28px" colour="#00000000">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="TileSetEditor_TileHeight" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="tile_height" layout_guid="da94841d-ad6b-49d8-8406-4fd036091448" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tileheight" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="52px">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="PNG2Tileset_ImageLeft" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="left_edge" layout_guid="662f8c4d-5f28-4bae-a646-1de6c489bab3" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tilexoff" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="76px" colour="#00000000">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="PNG2Tileset_ImageTop" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="top_edge" layout_guid="e2333ac7-a5e8-4679-8516-a1bd9c390b19" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tileyoff" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="100px">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="PNG2Tileset_ImageRight" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="right_edge" layout_guid="6e8e1623-0a9a-4373-902e-806b8087acc7" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tilehsep" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="124px" colour="#00000000">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" margin_bottom="4px" localise_caption="PNG2Tileset_ImageBottom" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="bottom_edge" layout_guid="05836673-3d52-466f-9329-05fb0bf4afb9" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="tilevsep" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="148px">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="tilesetproperties_label" height="16px" left="10px" localise_caption="PNG2Tileset_TilesetSpriteWidth" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" layout_id="dest_width" layout_guid="15147a87-e5b0-4351-93c9-f465c24917a8" width="60dpi_px" left="0px" margin_right="4px" margin_top="2px" margin_bottom="2px" bind_property="out_tilehborder" max="9999" />
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                            <Grid stylename="tileset_property_panel" top="172px" colour="#00000000"></Grid>
+                            <Grid stylename="tileset_property_panel" top="172px" colour="#00000000">
+                              <Cell row="0" column="0" flow_index="0">
+                                <ChildGadgets>
+                                  <Label stylename="label" height="14px" width="72px" left="10px" margin_left="10px" localise_caption="PNG2Tileset_ColourLabel" />
+                                </ChildGadgets>
+                              </Cell>
+                              <Cell row="0" column="1" flow_index="0">
+                                <ChildGadgets>
+                                  <ColourSelectButton stylename="colour_select_button_up" layout_id="remove_colour_id" layout_guid="059074dd-84c5-41cc-9c26-091b2a91d988" width="60dpi_px" margin_right="4px" margin_top="2px" margin_bottom="2px" spawn_dialog_in_parent="false"/>
+                                </ChildGadgets>
+                              </Cell>
+                            </Grid>
+                          </ChildGadgets>
+                        </StackPanel>
+                        <Label stylename="label" height="14px" width="60px" left="0dpi_px" top="217.6667px" margin_top="32dpi_px" localise_caption="PNG2Tileset_SpriteName" />
+                        <TextBox stylename="text_box" layout_id="sprite_name_id" layout_guid="aebbf223-eedc-4cfc-a5ba-615220764f53" left="0dpi_px" top="231px" />
+                        <Label stylename="label" height="14px" width="71px" left="0dpi_px" top="253px" localise_caption="PNG2Tileset_TilemapName" />
+                        <TextBox stylename="text_box" layout_id="tileset_name_id" layout_guid="c5a188e5-f2a9-439f-a432-1e15aa51b862" left="0dpi_px" top="267px" />
+                        <Label stylename="label" height="14px" width="58px" left="0dpi_px" top="289px" localise_caption="PNG2Tileset_LayerName" />
+                        <TextBox stylename="text_box" layout_id="layer_name_id" layout_guid="2066dba6-2f26-48b5-b595-36c54dc76cc8" left="0dpi_px" top="303px" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <Button stylename="button_up" layout_id="gen_button" layout_guid="42e7cf5a-dc5c-4aef-a8aa-110bd7d7b4a0" height="22px" left="4dpi_px" right="4dpi_px" bottom="0dpi_px" localise_name="PNG2Tileset_GenerateButton" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

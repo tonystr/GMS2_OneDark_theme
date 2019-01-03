@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="NewProjectDialog" layout_guid="8061175d-4300-4341-8ce5-033af90af5e6">
+    <Window stylename="default_window" layout_id="new_project_dialog" layout_guid="7e67ce8e-9e3a-4dd9-acda-bf579ca34d49" height="494px" width="816px" title="Select Project">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['25%', '1*']" grid_columnlayout="['1*', '5%', '1*']">
+            <Cell row="0" column="2">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="new_project_button" layout_guid="1824dbd7-497a-4504-a0a6-367910346d27" name="New Project" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="206px" left="76px" top="6.72px" margin_top="2%" margin_bottom="2%" caption="Import GameMaker: Studio 1.x project" />
+                    <Button stylename="button_up" layout_id="import_button" layout_guid="21f81c5a-b12b-45e5-a54c-17682c5dc221" height="80%" width="97.55385%" left="206px" top="29px" name="Import" />
+                    <Label stylename="label" height="16px" width="120px" left="4px" top="300.36px" margin_top="1%" caption="Destination root folder" />
+                    <StackPanel stylename="stack_panel" height="30px" top="316px">
+                      <ChildGadgets>
+                        <TextBox stylename="text_box" layout_id="destination_folder" layout_guid="9c469fbd-4929-4108-85b0-23c921d0c08f" width="90%" left="0px" top="400px" />
+                        <Button stylename="button_up" layout_id="browse_button" layout_guid="c96c1d6d-66e2-4166-a416-5400b4565d33" width="8.259309%" left="342.77px" margin_left="1%" icon="ProgressBar.png" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="2">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="143px" left="116px" top="6.72px" margin_top="2%" margin_bottom="2%" caption="Load 'Project Zeus' project" />
+                    <Button stylename="button_up" layout_id="load_button" layout_guid="b833d959-fc60-4699-8b1a-73e2a18c08a8" height="90%" top="29px" name="Load" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

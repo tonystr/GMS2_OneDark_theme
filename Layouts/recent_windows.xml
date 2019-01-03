@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="RecentWindows" layout_guid="47083ab2-9608-46b9-8e49-e74c554624f9">
+    <Window stylename="recent_windows" localise_title="recentwindows_title">
+      <Client>
+        <ChildGadgets>
+          <TableListBox stylename="extension_tablegadget_content" layout_id="list" layout_guid="2c22a3a1-7de5-46a0-b12d-f9cdd973a1bc">
+            <ListBoxItems />
+            <ContextMenu stylename="context_menu" layout_id="list_menu" layout_guid="43745e9b-6c3e-4284-b029-bd5d0dd42c54" left="10px" top="10px">
+              <MenuEntry stylename="button_reactivated" layout_id="list_clearall" layout_guid="a92a6e3a-f5c6-49fd-a763-443ffd4d2297" localise_name="RecentWindows_ClearAll" click_command="recentwindows_clear_all" />
+            </ContextMenu>
+          </TableListBox>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

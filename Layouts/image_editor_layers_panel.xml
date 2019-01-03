@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ImageEditor_LayersPanel_Window" layout_guid="dbf66af2-6a92-49ef-a3ac-9ad9312ba5c9">
+    <Window stylename="image_editor_toolbox" height="250px" title="Layers">
+      <Client>
+        <Layout layout_name="ImageEditor_LayersPanel" />
+      </Client>
+      <Layout layout_name="ToolPanelWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ImageEditor_LayersPanel" layout_guid="dbf66af2-6a92-49ef-a3ac-9ad9312ba5c9">
+    <ChildGadgets>
+        <Grid stylename="grid_container" layout_id="layers_panel" layout_guid="6c4bf800-71b5-4d60-917c-fb991fd03baa" height="100%" left="0dpi_px" top="0dpi_px" grid_rowlayout="['20dpi_px', '32*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+                <ChildGadgets>
+                    <Grid stylename="layer_grid" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto', 'auto']">
+                        <Cell row="0" column="1" flow_index="0">
+                            <ChildGadgets>
+                              <ImageEditor_LayerVisibilityCheckbox stylename="visible_checkbox_stack" bind_property="layers" layout_id="all_visible_checkbox" layout_guid="a5c26f84-33c0-4ec4-acc5-4f02b6231149" base_style="visible_checkbox" checked="True" />
+                            </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="2" flow_index="0">
+                            <ChildGadgets>
+                              <ImageEditor_LayerLockedCheckbox stylename="lock_checkbox_stack" bind_property="layers" layout_id="all_locked_checkbox" layout_guid="8a418fcb-10bf-4908-8a69-830f52b9d741" base_style="lock_checkbox" />
+                            </ChildGadgets>
+                        </Cell>
+                    </Grid>
+                </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+                <ChildGadgets>
+                    <ImageLayerTreeView stylename="layer_view" layout_id="layers_tree" layout_guid="2b468ff4-eea5-40df-b0b5-f22c02ccf013" top="0dpi_px" bind_property="layers" node_stylename="ie_layerview" />
+                </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+                <ChildGadgets>
+                    <Grid stylename="grid_container" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGrid">
+                        <Cell row="0" column="0" flow_index="0">
+                            <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="40dpi_px" stack_resize="ResizeAll">
+                                    <ChildGadgets>
+                                        <Button stylename="button_up" layout_id="button_add_layer" layout_guid="a509122d-8131-4725-bcc1-7436ff9487cd" localise_tooltip="ImageEditor_AddLayer_TT" width="32dpi_px" left="8px" top="2dpi_px" bottom="2dpi_px" margin_left="8dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ImageEditor\icon_IE_layer_new.png" />
+                                        <Button stylename="button_up" layout_id="button_add_folder" layout_guid="e15b4a64-e887-4b7c-b0d8-34caa625a6f9" localise_tooltip="ImageEditor_AddLayerGroup_TT" width="32dpi_px" left="48px" top="2dpi_px" bottom="2dpi_px" margin_left="8dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_newfolder.png" />
+                                    </ChildGadgets>
+                                </StackPanel>
+                            </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                            <ChildGadgets>
+                                <Button stylename="button_up" layout_id="button_delete_layer" layout_guid="54b685d9-9009-4b30-ad4d-ce2dde975c5d" localise_tooltip="ImageEditor_DeleteLayer_TT" width="32dpi_px" right="4dpi_px" top="2dpi_px" bottom="2dpi_px" margin_left="8dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ImageEditor\icon_IE_layer_delete.png" />
+                            </ChildGadgets>
+                        </Cell>
+                    </Grid>
+                </ChildGadgets>
+            </Cell>
+        </Grid>
+    </ChildGadgets>
+  </Layout>
+  <Layout layout_name="ImageEditor_LayerNode2" layout_guid="dd2063e0-ba88-48a0-9453-97a12915df8c">
+    <Grid stylename="layer_grid" height="40dpi_px" left="0dpi_px" top="0dpi_px" grid_columnlayout="['1*', 'auto', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <GalleryFrame stylename="image" layout_id="layer_icon" layout_guid="1a5455cd-20e2-4900-9876-321935340a87" height="32dpi_px" width="32dpi_px" left="0dpi_px" top="" margin_left="" margin_right="" margin_top="" margin_bottom="" />
+          <Label stylename="layer_label" layout_id="layer_name" layout_guid="b0a58958-8af3-4f74-a154-9168910e0575" height="16dpi_px" left="35dpi_px" bind_property="name" caption="layer name" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <CheckBox stylename="visible_checkbox_stack" layout_id="layer_visible_check" layout_guid="46c5d91c-d29b-4779-aa86-5443ee0f3564" bind_property="hierarchyVisible" base_style="visible_checkbox" flow_focus_accept="true"/>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <CheckBox stylename="lock_checkbox_stack" layout_id="layer_lock_check" layout_guid="b487e194-6653-492b-a3a0-09eb55f32a42" left="0dpi_px" bind_property="hierarchyLocked" base_style="lock_checkbox" flow_focus_accept="true"/>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ImageEditor_LayerGroupNode" layout_guid="dd2063e0-ba88-48a0-9453-97a12915df8c">
+    <Grid stylename="layer_grid" height="40dpi_px" left="0dpi_px" top="0dpi_px" grid_columnlayout="['1*', 'auto', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="layer_label" layout_id="layer_name" layout_guid="b0a58958-8af3-4f74-a154-9168910e0575" height="16dpi_px" left="4dpi_px" top="11dpi_px" bind_property="name" caption="layer name" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <CheckBox stylename="visible_checkbox_stack" layout_id="layer_visible_check" layout_guid="54fd8035-1709-40dc-9983-883af5b20f21" bind_property="hierarchyVisible" base_style="visible_checkbox" flow_focus_accept="true"/>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <CheckBox stylename="lock_checkbox_stack" layout_id="layer_lock_check" layout_guid="31ed9386-2696-4908-9a19-75b353cf28fa" bind_property="hierarchyLocked" base_style="lock_checkbox" flow_focus_accept="true"/>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ImageLayerPropertiesWindow" layout_guid="2f11ffe3-2ea1-4069-8ac0-f093af7813b8">
+    <Window stylename="default_window" height="200dpi_px" width="230dpi_px" localise_title="ImageEditor_LayerProperties" window_flags="CloseButton, AutoSizeHeight, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="5dpi_px" right="5dpi_px" top="10dpi_px" margin_top="0dpi_px" margin_bottom="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Label stylename="label" height="25px" width="56px" left="2dpi_px" top="0px" localise_caption="ImageEditor_LayerName" />
+              <TextBox stylename="text_box" left="37px" top="31px" margin_top="4dpi_px" bind_property="name" />
+              <Label stylename="label" height="25px" width="107px" left="0dpi_px" top="88px" margin_top="16dpi_px" localise_caption="ImageEditor_LayerBlendMode" />
+              <ComboBox stylename="combobox_panel" left="0dpi_px" right="0dpi_px" top="117px" bind_property="blendMode">
+                <ListBoxItems />
+              </ComboBox>
+              <Label stylename="label" height="25px" width="69px" left="4dpi_px" top="178px" margin_top="16dpi_px" localise_caption="ImageEditor_LayerOpacity" />
+              <Slider stylename="opacity_slider" layout_id="opacity_slider" width="173dpi_px" right="0dpi_px" top="209px" margin_top="4dpi_px" margin_bottom="20dpi_px" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ImageEditor_LayerContextMenu" layout_guid="5688abc2-1c43-4674-ba19-b0b3fb97bf7e">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_edit_properties" localise_name="ImageEditor_EditLayerProperties" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_add_layer" localise_name="ImageEditor_AddLayer" />
+      <MenuEntry layout_id="menu_add_folder" localise_name="ImageEditor_AddGroup" />
+      <MenuEntry layout_id="menu_delete_layer" localise_name="ImageEditor_DeleteLayer" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry layout_id="menu_duplicate_layer" localise_name="ImageEditor_DuplicateLayer" />
+      <MenuEntry layout_id="menu_merge_down" localise_name="ImageEditor_MergeLayerDown" />
+      <MenuEntry layout_id="menu_merge_group" localise_name="ImageEditor_MergeGroup" />
+      <MenuEntry layout_id="menu_flatten_image" localise_name="ImageEditor_MergeAllLayers" />
+    </ContextMenu>
+  </Layout>
+</Layouts>

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="BasicWindow" layout_guid="105c6ab0-f4df-4dd9-b366-ba5f426104d2">
+    <Window stylename="basic_window" title="Basic Window" window_flags="CloseButton">
+      <Client />
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DefaultBorderedWindow" layout_guid="e124b9d6-66db-432d-8be4-d61b75bb33fb">
+    <Window stylename="default_window" title="Basic Window">
+      <Client />
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DefaultBorderlessWindow" layout_guid="a3f629ec-3eed-4281-884f-4f5c0e77b6a8">
+    <Window stylename="default_borderless_window">
+      <Layout layout_name="BasicBorderlessWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6" />
+    </Window>
+  </Layout>
+  <Layout layout_name="DefaultBlendWindow" layout_guid="cda4c191-83ae-4aa2-a62e-b59965c7fbe2">
+    <Window stylename="default_blend_window" left="86px" top="9px" title="Blend Window">
+      <Client />
+      <Layout layout_name="BlendWindowFrame" layout_guid="0d9b47bf-35fe-4d09-b089-30cb2385bb82" />
+    </Window>
+  </Layout>
+  <Layout layout_name="BasicBorderlessWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6">
+    <Cell row="0" column="1" flow_index="1">
+      <Gadgets>
+        <TitleBar stylename="title_bar" layout_id="window_title_bar" layout_guid="51fa4d0a-46b3-4011-b5b8-6785303541a9" title="Basic Window">
+            <Gadgets>
+              <Grid stylename="grid_container" grid_columnlayout="['3px', '17dpi_px', '1*', 'auto', '40dpi_px']">
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <ToggleButton stylename="borderless_window_minimize_button" layout_id="window_minimize_button" layout_guid="918dff51-7215-484b-93f9-b802d401a484" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="2" flow_index="4">
+                  <ChildGadgets>
+                    <Label stylename="borderless_title_bar_label" layout_id="title_bar_label" layout_guid="25f475a9-f7d2-4eec-a5c8-d20ec9a84bff" caption="Basic Window" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="3" flow_index="4">
+                  <ChildGadgets>
+                    <Image stylename="window_icon" layout_id="window_icon" layout_guid="4fb60b41-cbde-4cf4-9f26-8da794c459a8" margin_top="3px" margin_bottom="9px" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="4" flow_index="1">
+                  <ChildGadgets>
+                    <Button stylename="borderless_window_maximize_button" layout_id="window_maximize_button" layout_guid="d9a512b4-4bfb-46de-903d-3a5709c642c7" />
+                    <CloseButton stylename="borderless_close_button_up" layout_id="window_close_button" layout_guid="4d0a1121-1c0f-4374-808c-455d373c87a9" />
+                    <Button stylename="window_user_button" layout_id="window_user_button" layout_guid="1E4EEEEF-8C7C-452E-928B-52002A630885" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </Gadgets>
+          </TitleBar>
+      </Gadgets>
+    </Cell>
+    <Cell row="1" column="1" flow_index="0" layout_id="window_client_panel" />
+  </Layout>
+  <Layout layout_name="BlendWindowFrame" layout_guid="0d9b47bf-35fe-4d09-b089-30cb2385bb82">
+    <Cell row="0" column="1" flow_index="1">
+      <Gadgets>
+        <TitleBar stylename="title_bar_blend" layout_id="window_title_bar" layout_guid="51fa4d0a-46b3-4011-b5b8-6785303541a9" title="Blend Window">
+          <Gadgets>
+            <Grid stylename="grid_container" grid_columnlayout="['1*', '40dpi_px']">
+              <Cell row="0" column="0" flow_index="1">
+                <ChildGadgets>
+                  <Label stylename="blend_title_bar_label" layout_id="title_bar_label" layout_guid="25f475a9-f7d2-4eec-a5c8-d20ec9a84bff" caption="Blend Window" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" flow_index="0">
+                <ChildGadgets>
+                  <CloseButton stylename="close_button_up_blend" accepts_flow="false" layout_id="window_close_button" layout_guid="4d0a1121-1c0f-4374-808c-455d373c87a9" top="5px" right="5px" />
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </Gadgets>
+        </TitleBar>
+      </Gadgets>
+    </Cell>
+    <Cell row="1" column="1" flow_index="0" layout_id="window_client_panel" />
+  </Layout>
+  <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c">
+    <Cell row="0" column="0" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="window_title_left" />
+        <WindowFrame stylename="window_title_left_stroke" />
+      </Gadgets>
+    </Cell>
+    <Cell row="0" column="1" flow_index="1">
+      <Gadgets>
+        <WindowFrame stylename="window_title_fade" />
+        <WindowFrame stylename="window_title_fade_stroke" />
+        <TitleBar stylename="border_title_bar" layout_id="window_title_bar" layout_guid="53545f13-d714-4142-ada9-d644fea696ef" title="Basic Window">
+          <Gadgets>
+            <Grid grid_columnlayout="['auto', '*', 'auto', '38dpi_px', '41dpi_px']" top="0px" bottom="8px">
+              <Cell row="0" column="0">
+                <Gadgets>
+                  <ToggleButton stylename="window_minimize_button" layout_id="window_minimize_button" layout_guid="07cfbb51-ca10-427d-bf9e-6fcbe8d57372" />
+                </Gadgets>
+              </Cell>
+              <Cell row="0" column="1">
+                <ChildGadgets>
+                  <Label layout_id="title_bar_label"/>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="2">
+                <ChildGadgets>
+                  <Image stylename="window_icon" layout_id="window_icon" layout_guid="4fb60b41-cbde-4cf4-9f26-8da794c459a8" margin_top="3px" margin_bottom="1px" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="3">
+                <ChildGadgets>
+                  <WindowFrame stylename="window_title_bookmark" layout_id="bookmark_frame"/>
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </Gadgets>
+        </TitleBar>      
+      </Gadgets>
+    </Cell>
+    <Cell row="0" column="2" flow_index="2">
+      <Gadgets>
+        <WindowFrame stylename="window_title_right" />
+        <WindowFrame stylename="window_title_right_stroke" />
+        <WindowFrame stylename="window_title_button_container">
+          <Gadgets>
+            <CloseButton stylename="close_button_up" layout_id="window_close_button" layout_guid="dfb141c1-0060-45ac-aaa7-6dc37e0a0ada" />
+            <Button stylename="window_maximize_button" layout_id="window_maximize_button" layout_guid="fe2c1391-69c0-4c18-ba77-d1780b7972f3" />
+            <WindowFrame stylename="window_title_button_container_slope"/>
+          </Gadgets>
+        </WindowFrame>
+      </Gadgets>
+    </Cell>
+    <Cell row="1" column="0" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="window_left_frame" />
+      </Gadgets>
+    </Cell>
+    <Cell layout_id="window_client_panel" layout_guid="f2f5270e-1e13-4a3a-8df6-586913bccbf1" row="1" column="1" flow_index="0" />
+    <Cell row="1" column="2" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="window_right_frame" />
+      </Gadgets>
+    </Cell>
+    <Cell row="2" column="0" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="window_bottom_left_frame" />
+      </Gadgets>
+    </Cell>
+    <Cell row="2" column="1" flow_index="4">
+      <Gadgets>
+        <StackPanel stylename="window_statusbar_stack_panel" layout_id="window_statusbar_container" layout_guid="c3532047-0bcc-45cc-be96-72ba84d99552">
+          <Gadgets>
+            <StackPanel stylename="default_status_bar" layout_id="window_status_bar" />
+            <WindowFrame stylename="window_bottom_frame" top="0px" />
+          </Gadgets>
+        </StackPanel>
+      </Gadgets>
+    </Cell>
+    <Cell row="2" column="2" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="window_bottom_right_frame" />
+      </Gadgets>
+    </Cell>
+    <Cell row="0" column="0" rowspan="1" columnspan="3" flow_index="4">
+      <Gadgets>
+        <WindowFrame stylename="border_top" />
+        <Grid grid_columnlayout="['*', '38dpi_px', '41dpi_px', '8px']">
+          <Cell row="0" column="1">
+            <ChildGadgets>
+              <WindowFrame stylename="window_title_bookmark_icon" layout_id="bookmark_icon">
+                <Gadgets>
+                  <Label stylename="bookmark_ID_text" layout_id="bookmark_text" layout_guid="ad9895cc-aa73-46c1-a800-f99587fe2af7" caption="" />
+                </Gadgets>
+              </WindowFrame>
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </Gadgets>
+    </Cell>
+    <Gadgets>
+      <WindowFrame stylename="window_bottom_resize" layout_id="window_bottom_grip" layout_guid="116efb2a-1baf-4d7d-8336-21268f446219" />
+      <WindowFrame stylename="window_bottom_right_resize" layout_id="window_corner_grip" layout_guid="08751096-d1b1-4c6c-b4db-df311d9f163e" />
+    </Gadgets>
+  </Layout>  
+  <Layout layout_name="DockContainerFrame" layout_guid="cd87fe10-ef5b-44cf-8de1-1e66223d9821">
+    <Cell row="0" column="1" flow_index="1">
+      <Gadgets>
+        <TitleBar layout_id="window_title_bar" title="Dock" />
+      </Gadgets>
+    </Cell>
+    <Cell row="1" column="1" flow_index="0" layout_id="window_client_panel" />
+    <Client>
+      <ChildGadgets>
+        <StackPanel stylename="dock_stack_style" layout_id="dock_stack" />
+      </ChildGadgets>
+    </Client>
+  </Layout>
+</Layouts>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="RemoteWorkerUISetting" layout_guid="7cddc504-5126-410b-994a-0f123212ea89">
+    <ChildGadgets>
+      <Grid grid_rowlayout="['auto', 'auto']" grid_columnlayout="['1*']" row_spacing="4dpi_px">
+        <Cell row="0" column="0">
+          <ChildGadgets>
+            <Label layout_id="name" left="0px" />
+          </ChildGadgets>
+        </Cell>
+        <Cell row="1" column="0">
+          <ChildGadgets>
+            <TextBox layout_id="value" />
+          </ChildGadgets>
+        </Cell>
+      </Grid>
+    </ChildGadgets>
+  </Layout>
+  <Layout layout_name="RemoteWorkerManagerLayout" layout_guid="202b05bd-c57a-4e7e-af29-cfda35ca5d0d">
+    <!--<Window stylename="remote_worker_settings_window" localise_title="PlatformImage_GenerateTitle" window_flags="Default" help_tag="remote_worker">
+    <Client />
+    -->
+    <Window stylename="image_generation_window" localise_title="PlatformImage_GenerateTitle" window_flags="Default" help_tag="remote_worker">
+      <Client>
+        <ChildGadgets>
+          <WebView layout_id="worker_view" width="100%" height="100%" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RemoteWorkerAddLayout" layout_guid="06c99999-dfcd-4854-8578-cfdcddbc2942">
+    <Window stylename="remote_add_window" height="160dpi_px" width="420dpi_px" left="463px" top="293dpi_px" help_tag="remote_worker" localise_title="RemoteWorker_AddWorker" accept_button_id="add_button">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', '1*']" grid_columnlayout="['auto', '1*']" row_spacing="4dpi_px" column_spacing="8dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="label" localise_tooltip="AddWorker_NameTooltip" height="16px" width="34px" left="0px" localise_caption="AddWorker_Name" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="1">
+              <ChildGadgets>
+                <TextBox stylename="text_box" layout_id="name" layout_guid="1973445a-63da-47dc-9bb3-49017105b3ed" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="image_generation_label" localise_tooltip="AddWorker_Host_Tooltip" localise_caption="AddWorker_Host" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="2">
+              <ChildGadgets>                
+                <TextBox stylename="text_box" layout_id="hostname" layout_guid="ee543042-4474-4f39-b244-505cdb94faa0" width="60%" left="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="3">
+              <ChildGadgets>
+                <Label stylename="image_generation_label" localise_tooltip="AddWorker_Port_Tooltip" width="7%" left="0px" margin_left="3%" localise_caption="AddWorker_Port" auto_size="False" auto_ellipsis="False" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="1" flow_index="4">
+              <ChildGadgets>
+                <TextBox stylename="text_box" layout_id="portnumber" layout_guid="a8ad023e-b9bf-4d12-a73d-f88414f4bf46" width="30%" left="0px" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="3" column="0" rowspan="1" columnspan="2" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="add_button" layout_guid="cd858c74-637f-46a2-b0c1-b3be656b300b" height="24px" width="80dpi_px" left="0px" margin_right="8dpi_px" localise_name="Button_Add" />
+                    <Button stylename="button_up" layout_id="cancel_button" layout_guid="9d8bc1f1-0de4-4e2d-9c65-e3b21f27201d" height="24px" width="80dpi_px" left="88px" localise_name="Button_Cancel" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="RoomEditor_LayersView" layout_guid="3bdf4c2e-a956-4cd6-a905-59a04d22f038">
+    <Window stylename="layer_view_window" height="250dpi_px" width="320dpi_px" left="340dpi_px" bottom="270dpi_px" help_tag="room_editor" localise_title="RoomEditor_Layers" window_flags="CloseButton, MinimizeButton, ResizeButton, ScrollBars">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="layer_grid" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto', 'auto']">
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <RoomEditor_LayerVisibilityCheckbox stylename="visible_checkbox_stack" bind_property="layers" base_style="visible_checkbox" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" flow_index="0">
+                    <ChildGadgets>
+                      <RoomEditor_LayerLockedCheckbox stylename="lock_checkbox_stack" bind_property="layers" base_style="lock_checkbox" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <RoomEditor_LayerView stylename="room_layer_view" layout_id="layers_view" layout_guid="5300a6c6-2f49-4d33-9c74-0d41990653bf" bind_property="layers" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="layer_button_stack_panel" top="0px" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="new_background_layer" layout_guid="fa79c122-aec7-4a48-9818-8bac149b96f4" localise_tooltip="RoomEditor_NewBackgroundLayer" height="30dpi_px" width="30dpi_px" left="0px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_bglayer.png" />
+                    <Button stylename="button_up" layout_id="new_instance_layer" layout_guid="39676ea9-ae79-4ffa-bb36-d0b1952f17ab" localise_tooltip="RoomEditor_NewInstanceLayer" height="30dpi_px" width="30dpi_px" left="35px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_instancelayer.png" />
+                    <Button stylename="button_up" layout_id="new_tile_layer" layout_guid="54100ce8-9b8f-49e2-b1d5-fdefcbd065df" localise_tooltip="RoomEditor_NewTileLayer" height="30dpi_px" width="30dpi_px" left="70px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_newtilelayer.png" />
+                    <Button stylename="button_up" layout_id="new_path_layer" layout_guid="9be75a0e-2b5d-417a-9c06-39eca256529b" localise_tooltip="RoomEditor_NewPathLayer" height="30dpi_px" width="30dpi_px" left="105px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_newpathlayer.png" />
+                    <Button stylename="button_up" layout_id="new_asset_layer" layout_guid="76ae683e-7f25-41a5-9a95-78c138695c6b" localise_tooltip="RoomEditor_NewAssetLayer" height="30dpi_px" width="30dpi_px" left="140px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_assetlayer.png" />
+                    <Button stylename="button_up" layout_id="new_folder_layer" layout_guid="18061cbb-a47c-40ff-bb92-900e8875e389" localise_tooltip="RoomEditor_NewFolder" height="30dpi_px" width="30dpi_px" left="175px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="RoomEditor\icon_RE_newfolder.png" />
+                    <Button stylename="button_up" layout_id="delete_layer" layout_guid="72e73fa3-e709-4820-a111-5723289213ec" localise_tooltip="RoomEditor_DeleteSelectedLayer" height="30dpi_px" width="30dpi_px" left="210px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ImageEditor\icon_IE_layer_delete.png" />
+                    <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="247px" margin_left="2dpi_px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" bind_property="inheritLayers" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritLayersToolTip" parent_property="parentRoom" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_LayerNode" layout_guid="0e17275c-8fa5-4c4e-8a9c-a8800484dd92">
+    <Grid stylename="layer_grid" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*', 'auto', 'auto']">
+      <Cell row="0" column="0">
+        <ChildGadgets>
+          <Image stylename="room_layer_icon" layout_id="layer_icon" layout_guid="50CE5A54-EDCD-4FFB-82D6-B2447D3AF9BB" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1">
+        <ChildGadgets>
+          <Label stylename="layer_label" layout_id="layer_editlabel" layout_guid="3bf007ee-bc07-4bda-be6c-33d7014b7153" height="16dpi_px" bind_property="name" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2">
+        <ChildGadgets>
+          <CheckBox stylename="visible_checkbox_stack" bind_property="hierarchyVisible" base_style="visible_checkbox" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="3">
+        <ChildGadgets>
+          <CheckBox stylename="lock_checkbox_stack" bind_property="hierarchyFrozen" base_style="lock_checkbox" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="RoomEditor_LayerNodeContextMenu" layout_guid="55807663-5A43-4C4D-8C82-5DF11504C017">
+    <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+      <MenuEntry stylename="menu_entry" layout_id="bar_entry0" layout_guid="ee9a45c6-240c-4850-b6f5-c00ca33df87f" click_command="open_layer_properties" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_LayerProperties" keyboard_shortcut="CTRL+ALT+P" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry stylename="menu_entry" layout_id="rename_layer" layout_guid="d19a45c6-330c-4850-baf6-c00ca33df87f" localise_name="RoomEditor_RenameLayer" keyboard_shortcut="F2" />
+      <MenuEntry stylename="menu_entry" layout_id="delete_layer" layout_guid="05d11e45-fc30-4572-9d23-b177bae2d554" localise_name="RoomEditor_DeleteLayer" />
+      <MenuEntry stylename="menu_entry" layout_id="duplicate_layer" layout_guid="05d11e45-fc30-4572-9d23-b177bae2d554" localise_name="RoomEditor_DuplicateLayer" />
+      <SubMenuEntry stylename="menu_entry" layout_id="submenu1" layout_guid="F6B01561-1D40-486E-8E6A-685E24F9607B" localise_name="RoomEditor_AddRootLayer">
+        <ContextMenu stylename="context_menu" left="282dpi_px" top="25dpi_px">
+          <MenuEntry stylename="menu_entry" layout_id="add_root_background" layout_guid="8cbd0d56-b35b-4d8c-9a1f-1b6adf8dddc1" localise_name="RoomEditor_NewBackgroundLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_root_instance" layout_guid="aedcc58c-40b8-428f-aa05-04be70e68b0f" localise_name="RoomEditor_NewInstanceLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_root_tile" layout_guid="40bb6cdc-9f4c-4a2e-8c3b-148432384a36" localise_name="RoomEditor_NewTileLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_root_path" layout_guid="b67d1d6e-ee62-4b05-b6ec-7bd39a93849e" localise_name="RoomEditor_NewPathLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_root_asset" layout_guid="9adc4f01-3843-4c29-96ec-0cfa85a22295" localise_name="RoomEditor_NewAssetLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_root_folder" layout_guid="aa0b91c8-2b6f-4da2-bb2c-460ad33dd476" localise_name="RoomEditor_NewFolder" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="submenu1" layout_guid="F6B01561-1D40-486E-8E6A-685E24F9607B" localise_name="RoomEditor_AddSubLayer">
+        <ContextMenu stylename="context_menu" left="282dpi_px" top="25dpi_px">
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_background" layout_guid="8cbd0d56-b35b-4d8c-9a1f-1b6adf8dddc1" localise_name="RoomEditor_NewBackgroundLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_instance" layout_guid="aedcc58c-40b8-428f-aa05-04be70e68b0f" localise_name="RoomEditor_NewInstanceLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_tile" layout_guid="40bb6cdc-9f4c-4a2e-8c3b-148432384a36" localise_name="RoomEditor_NewTileLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_path" layout_guid="b67d1d6e-ee62-4b05-b6ec-7bd39a93849e" localise_name="RoomEditor_NewPathLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_asset" layout_guid="9adc4f01-3843-4c29-96ec-0cfa85a22295" localise_name="RoomEditor_NewAssetLayer" />
+          <MenuEntry stylename="menu_entry" layout_id="add_sub_folder" layout_guid="aa0b91c8-2b6f-4da2-bb2c-460ad33dd476" localise_name="RoomEditor_NewFolder" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <MenuEntry stylename="menu_entry" layout_id="inherit_sub_layers" layout_guid="1d03a9a3-d95c-41cf-bcd3-4d485368baed" localise_name="RoomEditor_InheritSubLayers" has_checkbox="True" />
+      <MenuEntry stylename="menu_entry" layout_id="inherit_visibility" layout_guid="1d03a9a3-ab5c-41cf-bcd3-4e485377baed" localise_name="RoomEditor_InheritVisibility" has_checkbox="True" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="RoomEditor_ItemNode" layout_guid="47BF3615-BD0D-4244-BBDD-51D7343F325F">
+    <CheckBox stylename="ignore_checkbox_stack" bind_property="ignore" base_style="ignore_checkbox" localise_tooltip="RoomEditor_IgnoreItem" />
+    <Image stylename="layercontents_icon" layout_id="icon" layout_guid="2f812d65-8967-4bfe-b554-6eca65c45661" />
+    <RoomEditor_LayerItemLabel stylename="layercontents_label" layout_id="label" layout_guid="A2F42973-B62C-4E3E-A970-6D829147FE9B" height="16dpi_px" />
+  </Layout>
+  <Layout layout_name="RoomEditor_InstanceCreationNode" layout_guid="A55F5E76-4A9B-4933-926C-A243FFD34042">
+    <Image stylename="layercontents_icon" layout_id="icon" layout_guid="9CCE6801-F212-4208-A466-9B68365D61BB" />
+    <RoomEditor_LayerItemLabel stylename="layercontents_label" height="16dpi_px" layout_id="label" layout_guid="A0CAA788-11C8-41C7-9179-729D60BB35DE" />
+  </Layout>
+  <Layout layout_name="RoomEditor_LayerProperties" layout_guid="fd899961-4fd1-4606-9664-85735adc7304">
+    <Window stylename="layer_properties_window" height="330dpi_px" width="260dpi_px" left="20dpi_px" help_tag="room_editor" bottom="350dpi_px" localise_title="RoomEditor_LayerProperties" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <ScrollPanel stylename="default_scrollpanel" layout_id="GMRAssetLayer" layout_guid="2f812d65-8967-4bfe-b843-6eca65c45661">
+            <ChildGadgets>
+              <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <RoomEditor_LayerGraphicsView stylename="graphics_view" top="0dpi_px" bind_property="assets" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="1" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" margin_top="4dpi_px" margin_bottom="6dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                      <ChildGadgets>
+                        <StackPanel stylename="stack_panel" height="24dpi_px" top="6px" margin_top="6px" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <Label stylename="layerproperties_label" height="" width="15%" left="5px" top="0dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="Layer_Depth" />
+                            <NumericTextBox stylename="numeric_text_box" layout_id="assetlayer_depth_value" layout_guid="dc1222b7-abcd-1234-b224-65dc97c7863d" width="100dpi_px" left="51px" top="0dpi_px" margin_right="10dpi_px" bind_property="depth" />
+                            <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="assetlayer_depth_toggle" layout_guid="dc1333b7-abcd-4ecc-b224-65dc97c7863d" left="161px" margin_right="10dpi_px" bind_property="userdefined_depth" toggle_gadgets="['assetlayer_depth_value']" />
+                            <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="190px" bind_property="inheritLayerDepth" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritLayerDepthToolTip" parent_property="parentLayer" />
+                          </ChildGadgets>
+                        </StackPanel>
+                        <StackPanel stylename="stack_panel" top="30px" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="0px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" bind_property="inheritLayerSettings" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritAssetsToolTip" parent_property="parentLayer" />
+                            <Button stylename="button_up" layout_id="delete_graphics" layout_guid="f3f91c55-884c-4d49-bcab-97f7b6ad711c" width="24dpi_px" left="55px" margin_top="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ImageEditor\icon_IE_layer_delete.png" />
+                          </ChildGadgets>
+                        </StackPanel>
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </ScrollPanel>
+          <ScrollPanel stylename="default_scrollpanel" layout_id="GMRInstanceLayer" layout_guid="66c10de3-aeab-40cb-b5d6-3911a206dc05">
+            <ChildGadgets>
+              <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <RoomEditor_LayerInstancesView stylename="instances_view" top="0dpi_px" bind_property="instances" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="1" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" margin_top="4dpi_px" margin_bottom="6dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                      <ChildGadgets>
+                        <StackPanel stylename="stack_panel" height="24dpi_px" top="6px" margin_top="6px" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <Label stylename="layerproperties_label" height="" width="15%" left="5px" top="0dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="Layer_Depth" />
+                            <NumericTextBox stylename="numeric_text_box" layout_id="instlayer_depth_value" layout_guid="dc1222b7-abcd-1234-b224-65dc97c7863d" width="100dpi_px" left="51px" top="0dpi_px" margin_right="10dpi_px" bind_property="depth" />
+                            <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="instlayer_depth_toggle" layout_guid="dc1333b7-abcd-4ecc-b224-65dc97c7863d" left="161px" margin_right="10dpi_px" bind_property="userdefined_depth" toggle_gadgets="['instlayer_depth_value']" />
+                            <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="190px" bind_property="inheritLayerDepth" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritLayerDepthToolTip" parent_property="parentLayer" />
+                          </ChildGadgets>
+                        </StackPanel>
+                        <StackPanel stylename="stack_panel" left="182dpi_px" top="30px" stack_resize="ResizeHeight">
+                          <ChildGadgets>
+                            <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="0px" margin_right="5dpi_px" margin_top="2dpi_px" margin_bottom="2dpi_px" bind_property="inheritLayerSettings" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritInstancesToolTip" parent_property="parentLayer" />
+                            <Button stylename="button_up" layout_id="delete_instances" layout_guid="164efb97-b3d0-4a6d-a3cf-fd4de56cb158" width="24dpi_px" left="55px" margin_top="2dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ImageEditor\icon_IE_layer_delete.png" />
+                          </ChildGadgets>
+                        </StackPanel>
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </ScrollPanel>
+          <ScrollPanel stylename="auto_adjust_scrollpanel" layout_id="GMRBackgroundLayer" layout_guid="959f7781-1790-44fb-9875-1a53b5902788">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_flags="FullSizeInternalPanel">
+                <Gadgets>
+                  <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="0dpi_px" top="5px" margin_left="10dpi_px" margin_top="5dpi_px" bind_property="inheritLayerSettings" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritBackgroundToolTip" parent_property="parentLayer" />
+                  <StackPanel stylename="stack_panel" height="32dpi_px" top="34px" margin_top="5dpi_px" margin_bottom="6dpi_px">
+                    <ChildGadgets>
+                      <Resource_SpriteIcon stylename="image" height="100%" width="30dpi_px" left="8px" margin_left="8dpi_px" bind_property="spriteView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                      <ResourceButton stylename="layerproperties_resourcebutton" height="24px" left="43px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="spriteView" localise_name="PropertyButton_NoGMSprite" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stackpanel" height="100%" top="72px" margin_bottom="8dpi_px" stack_resize="ResizeHeight">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5px" margin_left="5dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_Colour" />
+                      <ColourSelectButton stylename="layerproperties_colourselect" left="113px" top="33dpi_px" margin_right="10dpi_px" bind_property="colour" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <CheckBox stylename="checkbox_stack" left="0dpi_px" top="98px" bind_property="htiled" localise_name="BackgroundLayer_HTile" />
+                  <CheckBox stylename="checkbox_stack" left="0dpi_px" top="117px" bind_property="vtiled" localise_name="BackgroundLayer_VTile" />
+                  <CheckBox stylename="checkbox_stack" left="40dpi_px" top="136px" bind_property="stretch" localise_name="BackgroundLayer_Stretch" />
+                  <StackPanel stylename="stack_panel" top="155px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_PosX" />
+                      <NumericTextBox stylename="numeric_text_box" left="115px" margin_right="10dpi_px" bind_property="x" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stack_panel" top="185px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_PosY" />
+                      <NumericTextBox stylename="numeric_text_box" left="115px" margin_right="10dpi_px" bind_property="y" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stack_panel" height="24dpi_px" top="215px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_HSpeed" />
+                      <NumericTextBox stylename="numeric_text_box" left="115px" margin_right="10dpi_px" bind_property="hspeed" input_type="Real" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stack_panel" height="24dpi_px" top="245px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_VSpeed" />
+                      <NumericTextBox stylename="numeric_text_box" left="115px" margin_right="10dpi_px" bind_property="vspeed" input_type="Real" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stack_panel" height="24dpi_px" top="275px" stack_resize="ResizeHeight">
+                    <Gadgets>
+                      <Label stylename="layerproperties_label" height="" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_AnimationFPS" />
+                      <NumericTextBox stylename="numeric_text_box" layout_id="animFPS_value" layout_guid="dc1222b7-5678-1234-b224-65dc97c7863d" width="100dpi_px" left="115px" top="0dpi_px" margin_right="10dpi_px" bind_property="animationFPS" input_type="Real" />
+                      <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="animFPS_toggle" layout_guid="dc1333b7-2345-4ecc-b224-65dc97c7863d" left="225px" top="0dpi_px" margin_right="10dpi_px" bind_property="userdefined_animFPS" toggle_gadgets="['animFPS_value', 'animSpeedType']" />
+                    </Gadgets>
+                  </StackPanel>
+                  <ComboBox stylename="deactivated_combobox" layout_id="animSpeedType" layout_guid="be931e86-be1b-46f8-bd1a-f0d27358eb05" width="170dpi_px" left="4dpi_px" top="305px" margin_top="6dpi_px" bind_property="animationSpeedType">
+                    <ListBoxItems />
+                  </ComboBox>
+                  <StackPanel stylename="stack_panel" height="24dpi_px" left="0dpi_px" top="337px" margin_top="4dpi_px" margin_bottom="4dpi_px" stack_resize="ResizeHeight">
+                    <Gadgets>
+                      <Label stylename="layerproperties_label" height="" width="50%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="Layer_Depth" />
+                      <NumericTextBox stylename="numeric_text_box" layout_id="background_depth_value" layout_guid="dc1222b7-abcd-1234-b224-65dc97c7863d" width="100dpi_px" left="115px" top="0dpi_px" margin_right="10dpi_px" bind_property="depth" />
+                      <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="background_depth_toggle" layout_guid="dc1333b7-abcd-4ecc-b224-65dc97c7863d" left="225px" top="0dpi_px" margin_right="10dpi_px" bind_property="userdefined_depth" toggle_gadgets="['background_depth_value']" />
+                      <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="254px" top="0dpi_px" bind_property="inheritLayerDepth" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritLayerDepthToolTip" parent_property="parentLayer" />
+                    </Gadgets>
+                  </StackPanel>
+                </Gadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_TileLayerProperties" layout_guid="5c23c5eb-a893-789a-988e-369ab3b9ffa8">
+    <ScrollPanel stylename="auto_adjust_scrollpanel" layout_id="GMRTileLayer" layout_guid="cbc76ed0-3bac-405a-9224-554fe4b97bcb">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_flags="FullSizeInternalPanel">
+          <Gadgets>
+            <RoomEditor_InheritButton stylename="button_up" height="24dpi_px" width="50dpi_px" left="0dpi_px" top="5dpi_px" margin_left="10dpi_px" margin_top="5dpi_px" bind_property="inheritLayerSettings" parent_property="parentLayer" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritTileLayerToolTip"/>
+            <StackPanel stylename="stack_panel" height="32dpi_px" top="34dpi_px" margin_top="5dpi_px" margin_bottom="6dpi_px">
+              <ChildGadgets>
+                <Resource_TileSetIcon stylename="image" height="100%" width="30dpi_px" left="8dpi_px" margin_left="8dpi_px" bind_property="tilesetView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                <ResourceButton stylename="tilesetproperties_selectbutton" height="24dpi_px" left="43dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="tilesetView" localise_name="PropertyButton_NoGMTileSet" />
+              </ChildGadgets>
+            </StackPanel>
+            <StackPanel stylename="stack_panel" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_PosX" />
+                <NumericTextBox stylename="numeric_text_box" left="115dpi_px" margin_right="10dpi_px" bind_property="x" />
+              </ChildGadgets>
+            </StackPanel>
+            <StackPanel stylename="stack_panel" stack_resize="ResizeHeight" margin_top="6dpi_px">
+              <ChildGadgets>
+                <Label stylename="layerproperties_label" height="16dpi_px" width="50%" left="5dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_PosY" />
+                <NumericTextBox stylename="numeric_text_box" left="115dpi_px" margin_right="10dpi_px" bind_property="y" />
+              </ChildGadgets>
+            </StackPanel>
+            <StackPanel stylename="stack_panel" height="24dpi_px" top="102dpi_px" margin_top="6dpi_px">
+              <Gadgets>
+                <Label stylename="layerproperties_label" height="" width="50%" left="5dpi_px" top="0dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="Layer_Depth" />
+                <NumericTextBox stylename="numeric_text_box" layout_id="tilelayer_depth_value" layout_guid="dc1222b7-abcd-1234-b224-65dc97c7863d" width="100dpi_px" left="115dpi_px" top="0dpi_px" margin_right="10dpi_px" bind_property="depth" />
+                <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="tilelayer_depth_toggle" layout_guid="dc1333b7-abcd-4ecc-b224-65dc97c7863d" left="225dpi_px" top="0dpi_px" margin_right="10dpi_px" bind_property="userdefined_depth" toggle_gadgets="['tilelayer_depth_value']" />
+                <RoomEditor_InheritButton stylename="button_up" height="24dpi_px" width="50dpi_px" left="254dpi_px" top="0dpi_px" bind_property="inheritLayerDepth" parent_property="parentLayer" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritLayerDepthToolTip" />
+              </Gadgets>
+            </StackPanel>
+          </Gadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="RoomEditor_RoomProperties" layout_guid="5c23c5eb-a893-489a-938e-369de3b9eca8">
+    <Window stylename="room_properties_window" height="240dpi_px" width="300dpi_px" left="10dpi_px" help_tag="room_editor" top="125dpi_px" localise_title="RoomEditor_RoomProperties" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <TreeView stylename="roomproperties_treeview" layout_id="roomproperties_treeview">
+            <Node stylename="roomproperties_node" selectable="False" expanded="True">
+              <Label stylename="label" height="16px" width="80px" left="20px" localise_caption="RoomProperties_Settings" />
+              <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                <StackPanel stylename="roomproperties_stackpanel" left="6px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritRoomSettings" height="24px" width="50dpi_px" left="0dpi_px" top="0px" margin_top="2px" bind_property="inheritRoomSettings" localise_name="RoomEditor_Inherit" parent_property="parentRoom" />
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" top="24px" margin_top="6dpi_px" bind_property="persistent" localise_name="RoomProperties_Persistent" />
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" margin_top="6dpi_px" bind_property="clearDisplayBuffer" localise_name="RoomProperties_ClearDisplayBuffer" />
+                    <StackPanel stylename="roomproperties_stackpanel" height="100%" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0px" margin_right="8dpi_px" localise_caption="RoomProperties_Width" />
+                        <NumericTextBox stylename="numeric_text_box" left="61px" margin_right="8dpi_px" bind_property="Width" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <StackPanel stylename="roomproperties_stackpanel" height="100%" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0px" margin_right="8dpi_px" localise_caption="RoomProperties_Height" />
+                        <NumericTextBox stylename="numeric_text_box" left="61px" margin_right="8dpi_px" bind_property="Height" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <StackPanel stylename="stack_panel" top="75px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritCode" height="24px" width="50dpi_px" left="0px" margin_right="10dpi_px" bind_property="inheritCode" localise_name="RoomEditor_Inherit" parent_property="parentRoom" />
+                        <Button stylename="layerproperties_button" layout_id="room_creationcode" layout_guid="dc1eaeb7-c302-4ecc-b224-65dc97c7863d" height="24px" left="60px" margin_right="10dpi_px" margin_bottom="4dpi_px" localise_name="RoomProperties_CreationCode" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <Button stylename="layerproperties_button" layout_id="room_creationorder" layout_guid="4BC7ACEC-0AEE-42B7-9243-73FA79CC40A6" height="24px" left="0px" margin_right="10dpi_px" margin_top="4dpi_px" margin_bottom="4dpi_px" localise_name="RoomProperties_CreationOrder" />
+                  </ChildGadgets>
+                </StackPanel>
+              </Node>
+            </Node>
+            <Node stylename="roomproperties_node" selectable="False" expanded="False">
+              <Label stylename="label" height="16px" width="67px" left="20px" localise_caption="RoomProperties_Views" />
+              <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                <StackPanel stylename="roomproperties_stackpanel" left="24dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritViewSettings" height="24px" width="50dpi_px" left="0dpi_px" margin_top="2px" bind_property="inheritViewSettings" localise_name="RoomEditor_Inherit" parent_property="parentRoom" />
+                    <CheckBox stylename="checkbox_stack" left="11913dpi_px" top="0dpi_px" margin_top="4dpi_px" bind_property="enableViews" localise_name="RoomProperties_EnableViews" />
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" top="32dpi_px" margin_top="4dpi_px" bind_property="clearViewBackground" localise_name="RoomProperties_ClearView" />
+                  </ChildGadgets>
+                </StackPanel>
+              </Node>
+              <Node layout_id="view_0" layout_guid="7cb047f7-6700-4681-ab57-298081e36a55" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="7cccf3e3-040c-4830-9407-1b92ac954186" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_1" layout_guid="c806f15f-54cb-4d2d-b670-a4cdd34b11d5" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="80d74b90-5135-446e-89ba-bfab98d373b8" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_2" layout_guid="f4e892fd-04a0-4dbc-a6e8-897cda7b0aa8" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="3bbbf33a-1ffb-401a-bfdf-3372f5003c65" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_3" layout_guid="b9d991db-c83f-4ecb-9cba-add3891f548c" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="1a7a6ed1-a44b-470b-aa29-d164a12ff78c" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_4" layout_guid="403e3d4f-6e45-4962-a282-40e534d28b1d" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="854de897-8f2e-4458-9a6d-04fd54d27ce4" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_5" layout_guid="647a6004-af4b-4adc-b32d-4fb971ae1719" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="9b70389d-a219-4a7f-9e27-b01c691e4443" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_6" layout_guid="fe67a39e-59ff-47c9-80aa-e87c79fdb97c" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="34b270c7-8e8a-48eb-82c4-4fa3fe692b26" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+              <Node layout_id="view_7" layout_guid="e3360017-2921-4f9d-918c-6bc73a30a536" stylename="roomproperties_node" selectable="False" expanded="False">
+                <Label stylename="label" layout_id="view_label" layout_guid="5c92fb3c-e15d-4ffa-b680-7d37f46a4537" height="16px" width="46px" left="24dpi_px" localise_caption="RoomProperties_View" />
+                <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535" />
+                </Node>
+              </Node>
+            </Node>
+            <Node stylename="roomproperties_node" selectable="False" expanded="False">
+              <Label stylename="label" height="16px" width="76px" left="20px" localise_caption="RoomProperties_Physics" />
+              <Node stylename="roomproperties_node" selectable="False" expanded="False">
+                <StackPanel stylename="roomproperties_stackpanel" left="24dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritPhysicsSettings" height="24px" width="50dpi_px" left="0dpi_px" top="0px" margin_top="2px" bind_property="inheritPhysicsSettings" localise_name="RoomEditor_Inherit" parent_property="parentRoom" />
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" top="33px" margin_top="6dpi_px" bind_property="PhysicsWorld" localise_name="RoomProperties_EnablePhysics" />
+                    <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_top="6dpi_px">
+                      <ChildGadgets>
+                        <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_GravityX" />
+                        <NumericTextBox stylename="numeric_text_box" left="108dpi_px" margin_right="8dpi_px" bind_property="PhysicsWorldGravityX" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_top="6dpi_px">
+                      <ChildGadgets>
+                        <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_GravityY" />
+                        <NumericTextBox stylename="numeric_text_box" left="108dpi_px" margin_right="8dpi_px" bind_property="PhysicsWorldGravityY" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                    <StackPanel stylename="roomproperties_stackpanel" height="100%" top="64dpi_px" margin_top="6dpi_px" margin_bottom="8dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_PixsToMeters" />
+                        <NumericTextBox stylename="numeric_text_box" left="108dpi_px" margin_right="8dpi_px" bind_property="PhysicsWorldPixToMeters" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </StackPanel>
+              </Node>
+            </Node>
+          </TreeView>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomProperties_ViewNode" layout_guid="ab80393d-f882-4e37-9389-078212f99535">
+    <StackPanel stylename="roomproperties_stackpanel" stack_order="TopToBottom" stack_resize="ResizeHeight">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" top="0dpi_px" stack_resize="ResizeHeight">
+          <ChildGadgets>
+            <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritView" height="24dpi_px" width="50dpi_px" left="10dpi_px" margin_left="10dpi_px" bind_property="inherit" parent_property="parentView" localise_name="RoomEditor_Inherit" />
+            <CheckBox stylename="checkbox_stack" left="60dpi_px" top="520dpi_px" margin_left="4dpi_px" bind_property="visible" localise_name="RoomProperties_ViewVisible" />
+          </ChildGadgets>
+        </StackPanel>
+        <Group stylename="roomproperties_group" height="78dpi_px" top="42dpi_px" localise_name="RoomProperties_ViewArea">
+          <ChildGadgets>
+            <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                <Grid stylename="roomproperties_grid" height="26dpi_px" top="14dpi_px" margin_left="5dpi_px" margin_top="14dpi_px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewX" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="xview" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewY" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="yview" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+                <Grid stylename="roomproperties_grid" height="26dpi_px" top="46dpi_px" margin_left="5dpi_px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewW" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="wview" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewH" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="hview" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </Group>
+        <Group stylename="roomproperties_group" height="78dpi_px" top="130dpi_px" localise_name="RoomProperties_Viewport">
+          <ChildGadgets>
+            <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                <Grid stylename="roomproperties_grid" height="26dpi_px" top="14dpi_px" margin_left="5dpi_px" margin_top="14dpi_px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewX" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="xport" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewY" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="yport" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+                <Grid stylename="roomproperties_grid" height="26dpi_px" top="46dpi_px" margin_left="5dpi_px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                  <Cell row="0" column="0">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewW" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="wport" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1">
+                    <ChildGadgets>
+                      <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight">
+                        <ChildGadgets>
+                          <Label stylename="roomproperties_label" height="16dpi_px" width="40%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_ViewH" />
+                          <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="hport" />
+                        </ChildGadgets>
+                      </StackPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </Group>
+        <Group stylename="roomproperties_group" height="114dpi_px" top="218dpi_px" localise_name="RoomProperties_ViewFollowing">
+          <ChildGadgets>
+            <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeHeight">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="32dpi_px" top="12dpi_px" margin_top="12dpi_px" margin_bottom="6dpi_px">
+                  <ChildGadgets>
+                    <Resource_ObjectIcon stylename="image" height="100%" width="30dpi_px" left="8dpi_px" margin_left="8dpi_px" bind_property="objView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                    <ResourceButton stylename="layerproperties_resourcebutton" left="43dpi_px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="objView" localise_name="RoomProperties_ViewNoObject" />
+                  </ChildGadgets>
+                </StackPanel>
+                <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_bottom="6dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="roomproperties_label" height="16dpi_px" width="60%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_HBorder" />
+                    <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="hborder" />
+                  </ChildGadgets>
+                </StackPanel>
+                <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_bottom="6dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="roomproperties_label" height="16dpi_px" width="60%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_VBorder" />
+                    <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="vborder" />
+                  </ChildGadgets>
+                </StackPanel>
+                <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_bottom="6dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="roomproperties_label" height="16dpi_px" width="60%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_HSpeed" />
+                    <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="hspeed" />
+                  </ChildGadgets>
+                </StackPanel>
+                <StackPanel stylename="roomproperties_stackpanel" height="100%" stack_resize="ResizeHeight" margin_bottom="6dpi_px">
+                  <ChildGadgets>
+                    <Label stylename="roomproperties_label" height="16dpi_px" width="60%" left="0dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_VSpeed" />
+                    <NumericTextBox left="108dpi_px" margin_right="8dpi_px" bind_property="vspeed" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </Group>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="RoomEditor_InstanceProperties" layout_guid="dc9cd309-aa2b-4c14-9c62-31cf9b4965c4">
+    <Window stylename="instance_properties_window" height="372dpi_px" width="280dpi_px" help_tag="room_editor#room_instance_layer" localise_title="RoomEditor_InstanceProperties">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" height="32dpi_px" top="0px" stack_order="RightToLeft">
+                <ChildGadgets>
+                  <CheckBox stylename="lock_checkbox_stack" localise_tooltip="RoomEditor_InstanceLockToolTip" right="0px" top="32dpi_px" margin_top="2dpi_px" bind_property="frozen" base_style="lock_checkbox" />
+                  <TextBox stylename="instance_properties_text_box" width="100%" right="29px" top="6dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" margin_top="6dpi_px" bind_property="name" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stack_panel" height="32dpi_px" top="27.75px" margin_top="5dpi_px" margin_bottom="6dpi_px">
+                <ChildGadgets>
+                  <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="10px" margin_left="10dpi_px" bind_property="inheritItemSettings" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritInstanceToolTip" parent_property="parentItem" />
+                  <Resource_ObjectIcon stylename="image" height="100%" width="30dpi_px" left="68px" margin_left="8dpi_px" bind_property="objectView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                  <ResourceButton stylename="instanceproperties_button" height="24px" left="103px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="objectView" localise_name="PropertyButton_NoGMObject" />
+                </ChildGadgets>
+              </StackPanel>
+              <RoomEditor_ObjectEditorButton stylename="instanceproperties_button" layout_id="instance_editobject" layout_guid="5ba4af76-ebe5-42b9-850f-5bca7ba90376" auto_height="false" height="24dpi_px" top="56px" margin_left="10dpi_px" margin_right="10dpi_px" margin_bottom="8dpi_px" bind_property="objectView" localise_name="InstanceProperties_EditObject" />
+              <Button stylename="button_up" layout_id="btn_variables" layout_guid="8af9d121-409c-412e-8bb1-e0a674babd40" auto_height="false" height="24dpi_px" width="100%" top="80px" margin_left="10dpi_px" margin_right="10dpi_px" margin_bottom="8dpi_px" localise_name="ObjectEditor_InstProps" />
+              <StackPanel stylename="stackpanel" height="24dpi_px" top="105.5px" margin_top="2dpi_px" margin_bottom="2dpi_px">
+                <ChildGadgets>
+                  <Label stylename="instanceproperties_label" height="16dpi_px" width="35%" left="5px" margin_left="5dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_Colour" />
+                  <ColourSelectButton stylename="instanceproperties_colourselect" left="104px" top="33dpi_px" margin_right="10dpi_px" bind_property="colour" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stack_panel" height="26dpi_px" top="129px" margin_bottom="2dpi_px">
+                <ChildGadgets>
+                  <Label stylename="instanceproperties_label" height="" width="35%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_Rotation" />
+                  <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="78px" top="125dpi_px" margin_right="10dpi_px" bind_property="rotation" input_type="Real" />
+                </ChildGadgets>
+              </StackPanel>
+              <Grid stylename="grid_container" height="24dpi_px" top="150px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" bind_property="flipX" localise_name="InstanceProperties_FlipX" stack_order="RightToLeft" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" bind_property="flipY" localise_name="InstanceProperties_FlipY" stack_order="RightToLeft" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="24dpi_px" top="174px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']" grid_resize="None">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="45%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_ScaleX" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="54px" margin_right="10dpi_px" bind_property="scaleX" min="-99999" max="99999" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="45%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_ScaleY" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="54px" margin_right="10dpi_px" bind_property="scaleY" min="-99999" max="99999" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="24dpi_px" left="114dpi_px" top="198px" grid_columnlayout="['1*', '1*']" grid_resize="None">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="45%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_PosX" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="54px" margin_right="10dpi_px" bind_property="x" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" height="24dpi_px" stack_resize="ResizeHeight">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="45%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_PosY" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="54px" margin_right="10dpi_px" bind_property="y" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <StackPanel stylename="stack_panel" height="26dpi_px" top="222px" margin_top="8dpi_px">
+                <ChildGadgets>
+                  <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritCode" auto_height="false" height="24dpi_px" width="50dpi_px" left="7.5px" margin_left="10dpi_px" bind_property="inheritCode" localise_name="RoomEditor_Inherit" parent_property="parentItem" />
+                  <Button stylename="instanceproperties_button" layout_id="instance_creationcode" layout_guid="05e8d1eb-d0d2-4a09-aef3-a524398c1d59" auto_height="false" height="24dpi_px" left="52.5px" margin_left="10dpi_px" margin_right="10dpi_px" localise_name="InstanceProperties_CreationCode" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_ParentItemDeleteWarning" layout_guid="A00AA027-3F00-4C2D-9816-399AA2CFE93B">
+    <Layout layout_name="BasicWindowFrame" />
+    <Client>
+      <ChildGadgets>
+        <Grid stylename="grid_container" grid_rowlayout="['1*', '38px','30px']">
+          <Cell row="0" column="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel">
+                <ChildGadgets>
+                  <Image stylename="image" layout_id="message_icon" layout_guid="7671E847-324A-4BCE-B31E-69B7661937EC" height="32dpi_px" width="32dpi_px" left="10dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" image="WarningTriangle32.png" />
+                  <Label stylename="confirm_dialog_label" layout_id="message_label" layout_guid="FBA85753-EA03-4F1F-B39B-711E7B4451F5" top="0dpi_px" left="0dpi_px" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="1" column="0">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" stack_order="RightToLeft">
+                <ChildGadgets>
+                  <Button stylename="button_up" layout_id="cancel_button" layout_guid="73F6CF64-E4BC-4123-ADDE-B7302BE241E3" height="30dpi_px" width="90dpi_px" right="8dpi_px" margin_right="8dpi_px" localise_name="Button_Cancel" />
+                  <Button stylename="button_up" layout_id="user1_button" layout_guid="12843067-5BD0-49B8-ACB6-05633ED1101A" height="30dpi_px" width="90dpi_px" right="76dpi_px" margin_right="8dpi_px" localise_name="RoomEditor_KeepBrokenChildLayers" />
+                  <Button stylename="button_up" layout_id="no_button" layout_guid="86649D0E-9392-4102-B6D7-AFB56254482A" height="30dpi_px" width="90dpi_px" right="76dpi_px" margin_right="8dpi_px" localise_name="RoomEditor_KeepAllChildLayers" />
+                  <Button stylename="button_up" layout_id="yes_button" layout_guid="5ADBE563-C69A-40A4-9B92-820558D9C7E8" height="30dpi_px" width="90dpi_px" right="144dpi_px" margin_right="8dpi_px" localise_name="RoomEditor_DeleteAllChildLayers" />
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </Cell>
+          <Cell row="2" column="0">
+            <ChildGadgets>
+              <CheckBox stylename="checkbox_stack" layout_id="dontshowagain_checkbox" layout_guid="3874c1f4-c8e9-4f83-a7aa-3a1d4c00bace" left="0dpi_px" localise_name="Dialog_DontShowAgain" />
+            </ChildGadgets>
+          </Cell>
+        </Grid>
+      </ChildGadgets>
+    </Client>
+  </Layout>
+  <Layout layout_name="RoomEditor_GraphicProperties" layout_guid="13b8244b-37b6-451b-8999-ed5e367744d6">
+    <Window stylename="graphic_properties_window" height="274dpi_px" width="280dpi_px" help_tag="room_editor#room_asset_layer" localise_title="RoomEditor_GraphicProperties">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" top="0px" stack_order="RightToLeft" stack_resize="ResizeHeight">
+                <ChildGadgets>
+                  <CheckBox stylename="lock_checkbox_stack" right="0px" top="32dpi_px" margin_top="2dpi_px" bind_property="frozen" base_style="lock_checkbox" localise_tooltip="RoomEditor_GraphicLockToolTip" />
+                  <TextBox stylename="instance_properties_text_box" width="100%" right="29px" top="6dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" margin_top="6dpi_px" bind_property="name" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stack_panel" height="32dpi_px" top="35px" margin_top="5dpi_px" margin_bottom="6dpi_px">
+                <ChildGadgets>
+                  <RoomEditor_InheritButton stylename="button_up" height="24px" width="50dpi_px" left="10px" margin_left="10dpi_px" bind_property="inheritItemSettings" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritGraphicToolTip" parent_property="parentItem" />
+                  <Resource_SpriteIcon stylename="image" height="100%" width="30dpi_px" left="68px" margin_left="8dpi_px" bind_property="sprView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                  <ResourceButton stylename="instanceproperties_button" height="24px" left="103px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="sprView" localise_name="PropertyButton_NoGMSprite" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stackpanel" height="100%" top="73px" margin_bottom="8dpi_px" stack_resize="ResizeHeight">
+                <ChildGadgets>
+                  <Label stylename="instanceproperties_label" height="16dpi_px" width="35%" left="5px" margin_left="5dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_Colour" />
+                  <ColourSelectButton stylename="instanceproperties_colourselect" left="104px" top="33dpi_px" margin_right="10dpi_px" bind_property="colour" />
+                </ChildGadgets>
+              </StackPanel>
+              <Grid stylename="grid_container" height="26dpi_px" left="114dpi_px" top="99px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_PosX" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="x" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_PosY" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="y" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="26dpi_px" top="133px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_Width" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="w" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" height="100%">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_Height" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="h" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="26dpi_px" top="167px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_u0" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="u0" textbox_style="deactivated_numeric_textbox" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_v0" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="v0" textbox_style="deactivated_numeric_textbox" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="26dpi_px" top="201px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_u1" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="u1" textbox_style="deactivated_numeric_textbox" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="5px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_v1" />
+                        <NumericTextBox stylename="numeric_text_box" left="67px" margin_right="10dpi_px" bind_property="v1" textbox_style="deactivated_numeric_textbox" max="99999" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_TileSelectionWindow" layout_guid="c8f7a891-60fe-4d44-b437-7b28a863cd7e">
+    <Window stylename="tilebrush_window" height="400dpi_px" width="450dpi_px" right="370dpi_px" top="125dpi_px" help_tag="room_editor" localise_title="RoomEditor_TileWindow" window_flags="ScrollBars, Default">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="tile_stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <StackPanel stylename="tile_stack_panel" top="0px" margin_bottom="10dpi_px" stack_resize="ResizeHeight">
+                <Layout layout_name="TileSet_BrushSettings" layout_guid="fcb686a8-e74a-44e9-9d0d-d3bc3172e351" />
+              </StackPanel>
+              <TabControl stylename="fixed_tab_control" layout_id="editingdisplay_tabcontrol" layout_guid="ceebb4b9-4423-4ee3-9d58-8ec710c8ba54" height="100%" top="90px">
+                <Cell row="0" column="0" flow_index="0">
+                  <Gadgets>
+                    <Grid stylename="tab_container" layout_id="tab_list" layout_guid="9391e270-2440-4191-a5e0-68d2432500dd" grid_columnlayout="['auto', 'auto', 'auto']">
+                      <Cell row="0" column="0" flow_index="0">
+                        <Gadgets>
+                          <TabItem stylename="fixed_tab_item" layout_id="standard_tab" layout_guid="e5d02379-12ca-4fa0-820a-4390fd233e66" localise_tooltip="TileSetEditor_Tiles" height="22px" localise_name="TileSetEditor_Tiles">
+                            <Client>
+                              <ChildGadgets>
+                                <RoomEditor_TileDisplay stylename="room_editor_tile_display" layout_id="display_panel" layout_guid="df8716ab-9620-4a5e-807b-4684deca7908" height="100%" left="0dpi_px" top="0dpi_px" bind_property="tilesetView" />
+                                <ResourceDropPanel stylename="room_selecttileset_panel" layout_id="select_tileset" layout_guid="ba9dab73-55b3-4d3d-aa3b-d8d2d6db9f50" bind_property="tilesetView">
+                                  <ChildGadgets>
+                                    <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+                                      <ChildGadgets>
+                                        <Image stylename="image" height="32dpi_px" width="32dpi_px" top="0px" margin_bottom="15px" image_flags="Stretch, KeepAspectRatio" image="ResourceIcons\icon_tileset.png" />
+                                        <Label stylename="room_tileset_message" layout_id="invalid_tilelayer_message" layout_guid="95C9EBA9-E73F-4F93-A3B3-B5E5FCE53822" top="47px" localise_caption="RoomEditor_NoTilesetMessage" />
+                                        <ResourceButton stylename="browse_button" height="24px" width="120dpi_px" top="78px" margin_top="15px" bind_property="tilesetView" localise_name="RoomEditor_SelectTileset" />
+                                      </ChildGadgets>
+                                    </StackPanel>
+                                  </ChildGadgets>
+                                </ResourceDropPanel>
+                                <ScrollPanel stylename="room_selecttileset_panel" layout_id="no_tilelayer" layout_guid="12084AC7-5720-4D5E-A4D7-61EB134EF139">
+                                  <ChildGadgets>
+                                    <StackPanel stylename="stack_panel" stack_order="TopToBottom" stack_resize="ResizeAll">
+                                      <ChildGadgets>
+                                        <Image stylename="image" height="32dpi_px" width="32dpi_px" top="0px" margin_bottom="15px" image_flags="Stretch, KeepAspectRatio" image="ResourceIcons\icon_tileset.png" />
+                                        <Label stylename="room_tileset_message" top="47px" localise_caption="RoomEditor_NoLayer" />
+                                      </ChildGadgets>
+                                    </StackPanel>
+                                  </ChildGadgets>
+                                </ScrollPanel>
+                              </ChildGadgets>
+                            </Client>
+                          </TabItem>
+                        </Gadgets>
+                      </Cell>
+                      <Cell row="0" column="1" flow_index="0">
+                        <Gadgets>
+                          <TabItem stylename="fixed_tab_item" layout_id="macro_tab" layout_guid="de85e8e5-5dee-4460-95f3-2ba4e18d1f98" localise_tooltip="TileSet_Brushes" height="22px" localise_name="TileSet_Brushes">
+                            <Client>
+                              <ChildGadgets>
+                                <TileSetEditor_MacroPage stylename="tileset_macro_page_display" layout_id="macro_page" layout_guid="5cb8dc48-a9c3-40df-9917-b003dd9a7a1f" grid_rowlayout="['1*', '1*', 'auto']">
+                                  <RowDockSplitter stylename="dock_splitter" width="242px" height="14dpi_px" left="209px" top="0px" splitter_anchor="First" row="1" column="0" rowspan="1" columnspan="1" />
+                                  <Cell row="0" column="0" flow_index="0">
+                                    <ChildGadgets>
+                                      <RoomEditor_TileDisplay stylename="room_editor_tile_display" layout_id="tile_display_panel" layout_guid="c8901777-43b1-4f7a-898c-e8d3d7980bfa" height="100%" left="0dpi_px" top="0dpi_px" bind_property="tilesetView" />
+                                    </ChildGadgets>
+                                  </Cell>
+                                  <Cell row="1" column="0" flow_index="0">
+                                    <ChildGadgets>
+                                      <BrushBuilderArea stylename="room_editor_macro_display" layout_id="macro_page" layout_guid="f1bb5bc4-3aab-426a-8810-86c7fd73d89c" left="0dpi_px" top="0dpi_px" />
+                                    </ChildGadgets>
+                                  </Cell>
+                                  <Cell row="2" column="0">
+                                    <ChildGadgets>
+                                      <StackPanel stylename="editing_mode_stack_panel" height="100%" left="0px" top="0px" stack_resize="ResizeHeight">
+                                        <ChildGadgets>
+                                          <Label stylename="label" height="16px" width="79px" left="0px" localise_caption="RoomEditor_EditingWindowMode" />
+                                          <ToggleButton stylename="toggle_button_switch_button_up" layout_id="editing_mode" layout_guid="90484d37-9f28-455f-adc8-1265b3ecedc8" localise_tooltip="RoomEditor_BrushEditingModeToolTip" height="16dpi_px" width="36dpi_px" left="91px" margin_left="12dpi_px" margin_right="4dpi_px" margin_top="2px" margin_bottom="2px" button_down_style="toggle_button_switch_button_down" button_over_style="toggle_button_switch_button_up" />
+                                        </ChildGadgets>
+                                      </StackPanel>
+                                    </ChildGadgets>
+                                  </Cell>
+                                </TileSetEditor_MacroPage>
+                              </ChildGadgets>
+                            </Client>
+                          </TabItem>
+                        </Gadgets>
+                      </Cell>
+                      <Cell row="0" column="2" flow_index="0">
+                        <Gadgets>
+                          <TabItem stylename="fixed_tab_item" layout_id="library_tab" layout_guid="de85e8e5-5dee-4460-95f3-2ba4e18d1f98" localise_tooltip="TileSet_Libraries" height="22px" localise_name="TileSet_Libraries">
+                            <Client>
+                              <ChildGadgets>
+                                <ScrollPanel stylename="tileset_tools_panel" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+                                  <ChildGadgets>
+                                    <StackPanel stylename="tile_scratchpad_stack_panel" top="0px" margin_bottom="10px" stack_order="TopToBottom">
+                                      <Gadgets>
+                                        <Window stylename="list_scratchpad_panel_window" layout_id="autotile_library_panel" layout_guid="e0532e9e-2cc6-4afc-9ab2-3194a10ba993" height="50%" width="100%" left="0px" top="206px" localise_title="TileSetEditor_AutoTileLibrary" window_flags="Borderless, MinimizeButton, AllowFlowEscapeWindow" user_button_icon="Buttons\Icon_IDE_pencil.png" user_button_tooltip="TileSetEditor_AutoTileLibrary_Tooltip">
+                                          <Client>
+                                            <ChildGadgets>
+                                              <TileEditing_AutoTileLibrary stylename="readonly_tileset_library" layout_id="autotile_library" layout_guid="67a6776c-bc78-4eb0-896f-0eda1a532255" bind_property="auto_tile_sets" />
+                                            </ChildGadgets>
+                                          </Client>
+                                          <Layout layout_name="BasicBorderlessWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6" />
+                                        </Window>
+                                        <Window stylename="last_list_scratchpad_panel_window" layout_id="animation_library_panel" layout_guid="e1f95ba5-c91d-448c-b857-baecd48e2842" height="100%" width="100%" left="0px" top="306px" localise_title="TileSetEditor_AnimationsLibrary" window_flags="Borderless, MinimizeButton, AllowFlowEscapeWindow" user_button_icon="Buttons\Icon_IDE_pencil.png" user_button_tooltip="TileSetEditor_AnimationsLibrary_Tooltip">
+                                          <Client>
+                                            <ChildGadgets>
+                                              <TileEditing_AnimationLibrary stylename="readonly_tileset_library" layout_id="animation_library" layout_guid="cc6d9f09-9645-4e06-a403-10f31179a96b" bind_property="tile_animation_frames" />
+                                            </ChildGadgets>
+                                          </Client>
+                                          <Layout layout_name="BasicBorderlessWindowFrame" layout_guid="53cfe63e-6679-4383-b1ab-f891ade9d6f6" />
+                                        </Window>
+                                      </Gadgets>
+                                    </StackPanel>
+                                  </ChildGadgets>
+                                </ScrollPanel>
+                              </ChildGadgets>
+                            </Client>
+                          </TabItem>
+                        </Gadgets>
+                      </Cell>
+                    </Grid>
+                  </Gadgets>
+                </Cell>
+              </TabControl>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_TileLayerEditingInfo" layout_guid="d27fa794-a4ed-4c94-a1d9-dd3f060a9b83">
+    <StackPanel stylename="stack_panel" stack_resize="ResizeAll">
+      <ChildGadgets>
+        <Label stylename="label" layout_id="tool_label" layout_guid="225cc04f-a78b-441c-962c-ba8bc5ac25c9" height="16dpi_px" width="256dpi_px" left="0dpi_px" localise_caption="RoomEditor_SelectedTileTool" />
+        <Button stylename="room_editor_tile_edit_info" layout_id="tool_display" layout_guid="685c98ec-9b6c-4f10-aef5-2e3049e14e28" left="260dpi_px" />
+        <Label stylename="label" layout_id="brush_label" layout_guid="3fec6ec4-3558-4b88-8fd3-db8aa98406f0" height="16dpi_px" width="264dpi_px" left="296dpi_px" localise_caption="RoomEditor_SelectedTileBrush" />
+        <Button stylename="room_editor_tile_edit_info" layout_id="brush_display" layout_guid="0d1181a2-accb-411d-bbb3-18ddc18cdace" left="564dpi_px" />
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="RoomEditor_SpriteGraphicProperties" layout_guid="9a1af0e5-32dc-44f3-977a-fd214285756c">
+    <Window stylename="graphic_properties_window" height="380dpi_px" width="280dpi_px" help_tag="room_editor#room_asset_layer" localise_title="RoomEditor_GraphicProperties">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" stack_order="TopToBottom">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" height="32dpi_px" top="0px" stack_order="RightToLeft">
+                <ChildGadgets>
+                  <CheckBox stylename="lock_checkbox_stack" localise_tooltip="RoomEditor_GraphicLockToolTip" right="0.25px" top="32dpi_px" margin_top="2dpi_px" bind_property="frozen" base_style="lock_checkbox" />
+                  <TextBox stylename="instance_properties_text_box" width="100%" right="21.5px" top="6dpi_px" margin_left="10dpi_px" margin_right="10dpi_px" margin_top="6dpi_px" bind_property="name" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stack_panel" height="32dpi_px" top="27.75px" margin_top="5dpi_px" margin_bottom="6dpi_px">
+                <ChildGadgets>
+                  <RoomEditor_InheritButton stylename="button_up" localise_tooltip="RoomEditor_InheritGraphicToolTip" auto_height="false" height="24dpi_px" width="50dpi_px" left="7.5px" margin_left="10dpi_px" bind_property="inheritItemSettings" localise_name="RoomEditor_Inherit" parent_property="parentItem" />
+                  <Resource_SpriteIcon stylename="image" height="100%" width="30dpi_px" left="51px" margin_left="8dpi_px" bind_property="sprView" image_flags="Stretch, Centre, KeepAspectRatio" />
+                  <ResourceButton stylename="instanceproperties_button" auto_height="false" height="24dpi_px" left="76.75px" margin_left="5dpi_px" margin_right="10dpi_px" bind_property="sprView" localise_name="PropertyButton_NoGMSprite" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stackpanel" height="24dpi_px" top="56px" margin_bottom="2dpi_px">
+                <ChildGadgets>
+                  <Label stylename="instanceproperties_label" height="16dpi_px" width="35%" left="3.75px" margin_left="5dpi_px" margin_right="8dpi_px" localise_caption="RoomProperties_Colour" />
+                  <ColourSelectButton stylename="instanceproperties_colourselect" left="76px" top="33dpi_px" margin_right="10dpi_px" bind_property="colour" />
+                </ChildGadgets>
+              </StackPanel>
+              <StackPanel stylename="stack_panel" height="26dpi_px" top="80px" margin_bottom="2dpi_px">
+                <ChildGadgets>
+                  <Label stylename="instanceproperties_label" height="" width="35%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_Rotation" />
+                  <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="78px" margin_right="10dpi_px" bind_property="rotation" input_type="Real" />
+                </ChildGadgets>
+              </StackPanel>
+              <Grid stylename="grid_container" height="26dpi_px" top="101px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" bind_property="flipX" localise_name="InstanceProperties_FlipX" stack_order="RightToLeft" />
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <CheckBox stylename="checkbox_stack" left="0dpi_px" bind_property="flipY" localise_name="InstanceProperties_FlipY" stack_order="RightToLeft" />
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="26dpi_px" top="126px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_ScaleX" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="49px" margin_right="10dpi_px" bind_property="scaleX" min="-99999" max="99999" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="InstanceProperties_ScaleY" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="49px" margin_right="10dpi_px" bind_property="scaleY" min="-99999" max="99999" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <Grid stylename="grid_container" height="26dpi_px" left="114dpi_px" top="151px" margin_bottom="8dpi_px" grid_columnlayout="['1*', '1*']">
+                <Cell row="0" column="0" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_PosX" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="49px" margin_right="10dpi_px" bind_property="x" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+                <Cell row="0" column="1" flow_index="0">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel">
+                      <ChildGadgets>
+                        <Label stylename="instanceproperties_label" height="" width="40%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_PosY" />
+                        <NumericTextBox stylename="numeric_text_box" height="24dpi_px" left="49px" margin_right="10dpi_px" bind_property="y" input_type="Real" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </Cell>
+              </Grid>
+              <StackPanel stylename="stack_panel" height="24dpi_px" top="176px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" height="28dpi_px" top="0px">
+                    <ChildGadgets>
+                      <Label stylename="instanceproperties_label" height="" width="60%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="GraphicProperties_FrameIndex" />
+                      <NumericTextBox stylename="numeric_text_box" width="55dpi_px" left="86px" margin_right="10dpi_px" bind_property="frameIndex" max="999" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <StackPanel stylename="stack_panel" height="28dpi_px" top="27px" margin_top="8dpi_px">
+                    <ChildGadgets>
+                      <Label stylename="layerproperties_label" height="" width="60%" left="3.75px" margin_left="5dpi_px" margin_right="10dpi_px" localise_caption="BackgroundLayer_AnimationFPS" />
+                      <NumericTextBox stylename="numeric_text_box" layout_id="animFPS_value" layout_guid="84ac338a-9b2b-4ebf-bb43-f5edb6e667fb" width="55dpi_px" left="86px" top="0dpi_px" margin_right="10dpi_px" bind_property="animationFPS" input_type="Real" />
+                      <GadgetToggleCheckBox stylename="toggle_gadget_checkbox_stack" layout_id="animFPS_toggle" layout_guid="dc1333b7-2345-4ecc-b224-65dc97c7863d" left="134px" top="0dpi_px" margin_right="10dpi_px" bind_property="userdefined_animFPS" toggle_gadgets="['animFPS_value', 'animSpeedType']" />
+                    </ChildGadgets>
+                  </StackPanel>
+                  <ComboBox stylename="deactivated_combobox" layout_id="animSpeedType" layout_guid="be931e86-be1b-46f8-bd1a-f0d27358eb05" width="170dpi_px" left="0px" top="52.5px" margin_top="6dpi_px" bind_property="animationSpeedType">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </StackPanel>
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_MenuBar" layout_guid="7af563e4-fd69-4bd8-9b29-392b2b8228a7">
+    <MenuBar stylename="menu_bar" top="197dpi_px">
+      <MenuBarEntry stylename="menu_bar_entry" layout_id="bar_entry0" layout_guid="9a9f1eac-c5e1-4ed8-8b07-3890e9fd7154" width="52dpi_px" left="0dpi_px" localise_name="RoomEditorMenu_Room">
+        <ContextMenu layout_id="room_menu" stylename="context_menu" left="10dpi_px" top="10dpi_px">
+          <MenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu1_entry0" layout_guid="d7974396-9195-4514-8983-90e0a2950769" click_command="open_layer_view" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_LayerView" keyboard_shortcut="CTRL+ALT+L" />
+          <MenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu1_entry1" layout_guid="0f373791-b6a6-4549-b15f-c697d5ef5592" click_command="open_room_properties" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_RoomProperties" keyboard_shortcut="CTRL+ALT+R" />
+          <MenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu1_entry2" layout_guid="ee9a16c6-240c-4850-a8f5-c00b233df87f" click_command="open_layer_properties" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_LayerProperties" keyboard_shortcut="CTRL+ALT+P" />
+          <MenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu1_entry3" layout_guid="C6D0DA2E-821E-4CD2-89BE-92D2D5F4CA7D" click_command="open_instance_creation_order" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_InstanceCreationOrder" keyboard_shortcut="CTRL+ALT+I" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu1_entry2" layout_guid="ee9a16c6-240c-4850-a8f5-c00b233df87f" click_command="reset_windows" throw_click_command_to_owner="True" localise_name="RoomEditorMenu_ResetWindowLayout" />
+        </ContextMenu>
+      </MenuBarEntry>
+    </MenuBar>
+  </Layout>
+  <Layout layout_name="RoomEditorTileEditing_Menu" layout_guid="7af563e4-fd19-4bd8-5b29-392c2b722ba7">
+    <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+      <MenuEntry stylename="menu_entry" layout_id="clear_selection" layout_guid="d79abc96-9195-ab44-8983-90e0a2950769" localise_name="RoomEditorTileEditing_ClearSelection" keyboard_shortcut="Esc" />
+      <MenuEntry stylename="menu_entry" layout_id="invert_selection" layout_guid="0f373791-b6a6-4ef9-b15f-c697d5ef5592" localise_name="RoomEditorTileEditing_InvertSelection" keyboard_shortcut="CTRL+I" />
+      <MenuEntry stylename="menu_entry" layout_id="copy_selection" layout_guid="ee9a16c6-240c-4130-a8f5-baba233df87f" localise_name="RoomEditorTileEditing_CopySelection" keyboard_shortcut="CTRL+C" />
+      <MenuEntry stylename="menu_entry" layout_id="cut_selection" layout_guid="ee9a16c6-ab0c-4130-a795-baba233df87f" localise_name="RoomEditorTileEditing_CutSelection" keyboard_shortcut="CTRL+X" />
+      <MenuEntry stylename="menu_entry" layout_id="delete_selection" layout_guid="ee9a16c6-ab0c-1234-a795-baba233df87f" localise_name="RoomEditorTileEditing_DeleteSelection" keyboard_shortcut="Delete" />
+      <HorizontalSeparator stylename="menu_separator" />
+      <MenuEntry stylename="menu_entry" layout_id="open_tile_window" layout_guid="ee9a16c6-123c-4650-a8f5-c00d233df87f" localise_name="RoomEditorTileEditing_TileDisplayWindow" keyboard_shortcut="CTRL+ALT+T" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="RoomEditor_InstanceCreationOrder" layout_guid="4b1273e1-8730-4fcd-a18f-3c02200e5e72">
+    <Window stylename="default_window" width="300px" left="328px" top="52px" help_tag="room_editor" localise_title="RoomEditor_InstanceCreationOrder">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <RoomEditor_LayerInstancesView stylename="instance_creation_view" top="0px" bind_property="instanceCreationOrder" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <RoomEditor_InheritButton stylename="button_up" height="24dpi_px" width="50dpi_px" left="2px" margin_top="2px" margin_bottom="2px" bind_property="inheritCreationOrder" parent_property="parentRoom" localise_name="RoomEditor_Inherit" localise_tooltip="RoomEditor_InheritCreationOrderToolTip"/>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="RoomEditor_EditArea" layout_guid="6bbd173b-08f7-4add-8c33-271bd45848da">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['1*', 'auto']" grid_columnlayout="['100dpi_px', '1*']">
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="partial_status_bar_left" left="0px">
+            <ChildGadgets>
+              <Label stylename="label" layout_id="mouse_pos" layout_guid="b1382a5d-d138-47ee-aaf7-1d82dc0fb3d7" height="16px" width="100%" left="0px" auto_ellipsis="true" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="partial_status_bar_right" left="0px">
+            <ChildGadgets>
+              <Label stylename="label" layout_id="layer_info" layout_guid="0f7da58c-6b4f-4154-91f3-9f09be500106" height="16px" width="100%" left="0px" auto_ellipsis="true" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="0" rowspan="1" columnspan="2">
+        <ChildGadgets>
+          <RoomEditor_Room stylename="room_editor_room" layout_id="room_edit_area" layout_guid="da60e118-6c21-49cf-a1b6-3b630a2af505" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="WelcomePage" layout_guid="5711800D-8454-4C98-85B9-BBB4FF4C073A">
+    <WebView height="100%" width="100%"/>
+  </Layout>
+</Layouts>

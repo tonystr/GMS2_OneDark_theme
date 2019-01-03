@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitLog" layout_guid="256f30af-1620-4b64-aee6-f4a4db030090">
+    <Window stylename="source_control_git_log_window" height="500dpi_px" width="480dpi_px" localise_title="sourcecontrolgit_log" window_flags="CloseButton, MinimizeButton, MaximizeButton, ResizeButton, DockingDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['3*', '1*', '2*']" row_spacing="6dpi_px">
+            <RowSplitter stylename="horizontal_grid_splitter_git" height="5dpi_px" width="462px" left="0px" top="222px" row="1" column="0" rowspan="1" columnspan="1" />
+            <RowSplitter stylename="horizontal_grid_splitter_git" height="5dpi_px" width="462px" left="0px" top="302px" row="2" column="0" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['24dpi_px', '1*', '26dpi_px']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" localise_title="SourceControlGit_History_Commits" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TableListBox stylename="extension_tablegadget_content" layout_id="log_history" layout_guid="e2a6785f-aeec-46b7-bdbe-927494f371b8" height="" top="-1px" bottom="-1px">
+                        <ListBoxItems />
+                      </TableListBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" grid_columnlayout="['1*', '100dpi_px']">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" layout_id="history_label" layout_guid="c9ccc62c-dfd6-4339-869c-bdaab96a9a98" height="16px" width="53px" left="6dpi_px" localise_caption="Loading" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="20dpi_px" right="6dpi_px" stack_order="RightToLeft">
+                                  <ChildGadgets>
+                                    <Button stylename="button_up" layout_id="history_right" layout_guid="2655db00-0890-4505-8267-4300d7a2893c" localise_tooltip="SourceControlGit_PageRight" height="20dpi_px" width="34dpi_px" right="0px" margin_left="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeft.png" />
+                                    <Button stylename="button_up" layout_id="history_left" layout_guid="5cd4c84f-95de-4fbd-a3e5-c7eab9cb3dc0" localise_tooltip="SourceControlGit_PageLeft" height="20dpi_px" width="34dpi_px" right="40px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeft.png" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['24dpi_px', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" layout_id="title_message" layout_guid="da2f0da0-08ce-4f37-a183-7e81457d3f89" localise_title="SourceControlGit_History_Message" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <MultiLineTextBox stylename="log_comment_style" layout_id="log_comment" layout_guid="fe76cd7b-b1a9-40b8-bfce-db38cb3f603e" height="" width="" left="0dpi_px" right="0dpi_px" top="-1px" bottom="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['24dpi_px', '1*', '26dpi_px']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" layout_id="title_files" layout_guid="53c9d4eb-b0e8-4451-9d10-c5bbfaa87ba8" localise_title="SourceControlGit_History_Files" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TableListBox stylename="extension_tablegadget_content" layout_id="log_files" layout_guid="5b2aa32c-dc9c-4e79-acbf-78b212e8dc32" top="-1px" bottom="-1px">
+                        <ListBoxItems />
+                      </TableListBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="source_control_git_commit_title_bar" height="">
+                        <ChildGadgets>
+                          <Grid stylename="grid_container" grid_columnlayout="['1*', '100dpi_px']">
+                            <Cell row="0" column="0" flow_index="0">
+                              <ChildGadgets>
+                                <Label stylename="label" layout_id="files_label" layout_guid="8c6c6967-f79e-4afc-a7d9-c635f40e3a5c" height="16px" width="91px" left="6dpi_px" localise_caption="SourceControlGit_SelectCommit" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="1" flow_index="0">
+                              <ChildGadgets>
+                                <StackPanel stylename="stack_panel" height="20dpi_px" right="6dpi_px" stack_order="RightToLeft">
+                                  <ChildGadgets>
+                                    <Button stylename="button_up" layout_id="files_right" layout_guid="7563d993-fe9f-4144-8acb-6b92b6b36c34" localise_tooltip="SourceControlGit_PageRight" height="20dpi_px" width="34dpi_px" right="0px" margin_left="6dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon_render_flags="FlipHorizontal" icon="ArrowLeft.png" />
+                                    <Button stylename="button_up" layout_id="files_left" layout_guid="bba19343-df73-463b-a213-a2d268d53918" localise_tooltip="SourceControlGit_PageLeft" height="20dpi_px" width="34dpi_px" right="40px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="ArrowLeft.png" />
+                                  </ChildGadgets>
+                                </StackPanel>
+                                <Grid stylename="grid_container" left="0dpi_px" right="6dpi_px" grid_columnlayout="['1*', '1*']" column_spacing="6dpi_px"></Grid>
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </TitleBar>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="SourceControlGitLog_Revision_Menu" layout_guid="2dab27c9-4140-4171-abdc-4ba3ac0ce655">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_revert" localise_name="SCM_Revert_Revision" />
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="SourceControlGitLog_File_Menu" layout_guid="43a218e0-ef0d-4b22-9b20-625fad3abc51">
+    <ContextMenu>
+      <MenuEntry layout_id="menu_revert" localise_name="SCM_Revert_Path" />
+    </ContextMenu>
+  </Layout>
+</Layouts>

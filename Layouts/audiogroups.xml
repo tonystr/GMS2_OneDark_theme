@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="AudioGroupsWindow" layout_guid="44d85149-ac50-4d5a-af84-e20a648de2e0">
+    <Window stylename="audiotexturegroup_window" height="550dpi_px" width="640dpi_px" left="34dpi_px" top="28dpi_px" localise_title="AudioGroups_WindowTitle" window_flags="CloseButton, MinimizeButton, ResizeButton">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['40dpi_px', '1*']" grid_columnlayout="['1*', '1*']" row_spacing="6dpi_px" column_spacing="6dpi_px">
+            <ColumnSplitter stylename="vertical_grid_splitter" height="461px" width="5dpi_px" left="308px" top="46px" row="1" column="1" rowspan="1" columnspan="1" />
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']" row_spacing="6dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <ListBox stylename="list_box" layout_id="listbox_resources" layout_guid="c71062db-fef9-46d2-abcf-e03c6154e91d" left="2dpi_px" right="5dpi_px" multi_select="True">
+                        <ListBoxItems />
+                        <ContextMenu stylename="context_menu" layout_id="resource_menu" layout_guid="e5efd69a-a021-4916-9541-4b8a80a2e373" left="10px" top="10px">
+                          <MenuEntry stylename="menu_entry" layout_id="menu_open" layout_guid="e558de35-ed7b-413e-8563-9d1d9ae99959" localise_name="SoundEditor_Open" icon_flags="Stretch, Centre, KeepAspectRatio" />
+                          <SubMenuEntry stylename="menu_entry" layout_id="menu_moveto" layout_guid="12760322-a28c-4a3a-a404-228e75bed57a" localise_name="TextureGroups_Menu_MoveTo">
+                            <ContextMenu stylename="context_menu" left="102px" top="1px" />
+                          </SubMenuEntry>
+                        </ContextMenu>
+                      </ListBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_explorer" layout_guid="ce75bfcd-1d3a-491a-b8cf-73cc60b0a712" height="24px" left="10px" right="10px" localise_name="AudioGroups_FindResource" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="1" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="88px" left="0dpi_px" top="0px" localise_caption="AudioGroups_TargetPlatforms" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <TableListBox stylename="extension_tablegadget_content" layout_id="platformList" layout_guid="36d22adf-b96a-4833-be8f-760eea9956b7" top="0px">
+                        <ListBoxItems />
+                      </TableListBox>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="0" rowspan="1" columnspan="2" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="30dpi_px" top="0px" grid_columnlayout="['auto', 'auto', '1*', 'auto', 'auto']" column_spacing="6dpi_px">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="84px" localise_caption="AudioGroups_ActiveGroup" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" flow_index="0">
+                    <ChildGadgets>
+                      <ComboBox stylename="combobox_panel" layout_id="combo_currentgroup" layout_guid="3907974c-0040-4769-aa8a-16fc2f227e12" width="180dpi_px" allow_edit="True">
+                        <ListBoxItems />
+                      </ComboBox>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="3" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_addnew" layout_guid="153e2581-7656-4578-87f7-866502dc8514" height="24px" width="120dpi_px" localise_name="AudioGroups_AddNew" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="4" flow_index="0">
+                    <ChildGadgets>
+                      <Button stylename="button_up" layout_id="btn_delete" layout_guid="da71f51c-1f6d-4214-9320-8fcbf1080a4d" height="24px" width="120dpi_px" localise_name="AudioGroups_Delete" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+                <HorizontalSeparator stylename="horizontal_separator" top="35dpi_px" margin_left="" margin_right="" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

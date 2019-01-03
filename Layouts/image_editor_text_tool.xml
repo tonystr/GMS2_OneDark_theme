@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ImageEditor_TextTool_Settings" layout_guid="137aa692-2c82-4e3c-afd1-8de3e0b03403">
+    <Window stylename="default_window" height="105px" width="300px" left="26px" top="54px" localise_title="ImageEditor_TextTool_SettingsWindow" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*']" row_spacing="4px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <ComboBox stylename="combobox_panel" layout_id="combo_fonts" layout_guid="aa76d44b-e60a-425f-a44c-834cd3b5a385" width="140px" left="4px">
+                  <ListBoxItems />
+                </ComboBox>
+                <ComboBox stylename="combobox_panel" layout_id="combo_stylename" layout_guid="fe276227-2327-4438-8ecd-366f918aff46" left="148px" right="5px">
+                  <ListBoxItems />
+                </ComboBox>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="27px" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <NumericTextBox layout_id="textbox_fontsize" layout_guid="b859509e-c9cb-4197-ad34-0dd2de9987e2" width="50px" left="4px" top="24px" margin_left="4px" default_value="10" min="4" max="100" />
+                    <CheckBox stylename="checkbox_stack" layout_id="checkbox_aa" layout_guid="91d67cf3-31fe-421b-abf3-b5333df5c684" left="64px" margin_left="10px" localise_name="ImageEditor_TextTool_AA" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

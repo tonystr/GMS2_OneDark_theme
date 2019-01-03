@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="EventsContextMenu" layout_guid="16e03995-baaf-4079-8445-9de173a5ec3f">
+    <ContextMenu stylename="context_menu" layout_id="events_menu" left="10px" top="10px">
+      <MenuEntry stylename="menu_entry" layout_id="create" localise_name="Event_Create" icon="ResourceIcons\EventIcons\icon_event_create.png" />
+      <MenuEntry stylename="menu_entry" layout_id="destroy" localise_name="Event_Destroy" icon="ResourceIcons\EventIcons\icon_event_destroy.png" />
+      <MenuEntry stylename="menu_entry" layout_id="clean_up" localise_name="Event_CleanUp" icon="ResourceIcons\EventIcons\icon_event_cleanup.png" />
+      <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu12" localise_name="Event_Step" icon="ResourceIcons\EventIcons\icon_event_step.png">
+        <ContextMenu stylename="context_menu" left="125px" top="65px">
+          <MenuEntry stylename="menu_entry" layout_id="step:0" localise_name="Event_Step" />
+          <MenuEntry stylename="menu_entry" layout_id="step:1" localise_name="Event_StepBegin" />
+          <MenuEntry stylename="menu_entry" layout_id="step:2" localise_name="Event_StepEnd" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="events_submenu2" localise_name="Event_Alarm" icon="ResourceIcons\EventIcons\icon_event_alarm.png">
+        <ContextMenu stylename="context_menu" left="125px" top="45px">
+          <MenuEntry stylename="menu_entry" layout_id="alarm:0" localise_name="Event_AlarmN" localise_arguments="['0']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:1" localise_name="Event_AlarmN" localise_arguments="['1']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:2" localise_name="Event_AlarmN" localise_arguments="['2']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:3" localise_name="Event_AlarmN" localise_arguments="['3']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:4" localise_name="Event_AlarmN" localise_arguments="['4']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:5" localise_name="Event_AlarmN" localise_arguments="['5']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:6" localise_name="Event_AlarmN" localise_arguments="['6']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:7" localise_name="Event_AlarmN" localise_arguments="['7']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:8" localise_name="Event_AlarmN" localise_arguments="['8']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:9" localise_name="Event_AlarmN" localise_arguments="['9']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:10" localise_name="Event_AlarmN" localise_arguments="['10']" />
+          <MenuEntry stylename="menu_entry" layout_id="alarm:11" localise_name="Event_AlarmN" localise_arguments="['11']" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="events_submenu3" localise_name="Event_Draw" icon="ResourceIcons\EventIcons\icon_event_draw.png">
+        <ContextMenu stylename="context_menu" left="125px" top="165px">
+          <MenuEntry stylename="menu_entry" layout_id="draw:0" localise_name="Event_Draw_Draw" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:64" localise_name="Event_Draw_DrawGUI" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:72" localise_name="Event_Draw_DrawBegin" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:73" localise_name="Event_Draw_DrawEnd" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:74" localise_name="Event_Draw_DrawGUIBegin" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:75" localise_name="Event_Draw_DrawGUIEnd" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:76" localise_name="Event_Draw_PreDraw" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:77" localise_name="Event_Draw_PostDraw" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="draw:65" localise_name="Event_Draw_Resize" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="events_submenu0" localise_name="Event_Mouse" icon="ResourceIcons\EventIcons\icon_event_mouse.png">
+        <ContextMenu stylename="context_menu" left="125px" top="125px">
+          <MenuEntry stylename="menu_entry" layout_id="mouse:0" localise_name="Event_Mouse_LeftButton" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:1" localise_name="Event_Mouse_RightButton" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:2" localise_name="Event_Mouse_MiddleButton" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:3" localise_name="Event_Mouse_NoButton" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:4" localise_name="Event_Mouse_LeftPressed" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:5" localise_name="Event_Mouse_RightPressed" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:6" localise_name="Event_Mouse_MiddlePressed" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:7" localise_name="Event_Mouse_LeftReleased" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:8" localise_name="Event_Mouse_RightReleased" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:9" localise_name="Event_Mouse_MiddleReleased" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:10" localise_name="Event_Mouse_MouseEnter" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:11" localise_name="Event_Mouse_MouseLeave" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:60" localise_name="Event_Mouse_MouseWheelUp" />
+          <MenuEntry stylename="menu_entry" layout_id="mouse:61" localise_name="Event_Mouse_MouseWheelDown" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <SubMenuEntry stylename="menu_entry" layout_id="events_submenu0_submenu14" localise_name="Event_Mouse_GlobalMouse">
+            <ContextMenu stylename="context_menu" left="133px" top="315px">
+              <MenuEntry stylename="menu_entry" layout_id="mouse:50" localise_name="Event_Mouse_GlobalMouse_LeftButton" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:51" localise_name="Event_Mouse_GlobalMouse_RightButton" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:52" localise_name="Event_Mouse_GlobalMouse_MiddleButton" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:53" localise_name="Event_Mouse_GlobalMouse_LeftPressed" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:54" localise_name="Event_Mouse_GlobalMouse_RightPressed" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:55" localise_name="Event_Mouse_GlobalMouse_MiddlePressed" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:56" localise_name="Event_Mouse_GlobalMouse_LeftReleased" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:57" localise_name="Event_Mouse_GlobalMouse_RightReleased" />
+              <MenuEntry stylename="menu_entry" layout_id="mouse:58" localise_name="Event_Mouse_GlobalMouse_MiddleReleased" />
+            </ContextMenu>
+          </SubMenuEntry>
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="keyboard_event_submenu" localise_name="Event_Keyboard" icon="ResourceIcons\EventIcons\icon_event_keyboard.png">
+        <ContextMenu stylename="context_menu" left="125px" top="125px">
+          <Layout layout_name="EventKeysContextMenu" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="keypress_event_submenu" localise_name="Event_KeyPress" icon="ResourceIcons\EventIcons\icon_event_keydown.png">
+        <ContextMenu stylename="context_menu" left="125px" top="225px">
+          <Layout layout_name="EventKeysContextMenu" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="keyrelease_event_submenu" localise_name="Event_KeyRelease" icon="ResourceIcons\EventIcons\icon_event_keyrelease.png">
+        <ContextMenu stylename="context_menu" left="125px" top="265px">
+          <Layout layout_name="EventKeysContextMenu" />
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="gesture_events_submenu" localise_name="Event_Gesture" icon="ResourceIcons\EventIcons\icon_event_tap.png">
+        <ContextMenu stylename="context_menu" left="125px" top="125px">
+          <MenuEntry stylename="menu_entry" layout_id="gesture:0" localise_name="Event_Gesture_Tap" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:1" localise_name="Event_Gesture_DoubleTap" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:2" localise_name="Event_Gesture_DragStart" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:3" localise_name="Event_Gesture_DragMove" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:4" localise_name="Event_Gesture_DragEnd" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:5" localise_name="Event_Gesture_Flick" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:6" localise_name="Event_Gesture_PinchStart" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:7" localise_name="Event_Gesture_PinchIn" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:8" localise_name="Event_Gesture_PinchOut" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:9" localise_name="Event_Gesture_PinchEnd" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:10" localise_name="Event_Gesture_RotateStart" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:11" localise_name="Event_Gesture_Rotating" />
+          <MenuEntry stylename="menu_entry" layout_id="gesture:12" localise_name="Event_Gesture_RotateEnd" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <SubMenuEntry stylename="menu_entry" layout_id="gesture_global_events_submenu" localise_name="Event_Gesture_Global">
+            <ContextMenu stylename="context_menu" left="133px" top="315px">
+              <MenuEntry stylename="menu_entry" layout_id="gesture:64" localise_name="Event_Gesture_Global_Tap" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:65" localise_name="Event_Gesture_Global_DoubleTap" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:66" localise_name="Event_Gesture_Global_DragStart" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:67" localise_name="Event_Gesture_Global_DragMove" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:68" localise_name="Event_Gesture_Global_DragEnd" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:69" localise_name="Event_Gesture_Global_Flick" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:70" localise_name="Event_Gesture_Global_PinchStart" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:71" localise_name="Event_Gesture_Global_PinchIn" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:72" localise_name="Event_Gesture_Global_PinchOut" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:73" localise_name="Event_Gesture_Global_PinchEnd" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:74" localise_name="Event_Gesture_Global_RotateStart" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:75" localise_name="Event_Gesture_Global_Rotating" />
+              <MenuEntry stylename="menu_entry" layout_id="gesture:76" localise_name="Event_Gesture_Global_RotateEnd" />
+            </ContextMenu>
+          </SubMenuEntry>
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="collision" localise_name="Event_Collision" icon="ResourceIcons\EventIcons\icon_event_collision.png">
+        <ContextMenu stylename="context_menu" left="125px" top="0px" />
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="events_submenu1" localise_name="Event_Other" icon="ResourceIcons\EventIcons\icon_event_other.png">
+        <ContextMenu stylename="context_menu" left="125px" top="145px">
+          <MenuEntry stylename="menu_entry" layout_id="other:0" localise_name="Event_Other_OutsideRoom" />
+          <MenuEntry stylename="menu_entry" layout_id="other:1" localise_name="Event_Other_IntersectBoundary" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <SubMenuEntry stylename="menu_entry" layout_id="events_submenu1_submenu2" localise_name="Event_Other_Views">
+            <ContextMenu stylename="context_menu" left="128px" top="50px">
+              <MenuEntry stylename="menu_entry" layout_id="other:40" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['0']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:41" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['1']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:42" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['2']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:43" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['3']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:44" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['4']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:45" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['5']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:46" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['6']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:47" localise_name="Event_Other_Views_OutsideViewN" localise_arguments="['7']" />
+              <HorizontalSeparator stylename="menu_separator" />
+              <MenuEntry stylename="menu_entry" layout_id="other:50" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['0']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:51" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['1']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:52" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['2']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:53" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['3']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:54" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['4']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:55" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['5']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:56" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['6']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:57" localise_name="Event_Other_Views_BoundaryViewN" localise_arguments="['7']" />
+            </ContextMenu>
+          </SubMenuEntry>
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="other:2" localise_name="Event_Other_GameStart" />
+          <MenuEntry stylename="menu_entry" layout_id="other:3" localise_name="Event_Other_GameEnd" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="other:4" localise_name="Event_Other_RoomStart" />
+          <MenuEntry stylename="menu_entry" layout_id="other:5" localise_name="Event_Other_RoomEnd" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="other:7" localise_name="Event_Other_AnimationEnd" />
+          <MenuEntry stylename="menu_entry" layout_id="other:58" localise_name="Event_Other_AnimationUpdate" />
+          <MenuEntry stylename="menu_entry" layout_id="other:59" localise_name="Event_Other_AnimationEvent" />
+          <HorizontalSeparator stylename="menu_separator" />
+          <MenuEntry stylename="menu_entry" layout_id="other:8" localise_name="Event_Other_EndOfPath" />
+          <SubMenuEntry stylename="menu_entry" layout_id="events_submenu1_submenu12" localise_name="Event_Other_UserDefined">
+            <ContextMenu stylename="context_menu" left="128px" top="275px">
+              <MenuEntry stylename="menu_entry" layout_id="other:10" localise_name="Event_Other_UserN" localise_arguments="['0']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:11" localise_name="Event_Other_UserN" localise_arguments="['1']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:12" localise_name="Event_Other_UserN" localise_arguments="['2']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:13" localise_name="Event_Other_UserN" localise_arguments="['3']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:14" localise_name="Event_Other_UserN" localise_arguments="['4']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:15" localise_name="Event_Other_UserN" localise_arguments="['5']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:16" localise_name="Event_Other_UserN" localise_arguments="['6']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:17" localise_name="Event_Other_UserN" localise_arguments="['7']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:18" localise_name="Event_Other_UserN" localise_arguments="['8']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:19" localise_name="Event_Other_UserN" localise_arguments="['9']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:20" localise_name="Event_Other_UserN" localise_arguments="['10']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:21" localise_name="Event_Other_UserN" localise_arguments="['11']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:22" localise_name="Event_Other_UserN" localise_arguments="['12']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:23" localise_name="Event_Other_UserN" localise_arguments="['13']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:24" localise_name="Event_Other_UserN" localise_arguments="['14']" />
+              <MenuEntry stylename="menu_entry" layout_id="other:25" localise_name="Event_Other_UserN" localise_arguments="['15']" />
+            </ContextMenu>
+          </SubMenuEntry>
+        </ContextMenu>
+      </SubMenuEntry>
+      <SubMenuEntry stylename="menu_entry" layout_id="events_submenu4" localise_name="Event_Asynchronous" icon="ResourceIcons\EventIcons\icon_event_asynchronous.png">
+        <ContextMenu stylename="context_menu" left="125px" top="225px">
+          <MenuEntry stylename="menu_entry" layout_id="other:74" localise_name="Event_Async_AudioPlayback" />
+          <MenuEntry stylename="menu_entry" layout_id="other:73" localise_name="Event_Async_AudioRecording" />
+          <MenuEntry stylename="menu_entry" layout_id="other:67" localise_name="Event_Async_Cloud" />
+          <MenuEntry stylename="menu_entry" layout_id="other:63" localise_name="Event_Async_Dialog" />
+          <MenuEntry stylename="menu_entry" layout_id="other:62" localise_name="Event_Async_HTTP" />
+          <MenuEntry stylename="menu_entry" layout_id="other:66" localise_name="Event_Async_IAP" />
+          <MenuEntry stylename="menu_entry" layout_id="other:60" localise_name="Event_Async_ImageLoaded" />
+          <MenuEntry stylename="menu_entry" layout_id="other:68" localise_name="Event_Async_Networking" />
+          <MenuEntry stylename="menu_entry" layout_id="other:71" localise_name="Event_Async_PushNotification" />
+          <MenuEntry stylename="menu_entry" layout_id="other:72" localise_name="Event_Async_SaveLoad" />
+          <MenuEntry stylename="menu_entry" layout_id="other:70" localise_name="Event_Async_Social" />
+          <MenuEntry stylename="menu_entry" layout_id="other:69" localise_name="Event_Async_Steam" />
+          <MenuEntry stylename="menu_entry" layout_id="other:75" localise_name="Event_Async_SystemEvent" />
+        </ContextMenu>
+      </SubMenuEntry>
+    </ContextMenu>
+  </Layout>
+  <Layout layout_name="EventKeysContextMenu" layout_guid="255dff35-7bed-437c-bbc8-8656737fdc44">
+    <MenuEntry stylename="menu_entry" layout_id="key:37" localise_name="Event_Key_Left" />
+    <MenuEntry stylename="menu_entry" layout_id="key:39" localise_name="Event_Key_Right" />
+    <MenuEntry stylename="menu_entry" layout_id="key:38" localise_name="Event_Key_Up" />
+    <MenuEntry stylename="menu_entry" layout_id="key:40" localise_name="Event_Key_Down" />
+    <HorizontalSeparator stylename="menu_separator" />
+    <MenuEntry stylename="menu_entry" layout_id="key:17" localise_name="Event_Key_Ctrl" />
+    <MenuEntry stylename="menu_entry" layout_id="key:18" localise_name="Event_Key_Alt" />
+    <MenuEntry stylename="menu_entry" layout_id="key:16" localise_name="Event_Key_Shift" />
+    <MenuEntry stylename="menu_entry" layout_id="key:32" localise_name="Event_Key_Space" />
+    <MenuEntry stylename="menu_entry" layout_id="key:13" localise_name="Event_Key_Enter" />
+    <HorizontalSeparator stylename="menu_separator" />
+    <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu9" localise_name="Event_Key_Keypad">
+      <ContextMenu stylename="context_menu" left="102px" top="195px">
+        <MenuEntry stylename="menu_entry" layout_id="key:96" localise_name="Event_Key_KeypadN" localise_arguments="['0']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:97" localise_name="Event_Key_KeypadN" localise_arguments="['1']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:98" localise_name="Event_Key_KeypadN" localise_arguments="['2']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:99" localise_name="Event_Key_KeypadN" localise_arguments="['3']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:100" localise_name="Event_Key_KeypadN" localise_arguments="['4']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:101" localise_name="Event_Key_KeypadN" localise_arguments="['5']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:102" localise_name="Event_Key_KeypadN" localise_arguments="['6']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:103" localise_name="Event_Key_KeypadN" localise_arguments="['7']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:104" localise_name="Event_Key_KeypadN" localise_arguments="['8']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:105" localise_name="Event_Key_KeypadN" localise_arguments="['9']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:111" localise_name="Event_Key_KeypadN" localise_arguments="['/']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:106" localise_name="Event_Key_KeypadN" localise_arguments="['*']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:109" localise_name="Event_Key_KeypadN" localise_arguments="['-']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:107" localise_name="Event_Key_KeypadN" localise_arguments="['+']" />
+        <MenuEntry stylename="menu_entry" layout_id="key:110" localise_name="Event_Key_KeypadN" localise_arguments="['.']" />
+      </ContextMenu>
+    </SubMenuEntry>
+    <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu10" localise_name="Event_Key_Digits">
+      <ContextMenu stylename="context_menu" left="102px" top="215px">
+        <MenuEntry stylename="menu_entry" layout_id="key:48" name="0" />
+        <MenuEntry stylename="menu_entry" layout_id="key:49" name="1" />
+        <MenuEntry stylename="menu_entry" layout_id="key:50" name="2" />
+        <MenuEntry stylename="menu_entry" layout_id="key:51" name="3" />
+        <MenuEntry stylename="menu_entry" layout_id="key:52" name="4" />
+        <MenuEntry stylename="menu_entry" layout_id="key:53" name="5" />
+        <MenuEntry stylename="menu_entry" layout_id="key:54" name="6" />
+        <MenuEntry stylename="menu_entry" layout_id="key:55" name="7" />
+        <MenuEntry stylename="menu_entry" layout_id="key:56" name="8" />
+        <MenuEntry stylename="menu_entry" layout_id="key:57" name="9" />
+      </ContextMenu>
+    </SubMenuEntry>
+    <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu11" localise_name="Event_Key_Letters">
+      <ContextMenu stylename="context_menu" left="102px" top="235px">
+        <MenuEntry stylename="menu_entry" layout_id="key:65" name="A" />
+        <MenuEntry stylename="menu_entry" layout_id="key:66" name="B" />
+        <MenuEntry stylename="menu_entry" layout_id="key:67" name="C" />
+        <MenuEntry stylename="menu_entry" layout_id="key:68" name="D" />
+        <MenuEntry stylename="menu_entry" layout_id="key:69" name="E" />
+        <MenuEntry stylename="menu_entry" layout_id="key:70" name="F" />
+        <MenuEntry stylename="menu_entry" layout_id="key:71" name="G" />
+        <MenuEntry stylename="menu_entry" layout_id="key:72" name="H" />
+        <MenuEntry stylename="menu_entry" layout_id="key:73" name="I" />
+        <MenuEntry stylename="menu_entry" layout_id="key:74" name="J" />
+        <MenuEntry stylename="menu_entry" layout_id="key:75" name="K" />
+        <MenuEntry stylename="menu_entry" layout_id="key:76" name="L" />
+        <MenuEntry stylename="menu_entry" layout_id="key:77" name="M" />
+        <MenuEntry stylename="menu_entry" layout_id="key:78" name="N" />
+        <MenuEntry stylename="menu_entry" layout_id="key:79" name="O" />
+        <MenuEntry stylename="menu_entry" layout_id="key:80" name="P" />
+        <MenuEntry stylename="menu_entry" layout_id="key:81" name="Q" />
+        <MenuEntry stylename="menu_entry" layout_id="key:82" name="R" />
+        <MenuEntry stylename="menu_entry" layout_id="key:83" name="S" />
+        <MenuEntry stylename="menu_entry" layout_id="key:84" name="T" />
+        <MenuEntry stylename="menu_entry" layout_id="key:85" name="U" />
+        <MenuEntry stylename="menu_entry" layout_id="key:86" name="V" />
+        <MenuEntry stylename="menu_entry" layout_id="key:87" name="W" />
+        <MenuEntry stylename="menu_entry" layout_id="key:88" name="X" />
+        <MenuEntry stylename="menu_entry" layout_id="key:89" name="Y" />
+        <MenuEntry stylename="menu_entry" layout_id="key:90" name="Z" />
+      </ContextMenu>
+    </SubMenuEntry>
+    <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu12" localise_name="Event_Key_FunctionKeys">
+      <ContextMenu stylename="context_menu" left="102px" top="255px">
+        <MenuEntry stylename="menu_entry" layout_id="key:112" name="F1" />
+        <MenuEntry stylename="menu_entry" layout_id="key:113" name="F2" />
+        <MenuEntry stylename="menu_entry" layout_id="key:114" name="F3" />
+        <MenuEntry stylename="menu_entry" layout_id="key:115" name="F4" />
+        <MenuEntry stylename="menu_entry" layout_id="key:116" name="F5" />
+        <MenuEntry stylename="menu_entry" layout_id="key:117" name="F6" />
+        <MenuEntry stylename="menu_entry" layout_id="key:118" name="F7" />
+        <MenuEntry stylename="menu_entry" layout_id="key:119" name="F8" />
+        <MenuEntry stylename="menu_entry" layout_id="key:120" name="F9" />
+        <MenuEntry stylename="menu_entry" layout_id="key:121" name="F10" />
+        <MenuEntry stylename="menu_entry" layout_id="key:122" name="F11" />
+        <MenuEntry stylename="menu_entry" layout_id="key:123" name="F12" />
+      </ContextMenu>
+    </SubMenuEntry>
+    <SubMenuEntry stylename="menu_entry" layout_id="bar_entry0_submenu13" localise_name="Event_Key_Others">
+      <ContextMenu stylename="context_menu" left="102px" top="275px">
+        <MenuEntry stylename="menu_entry" layout_id="key:8" localise_name="Event_Key_Backspace" />
+        <MenuEntry stylename="menu_entry" layout_id="key:9" localise_name="Event_Key_Tab" />
+        <MenuEntry stylename="menu_entry" layout_id="key:27" localise_name="Event_Key_Escape" />
+        <MenuEntry stylename="menu_entry" layout_id="key:36" localise_name="Event_Key_Home" />
+        <MenuEntry stylename="menu_entry" layout_id="key:35" localise_name="Event_Key_End" />
+        <MenuEntry stylename="menu_entry" layout_id="key:33" localise_name="Event_Key_PageUp" />
+        <MenuEntry stylename="menu_entry" layout_id="key:34" localise_name="Event_Key_PageDown" />
+        <MenuEntry stylename="menu_entry" layout_id="key:46" localise_name="Event_Key_Delete" />
+        <MenuEntry stylename="menu_entry" layout_id="key:45" localise_name="Event_Key_Insert" />
+      </ContextMenu>
+    </SubMenuEntry>
+    <HorizontalSeparator stylename="menu_separator" />
+    <MenuEntry stylename="menu_entry" layout_id="key:0" localise_name="Event_Key_NoKey" />
+    <MenuEntry stylename="menu_entry" layout_id="key:1" localise_name="Event_Key_AnyKey" />
+  </Layout>
+</Layouts>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="SourceControlGitConflicts" layout_guid="00c2a2d7-3374-4bbf-bdca-c07b6e3222f7">
+    <Window stylename="source_control_git_conflicts_window" height="341dpi_px" width="481dpi_px" left="188dpi_px" top="75dpi_px" localise_title="SCM_Conflict_Title" window_flags="CloseButton, MinimizeButton, MaximizeButton, ResizeButton, DockingDisabled">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" left="6dpi_px" top="6dpi_px" bottom="6dpi_px" grid_columnlayout="['2*', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <TableListBox stylename="extension_tablegadget_content" layout_id="conflicts" layout_guid="dfd7a39c-b853-443f-869d-453a8108ad54" height="" width="">
+                  <ListBoxItems />
+                </TableListBox>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="theirs_button" layout_guid="80c45bad-bb3c-4198-b056-ffdd6afc0522" height="24px" width="100dpi_px" top="10dpi_px" localise_name="SCM_Conflict_Theirs" />
+                <Button stylename="button_up" layout_id="mine_button" layout_guid="9462dba3-2704-41ac-9d40-ee88c8308aee" height="24px" width="100dpi_px" top="75dpi_px" localise_name="SCM_Conflict_Mine" />
+                <Button stylename="button_up" layout_id="merge_button" layout_guid="7e031f27-17f6-4b19-8248-67a0f86495c6" height="24px" width="100dpi_px" top="145dpi_px" localise_name="SCM_Conflict_Merge" />
+                <Button stylename="button_up" layout_id="mergetool_button" layout_guid="4e053bcf-7dd3-41af-b131-9ce96973cb52" height="24px" width="120dpi_px" top="240dpi_px" localise_name="SCM_Conflict_MergeTool" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="SourceControlGitConflicts_Menu" layout_guid="5693ac4e-889f-467f-908b-a211ab8ab645">
+    <ContextMenu stylename="context_menu" layout_id="menu_conflict" layout_guid="2c934b1f-922f-439f-8ce2-7450d542cbe7" left="10dpi_px" top="10dpi_px">
+      <MenuEntry stylename="menu_entry" layout_id="menu_theirs" layout_guid="6492e664-392c-4855-b4c3-072be68b047d" localise_name="SCM_Conflict_Theirs" />
+      <MenuEntry stylename="menu_entry" layout_id="menu_mine" layout_guid="80f061e1-43bb-40fe-8009-d15051316ffe" localise_name="SCM_Conflict_Mine" />
+      <MenuEntry stylename="menu_entry" layout_id="menu_merge" layout_guid="df5cf3de-70d4-4991-a1f9-3850de73edee" localise_name="SCM_Conflict_Merge" />
+    </ContextMenu>
+  </Layout>
+</Layouts>

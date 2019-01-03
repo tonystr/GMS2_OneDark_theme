@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="GoToType_Window" layout_guid="bc2c1b57-7b7a-4c60-9d92-a7b01cb7b9d3">
+    <Window stylename="default_blend_window" height="70dpi_px" width="500dpi_px" left="53px" top="39px" localise_title="GoToType_WindowTitle" window_flags="Borderless, CloseButton, ScrollBars, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <TextBox stylename="gototype_text_box" layout_id="textbox" layout_guid="dddd05d8-7bdb-4e84-8d3d-29862c6c4b02" left="7px" right="7px" top="0px" localise_default_caption="GoToType_FieldCaption" text_hoffset="22dpi_px" />
+          <Image stylename="image_searchicon" left="14px" top="6px" image="searchbar_icon.png" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BlendWindowFrame" layout_guid="0d9b47bf-35fe-4d09-b089-30cb2385bb82" />
+    </Window>
+  </Layout>
+  <Layout layout_name="GoToType_ListItem" layout_guid="d9efafad-ff7c-488a-80dc-436dbac811b4">
+    <Grid stylename="grid_container" height="18dpi_px" width="100%" margin_top="2px" margin_bottom="2px" grid_columnlayout="['auto', '1*', 'auto', 'auto']" column_spacing="7px">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Image stylename="image_searchicon" right="0px" margin_left="12px" image="searchbar_icon.png" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <FormattedLabel stylename="label" layout_id="caption" layout_guid="9483b388-b9c4-4baa-aed4-268587439a9c" height="16px" left="0px" auto_size="False" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="2" flow_index="0">
+        <ChildGadgets>
+          <FormattedLabel stylename="label_goto_type" layout_id="type" layout_guid="983d28aa-35fb-4189-ad2c-1f100c259e1b" height="16px" width="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="3" flow_index="0">
+        <ChildGadgets>
+          <Image stylename="image_searchicon" layout_id="icon" layout_guid="6f973843-66f6-454b-ae58-cb6c4b2e2ac9" left="0px" margin_right="12px" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="GoToType_ListBox" layout_guid="bf52c990-deec-4066-b5c5-494bf0ba528a">
+    <ListBox stylename="list_box_dial_inner_gototype" layout_id="listbox" layout_guid="7b02edd0-b548-43f1-9fc1-a791a87d7789" height="6px" height_max="512px" width="500px">
+      <ListBoxItems />
+    </ListBox>
+  </Layout>
+</Layouts>

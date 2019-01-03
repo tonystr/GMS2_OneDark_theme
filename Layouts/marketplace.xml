@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="CertificatePropertiesExisting" layout_guid="2d97bb30-c4ec-4955-a6d5-7c2cbe1df117">
+    <!--<Group stylename="group_box" height="215px" width="500px">-->
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+          <ChildGadgets>
+            <Label stylename="label" height="16px" width="302px" left="0px" top="0px" localise_caption="CertProperties_Heading" />
+            <Label stylename="label" height="16px" width="411px" top="16px" localise_caption="CertProperties_Heading2" />
+          </ChildGadgets>
+        </StackPanel>
+        <FileInputGadget stylename="file_input" layout_id="cert_file" layout_guid="0ac82df2-ba7a-45a6-aace-34906511842f" width="400dpi_px" left="140dpi_px" top="43dpi_px" />
+        <Label stylename="label" height="16dpi_px" width="130dpi_px" left="0dpi_px" top="45dpi_px" localise_caption="CertProperties_CertificateFile" auto_size="False" word_wrap="True" />
+        <TextBox stylename="text_box" layout_id="password" layout_guid="6ec51501-f9f1-4cfb-8736-1cbdf564fd71" width="224dpi_px" left="140dpi_px" top="83dpi_px" />
+        <Label stylename="label" height="34dpi_px" width="137dpi_px" left="0dpi_px" top="80dpi_px" localise_caption="CertProperties_CertificatePassword" auto_size="False" word_wrap="True" />
+        <CheckBox stylename="checkbox_stack" layout_id="show_password" layout_guid="498f1c13-59da-4b29-97f4-40bef1f9b1e4" localise_tooltip="Settings_ShowPassword" left="140dpi_px" top="116dpi_px" localise_name="Settings_ShowPassword" />
+        <Button stylename="button_up" layout_id="generate_cert" layout_guid="a81f3001-f84c-454b-bf9f-0f29ce14e74f" height="24dpi_px" width="200dpi_px" left="10dpi_px" top="191dpi_px" localise_name="CertProperties_CreateNewCertificate" />
+        <Button stylename="button_up" layout_id="check_cert" layout_guid="b4907fe4-8eac-4254-94ca-03c2c626426f" height="24dpi_px" width="80dpi_px" left="380dpi_px" top="83dpi_px" localise_name="CertProperties_Check" />
+        <Label stylename="label" height="16dpi_px" width="318dpi_px" left="10dpi_px" top="165dpi_px" localise_caption="CertProperties_CreateInfoLabel" />
+      </ChildGadgets>
+    <!--</Group>-->
+  </Layout>
+  <Layout layout_name="GenerateCertificateDialog" layout_guid="485d2f20-4aad-4edb-8fe7-4b531520bca9">
+    <Window stylename="default_window" width="500dpi_px" localise_title="CertProperties_CreateNewCertificate" window_flags="CloseButton, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="92px" left="10dpi_px" top="74dpi_px" localise_caption="CertProperties_PublisherName" />
+          <TextBox stylename="text_box" layout_id="publisher_name" layout_guid="1973cdaa-9988-4b22-9a90-05fd0f6919cb" left="150dpi_px" right="10dpi_px" top="71dpi_px" />
+          <TextBox stylename="text_box" layout_id="password" layout_guid="ebb96858-c5a8-4882-8b7b-78fdefabc607" left="150dpi_px" right="10dpi_px" top="113dpi_px" />
+          <Label stylename="label" height="38dpi_px" width="132dpi_px" left="10dpi_px" top="104dpi_px" localise_caption="CertProperties_CertificatePassword" auto_size="False" word_wrap="True" />
+          <CheckBox stylename="checkbox_stack" layout_id="show_password" layout_guid="7a3b32cf-1391-405c-952d-acb9b8bee2a0" localise_tooltip="Settings_ShowPassword" left="150dpi_px" top="141dpi_px" localise_name="Settings_ShowPassword" />
+          <StackPanel stylename="stack_panel" bottom="10dpi_px" stack_resize="ResizeAll">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="create_pub_account" layout_guid="602fab9d-a77d-437c-b635-3098f006a300" height="24px" width="200dpi_px" left="15px" margin_left="15dpi_px" margin_right="50dpi_px" localise_name="CertProperties_CreatePublisherAccount" />
+              <Button stylename="button_up" layout_id="generate_cert" layout_guid="b73ce1c4-e40f-4559-adda-058ef6a478ae" height="24px" width="200dpi_px" left="265px" margin_right="15dpi_px" localise_name="CertProperties_CreateCertificate" />
+            </ChildGadgets>
+          </StackPanel>
+          <Label stylename="label" height="16px" width="158px" left="11px" top="17px" localise_caption="CertProperties_EnterCertDetails" />
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

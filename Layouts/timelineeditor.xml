@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="TimeLineEditorLayout" layout_guid="a7b1cab0-75f5-4aee-a66e-1795da2143a9">
+    <Window stylename="timeline_window" left="26dpi_px" top="54dpi_px" localise_title="TimeLine_WindowTitle" window_flags="Default" help_tag="timeline_editor">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', 'auto']" row_spacing="6dpi_px">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="24dpi_px" width="100%" left="0dpi_px" top="6dpi_px" margin_bottom="6dpi_px" stack_resize="ResizeHeight">
+                  <ChildGadgets>
+                    <Label stylename="label" height="16px" width="37px" left="10px" top="0dpi_px" margin_left="10dpi_px" margin_right="6dpi_px" margin_top="4dpi_px" localise_caption="TimeLine_Name" />
+                    <TextBox stylename="timeline_editor_textbox" width="100%" left="53px" margin_right="10dpi_px" bind_property="name" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_columns_moments" flow_index="1" height="100%" left="0dpi_px" top="0px" grid_rowlayout="['16dpi_px', '1*']">
+                  <Cell row="0" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <Grid stylename="grid_container" grid_columnlayout="['1*', '2*']">
+                        <Cell row="0" column="0" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="47px" left="5dpi_px" right="0dpi_px" localise_caption="TimeLine_Moments" />
+                          </ChildGadgets>
+                        </Cell>
+                        <Cell row="0" column="1" flow_index="0">
+                          <ChildGadgets>
+                            <Label stylename="label" height="16px" width="64px" left="5dpi_px" right="0dpi_px" localise_caption="TimeLine_Names" />
+                          </ChildGadgets>
+                        </Cell>
+                      </Grid>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" flow_index="0">
+                    <ChildGadgets>
+                      <ListBox stylename="list_box_moments" layout_id="list_box_moments" layout_guid="fd5d40bc-8973-47e5-b4c8-5b673c8ce75d" width="">
+                        <ListBoxItems />
+                        <ContextMenu stylename="context_menu" left="10dpi_px" top="10dpi_px">
+                          <MenuEntry stylename="menu_entry" layout_id="entry_add" layout_guid="6c5e1f2f-272e-4310-a9d3-e0371406f586" localise_name="TimeLine_ContextMenu_Add" keyboard_shortcut="${add_moment}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_edit" layout_guid="a0a95484-5830-45d8-be82-248a40fb31cd" localise_name="TimeLine_ContextMenu_Edit" keyboard_shortcut="${edit_moment}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_change_moment" layout_guid="2db1b1ba-06f2-4007-b2e4-184f33f2db35" localise_name="TimeLine_ContextMenu_EditStep" keyboard_shortcut="${change_moment}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_duplicate" layout_guid="ff55145f-6a0b-4912-b84b-13da888432d9" localise_name="TimeLine_ContextMenu_Duplicate" keyboard_shortcut="${duplicate_moments}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_merge" layout_guid="b63a8997-26d5-4f83-a5da-064899520c1d" localise_name="TimeLine_ContextMenu_Merge" keyboard_shortcut="${merge_moments}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_remove" layout_guid="49f6fab7-2648-4c5f-af79-ab00cccddbdd" localise_name="TimeLine_ContextMenu_RemoveMoments" keyboard_shortcut="${remove_moments}" />
+                          <HorizontalSeparator stylename="menu_separator" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_cut" layout_guid="684f7caf-a7a4-4136-9990-9453edd43759" localise_name="TimeLine_ContextMenu_CutMoments" keyboard_shortcut="${cut_moments}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_copy" layout_guid="f56360c7-18ef-4a8a-b978-8ebff5791e2c" localise_name="TimeLine_ContextMenu_CopyMoments" keyboard_shortcut="${copy_moments}" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_paste" layout_guid="e49457b4-fdb5-40cb-a94f-901dc56abe8a" localise_name="TimeLine_ContextMenu_PasteMoments" keyboard_shortcut="${paste_moments}" />
+                          <HorizontalSeparator stylename="menu_separator" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_selectall" layout_guid="cfd609fb-e707-4439-9214-a775f5f1462f" localise_name="TimeLine_ContextMenu_SelectAll" keyboard_shortcut="${select_moments}" />
+                          <HorizontalSeparator stylename="menu_separator" />
+                          <MenuEntry stylename="menu_entry" layout_id="entry_converttype" layout_guid="c70af095-fad6-44ee-81e5-c4ac1620e938" localise_name="TimeLine_ConvertType" />
+                        </ContextMenu>
+                      </ListBox>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" height="24px" left="0px" right="51%" margin_bottom="6px" click_command="add_moment" throw_click_command_to_owner="True" localise_name="TimeLine_ContextMenu_Add" />
+                <Button stylename="button_up" height="24px" left="51%" right="0px" margin_bottom="6px" click_command="remove_moments" throw_click_command_to_owner="True" localise_name="TimeLine_ContextMenu_RemoveMoments" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="TimeLineEditor_ListBoxItem" layout_guid="1611fe96-752a-4c03-ad08-ab7163ba3a10">
+    <Grid stylename="grid_container" height="24dpi_px" width="100%" grid_columnlayout="['1*', '2*']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="moment_editable_label" layout_id="item_editable_step" layout_guid="8831fafe-b5d5-4d69-8654-99901692d009" width="" left="5dpi_px" right="0dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="description_label" layout_id="item_description" layout_guid="290c802b-73f5-46ed-bdc4-50c891b6aed7" auto_ellipsis="False" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

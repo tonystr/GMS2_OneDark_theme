@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="XBoneDeviceEditor" layout_guid="daa4017e-5a58-4ce4-ada6-d1e638eae31a">
+    <Window stylename="device_editor_window" localise_title="platformdevice_edit_xbone_devices">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+          <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33px" width="50%" top="0px" localise_name="platformdevice_add" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="deviceeditor_scrollpanel" height="400px" width="580px" left="0px" top="0px">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="ddf186b8-a049-4a22-b41c-cb83d4db64f0" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="50%" top="0px" localise_name="platformdevice_clearkeys" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="XBoneDeviceGadget" layout_guid="87ea99d4-334f-4a92-a67a-857a7c5e8c78">
+    <Grid stylename="grid_container" width="100%" height="300px" margin_top="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="87px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="MacDeviceGadget" layout_guid="d6f11445-d936-43be-ba2a-54b0ed16bf10">
+    <Grid stylename="grid_container" width="100%" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="87px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="74px" localise_caption="platformdevice_installdir" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="install_dir" layout_guid="879ff485-3dc6-4980-8933-5698d77492dd" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="WinUWPDeviceGadget" layout_guid="4d6dd137-99b1-44c4-8e72-9a9acbc60321">
+    <Grid stylename="grid_container" width="100%" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="81px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_pin" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="pin" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="24dpi_px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" rowspan="1" columnspan="2">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" height="1dpi_px" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="tvOSDeviceEditor" layout_guid="a957b2b4-844f-4ff1-9a57-3c318c00c52e">
+    <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', 'auto']" grid_resize="None">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <ComboBox stylename="combobox_panel" layout_id="host_mac" layout_guid="88575FC6-0BD0-4356-8F79-AE285C04271E" height="24dpi_px" width="48%">
+                <ListBoxItems />
+              </ComboBox>
+              <Button stylename="button_up" layout_id="detect" layout_guid="F6A25B67-3FAE-42A3-AE6D-EF5399793B33" height="33dpi_px" width="48%" margin_left="10px" localise_name="platformdevice_detect" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel  margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="94F4A325-F528-467F-AE18-E5582342F129" margin_left="10dpi_px" margin_right="10dpi_px" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="300D4EAD-08B2-4765-8957-0BAF5C0CCBDC" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="WinUWPDeviceEditor" layout_guid="fa202887-7c8f-4a74-baff-33470cb53985">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="50%" localise_name="platformdevice_add" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="bd9369ee-8a89-49f1-8143-dd955a64c363" margin_left="10dpi_px" margin_right="10dpi_px" stack_order="TopToBottom" margin_top="5px" margin_botton="5px" margin_colour="#00ffff" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PS4DeviceEditor" layout_guid="cc8d5931-853a-425b-aaab-e24cacc306c6">
+    <Window stylename="device_editor_window" localise_title="platformdevice_edit_ps4devices">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+          <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33px" width="50%" top="0px" localise_name="platformdevice_add" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="deviceeditor_scrollpanel" height="400px" width="580px" left="0px" top="0px">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="b6d67caf-8776-4773-8840-6d7d9388ddce" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="clear" layout_guid="add3dcc8-bf59-4fe1-8d60-db6c70b076e3" height="33px" width="50%" localise_name="platformdevice_clearkeys" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="WindowsDeviceEditor" layout_guid="129eb5dc-273e-4f17-a084-f1c44bcb5a44">
+    <Window stylename="device_editor_window" localise_title="platformdevice_edit_windows_devices">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+          <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', 'auto']" grid_resize="None">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33px" width="50%" top="0px" localise_name="platformdevice_add" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="deviceeditor_scrollpanel" height="400px" width="580px" left="0px" top="0px">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="a4b23ac7-308f-4b51-a558-ea96a8a35288" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="2" column="0" flow_index="0">
+              <ChildGadgets>
+                <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="50%" top="0px" localise_name="platformdevice_clearkeys" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="WinUWPDeviceEditor" layout_guid="fa202887-7c8f-4a74-baff-33470cb53985">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+      <!--<Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="basic_wrapped_label" height="24dpi_px" width="100%" localise_caption="platformdevice_android_instructions" margin_bottom="5px"/>
+        </ChildGadgets>
+      </Cell>-->
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="48%" localise_name="platformdevice_add" />
+              <Button stylename="button_up" layout_id="detect" layout_guid="df2018ab-0c0a-4461-88df-ee13a3d0fe89" height="33dpi_px" margin_left="10px" width="48%" localise_name="platformdevice_detect" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="bd9369ee-8a89-49f1-8143-dd955a64c363" margin_left="10dpi_px" margin_right="10dpi_px" stack_order="TopToBottom" margin_top="5px" margin_botton="5px" margin_colour="#00ffff" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="iOSDeviceEditor" layout_guid="7fb4e6c6-b3af-4cab-8704-9af739dfb219">
+    <Grid stylename="grid_container" grid_rowlayout="['auto', '1*', 'auto']" grid_resize="None">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <ComboBox stylename="combobox_panel" layout_id="host_mac" layout_guid="89fcd1a5-3bcb-47ce-9650-ace65606b252" height="24dpi_px" width="48%">
+                <ListBoxItems />
+              </ComboBox>
+              <Button stylename="button_up" layout_id="detect" layout_guid="bf544bb0-079c-4cff-b1c6-e8a32547921e" height="33dpi_px" width="48%" margin_left="10px" localise_name="platformdevice_detect" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="ec5bcc57-b2f8-4c8a-83da-f2d36cb0cf67" margin_left="10dpi_px" margin_right="10dpi_px" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="WindowsDeviceGadget" layout_guid="1c1e5328-d076-4310-b68a-867c497f478c">
+    <Grid stylename="grid_container" width="100%" height="300px" margin_top="7dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="87px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AmazonFireDeviceEditor" layout_guid="a6cd6000-8cb3-496b-a67c-014db1749322">
+    <Window stylename="device_editor_window" localise_title="platformdevice_edit_amazonfire_devices">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*']">
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="24dpi_px" width="100%" top="0px">
+                  <ChildGadgets>
+                    <Button stylename="button_up" layout_id="add" layout_guid="8d0784b0-2db7-425e-a5e1-e1537683e2f6" width="50%" left="0px" top="0dpi_px" localise_name="platformdevice_add" />
+                    <Button stylename="button_up" layout_id="detect" layout_guid="4e4bf6b0-4e7c-4476-948a-9bf18694c36d" width="50%" localise_name="platformdevice_detect" />
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="1" column="0" flow_index="0">
+              <ChildGadgets>
+                <ScrollPanel stylename="deviceeditor_scrollpanel">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="bb40c630-a7db-4088-86ff-0a762afd8272" height="100%" width="100%" top="0dpi_px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="AndroidDeviceGadget" layout_guid="4d6dd137-99b1-44c4-8e72-9a9acbc60321">
+    <Grid stylename="grid_container" width="100%" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="81px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="b0dddf2a-a720-40dd-a3ca-f6fa1908b9e7" height="24dpi_px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="24dpi_px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" rowspan="1" columnspan="2">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" height="1dpi_px" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AmazonFireDeviceGadget" layout_guid="7347d854-d443-42d6-8551-56811f882cd7">
+    <Grid stylename="grid_container" width="100%" margin_top="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="9711e47d-3ab3-4e34-a394-debf6596cbe7" left="0dpi_px" right="6dpi_px" bottom="0dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="22aa0c28-e2a4-4ec4-8f03-9d552aaf049e" left="0dpi_px" right="6dpi_px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="ecaa7734-768e-4cc2-949a-a474063a4af1" height="33px" width="50%" margin_top="8dpi_px" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="c88af8c1-bb1f-4dae-81b4-bbd2d75c5032" height="33px" width="50%" margin_top="8dpi_px" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" rowspan="1" columnspan="2">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" height="1dpi_px" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="WinPhone8DeviceGadget" layout_guid="4f5e7019-7e17-4b4c-afef-8cc73688b32d">
+    <Grid stylename="grid_container" width="100%" height="300px" grid_rowlayout="['1*', '1*', '1*', '1*', '1*', '1*', '1*']" grid_columnlayout="['1*', '1*']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="81px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="67px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="57px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="password_text_box" layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="24px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="24px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="HTML5DeviceGadget" layout_guid="06556b65-0f09-4e71-9a4a-45cfe938726f">
+    <Grid stylename="grid_container" width="100%" margin_left="6dpi_px" margin_right="6dpi_px" margin_top="6dpi_px" margin_bottom="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', '50dpi_px', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="81px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="92px" localise_caption="platformdevice_browserpath" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <FileInputGadget stylename="file_input" layout_id="browser_path" layout_guid="4a298d3d-d26a-497b-88aa-3fffcc68f8d5" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="90px" localise_caption="platformdevice_webserver_port" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <NumericTextBox stylename="numeric_text_box" layout_id="server_port" layout_guid="d4784e24-3142-41ee-937b-47fd734a4fa2" width="" text="51264" default_value="51264" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="283px" localise_caption="platformdevice_webserver_ips" word_wrap="True" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <MultiLineTextBox stylename="multiline_text_box" layout_id="server_ips" layout_guid="bb8db733-6933-4e27-8544-613485928746" height="" width="" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="fb866e69-69f0-455a-9577-086a919a442d" height="24px" width="50%" margin_top="10dpi_px" localise_name="platformdevice_remove_browser" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" rowspan="1" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PS4DeviceGadget" layout_guid="1a219500-c9de-4c2a-8731-7c7e5231868f">
+    <Grid stylename="grid_container" width="100%" height="300px" margin_top="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="87px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PSVitaDeviceEditor" layout_guid="be26f491-5e09-4263-b4fe-9da6d3dc5b40">
+    <Window stylename="popup_window" height="500px" width="600px" left="249px" top="6px" localise_title="platformdevice_edit_psvita_devices" window_flags="CloseButton, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="24px" width="50%" top="0px" localise_name="platformdevice_add" />
+              <ScrollPanel stylename="default_scrollpanel" height="400px" width="580px" left="0px" top="24px">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="220fd1bf-c1e1-40bc-885e-55e913f95584" height="400px" width="560px" left="0px" top="0px" stack_order="TopToBottom" />
+                </ChildGadgets>
+              </ScrollPanel>
+              <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="24px" width="50%" top="424px" localise_name="platformdevice_clearkeys" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="LinuxDeviceEditor" layout_guid="b96ae61d-9088-4e28-9880-85f152423d53">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="50%" top="0px" localise_name="platformdevice_add" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="220fd1bf-c1e1-40bc-885e-55e913f95584" margin_left="10dpi_px" margin_right="10dpi_px" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="cleardevices" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PS3DeviceEditor" layout_guid="4293ff78-8ca0-4273-a9be-16db22d02256">
+    <Window stylename="popup_window" height="500px" width="600px" left="249px" top="6px" localise_title="platformdevice_edit_ps3_devices" window_flags="CloseButton, DockingDisabled, DesktopTransferDisabled">
+      <Client>
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="24px" width="50%" top="0px" localise_name="platformdevice_add" />
+              <ScrollPanel stylename="default_scrollpanel" height="400px" width="580px" left="0px" top="24px">
+                <ChildGadgets>
+                  <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="220fd1bf-c1e1-40bc-885e-55e913f95584" height="400px" width="560px" left="0px" top="0px" stack_order="TopToBottom" />
+                </ChildGadgets>
+              </ScrollPanel>
+              <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="24px" width="50%" top="424px" localise_name="platformdevice_clearkeys" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="iOSDeviceGadget" layout_guid="fc6a0fec-2744-4499-b674-3f229f473f8d">
+    <Grid stylename="grid_container" width="100%" height="300px" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="110px" localise_caption="platformdevice_deviceguid" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="device" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_ipaddress" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="device_ip" layout_guid="6f7370fb-a48a-4679-b361-e47bfde0a6ed" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="118px" localise_caption="platformdevice_status" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" layout_id="status" layout_guid="26ed6210-712d-465b-a359-419cc8e5c7b9" height="25px" width="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="106px" localise_caption="platformdevice_type" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" layout_id="type" layout_guid="61c3510a-67ba-49a9-8fbe-9d0618ac0097" height="25px" width="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="launch_simulator" layout_guid="aee4f617-d902-447e-960e-7781c61c3b53" height="33px" width="50%" margin_top="4dpi_px" localise_name="platformdevice_launch_simulator" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="LinuxDeviceGadget" layout_guid="c0d7e4ca-4ddb-48e5-acdc-f82826b5207d">
+    <Grid stylename="grid_container" width="100%" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="f2e47d2e-ea65-4bda-a85e-45b55ff07519" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="8cab63db-16f6-432a-adc9-0b6262312ca5" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="6b0459d6-d640-476e-a359-492efe04e346" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="87px" top="3dpi_px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <PasswordTextBox layout_id="password" layout_guid="82af7952-de05-4b12-8c60-6058a03ccc99" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="74px" localise_caption="platformdevice_installdir" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="install_dir" layout_guid="879ff485-3dc6-4980-8933-5698d77492dd" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="HTML5DeviceEditor" layout_guid="b7b3b253-b07b-452c-b998-3ff8b0c4d8d0">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="autodetect" layout_guid="ced89e56-5ab9-436a-bd51-bdc5132298e9" height="33dpi_px" width="48%" localise_name="platformdevice_detect_browsers" />
+              <Button stylename="button_up" layout_id="add" layout_guid="f658f71f-3f08-4f3a-8a25-076addb2d24a" height="33dpi_px" width="48%" margin_left="10px" localise_name="platformdevice_add_browser" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="b5f094df-75c8-4bcb-a04b-8e061748eeb6" margin_left="10dpi_px" margin_right="10dpi_px" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="24px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="PSVitaDeviceGadget" layout_guid="21443547-cee9-419f-9bce-2e07e6fe5f6c">
+    <Grid stylename="grid_container" width="100%" height="300px" grid_rowlayout="['1*', '1*', '1*', '1*', '1*', '1*', '1*']" grid_columnlayout="['1*', '1*']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="81px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="67px" localise_caption="platformdevice_username" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="username" layout_guid="9b674087-0ca6-469f-aaff-1d74e402aab0" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="57px" localise_caption="platformdevice_password" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="password_text_box" layout_id="password" layout_guid="ddd27bff-0c37-46d4-9614-6c0a72074d12" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="24px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="24px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="tvOSDeviceGadget" layout_guid="93a8b96a-ecd2-43fc-9d99-9edab7ee5cf3">
+    <Grid stylename="grid_container" width="100%" height="300px" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="1a4205d0-6f73-4ea7-a11c-4acfa6f4c606" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="110px" localise_caption="platformdevice_deviceguid" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="device" layout_guid="3d3087ce-a2d7-40d6-aa7b-6435c130daf1" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="16px" width="66px" localise_caption="platformdevice_ipaddress" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="device_ip" layout_guid="6f7370fb-a48a-4679-b361-e47bfde0a6ed" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="118px" localise_caption="platformdevice_status" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" layout_id="status" layout_guid="1d072ca8-044a-4319-9cd7-748de22d9b17" height="25px" width="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="106px" localise_caption="platformdevice_type" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="4" column="1" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" layout_id="type" layout_guid="9a074ff3-0462-4def-9d1e-0e53917bac98" height="25px" width="0px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="launch_simulator" layout_guid="377ffec6-4edb-4d7f-b1fc-e85e21759b46" height="33px" width="50%" margin_top="4dpi_px" localise_name="platformdevice_launch_simulator" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AndroidDeviceEditor" layout_guid="fa202887-7c8f-4a74-baff-33470cb53985">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', 'auto', '1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="basic_wrapped_label" layout_id="adb_label" height="24dpi_px" width="100%" localise_caption="platformdevice_android_instructions" margin_bottom="5px" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="31%" localise_name="platformdevice_add" />
+              <Button stylename="button_up" layout_id="detect" layout_guid="df2018ab-0c0a-4461-88df-ee13a3d0fe89" height="33dpi_px" margin_left="10px" width="31%" localise_name="platformdevice_detect" />
+              <Button stylename="button_up" layout_id="run_avd" layout_guid="d234987b-0c0a-4461-88df-ee13a3d0fe89" height="33dpi_px" margin_left="10px" width="31%" localise_name="platformdevice_run_avd" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="bd9369ee-8a89-49f1-8143-dd955a64c363" margin_left="10dpi_px" margin_right="10dpi_px" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="3" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="clear" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="MacDeviceEditor" layout_guid="46812b12-4097-4428-82f3-44e77408975b">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']" grid_resize="None">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="50%" top="0px" localise_name="platformdevice_add" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="5aa836b6-4f23-42be-b30b-2b9b761afc4e" margin_left="10dpi_px" margin_right="10dpi_px" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="cleardevices" layout_guid="31c4123d-af08-4bc7-8779-78f96f68be5b" height="33dpi_px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="SwitchDeviceEditor" layout_guid="b9aae61d-9088-4e28-9880-85f152423d53">
+    <Grid stylename="grid_container" height="100%" width="100%" grid_rowlayout="['auto', '1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <StackPanel stylename="stack_panel" width="100%" height="33dpi_px">
+            <ChildGadgets>
+              <Button stylename="button_up" layout_id="add" layout_guid="92b1e28d-3dc3-4f9a-8b3b-c43e533084ce" height="33dpi_px" width="48%" top="0px" localise_name="platformdevice_add" />
+              <Button stylename="button_up" layout_id="detect" layout_guid="df2018ab-0c0a-4461-88df-ee13a3d0fe87" height="33dpi_px" margin_left="10px" width="48%" localise_name="platformdevice_detect" />
+            </ChildGadgets>
+          </StackPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <ScrollPanel margin_top="10dpi_px" margin_bottom="10dpi_px" colour="#FF2C2C2C" stylename="bordered_auto_adjust_scrollpanel">
+            <ChildGadgets>
+              <StackPanel stylename="stack_panel" layout_id="device_stack" layout_guid="220fd1bf-c1e1-40bc-885e-55e913f95584" margin_left="10dpi_px" margin_right="10dpi_px" height="100%" width="100%" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+            </ChildGadgets>
+          </ScrollPanel>
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="cleardevices" layout_guid="31ce4d4d-af08-4bc7-8779-78f96f68be5b" height="33px" width="45%" top="0px" margin_bottom="10px" localise_name="platformdevice_cleardevices" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="SwitchDeviceGadget" layout_guid="c0d7e4ca-4ddb-48e5-acdc-f8282ab5207d">
+    <Grid stylename="grid_container" width="100%" margin="6dpi_px" grid_rowlayout="['auto', 'auto', 'auto', 'auto', 'auto', 'auto', '6dpi_px']" grid_columnlayout="['1*', '1*']" row_spacing="10dpi_px" grid_resize="ResizeGridHeight">
+      <Cell row="0" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="123px" localise_caption="platformdevice_displayname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="displayname" layout_guid="f2e47d2e-ea65-4bda-a85e-45b55ff07519" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_hostname" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="hostname" layout_guid="8cab63db-16f6-432a-adc9-0b6262312ca5" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Label stylename="label" height="25px" width="100px" localise_caption="platformdevice_targetip" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="2" column="1" flow_index="0">
+        <ChildGadgets>
+          <TextBox stylename="text_box" layout_id="target_ip" layout_guid="6b0459d6-d640-476e-a359-492efe04e346" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="0" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="check" layout_guid="77439af4-65b2-4ebc-8720-4d7786836142" height="33px" width="50%" localise_name="platformdevice_checkdevice" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="5" column="1" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="remove" layout_guid="23582c1e-b55d-4a70-a705-ffd475fe0ab6" height="33px" width="50%" localise_name="platformdevice_remove" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="6" column="0" columnspan="2" flow_index="0">
+        <ChildGadgets>
+          <HorizontalSeparator stylename="horizontal_separator" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>

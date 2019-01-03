@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ListView" layout_guid="9590e5b3-90ca-41ba-afd3-665587774e83">
+    <Grid stylename="grid_container" grid_rowlayout="['1*', 'auto']">
+      <Cell row="0" column="0" flow_index="0">
+        <Gadgets>
+          <VerticalScrollBar stylename="scroll_bar_vertical" />
+        </Gadgets>
+        <ChildGadgets>
+          <StackPanel stylename="list_view_wrap_panel" layout_id="wrap_panel" layout_guid="efa86b66-a520-4bbd-bfe8-000504659881" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="1" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid stylename="list_view_bar" layout_id="grid_bar" layout_guid="093b1a92-97cc-4ab6-b7ab-85ba562f1d3c" right="1dpi_px">
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <Label stylename="list_view_search_label" height="16px" width="39px" localise_caption="ListView_Search" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="2" flow_index="0">
+              <ChildGadgets>
+                <TextBox stylename="list_view_searchbox" layout_id="search_box" layout_guid="1f1279c5-7764-45f1-93d8-7c1c08e57383" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="3" flow_index="0">
+              <ChildGadgets>
+                <ThumbnailSlider stylename="thumbnail_slider_stackpanel" layout_id="slider" layout_guid="0be71286-ce96-4e32-8f39-36e6c5eb0835" height="100%" width="100dpi_px" top="5dpi_px" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AssetExplorer" layout_guid="56acafd0-d3e4-4bde-a89f-804df4def662">
+    <Grid layout_id="grid" stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', '6dpi_px']">
+      <Cell layout_id="cell_chrome" layout_guid="fbdcd24b-84a5-4644-ae0b-4b66a46c6ef0" row="0" column="0" flow_index="0" />
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <Grid layout_id="main_grid" stylename="listviewexplorer_grid">
+            <ColumnSplitter stylename="assetexplorer_splitter" height="677.75dpi_px" width="5dpi_px" left="390dpi_px" top="0dpi_px" row="0" column="1" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" flow_index="0">
+              <ChildGadgets>
+                <TreeView stylename="listviewexplorer_treeview" layout_id="treeview" layout_guid="619bee54-6aed-47cd-82b5-dbfdf2d68377" />
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" flow_index="0">
+              <ChildGadgets>
+                <ListView stylename="list_view" layout_id="listview" layout_guid="a3c5ca39-410a-4f5f-8421-f81bd0cb4689" />
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AssetExplorer_TreeOnly" layout_guid="860ad4c7-598a-4ef8-abdf-2713b04c6727">
+    <Grid layout_id="grid" stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', '6dpi_px']">
+      <Cell layout_id="cell_chrome" layout_guid="3c2c3ce6-cadb-46f7-ae8b-6e1820c8208c" row="0" column="0" flow_index="0" />
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <TreeView stylename="listviewexplorer_treeview" layout_id="treeview" layout_guid="09fc5468-0a51-436b-a8f7-f8cd10c07edf" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="AssetExplorer_ListViewOnly" layout_guid="f3b86f79-5e66-40b0-ab93-5c9a608153f7">
+    <Grid layout_id="grid" stylename="grid_container" grid_rowlayout="['auto', 'auto', '1*', '6dpi_px']">
+      <Cell layout_id="cell_chrome" layout_guid="e1f3bc2e-d14f-4f69-a12e-659e1375c4cc" row="0" column="0" flow_index="0" />
+      <Cell row="2" column="0" flow_index="0">
+        <ChildGadgets>
+          <ListView stylename="list_view" layout_id="listview" layout_guid="0afc0a6b-7222-469a-9fd7-af8d0e166521" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+</Layouts>
