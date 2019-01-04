@@ -181,7 +181,7 @@
 	},
 
 	"code_bookmark_line_number_text": {
-		colour: "#FF222222",
+		colour: "#FF2B2521",
         fontname: "Use Default",
         size: 8,
         style: "-1",
@@ -189,8 +189,8 @@
 	},
 
     "code_colours": {
-        background :            "#ff222222",
-        current_line_colour :   "#ff444444",
+        background :            "#ff2B2521",
+        current_line_colour :   "#2b191615",
         selection_colour :      "#60ffefcf",
         highlight_colour :      "#30ffffff",
         debugger_colour :       "#330000ff",

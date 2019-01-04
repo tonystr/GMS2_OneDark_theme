@@ -198,7 +198,7 @@
 				}, 
 		story_color: "#33FFFFFF", 
 		notice_color: "#AA0000FE", 
-		disabled_color: "#88222222", 
+		disabled_color: "#882B2521", 
 		resize_margin: "6dpi_px", 
 		position: [
 					[0, 0, 2, 2], [2, 0, 14, 2], [16, 0, 2, 2], 

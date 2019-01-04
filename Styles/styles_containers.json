@@ -431,7 +431,7 @@
 	},
 
 	"fullscreen_code_tab_control": {
-		colour: "#FF181818"
+		colour: "#FF2B2521"
 	},
 
 	"dock_tab_control": {
@@ -449,7 +449,7 @@
 		default_localised_tab_name: "Workspace_TabTitle",
 		height: "100%",
 		height_flags: "ScaleToFit",
-		colour: "#FF232323",
+		colour: "#FF2B2521",
 		tab_flags: "AddButton, CloseButton, DragEnabled, InsertBeforeAddButton"
 	},
 
@@ -473,7 +473,7 @@
 
 	"tab_control_client_panel": {
 		clip: ["0px", "2px", "0px", "0px"],
-		colour: "#FF181818"
+		colour: "#FF23201B"
 	},
 
     "tab_read_only_icon":{

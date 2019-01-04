@@ -143,7 +143,7 @@
 	},
 	
 	"button_canvas_resize_dot": {
-		icon_colour: "#FF222222", 
+		icon_colour: "#FF2B2521", 
 		deactivated_style: "button_canvas_resize_dot_deactivated", 
 		reactivated_style: "button_canvas_resize_dot_reactivated", 
 		button_over_style: "button_canvas_resize_dot_hover", 
@@ -164,7 +164,7 @@
 	},
 	
 	"button_canvas_resize_dot_icon": {
-		colour: "#FF222222"
+		colour: "#FF2B2521"
 	},
 	
 	"button_canvas_resize_dot_deactivated": {
@@ -173,7 +173,7 @@
 	},
 	
 	"button_canvas_resize_dot_reactivated": {
-		icon_colour: "#FF222222", 
+		icon_colour: "#FF2B2521", 
 		mouse_events: "True"
 	},
 	

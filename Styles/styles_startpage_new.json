@@ -23,7 +23,7 @@
 	},
 
 	"sp_grid_background": {
-		colour: "#FF222222"
+		colour: "#FF2B2521"
 	},
 	
 	"sp_grid_demo_buttons_collapse_first_content": {
@@ -733,7 +733,7 @@
 		right: "1px", 
 		top: "75%", 
 		bottom: "1px", 
-		colour: "#88222222"
+		colour: "#882B2521"
 	},
 	
 	"sp_demo_button_background_installed": {
@@ -762,7 +762,7 @@
 	
 	"sp_demo_button_background_hover": {
 		top: "1px", 
-		colour: "#88222222"
+		colour: "#882B2521"
 	},
 	
 	"sp_demo_button_label": {

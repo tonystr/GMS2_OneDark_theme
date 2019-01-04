@@ -1,4 +1,4 @@
-﻿{	
+﻿{
 	"scroll_bar": {
 			comment: "scroll bar",
 			position: [
@@ -37,7 +37,7 @@
 			bottom: "0px",
 			width: "14dpi_px",
 			height: "14dpi_px",
-			colour: "#FF000000"
+			colour: "#00000000"
 	},
 
 	"scroll_bar_horizontal": {
@@ -53,7 +53,7 @@
 	"scroll_bar_vertical": {
 			right: "0px",
 			top: "0px",
-			width: "14dpi_px",
+			width: "10dpi_px",
 			height: "100%",
 			top_flags: "ScaleToFit",
 			height_flags: "ScaleToFit",
@@ -67,13 +67,13 @@
 
 	"scroll_button": {
 			margin: ["1px", "1px", "1px", "1px"],
-			up_tint : "#FF4D4D4D",           
+			up_tint : "#FF4D4D4D",
 			mouseover_up_tint : "#FF645B57",
 			up_focused_tint: "#FF4D4D4D",
 			down_focused_tint: "#FFA09389",
 			mouseover_down_focused_tint: "#FFA09389"
 	},
-				
+
 	"scroll_up_button": {
 			height: "5dpi_px",
 			width: "8dpi_px",
@@ -88,7 +88,7 @@
 			button_down_style: "scroll_up_button_down",
 			button_over_style: "button_no_over_texture"
 	},
-				
+
 	"scroll_up_button_down": {
 			position: [
                         [0,0,0,0], [0,0,0,0], [0,0,0,0],
@@ -97,7 +97,7 @@
                         ],
             frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-				
+
 	"scroll_down_button": {
 			height: "5dpi_px",
 			width: "8dpi_px",
@@ -112,7 +112,7 @@
 			button_down_style: "scroll_down_button_down",
 			button_over_style: "button_no_over_texture"
 	},
-				
+
 	"scroll_down_button_down": {
 			position: [
                         [0,0,0,0], [0,0,0,0], [0,0,0,0],
@@ -145,7 +145,7 @@
                         ],
             frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-			
+
 	"scroll_right_button": {
 			width: "5dpi_px",
 			height: "8dpi_px",
@@ -160,7 +160,7 @@
 			button_down_style: "scroll_right_button_down",
 			button_over_style: "button_no_over_texture"
 	},
-			
+
 	"scroll_right_button_down": {
 			position: [
                         [0,0,0,0], [0,0,0,0], [0,0,0,0],
@@ -168,13 +168,13 @@
                         [0,0,0,0], [0,0,0,0], [0,0,0,0]
                         ],
             frame_name: "Scrollbar/dial_scrollbar.png"
-	},	
-			
+	},
+
 	"vertical_scroll_slider": {
-		width: "100%", 
+		width: "100%",
         height: "100%",
 		colour: "#00000000",
-        height_flags: "ScaleToFit", 
+        height_flags: "ScaleToFit",
         width_flags: "ScaleToFit",
 		margin: ["2dpi_px", "11dpi_px", "2dpi_px", "11dpi_px"],
 		slider_direction: "Vertical",
@@ -185,12 +185,12 @@
 		slider_bar_fill_not_focused_style: "scroll_slider_bar_fill"
 	},
 
-	"horizontal_scroll_slider": {	
-		width: "100%", 
-        height: "100%", 
+	"horizontal_scroll_slider": {
+		width: "100%",
+        height: "100%",
 		colour: "#00000000",
-        height_flags: "ScaleToFit", 
-        width_flags: "ScaleToFit",	
+        height_flags: "ScaleToFit",
+        width_flags: "ScaleToFit",
 		margin: ["11dpi_px", "2dpi_px", "11dpi_px", "2dpi_px"],
 		slider_direction: "Horizontal",
 		slider_flags: "AdjustThumbSize",
@@ -200,8 +200,8 @@
 		slider_bar_fill_not_focused_style: "scroll_slider_bar_fill"
 	},
 
-	"horizontal_scroll_slider_thumb": {	
-		width: "100%", 
+	"horizontal_scroll_slider_thumb": {
+		width: "100%",
         height: "10dpi_px",
 		width_min:"18dpi_px",
 		top: "0px",
@@ -211,17 +211,17 @@
 			[1,8,6,3], [8,8,6,3], [15,8,6,3]
 		],
 		frame_name: "Scrollbar/dial_scrollbar.png",
-		up_tint: "#ffffffff", 
-		mouseover_up_tint: "#ffffffff", 
-		down_focused_tint: "#ffffffff", 
+		up_tint: "#ffffffff",
+		mouseover_up_tint: "#ffffffff",
+		down_focused_tint: "#ffffffff",
 		mouseover_down_focused_tint: "#ffffffff",
 		button_over_style: "horizontal_scroll_slider_thumb_over",
 		button_down_style: "horizontal_scroll_slider_thumb_down"
 	},
-	
-	"horizontal_scroll_slider_thumb_over": {	
-		width: "100%", 
-        height: "10dpi_px", 
+
+	"horizontal_scroll_slider_thumb_over": {
+		width: "100%",
+        height: "10dpi_px",
 		width_min:"18dpi_px",
 		position: [
 				[1,12,6,3], [8,12,6,3], [15,12,6,3],
@@ -230,10 +230,10 @@
 			],
 			frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-	
-	"horizontal_scroll_slider_thumb_down": {	
-		width: "100%", 
-        height: "10dpi_px", 
+
+	"horizontal_scroll_slider_thumb_down": {
+		width: "100%",
+        height: "10dpi_px",
 		width_min:"18dpi_px",
 		position: [
 				[1,23,6,3], [8,23,6,3], [15,23,6,3],
@@ -242,10 +242,10 @@
 			],
 			frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-	
-	"vertical_scroll_slider_thumb": {	
-		width: "10dpi_px", 
-        height: "100%", 
+
+	"vertical_scroll_slider_thumb": {
+		width: "10dpi_px",
+        height: "100%",
 		height_min:"18dpi_px",
 		position: [
 				[1,34,3,6], [4,34,4,6], [8,34,3,6],
@@ -253,17 +253,17 @@
 				[1,48,3,6], [4,48,4,6], [8,48,3,6]
 			],
 		frame_name: "Scrollbar/dial_scrollbar.png",
-		up_tint: "#ffffffff", 
-		mouseover_up_tint: "#ffffffff", 
-		down_focused_tint: "#ffffffff", 
+		up_tint: "#ffffffff",
+		mouseover_up_tint: "#ffffffff",
+		down_focused_tint: "#ffffffff",
 		mouseover_down_focused_tint: "#ffffffff",
 		button_down_style: "vertical_scroll_slider_thumb_down",
 		button_over_style: "vertical_scroll_slider_thumb_over"
 	},
-	
-	"vertical_scroll_slider_thumb_over": {	
-		width: "10px", 
-        height: "100%", 
+
+	"vertical_scroll_slider_thumb_over": {
+		width: "10px",
+        height: "100%",
 		height_min:"18dpi_px",
 		position: [
 				[13,34,3,6], [16,34,4,6], [20,34,3,6],
@@ -272,10 +272,10 @@
 			],
 			frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-	
-	"vertical_scroll_slider_thumb_down": {	
-		width: "10dpi_px", 
-        height: "100%", 
+
+	"vertical_scroll_slider_thumb_down": {
+		width: "10dpi_px",
+        height: "100%",
 		height_min:"18dpi_px",
 		position: [
 				[25,34,3,6], [28,34,4,6], [32,34,3,6],
@@ -286,11 +286,11 @@
 	},
 
 	"horizontal_scroll_slider_bar": {
-		width: "100%", 
+		width: "100%",
         height: "6dpi_px",
 		top: "2dpi_px",
 		bottom: "2dpi_px",
-        height_flags: "None", 
+        height_flags: "None",
         width_flags: "None",
 		margin: "",
 		position: [
@@ -300,14 +300,14 @@
 			],
 			frame_name: "Scrollbar/dial_scrollbar.png"
 	},
-	
+
 	"vertical_scroll_slider_bar": {
-		width: "6dpi_px", 
+		width: "6dpi_px",
         height: "100%",
 		top: "0dpi_px",
-		bottom: "0dpi_px", 
+		bottom: "0dpi_px",
 		left: "2dpi_px",
-        height_flags: "None", 
+        height_flags: "None",
         width_flags: "None",
 		margin: "",
 		position: [
@@ -338,7 +338,7 @@
 		top_flags: "AlignWithOppositeEdge"
 	},
 
-	"floating_horizontal_scroll_slider": {	
+	"floating_horizontal_scroll_slider": {
 		colour: "#00000000",
 		margin: ["0dpi_px"],
 		slider_bar_style: "floating_scroll_slider_bar",
