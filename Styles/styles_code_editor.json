@@ -190,9 +190,9 @@
 
     "code_colours": {
         background :            "#FF342C28",
-        current_line_colour :   "#2B191615",
-        selection_colour :      "#6A191714",
-        highlight_colour :      "#30ffffff",
+        current_line_colour :   "#A32A2421",
+        selection_colour :      "#FF473632",
+        highlight_colour :      "#FF1F1A18",
         debugger_colour :       "#330000ff",
         error_line_colour :     "#FF2C2CE0",
         selected_line_colour :  "#ff9999CC",
