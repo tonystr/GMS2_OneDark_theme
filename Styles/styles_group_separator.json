@@ -1,23 +1,23 @@
 {
 	"group_box": {
-		auto_size: ["True", "True"], 
-		colour: "#FFFFFFFF", 
+		auto_size: ["True", "True"],
+		colour: "#FFFFFFFF",
 		position: [
-					[0, 0, 4, 4], [4, 0, 24, 4], [28, 0, 4, 4], 
-					[0, 4, 4, 24], [4, 4, 24, 24], [28, 4, 4, 24], 
+					[0, 0, 4, 4], [4, 0, 24, 4], [28, 0, 4, 4],
+					[0, 4, 4, 24], [4, 4, 24, 24], [28, 4, 4, 24],
 					[0, 28, 4, 4], [4, 28, 24, 4], [28, 28, 4, 4]
-				], 
+				],
 		frame_name: "Window/dial_inner.png"
 	},
 
      "group_box_fixed": {
-		auto_size: ["False", "False"], 
-		colour: "#FFFFFFFF", 
+		auto_size: ["False", "False"],
+		colour: "#FFFFFFFF",
 		position: [
-					[0, 0, 4, 4], [4, 0, 24, 4], [28, 0, 4, 4], 
-					[0, 4, 4, 24], [4, 4, 24, 24], [28, 4, 4, 24], 
+					[0, 0, 4, 4], [4, 0, 24, 4], [28, 0, 4, 4],
+					[0, 4, 4, 24], [4, 4, 24, 24], [28, 4, 4, 24],
 					[0, 28, 4, 4], [4, 28, 24, 4], [28, 28, 4, 4]
-				], 
+				],
 		frame_name: "Window/dial_inner.png"
 	},
 
@@ -78,7 +78,7 @@
 						[0,0,0,0], [0,0,0,0], [0,0,0,0]
 					],
 		frame_name: "Splitters/Separator.png",
-		colour: "#ff3e3e3e"
+		colour: "#001F1A18"
 	},
 
 	horizontal_separator: {

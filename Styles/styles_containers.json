@@ -86,7 +86,7 @@
 	},
 
 	"grid_splitter": {
-		colour: "#ff3e3e3e",
+		colour: "#ff1F1A18",
 		position: [
 					[2, 2, 2, 2], [4, 2, 2, 2], [6, 2, 2, 2],
 					[2, 4, 2, 2], [4, 4, 2, 2], [6, 4, 2, 2],
@@ -538,8 +538,8 @@
         text_margin: "3dpi_px",
         fold_area_margin: "2dpi_px",
         fold_area_width: "11dpi_px",
-        fold_line_colour: "#ffc0c0c0",
-        fold_line_hi_colour: "#ffffffff",
+        fold_line_colour: "#ff23201B",
+        fold_line_hi_colour: "#aaffffff",
         fold_margin_colour: "#ff756a5d"
 	},
 
