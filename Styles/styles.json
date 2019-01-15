@@ -1957,15 +1957,15 @@
 		button_down_style: "data_grid_column_down",
 		button_over_style: "data_grid_column_over",
 		button_over_down_style: "data_grid_column_over_down",
-		colour: "#FF303030",
-		up_tint: "#FF303030",
-		down_tint: "#FF303030",
-		mouseover_up_tint: "#FF404040",
-		mouseover_up_focused_tint: "#FF404040",
-		mouseover_down_tint: "#FF424242",
-		mouseover_down_focused_tint: "#FF424242",
-		up_focused_tint: "#FF303030",
-		down_focused_tint: "#FF303030"
+		colour: "#FF2B2521",
+		up_tint: "#FF2B2521",
+		down_tint: "#FF2B2521",
+		mouseover_up_tint: "#FF3C322C",
+		mouseover_up_focused_tint: "#FF3C322C",
+		mouseover_down_tint: "#FF4B3E36",
+		mouseover_down_focused_tint: "#FF4B3E36",
+		up_focused_tint: "#FF2B2521",
+		down_focused_tint: "#FF2B2521"
 	},
 
 	"data_grid_header_grid": {
@@ -1974,7 +1974,7 @@
 
 	"data_grid_column_splitter": {
 		frame_name: "",
-		colour: "#FF272727",
+		colour: "#0023201B",
 		height: "100%"
 	},
 
@@ -1983,10 +1983,10 @@
 	"data_grid_column_over_down": { frame_name: "" },
 
     "data_grid_style": {
-        grid_line_colour: "#FF303030",
-		node_line_colour: "#FF303030",
+        grid_line_colour: "#FF23201B",
+		node_line_colour: "#FF80BD3E",
         text_colour: "#FFFFFFFF",
-        hilight_colour: "#FF403a3a",
+        hilight_colour: "#FF2D2A23",
 		node_margin: "16dpi_px",
 		text_margin: "16dpi_px",
 		header_height: "20dpi_px"

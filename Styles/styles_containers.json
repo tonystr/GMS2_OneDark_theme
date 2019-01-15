@@ -362,7 +362,7 @@
 	},
 
 	"active_code_tab_item_label": {
-		colour: "#FFFFFFFF",
+		colour: "#FFBCA7A2",
 		margin: ["10px", "3px", "22dpi_px", "3px"]
 	},
 
