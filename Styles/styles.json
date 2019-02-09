@@ -1881,7 +1881,8 @@
 	},
 
 	"syntax_error_gutter": {
-		error_colour: "#00000000"
+		error_colour: "#00000000",
+		warning_colour: "#00000000"
 	},
 
 	"label_right_align": {
