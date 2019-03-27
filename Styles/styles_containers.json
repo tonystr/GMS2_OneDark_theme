@@ -43,7 +43,7 @@
 		height: "20px",
 		height_min: "20px",
 		top: "100%",
-		colour: "#ffffffff",
+		colour: "#ffBBA7A2",
 		position: [
 					[0, 0, 5, 5], [5, 0, 14, 5], [19, 0, 5, 5],
 					[0, 5, 5, 10], [5, 5, 14, 10], [19, 5, 5, 10],
@@ -300,7 +300,7 @@
 	},
 
 	"tab_stroke_frame": {
-		colour: "#FF5B9D03",
+		colour: "#005B9D03",
 		height: "22px",
 		width: "100px",
 		position: [
@@ -339,7 +339,7 @@
 	},
 
 	"code_tab_stroke_frame": {
-		colour: "#FF5B9D03",
+		colour: "#005B9D03",
 		position: [
 					[26, 1, 9, 4], [35, 1, 1, 4], [36, 1, 9, 4],
 					[26, 5, 9, 11], [35, 5, 1, 11], [36, 5, 9, 11],
@@ -467,9 +467,8 @@
 	},
 
 	"code_tab_container": {
-		colour: "#FF23201B",
 		margin_left: "1px",
-		margin_right: "1px",
+		margin_right: "1px"
 	},
 
 	"tab_control_client_panel": {
